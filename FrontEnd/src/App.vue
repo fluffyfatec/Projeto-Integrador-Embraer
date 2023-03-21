@@ -34,12 +34,24 @@
           </div>
       </div>
 
-    </div>    
+    </div>
+    
+
 
     
     
 
     <router-view />
+    <footer v-if="isMobile" class="mobile-navbar">
+          <nav>
+            <ul class="mobile-navbar-itens">
+              <li><router-link to="/"><i class="fa-solid fa-plane-departure"></i></router-link></li>
+              <li><router-link to="/"><i class="fa-sharp fa-solid fa-screwdriver-wrench"></i></router-link></li>
+              <li><router-link to="/"><i class="fa-solid fa-chart-line"></i></router-link></li>
+              <li><router-link to="/"><i class="fa-regular fa-bell"></i></router-link></li>
+            </ul>
+          </nav>
+    </footer>
   </div>
 </template>
 
@@ -106,6 +118,7 @@ export default {
   vertical-align: middle;
 }
 
+
 @media screen and (max-width: 768px) {
   .mobile-header-itens {
     
@@ -117,6 +130,28 @@ export default {
 }
 
 /* Navbar Mobile */
+footer{
+  background-color: #C0C0C0;
+  width: 100%;
+}
+.mobile-navbar{
+  bottom: 0;
+  position: fixed;
+
+}
+
+.mobile-navbar-itens{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+.mobile-navbar-itens li{
+  padding: 0 20px;
+
+}
+
 
 
 /* Navbar Desktop */
