@@ -72,18 +72,6 @@
 <p align="right">(<a href="#top">voltar ao topo</a>)</p>
 
 ## Metas das Sprints
-<details>
-<summary><b>Sprint 1</b></summary>
-                  <details>
-                             
-                  </details>
-                  
-                  <details>
-        
-</details>
-
-<details>
-
 
 <p align="right">(<a href="#top">voltar ao topo</a>)</p>
 
