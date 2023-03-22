@@ -1,0 +1,36 @@
+@import "./base.css";
+
+html, body, #app {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  
+}
+
+a,
+.green {
+  
+}
+
+@media (hover: hover) {
+  a:hover {
+    
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+   
+  }
+
+  #app {
+    
+  }
+}
