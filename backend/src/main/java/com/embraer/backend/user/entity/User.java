@@ -12,6 +12,12 @@ import javax.persistence.Table;
 
 import com.embraer.backend.permission.entity.Permission;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+
 @Entity
 @Table(name="USER")
 public class User {
@@ -26,6 +32,9 @@ public class User {
 	
 	@Column(name="USER_PASSWORD")
 	private String password;
+	
+	@Column(name = "STATUS")
+	private Character status;
 	
 	@JoinColumn(name="PERMISSION_ID")
 	@ManyToOne(fetch = FetchType.LAZY)

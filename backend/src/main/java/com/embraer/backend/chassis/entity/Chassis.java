@@ -9,8 +9,12 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import com.embraer.backend.user.entity.User;
+
+import org.aspectj.lang.annotation.Before;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -26,10 +30,12 @@ public class Chassis {
 	@Column(name="CHASSI_ID")
 	private Long chassiId;
 	
-	@Column(name="CHASSI_DTREGISTER", updatable = false)
+	@Column(name="CHASSI_DTREGISTER")
+	@UpdateTimestamp
 	private Timestamp chassiDtRegister;
 	
-	@Column(name="CHASSI_STATUS", updatable = true, nullable = false)
+	@Column(name="CHASSI_STATUS")
+	@NotNull
 	private Character chassiStatus;
 
 	@JoinColumn(name="USER_ID_REGISTER")
