@@ -30,7 +30,7 @@
 
       <div class="container-pesquisa">
           <div class="pesquisar">
-              <input type="text" class="formulario" placeholder="Pesquise um filme..." id="pesquisa-filme" onkeyup="jsAcharFilmes()" onclick="jsAcharFilmes()">
+              <input type="text" class="formulario" placeholder="Pesquise aqui...">
           </div>
       </div>
 
@@ -46,9 +46,9 @@
           <nav>
             <ul class="mobile-navbar-itens">
               <li><router-link to="/"><i class="fa-solid fa-plane-departure"></i></router-link></li>
-              <li><router-link to="/"><i class="fa-sharp fa-solid fa-screwdriver-wrench"></i></router-link></li>
+              <li><router-link to="/about"><i class="fa-sharp fa-solid fa-screwdriver-wrench"></i></router-link></li>
               <li><router-link to="/"><i class="fa-solid fa-chart-line"></i></router-link></li>
-              <li><router-link to="/"><i class="fa-regular fa-bell"></i></router-link></li>
+              <li><router-link to="/about"><i class="fa-regular fa-bell"></i></router-link></li>
             </ul>
           </nav>
     </footer>
@@ -118,17 +118,6 @@ export default {
   vertical-align: middle;
 }
 
-
-@media screen and (max-width: 768px) {
-  .mobile-header-itens {
-    
-  }
-  
-  .mobile-user {
-    
-  }
-}
-
 /* Navbar Mobile */
 footer{
   background-color: #C0C0C0;
@@ -141,18 +130,16 @@ footer{
 }
 
 .mobile-navbar-itens{
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   list-style-type: none;
 }
 
 .mobile-navbar-itens li{
-  padding: 0 20px;
-
+  align-items: center;
+  flex: 1 0 27%;
 }
-
-
 
 /* Navbar Desktop */
 .desktop-navbar {
@@ -195,26 +182,6 @@ footer{
 .desktop-nav li a:hover {
   background-color: #111;
 }
-
-@media screen and (max-width: 600px) {
-  .desktop-logo, .desktop-nav {
-    text-align: center;
-  }
-  
-  .desktop-navbar-header {
-    width: 100%;
-  }
-  
-  .desktop-nav li {
-    float: none;
-    display: block;
-  }
-  
-  .desktop-nav li a {
-    border-bottom: 1px solid black;
-  }
-}
-
 
 /* Classe wrapper */
 .wrapper {
@@ -280,5 +247,88 @@ footer{
 }
 
 
+/* --------------- Media Queries -------------------- */
+
+/* Estilos para tablet */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+  /* Classe wrapper */
+.wrapper {
+  background-image: url(@/assets/aeroporto.jpg);
+  height: 200px;
+}
+
+
+/* Container Pesquisa */
+.container-pesquisa {
+  margin-top: 6%;
+}
+
+/* Classes referentes ao formulário de pesquisa */
+
+.pesquisar h3 {
+    margin-right: 1rem;
+    font-size: 2rem;
+    color: var(--azul-profundo);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.pesquisar .formulario {
+    opacity: 0.7;
+    padding: 1rem 2rem;
+    font-size: 14pt;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: var(--light-dark-color);
+    width: 300px;
+    height: auto;
+}
+
+  
+}
+
+/* Estilos para mobile */
+@media only screen and (max-width: 767px) {
+
+  /* Classe wrapper */
+.wrapper {
+  background-image: url(@/assets/aeroporto-mobile.jpg);
+  height: 188px;
+}
+
+
+/* Container Pesquisa */
+.container-pesquisa {
+  margin-top: 9%;
+}
+
+/* Classes referentes ao formulário de pesquisa */
+
+.pesquisar h3 {
+    -ms-flex-item-align: center;
+        align-self: center;
+    margin-right: 1rem;
+    font-size: 2rem;
+    color: var(--azul-profundo);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.pesquisar .formulario {
+    opacity: 0.7;
+    padding: 1rem 2rem;
+    font-size: 12pt;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: var(--light-dark-color);
+    width: 180px;
+    height: 10px;
+}
+
+
+}
 
 </style>
