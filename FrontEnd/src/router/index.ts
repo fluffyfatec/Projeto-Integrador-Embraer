@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+
 
 Vue.use(VueRouter)
 
@@ -12,13 +12,13 @@ const router = new VueRouter({
     {
       path: '/',
       redirect: '/avioes',
-      component: HomeView
+      //component: HomeView
     },
 
     {
       path: '/avioes',
       name: 'avioes',
-      component: () => import('../views/AboutView.vue'),
+      //component: () => import(''),
       meta: {
         showPesquisar: true,
         placeHolderValue: 'Pesquise um chassi...',
@@ -28,7 +28,7 @@ const router = new VueRouter({
     {
       path: '/sbs',
       name: 'SBs',
-      component: () => import('../views/AboutView.vue'),
+      //component: () => import('../views/AboutView.vue'),
       meta: {
         showPesquisar: true,
         placeHolderValue: 'Pesquise um SB...',
@@ -48,7 +48,7 @@ const router = new VueRouter({
     {
       path: '/notificacoes',
       name: 'notificacoes',
-      component: () => import('../views/AboutView.vue'),
+      //component: () => import('../views/AboutView.vue'),
       meta: {
         showH3: true,
         tituloValue: 'Notificações',
