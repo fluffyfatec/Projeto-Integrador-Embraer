@@ -14,23 +14,3 @@ body {
   
 }
 
-a,
-.green {
-  
-}
-
-@media (hover: hover) {
-  a:hover {
-    
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-   
-  }
-
-  #app {
-    
-  }
-}

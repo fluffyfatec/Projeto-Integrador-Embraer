@@ -9,7 +9,7 @@
             <img src="@/assets/logo.svg" alt="Logo">
           </a>
           <a class="mobile-user">
-            <router-link to="/"><i class="fas fa-user"></i></router-link> 
+            <router-link to="/"><i class="fa-solid fa-circle-user"></i></router-link> 
           </a>
         </div>
       </nav>
@@ -19,11 +19,11 @@
           <img src="@/assets/logo.svg" alt="Logo">
         
           <ul class="desktop-nav">
-            <li><router-link to="/">Aviões</router-link></li>
-            <li><router-link to="/about">SBs</router-link></li>
-            <li><router-link to="/">Admin</router-link></li>
+            <li id="user-icone"><router-link to="/"><i class="fa-solid fa-circle-user"></i></router-link></li>
             <li><router-link to="/about">Notificações</router-link></li>
-            <li><router-link to="/"><i src="fas fa-user"></i></router-link></li>
+            <li><router-link to="/">Admin</router-link></li>
+            <li><router-link to="/about">SBs</router-link></li>
+            <li><router-link to="/">Aviões</router-link></li>
           </ul>
         </div>  
       </nav>
@@ -34,14 +34,11 @@
           </div>
       </div>
 
-    </div>
-    
-
-
-    
-    
+    </div>  
 
     <router-view />
+
+
     <footer v-if="isMobile" class="mobile-navbar">
           <nav>
             <ul class="mobile-navbar-itens">
@@ -87,6 +84,8 @@ export default {
 
 <style scoped>
 
+@import "./assets/base.css";
+
 /* Header Mobile */
 .mobile-header {
   background-color: transparent;
@@ -99,6 +98,9 @@ export default {
   display: flex;
   justify-content: space-between;
   vertical-align: middle;
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 3%;
 }
 
 .mobile-logo img {
@@ -108,7 +110,6 @@ export default {
 
 .mobile-user {
   list-style-type: none;
-  margin: 0;
   padding: 0;
   overflow: hidden;
   float: right;
@@ -116,29 +117,38 @@ export default {
 
 .mobile-user i {
   vertical-align: middle;
+  color: var(--azul-principal);
+  font-size: 25px;
 }
 
 /* Navbar Mobile */
-footer{
-  background-color: #C0C0C0;
+footer {
+  background-color: var(--silver);
   width: 100%;
 }
-.mobile-navbar{
+
+.mobile-navbar {
   bottom: 0;
   position: fixed;
-
 }
 
-.mobile-navbar-itens{
+.mobile-navbar-itens {
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style-type: none;
 }
 
-.mobile-navbar-itens li{
+.mobile-navbar-itens li {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   flex: 1 0 27%;
+}
+
+.mobile-navbar-itens i {
+  color: var(--azul-principal);
+  font-size: 25px;
 }
 
 /* Navbar Desktop */
@@ -153,6 +163,7 @@ footer{
   display: flex;
   justify-content: space-between;
   vertical-align: middle;
+  margin-top: 0.5%
 }
 
 .desktop-navbar-header img {
@@ -167,20 +178,34 @@ footer{
   overflow: hidden;
 }
 
+.desktop-nav a i {
+  font-size: 28px;
+  color: var(--azul-principal);
+
+}
+
 .desktop-nav li {
+  font-size: 18px;
+  font-weight: var(--semi-bold);
   float: right;
 }
 
 .desktop-nav li a {
   display: block;
-  color: black;
+  color: var(--azul-principal);
   text-align: center;
   padding: 5px 20px;
   text-decoration: none;
 }
 
-.desktop-nav li a:hover {
-  background-color: #111;
+.desktop-nav li a:hover:not(#user-icone) {
+  color: var(--white); 
+  transition: 0.3s;
+}
+
+#user-icone i:hover {
+  opacity: 0.7;
+  transition: 0.1s;
 }
 
 /* Classe wrapper */
@@ -236,7 +261,7 @@ footer{
 }
 
 .pesquisar .formulario {
-    opacity: 0.7;
+    opacity: 0.6;
     padding: 1rem 2rem;
     font-size: 18pt;
     border: none;
@@ -276,7 +301,7 @@ footer{
 
 .pesquisar .formulario {
     opacity: 0.7;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     font-size: 14pt;
     border: none;
     border-radius: 5px;
@@ -318,7 +343,7 @@ footer{
 
 .pesquisar .formulario {
     opacity: 0.7;
-    padding: 1rem 2rem;
+    padding: 1rem 0.8rem;
     font-size: 12pt;
     border: none;
     border-radius: 5px;
