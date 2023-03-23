@@ -8,18 +8,51 @@ const router = new VueRouter({
   mode: 'history',
   base: import.meta.env.BASE_URL,
   routes: [
+    
     {
       path: '/',
-      name: 'home',
+      redirect: '/avioes',
       component: HomeView
     },
+
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      path: '/avioes',
+      name: 'avioes',
+      component: () => import('../views/AboutView.vue'),
+      meta: {
+        showPesquisar: true,
+        placeHolderValue: 'Pesquise um chassi...',
+      }
+    },
+
+    {
+      path: '/sbs',
+      name: 'SBs',
+      component: () => import('../views/AboutView.vue'),
+      meta: {
+        showPesquisar: true,
+        placeHolderValue: 'Pesquise um SB...',
+      }
+    },
+
+    {
+      path: '/painel-adm',
+      name: 'painel-adm',
+      component: () => import('../views/AboutView.vue'),
+      meta: {
+        showH3: true,
+        tituloValue: 'Painel Administrativo',
+      }
+    },
+
+    {
+      path: '/notificacoes',
+      name: 'notificacoes',
+      component: () => import('../views/AboutView.vue'),
+      meta: {
+        showH3: true,
+        tituloValue: 'Notificações',
+      }
     }
   ]
 })
