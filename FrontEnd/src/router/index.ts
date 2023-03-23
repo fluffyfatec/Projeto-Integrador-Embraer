@@ -38,7 +38,7 @@ const router = new VueRouter({
     {
       path: '/painel-adm',
       name: 'painel-adm',
-      component: () => import('../views/AboutView.vue'),
+      component: () => import('../views/CrudChassi.vue'),
       meta: {
         showH3: true,
         tituloValue: 'Painel Administrativo',
