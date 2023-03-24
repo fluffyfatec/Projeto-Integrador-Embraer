@@ -1,5 +1,8 @@
 package com.embraer.backend.serviceBulletin.repository;
 
+import java.util.List;
+
+import com.embraer.backend.chassis.entity.Chassis;
 import com.embraer.backend.serviceBulletin.entity.ServiceBulletin;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -7,5 +10,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ServiceBulletinRepository extends JpaRepository<ServiceBulletin, Long>{
+	
+	List<ServiceBulletin> findByChassiId(Chassis chassi);
 
 }
