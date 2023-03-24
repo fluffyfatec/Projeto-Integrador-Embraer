@@ -51,7 +51,7 @@
     margin-right: 1rem;
     font-size: 2rem;
     color: var(--azul-principal);
-    font-weight: 500;
+    font-weight: 900;
     margin-bottom: 1.5rem;
 }
 .pesquisar .formulario {
@@ -61,7 +61,6 @@
     border: none;
     border-radius: 5px 0 0 5px;
     outline: none;
-    color: var(--light-dark-color);
     width: 250px;
 }
 
@@ -110,7 +109,7 @@
     margin-right: 1rem;
     font-size: 2rem;
     color: var(--azul-principal);
-    font-weight: 500;
+    font-weight: 900;
     margin-bottom: 1.5rem;
 }
 .pesquisar .formulario {
@@ -168,7 +167,7 @@
     margin-right: 1rem;
     font-size: 1.5rem;
     color: var(--azul-principal);
-    font-weight: 500;
+    font-weight: 900;
     margin-bottom: 1.5rem;
 }
 .pesquisar .formulario {

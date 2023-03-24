@@ -21,8 +21,8 @@
                     </div>           
                     <div v-else>
                     <td>{{ chassi.status }}</td>
-                    <td><button @click.prevent="editarChassi">Editar</button></td>
-                    <td><button @click.prevent="deletarChassi(chassi.id)">Deletar</button></td>
+                    <td><button @click.prevent="editarChassi"><i class="fa-solid fa-pen"></i></button></td>
+                    <td><button @click.prevent="deletarChassi(chassi.id)"><i class="fa-sharp fa-solid fa-trash"></i></button></td>
                     </div>    
                 </tr>
         </table> 
@@ -84,4 +84,133 @@ export default {
 
 
 <style scoped>
+
+table, th, td {
+    border: 1px solid rgb(216, 210, 210);
+    height: 30px;
+}
+
+table {
+        width: 50%;
+        font-size: 0.8em;
+        border-collapse: collapse;
+        margin: 0 auto;
+        height: 100px;
+        margin-top: -19%;
+        margin-left: 550px;
+
+    }
+    
+    th {
+        text-align: center;
+        color: var(--azul-embraer);
+        width:100px;
+        padding: 15px;
+    }
+    
+    td {
+        text-align: center;
+        width:100px;
+		height:30px;
+        padding: 15px;
+
+    }
+
+    
+    
+    tr {
+        background-color: #f2f2f2;
+    }
+    
+
+    select {
+        width: 70%;
+        padding: 5px;
+        border-radius: 4px;
+        border: none;
+    }
+
+    select:focus {
+        outline: none;
+        box-shadow: 0 0 0 0.2rem var(--azul-claro-light);
+    }
+    
+    button {
+        background-color: var(--azul-embraer);
+        border: none;
+        color: white;
+        padding: 3px 10px;
+        display: inline-block;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: 0.1s all;
+    }
+    
+    button:hover {
+        opacity: 0.8;
+    }
+/* --------------- Media Queries -------------------- */
+
+/* Estilos para tablet */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+/* Estilos para mobile */
+@media only screen and (max-width: 767px) {
+    table {
+        width: 90%;
+        font-size: 0.8em;
+        padding: 40px;
+        border-collapse: collapse;
+        margin: 0 auto;
+        margin-top: 6%;
+        height: 100px;
+
+    }
+    
+    th {
+        text-align: left;
+    }
+    
+    td {
+        text-align: center;
+        width:150px;
+		height:30px;
+    }
+    
+    tr {
+        background-color: #f2f2f2;
+        
+    }
+    
+
+    select {
+        width: 70%;
+        padding: 5px;
+        border-radius: 4px;
+        border: none;
+    }
+
+    select:focus {
+        outline: none;
+        box-shadow: 0 0 0 0.2rem var(--azul-claro-light);
+    }
+    
+    button {
+        background-color: var(--azul-embraer);
+        border: none;
+        color: white;
+        padding: 3px 10px;
+        display: inline-block;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: 0.1s all;
+    }
+    
+    button:hover {
+        opacity: 0.8;
+    }
+}
+
 </style>
