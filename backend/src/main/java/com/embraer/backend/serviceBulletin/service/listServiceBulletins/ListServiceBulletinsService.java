@@ -3,6 +3,7 @@ package com.embraer.backend.serviceBulletin.service.listServiceBulletins;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.embraer.backend.chassis.entity.Chassis;
 import com.embraer.backend.serviceBulletin.entity.ServiceBulletin;
 import com.embraer.backend.serviceBulletin.repository.ServiceBulletinRepository;
 import com.embraer.backend.serviceBulletin.service.listServiceBulletins.dto.ListBulletinApplicable;
@@ -19,9 +20,11 @@ public class ListServiceBulletinsService implements ListServiceBulletinsImpl {
 	@Autowired
 	ServiceBulletinRepository serviceBulletinRepository;
 
-	public ListServiceBulletinsResponse execute(String chassiId) {
+	public ListServiceBulletinsResponse execute(Long chassiId) {
+		Chassis chassis = new Chassis();
+		chassis.setChassiId(chassiId);
 
-		List<ServiceBulletin> serviceBulletins = serviceBulletinRepository.findAll();
+		List<ServiceBulletin> serviceBulletins = serviceBulletinRepository.findByChassiId(chassis);
 
 		ListServiceBulletinsResponse bulletinsResponse = new ListServiceBulletinsResponse();
 

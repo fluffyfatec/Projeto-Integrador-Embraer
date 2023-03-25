@@ -6,6 +6,6 @@ import com.embraer.backend.serviceBulletin.service.listServiceBulletins.dto.List
 
 public interface ListServiceBulletinsImpl {
 	
-	public ListServiceBulletinsResponse execute(String chassiId);
+	public ListServiceBulletinsResponse execute(Long chassiId);
 
 }
