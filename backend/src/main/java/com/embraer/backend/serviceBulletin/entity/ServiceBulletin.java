@@ -46,7 +46,7 @@ public class ServiceBulletin {
 	@NotNull
 	private String serviceBulletinStatus;
 	
-	@Column(name="SB_PARSERVICE")
+	@Column(name="SB_PARTSERVICE")
 	private String serviceBulletinPart;
 	
 	@JoinColumn(name="CHASSI_ID")
@@ -56,10 +56,5 @@ public class ServiceBulletin {
 	@JoinColumn(name="USER_ID_REGISTER")
 	@ManyToOne(fetch = FetchType.LAZY)
 	private User userRegister;
-
-	@JoinColumn(name="USER_ID_CHANGE")
-	@ManyToOne(fetch = FetchType.LAZY)
-	private User userChange;
-	
 	
 }

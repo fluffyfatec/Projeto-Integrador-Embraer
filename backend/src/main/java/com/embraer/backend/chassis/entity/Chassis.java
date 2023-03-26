@@ -42,7 +42,4 @@ public class Chassis {
 	@ManyToOne(fetch = FetchType.LAZY)
 	private User userRegister;
 
-	@JoinColumn(name="USER_ID_CHANGE")
-	@ManyToOne(fetch = FetchType.LAZY)
-	private User userChange;
 }
