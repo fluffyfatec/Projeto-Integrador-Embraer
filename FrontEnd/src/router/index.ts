@@ -38,7 +38,7 @@ const router = new VueRouter({
     {
       path: '/painel-adm',
       name: 'painel-adm',
-      component: () => import('../views/CrudChassi.vue'),
+      component: () => import('../views/CrudCondition.vue'),
       meta: {
         showH3: true,
         tituloValue: 'Painel Administrativo',
@@ -48,12 +48,22 @@ const router = new VueRouter({
     {
       path: '/notificacoes',
       name: 'notificacoes',
-      //component: () => import('../views/AboutView.vue'),
+      //component: () => import('../views/ImportaDados.vue'),
       meta: {
         showH3: true,
         tituloValue: 'Notificações',
       }
-    }
+    },
+
+    {
+      path: '/upload',
+      name: 'importarDados',
+      component: () => import('../views/DataImport.vue'),
+      meta: {
+        showH3: true,
+        tituloValue: 'Importar Dados',
+      }
+    },
   ]
 })
 
