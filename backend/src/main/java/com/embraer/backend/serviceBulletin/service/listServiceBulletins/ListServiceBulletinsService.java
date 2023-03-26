@@ -21,10 +21,15 @@ public class ListServiceBulletinsService implements ListServiceBulletinsImpl {
 	ServiceBulletinRepository serviceBulletinRepository;
 
 	public ListServiceBulletinsResponse execute(Long chassiId) {
+		
 		Chassis chassis = new Chassis();
 		chassis.setChassiId(chassiId);
 
 		List<ServiceBulletin> serviceBulletins = serviceBulletinRepository.findByChassiId(chassis);
+		
+		if(serviceBulletins == null) {
+			throw new Error("BulletinsNotExist");
+		}
 
 		ListServiceBulletinsResponse bulletinsResponse = new ListServiceBulletinsResponse();
 
