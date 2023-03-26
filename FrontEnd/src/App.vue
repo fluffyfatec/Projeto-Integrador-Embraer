@@ -28,7 +28,7 @@
         </div>  
       </nav>
 
-      <ContainerPesquisa></ContainerPesquisa>
+      <ContainerSearch></ContainerSearch>
 
     </div>  
 
@@ -51,7 +51,7 @@
 
 
 <script lang="ts">
-import ContainerPesquisa from './components/ContainerPesquisa.vue'
+import ContainerSearch from './components/ContainerSearch.vue'
 
 export default {
   data() {
@@ -78,7 +78,7 @@ export default {
     window.removeEventListener('resize', this.checkIfMobile);
   },
   components: {
-    ContainerPesquisa,
+    ContainerSearch,
   }
 };
 </script>
