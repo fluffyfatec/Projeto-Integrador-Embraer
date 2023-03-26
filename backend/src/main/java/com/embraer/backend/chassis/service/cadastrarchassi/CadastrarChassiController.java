@@ -18,6 +18,7 @@ public class CadastrarChassiController {
 	@PostMapping
 	public ResponseEntity<Void> CadastrarChassiController(@RequestBody CadastrarChassiRequestDto cadastrarChassiRequestDto) {
 		cadastrarChassiImpl.cadastrarChassi(cadastrarChassiRequestDto);
+		System.out.println("deu certo");
 		return new ResponseEntity<>(HttpStatus.CREATED);
 	}
 }

@@ -14,7 +14,9 @@ public class CadastrarChassiService implements CadastrarChassiImpl{
 
 	@Override
 	public void cadastrarChassi(CadastrarChassiRequestDto cadastrarChassiRequestDto) {
-				
-
+		Chassis chassi = new Chassis();
+		chassi.setChassiStatus(cadastrarChassiRequestDto.getChassi_status());
+		chassi.setChassiId(cadastrarChassiRequestDto.getChassi_id());
+		chassisRepository.saveAndFlush(chassi);
 	}
 }
