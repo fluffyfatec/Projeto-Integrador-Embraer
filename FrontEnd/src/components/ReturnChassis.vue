@@ -1,7 +1,7 @@
 <template>
     <div v-if="searchTerm" class="container-card">
-        <div v-if="$route.meta.ItemsDetails" v-for="c in filteredItems" class="card" @click="divClickToItems(c)"><i class="fa-solid fa-plane-up"></i>Chassi nº{{ c }}</div>
-        <div v-if="$route.meta.SbsDetails" v-for="c in filteredItems" class="card" @click="divClickToSbs(c)"><i class="fa-solid fa-plane-up"></i>Chassi nº{{ c }}</div>
+        <div v-if="$route.meta.itemsDetails" v-for="c in filteredItems" class="card" @click="divClickToItems(c)"><i class="fa-solid fa-plane-up"></i>Chassi nº{{ c }}</div>
+        <div v-if="$route.meta.planesDetails" v-for="c in filteredItems" class="card" @click="divClickToPlanes(c)"><i class="fa-solid fa-plane-up"></i>Chassi nº{{ c }}</div>
     </div>
 </template>
 
@@ -38,9 +38,9 @@ export default {
             });
         },
 
-        divClickToSbs(chassis: string) {
+        divClickToPlanes(chassis: string) {
             this.$router.push({
-             name: 'sbs-details',
+             name: 'planes-details',
                 params: {
                     chassis: chassis
                 }

@@ -1,6 +1,6 @@
 <template>
     <div v-if="searchTerm" class="container-card">
-        <div v-for="sb in filteredItems" class="card" @click="divClickToPlanes(sb)"><i class="fa-solid fa-plane-up"></i>{{ c }}</div>
+        <div v-for="sb in filteredItems" class="card" @click="divClickToSbs(sb)"><i class="fa-solid fa-plane-up"></i>{{ c }}</div>
     </div>
 </template>
 
@@ -28,9 +28,9 @@ export default {
             this.sbs = await (await axios.get('REQUISIÇÃO')).data
         },
 
-        divClickToPlanes(sb: string) {
+        divClickToSbs(sb: string) {
             this.$router.push({
-             name: 'planes-details',
+             name: 'sbs-details',
                 params: {
                     sb: sb
                 }

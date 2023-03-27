@@ -1,17 +1,18 @@
 <template>
     <div>
-        <table>
+        <ReturnSbs v-if="searchTerm"></ReturnSbs>
+        <table v-else>
             <tr>
                 <th>Bulletin Service</th>
                 <th>Applicable</th>
                 <th>Not Applicable</th>
                 <th>Incorporated</th>
             </tr>
-            <tr v-for="sb in sbs" :key="sb.id">
-                <td>{{ sb.id }}</td>
-                <td>{{ sb.incorporated }}</td>
-                <td>{{ sb.not_applicable }}</td>
-                <td>{{ sb.applicable }}</td>
+            <tr v-for="plane in planes" :key="plane.id">
+                <td>{{ plane.id }}</td>
+                <td>{{ plane.incorporated }}</td>
+                <td>{{ plane.not_applicable }}</td>
+                <td>{{ plane.applicable }}</td>
             </tr>
         </table>
     </div>
@@ -19,25 +20,40 @@
 
 <script lang="ts">
 import axios from 'axios';
+import { eventBus } from '@/main.js'
+import ReturnSbs from '@/components/ReturnSbs.vue';
 
 export default {
     
     data() {
         return {
-            sbs: [],
+            planes: [],
+            searchTerm: '',
         }
     },
 
     mounted() {
-        this.getSbs();
+        this.getPlanes();
+    },
+
+    created() {
+        
+        eventBus.$on('search-term-updated', (searchTerm: string) => {
+            this.searchTerm = searchTerm
+        })           
+        
     },
     
     methods: {
-        async getSbs() {
-            const chassis = this.$route.params.chassis;
+        async getPlanes() {
+            const sb = this.$route.params.sb;
 
-            this.sbs = (await axios.get('REQUISIÇÃO/' + chassis)).data
+            this.planes = (await axios.get('REQUISIÇÃO/' + sb)).data
         },
+    },
+
+    components: {
+        ReturnSbs,
     },
 }
 </script>
