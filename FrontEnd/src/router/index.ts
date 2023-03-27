@@ -16,23 +16,56 @@ const router = new VueRouter({
     },
 
     {
-      path: '/avioes',
-      name: 'avioes',
-      //component: () => import(''),
+      path: '/items',
+      name: 'items',
+      component: () => import('../views/SearchItems.vue'),
       meta: {
-        showPesquisar: true,
+        showSearchChassis: true,
+        ItemsDetails: true,
         placeHolderValue: 'Pesquise um chassi...',
       }
     },
 
     {
+      path: '/items/:chassis',
+      name: 'items-details',
+      component: () => import('../views/ItemsDetails.vue'),
+      props: true
+    },
+
+    {
+      path: '/planes',
+      name: 'planes',
+      component: () => import('../views/SearchPlanes.vue'),
+      meta: {
+        showSearchChassis: true,
+        SbsDetails: true,
+        placeHolderValue: 'Pesquise um Chassi...',
+      }
+    },
+
+    {
+      path: '/planes/:chassis',
+      name: 'sbs-details',
+      component: () => import('../views/SbsDetails.vue'),
+      props: true
+    },
+
+    {
       path: '/sbs',
       name: 'SBs',
-      //component: () => import('../views/AboutView.vue'),
+      component: () => import('../views/SearchSbs.vue'),
       meta: {
-        showPesquisar: true,
+        showSearchSbs: true,
         placeHolderValue: 'Pesquise um SB...',
       }
+    },
+
+    {
+      path: '/sbs/:sb',
+      name: 'planes-details',
+      component: () => import('../views/PlanesDetails.vue'),
+      props: true
     },
 
     {
