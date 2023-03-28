@@ -13,11 +13,10 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-import com.embraer.backend.chassis.entity.Chassis;
-import com.embraer.backend.permission.entity.Permission;
-import com.embraer.backend.user.entity.User;
-
 import org.hibernate.annotations.UpdateTimestamp;
+
+import com.embraer.backend.chassis.entity.Chassis;
+import com.embraer.backend.user.entity.User;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -46,7 +45,7 @@ public class ServiceBulletin {
 	@NotNull
 	private String serviceBulletinStatus;
 	
-	@Column(name="SB_PARSERVICE")
+	@Column(name="SB_PARTSERVICE")
 	private String serviceBulletinPart;
 	
 	@JoinColumn(name="CHASSI_ID")
@@ -56,10 +55,5 @@ public class ServiceBulletin {
 	@JoinColumn(name="USER_ID_REGISTER")
 	@ManyToOne(fetch = FetchType.LAZY)
 	private User userRegister;
-
-	@JoinColumn(name="USER_ID_CHANGE")
-	@ManyToOne(fetch = FetchType.LAZY)
-	private User userChange;
-	
 	
 }

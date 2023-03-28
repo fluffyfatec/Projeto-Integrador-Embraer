@@ -11,10 +11,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-import com.embraer.backend.user.entity.User;
-
-import org.aspectj.lang.annotation.Before;
 import org.hibernate.annotations.UpdateTimestamp;
+
+import com.embraer.backend.user.entity.User;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -28,7 +27,7 @@ public class Chassis {
 	
 	@Id
 	@Column(name="CHASSI_ID")
-	private Long chassiId;
+	private String chassiId;
 	
 	@Column(name="CHASSI_DTREGISTER")
 	@UpdateTimestamp
@@ -42,7 +41,4 @@ public class Chassis {
 	@ManyToOne(fetch = FetchType.LAZY)
 	private User userRegister;
 
-	@JoinColumn(name="USER_ID_CHANGE")
-	@ManyToOne(fetch = FetchType.LAZY)
-	private User userChange;
 }

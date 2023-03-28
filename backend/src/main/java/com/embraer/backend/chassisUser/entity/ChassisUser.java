@@ -1,4 +1,4 @@
-package com.embraer.backend.user.entity;
+package com.embraer.backend.chassisUser.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,7 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.embraer.backend.permission.entity.Permission;
+import com.embraer.backend.chassis.entity.Chassis;
+import com.embraer.backend.user.entity.User;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -19,25 +20,18 @@ import lombok.Setter;
 @Setter
 
 @Entity
-@Table(name="USER")
-public class User {
-
+@Table(name="CHASSIS_USER")
+public class ChassisUser {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="USER_ID")
-	private Long userId;
-	
-	@Column(name="USER_USERNAME")
-	private String userUsername;
-	
-	@Column(name="USER_PASSWORD")
-	private String userPassword;
-	
-	@Column(name = "STATUS")
-	private Character userStatus;
-	
-	@JoinColumn(name="PERMISSION_ID")
+	@Column(name="CHASSI_USER_ID")
+	private long chassiUserId;
+
+	@JoinColumn(name="CHASSI_ID")
 	@ManyToOne(fetch = FetchType.LAZY)
-	private Permission permissionId;
+	private Chassis chassiId;
 	
+	@JoinColumn(name="USER_ID")
+	@ManyToOne(fetch = FetchType.LAZY)
+	private User userId; 
 }
