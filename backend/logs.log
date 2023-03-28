@@ -12264,3 +12264,324 @@ Unconditional classes:
 2023-03-27 21:10:42.364 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962242364; nextExpiration=1679962242364; keyCount=0; hasEvents=false; eval=false
 2023-03-27 21:10:43.370 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962243370; nextExpiration=1679962243364; keyCount=0; hasEvents=false; eval=false
 2023-03-27 21:10:44.370 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962244370; nextExpiration=1679962244370; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:10:45.383 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962245383; nextExpiration=1679962245370; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:10:46.137 DEBUG 16380 --- [Catalina-utility-1] org.apache.catalina.session.ManagerBase  : Start expire sessions StandardManager at 1679962246137 sessioncount 0
+2023-03-27 21:10:46.137 DEBUG 16380 --- [Catalina-utility-1] org.apache.catalina.session.ManagerBase  : End expire sessions StandardManager processingTime 0 expired sessions: 0
+2023-03-27 21:10:46.383 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962246383; nextExpiration=1679962246383; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:10:47.384 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962247384; nextExpiration=1679962247383; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:10:48.385 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962248385; nextExpiration=1679962248384; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:10:49.391 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962249391; nextExpiration=1679962249385; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:10:50.392 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962250392; nextExpiration=1679962250391; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:10:51.392 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962251392; nextExpiration=1679962251392; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:10:52.394 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962252394; nextExpiration=1679962252392; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:10:53.394 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962253394; nextExpiration=1679962253394; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:10:54.404 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962254404; nextExpiration=1679962254394; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:10:55.404 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962255404; nextExpiration=1679962255404; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:10:55.715 DEBUG 16380 --- [RMI TCP Connection(15)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(15)-127.0.0.1: (port 53771) connection closed
+2023-03-27 21:10:55.715 DEBUG 16380 --- [RMI TCP Connection(15)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(15)-127.0.0.1: close connection, socket: Socket[addr=/127.0.0.1,port=53878,localport=53771]
+2023-03-27 21:10:55.715 DEBUG 16380 --- [RMI TCP Connection(15)-127.0.0.1] sun.rmi.transport.tcp                    : RMI TCP Connection(15)-127.0.0.1: socket close: Socket[addr=/127.0.0.1,port=53878,localport=53771]
+2023-03-27 21:10:56.405 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962256405; nextExpiration=1679962256404; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:10:57.405 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962257405; nextExpiration=1679962257405; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:10:58.419 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962258419; nextExpiration=1679962258405; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:10:59.420 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962259420; nextExpiration=1679962259419; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:11:00.421 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962260421; nextExpiration=1679962260420; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:11:01.422 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962261422; nextExpiration=1679962261421; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:11:02.422 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962262422; nextExpiration=1679962262422; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:11:03.423 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962263423; nextExpiration=1679962263422; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:11:04.423 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962264423; nextExpiration=1679962264423; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:11:05.429 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962265429; nextExpiration=1679962265423; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:11:06.430 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=0; now=1679962266430; nextExpiration=1679962266429; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:11:06.645 DEBUG 16380 --- [http-nio-8080-Acceptor] o.apache.tomcat.util.threads.LimitLatch  : Counting up[http-nio-8080-Acceptor] latch=1
+2023-03-27 21:11:06.649 DEBUG 16380 --- [http-nio-8080-Acceptor] o.apache.tomcat.util.threads.LimitLatch  : Counting up[http-nio-8080-Acceptor] latch=2
+2023-03-27 21:11:06.686 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.coyote.http11.Http11InputBuffer      : Before fill(): parsingHeader: [true], parsingRequestLine: [true], parsingRequestLinePhase: [0], parsingRequestLineStart: [0], byteBuffer.position(): [0], byteBuffer.limit(): [0], end: [0]
+2023-03-27 21:11:06.687 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.tomcat.util.net.SocketWrapperBase    : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@57c6dac2:org.apache.tomcat.util.net.NioChannel@365da4ee:java.nio.channels.SocketChannel[connected local=/[0:0:0:0:0:0:0:1]:8080 remote=/[0:0:0:0:0:0:0:1]:53891]], Read from buffer: [0]
+2023-03-27 21:11:06.687 DEBUG 16380 --- [http-nio-8080-exec-2] org.apache.tomcat.util.net.NioEndpoint   : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@57c6dac2:org.apache.tomcat.util.net.NioChannel@365da4ee:java.nio.channels.SocketChannel[connected local=/[0:0:0:0:0:0:0:1]:8080 remote=/[0:0:0:0:0:0:0:1]:53891]], Read direct from socket: [724]
+2023-03-27 21:11:06.687 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.coyote.http11.Http11InputBuffer      : Received [GET / HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+sec-ch-ua: "Microsoft Edge";v="111", "Not(A:Brand";v="8", "Chromium";v="111"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.54
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-BR,pt;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+
+]
+2023-03-27 21:11:06.714 DEBUG 16380 --- [http-nio-8080-exec-2] org.apache.tomcat.util.http.Parameters   : Set query string encoding to UTF-8
+2023-03-27 21:11:06.718 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.authenticator.AuthenticatorBase    : Security checking request GET /
+2023-03-27 21:11:06.718 DEBUG 16380 --- [http-nio-8080-exec-2] org.apache.catalina.realm.RealmBase      :   No applicable constraints defined
+2023-03-27 21:11:06.722 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.a.jaspic.AuthConfigFactoryImpl     : Loading persistent provider registrations from [C:\Users\Victor\AppData\Local\Temp\tomcat.8080.9929874582654044649\conf\jaspic-providers.xml]
+2023-03-27 21:11:06.723 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.authenticator.AuthenticatorBase    : Not subject to any constraint
+2023-03-27 21:11:06.725  INFO 16380 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-27 21:11:06.726  INFO 16380 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-27 21:11:06.726 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'multipartResolver'
+2023-03-27 21:11:06.726 TRACE 16380 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.multipart.support.StandardServletMultipartResolver@320a64b6
+2023-03-27 21:11:06.726 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'localeResolver'
+2023-03-27 21:11:06.726 TRACE 16380 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@7f87f811
+2023-03-27 21:11:06.726 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'themeResolver'
+2023-03-27 21:11:06.726 TRACE 16380 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.theme.FixedThemeResolver@4d96fa4e
+2023-03-27 21:11:06.727 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'welcomePageHandlerMapping'
+2023-03-27 21:11:06.727 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'requestMappingHandlerMapping'
+2023-03-27 21:11:06.727 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'viewControllerHandlerMapping'
+2023-03-27 21:11:06.727 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'beanNameHandlerMapping'
+2023-03-27 21:11:06.727 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'routerFunctionMapping'
+2023-03-27 21:11:06.727 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'resourceHandlerMapping'
+2023-03-27 21:11:06.727 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'defaultServletHandlerMapping'
+2023-03-27 21:11:06.727 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'requestMappingHandlerAdapter'
+2023-03-27 21:11:06.728 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'handlerFunctionAdapter'
+2023-03-27 21:11:06.728 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'httpRequestHandlerAdapter'
+2023-03-27 21:11:06.728 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'simpleControllerHandlerAdapter'
+2023-03-27 21:11:06.728 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'errorAttributes'
+2023-03-27 21:11:06.729 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'handlerExceptionResolver'
+2023-03-27 21:11:06.729 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'viewNameTranslator'
+2023-03-27 21:11:06.729 TRACE 16380 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected DefaultRequestToViewNameTranslator
+2023-03-27 21:11:06.729 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'beanNameViewResolver'
+2023-03-27 21:11:06.729 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'mvcViewResolver'
+2023-03-27 21:11:06.729 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'defaultViewResolver'
+2023-03-27 21:11:06.729 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'viewResolver'
+2023-03-27 21:11:06.730 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'flashMapManager'
+2023-03-27 21:11:06.730 TRACE 16380 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected SessionFlashMapManager
+2023-03-27 21:11:06.730 DEBUG 16380 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-03-27 21:11:06.730  INFO 16380 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-03-27 21:11:06.730 DEBUG 16380 --- [http-nio-8080-exec-2] o.apache.catalina.core.StandardWrapper   :   Returning non-STM instance
+2023-03-27 21:11:06.746 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.w.s.f.OrderedRequestContextFilter  : Bound request context to thread: org.apache.catalina.connector.RequestFacade@7bc65927
+2023-03-27 21:11:06.751 DEBUG 16380 --- [http-nio-8080-exec-2] org.apache.tomcat.util.http.Parameters   : Set encoding to UTF-8
+2023-03-27 21:11:06.751 TRACE 16380 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-03-27 21:11:06.761 TRACE 16380 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to HandlerExecutionChain with [ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]] and 4 interceptors
+2023-03-27 21:11:06.764 DEBUG 16380 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2023-03-27 21:11:06.764 TRACE 16380 --- [http-nio-8080-exec-2] .i.SessionFactoryImpl$SessionBuilderImpl : Opening Hibernate Session.  tenant=null
+2023-03-27 21:11:06.764 TRACE 16380 --- [http-nio-8080-exec-2] org.hibernate.internal.SessionImpl       : Opened Session [ff7c281b-b7e5-4919-9640-6b3b39b2177c] at timestamp: 1679962266764
+2023-03-27 21:11:06.766 DEBUG 16380 --- [http-nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2023-03-27 21:11:06.766 TRACE 16380 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-03-27 21:11:06.766 DEBUG 16380 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2023-03-27 21:11:06.766 TRACE 16380 --- [http-nio-8080-exec-2] org.hibernate.internal.SessionImpl       : Closing session [ff7c281b-b7e5-4919-9640-6b3b39b2177c]
+2023-03-27 21:11:06.766 TRACE 16380 --- [http-nio-8080-exec-2] o.h.e.jdbc.internal.JdbcCoordinatorImpl  : Closing JDBC container [org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl@259e851c]
+2023-03-27 21:11:06.766 TRACE 16380 --- [http-nio-8080-exec-2] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2023-03-27 21:11:06.766 TRACE 16380 --- [http-nio-8080-exec-2] o.h.r.j.i.LogicalConnectionManagedImpl   : Closing logical connection
+2023-03-27 21:11:06.766 TRACE 16380 --- [http-nio-8080-exec-2] o.h.r.j.i.LogicalConnectionManagedImpl   : Logical connection closed
+2023-03-27 21:11:06.766 DEBUG 16380 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND, headers={masked}
+2023-03-27 21:11:06.767 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'springApplicationAdminRegistrar'
+2023-03-27 21:11:06.767 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'liveReloadServerEventListener'
+2023-03-27 21:11:06.767 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.w.s.f.OrderedRequestContextFilter  : Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@7bc65927
+2023-03-27 21:11:06.768 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost]           : Processing ErrorPage[errorCode=0, location=/error]
+2023-03-27 21:11:06.774 DEBUG 16380 --- [http-nio-8080-exec-2] o.apache.catalina.core.StandardWrapper   :   Returning non-STM instance
+2023-03-27 21:11:06.774 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.w.s.f.OrderedRequestContextFilter  : Bound request context to thread: org.apache.catalina.core.ApplicationHttpRequest@7bf97bd3
+2023-03-27 21:11:06.774 TRACE 16380 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-03-27 21:11:06.777 TRACE 16380 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 matching mappings: [{ [/error], produces [text/html]}, { [/error]}]
+2023-03-27 21:11:06.779 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'basicErrorController'
+2023-03-27 21:11:06.779 TRACE 16380 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2023-03-27 21:11:06.779 DEBUG 16380 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2023-03-27 21:11:06.779 TRACE 16380 --- [http-nio-8080-exec-2] .i.SessionFactoryImpl$SessionBuilderImpl : Opening Hibernate Session.  tenant=null
+2023-03-27 21:11:06.779 TRACE 16380 --- [http-nio-8080-exec-2] org.hibernate.internal.SessionImpl       : Opened Session [7228f727-0d08-4d65-891a-316df00d2914] at timestamp: 1679962266779
+2023-03-27 21:11:06.792 TRACE 16380 --- [http-nio-8080-exec-2] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.core.ApplicationHttpRequest@7bf97bd3, org.apache.catalina.connector.ResponseFacade@46021663]
+2023-03-27 21:11:06.794 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     findClass(freemarker.template.Configuration)
+2023-03-27 21:11:06.794 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :       findClassInternal(freemarker.template.Configuration)
+2023-03-27 21:11:06.795 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Returning ClassNotFoundException
+2023-03-27 21:11:06.796 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Passing on ClassNotFoundException
+2023-03-27 21:11:06.796 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     findClass(freemarker.template$Configuration)
+2023-03-27 21:11:06.796 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :       findClassInternal(freemarker.template$Configuration)
+2023-03-27 21:11:06.797 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Returning ClassNotFoundException
+2023-03-27 21:11:06.798 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Passing on ClassNotFoundException
+2023-03-27 21:11:06.798 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     findClass(com.samskivert.mustache.Template)
+2023-03-27 21:11:06.798 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :       findClassInternal(com.samskivert.mustache.Template)
+2023-03-27 21:11:06.799 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Returning ClassNotFoundException
+2023-03-27 21:11:06.799 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Passing on ClassNotFoundException
+2023-03-27 21:11:06.800 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     findClass(com.samskivert.mustache$Template)
+2023-03-27 21:11:06.800 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :       findClassInternal(com.samskivert.mustache$Template)
+2023-03-27 21:11:06.801 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Returning ClassNotFoundException
+2023-03-27 21:11:06.801 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Passing on ClassNotFoundException
+2023-03-27 21:11:06.802 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     findClass(groovy.text.TemplateEngine)
+2023-03-27 21:11:06.802 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :       findClassInternal(groovy.text.TemplateEngine)
+2023-03-27 21:11:06.803 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Returning ClassNotFoundException
+2023-03-27 21:11:06.803 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Passing on ClassNotFoundException
+2023-03-27 21:11:06.804 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     findClass(groovy.text$TemplateEngine)
+2023-03-27 21:11:06.804 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :       findClassInternal(groovy.text$TemplateEngine)
+2023-03-27 21:11:06.805 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Returning ClassNotFoundException
+2023-03-27 21:11:06.805 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Passing on ClassNotFoundException
+2023-03-27 21:11:06.805 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     findClass(org.thymeleaf.spring5.SpringTemplateEngine)
+2023-03-27 21:11:06.805 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :       findClassInternal(org.thymeleaf.spring5.SpringTemplateEngine)
+2023-03-27 21:11:06.806 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Returning ClassNotFoundException
+2023-03-27 21:11:06.806 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Passing on ClassNotFoundException
+2023-03-27 21:11:06.806 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     findClass(org.thymeleaf.spring5$SpringTemplateEngine)
+2023-03-27 21:11:06.806 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :       findClassInternal(org.thymeleaf.spring5$SpringTemplateEngine)
+2023-03-27 21:11:06.807 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Returning ClassNotFoundException
+2023-03-27 21:11:06.807 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Passing on ClassNotFoundException
+2023-03-27 21:11:06.808 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     findClass(org.apache.jasper.compiler.JspConfig)
+2023-03-27 21:11:06.808 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :       findClassInternal(org.apache.jasper.compiler.JspConfig)
+2023-03-27 21:11:06.808 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Returning ClassNotFoundException
+2023-03-27 21:11:06.808 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Passing on ClassNotFoundException
+2023-03-27 21:11:06.809 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     findClass(org.apache.jasper.compiler$JspConfig)
+2023-03-27 21:11:06.809 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :       findClassInternal(org.apache.jasper.compiler$JspConfig)
+2023-03-27 21:11:06.809 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Returning ClassNotFoundException
+2023-03-27 21:11:06.810 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Passing on ClassNotFoundException
+2023-03-27 21:11:06.810 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       : getResource(META-INF/resources/error/404.html)
+2023-03-27 21:11:06.810 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :   Delegating to parent classloader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@49d791e2
+2023-03-27 21:11:06.810 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :   --> Resource not found, returning null
+2023-03-27 21:11:06.810 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       : getResource(resources/error/404.html)
+2023-03-27 21:11:06.811 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :   Delegating to parent classloader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@49d791e2
+2023-03-27 21:11:06.811 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :   --> Resource not found, returning null
+2023-03-27 21:11:06.811 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       : getResource(static/error/404.html)
+2023-03-27 21:11:06.811 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :   Delegating to parent classloader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@49d791e2
+2023-03-27 21:11:06.811 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :   --> Resource not found, returning null
+2023-03-27 21:11:06.811 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       : getResource(public/error/404.html)
+2023-03-27 21:11:06.811 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :   Delegating to parent classloader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@49d791e2
+2023-03-27 21:11:06.812 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :   --> Resource not found, returning null
+2023-03-27 21:11:06.813 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     findClass(freemarker.template.Configuration)
+2023-03-27 21:11:06.813 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :       findClassInternal(freemarker.template.Configuration)
+2023-03-27 21:11:06.814 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Returning ClassNotFoundException
+2023-03-27 21:11:06.814 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Passing on ClassNotFoundException
+2023-03-27 21:11:06.814 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     findClass(freemarker.template$Configuration)
+2023-03-27 21:11:06.814 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :       findClassInternal(freemarker.template$Configuration)
+2023-03-27 21:11:06.815 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Returning ClassNotFoundException
+2023-03-27 21:11:06.815 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Passing on ClassNotFoundException
+2023-03-27 21:11:06.815 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     findClass(com.samskivert.mustache.Template)
+2023-03-27 21:11:06.815 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :       findClassInternal(com.samskivert.mustache.Template)
+2023-03-27 21:11:06.816 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Returning ClassNotFoundException
+2023-03-27 21:11:06.816 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Passing on ClassNotFoundException
+2023-03-27 21:11:06.816 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     findClass(com.samskivert.mustache$Template)
+2023-03-27 21:11:06.816 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :       findClassInternal(com.samskivert.mustache$Template)
+2023-03-27 21:11:06.817 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Returning ClassNotFoundException
+2023-03-27 21:11:06.817 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Passing on ClassNotFoundException
+2023-03-27 21:11:06.817 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     findClass(groovy.text.TemplateEngine)
+2023-03-27 21:11:06.817 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :       findClassInternal(groovy.text.TemplateEngine)
+2023-03-27 21:11:06.818 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Returning ClassNotFoundException
+2023-03-27 21:11:06.818 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Passing on ClassNotFoundException
+2023-03-27 21:11:06.819 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     findClass(groovy.text$TemplateEngine)
+2023-03-27 21:11:06.819 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :       findClassInternal(groovy.text$TemplateEngine)
+2023-03-27 21:11:06.819 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Returning ClassNotFoundException
+2023-03-27 21:11:06.819 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Passing on ClassNotFoundException
+2023-03-27 21:11:06.820 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     findClass(org.thymeleaf.spring5.SpringTemplateEngine)
+2023-03-27 21:11:06.820 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :       findClassInternal(org.thymeleaf.spring5.SpringTemplateEngine)
+2023-03-27 21:11:06.820 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Returning ClassNotFoundException
+2023-03-27 21:11:06.820 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Passing on ClassNotFoundException
+2023-03-27 21:11:06.821 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     findClass(org.thymeleaf.spring5$SpringTemplateEngine)
+2023-03-27 21:11:06.821 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :       findClassInternal(org.thymeleaf.spring5$SpringTemplateEngine)
+2023-03-27 21:11:06.821 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Returning ClassNotFoundException
+2023-03-27 21:11:06.821 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Passing on ClassNotFoundException
+2023-03-27 21:11:06.822 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     findClass(org.apache.jasper.compiler.JspConfig)
+2023-03-27 21:11:06.822 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :       findClassInternal(org.apache.jasper.compiler.JspConfig)
+2023-03-27 21:11:06.823 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Returning ClassNotFoundException
+2023-03-27 21:11:06.823 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Passing on ClassNotFoundException
+2023-03-27 21:11:06.823 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     findClass(org.apache.jasper.compiler$JspConfig)
+2023-03-27 21:11:06.823 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :       findClassInternal(org.apache.jasper.compiler$JspConfig)
+2023-03-27 21:11:06.824 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Returning ClassNotFoundException
+2023-03-27 21:11:06.824 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :     --> Passing on ClassNotFoundException
+2023-03-27 21:11:06.824 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       : getResource(META-INF/resources/error/4xx.html)
+2023-03-27 21:11:06.824 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :   Delegating to parent classloader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@49d791e2
+2023-03-27 21:11:06.825 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :   --> Resource not found, returning null
+2023-03-27 21:11:06.825 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       : getResource(resources/error/4xx.html)
+2023-03-27 21:11:06.825 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :   Delegating to parent classloader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@49d791e2
+2023-03-27 21:11:06.825 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :   --> Resource not found, returning null
+2023-03-27 21:11:06.825 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       : getResource(static/error/4xx.html)
+2023-03-27 21:11:06.826 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :   Delegating to parent classloader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@49d791e2
+2023-03-27 21:11:06.826 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :   --> Resource not found, returning null
+2023-03-27 21:11:06.826 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       : getResource(public/error/4xx.html)
+2023-03-27 21:11:06.826 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :   Delegating to parent classloader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@49d791e2
+2023-03-27 21:11:06.826 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.loader.WebappClassLoaderBase       :   --> Resource not found, returning null
+2023-03-27 21:11:06.831 TRACE 16380 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-03-27 21:11:06.831 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'error'
+2023-03-27 21:11:06.836 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.f.s.DefaultListableBeanFactory     : Invoking afterPropertiesSet() on bean with name 'error'
+2023-03-27 21:11:06.836 DEBUG 16380 --- [http-nio-8080-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2023-03-27 21:11:06.836 TRACE 16380 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Rendering view [org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$StaticView@560e1f18] 
+2023-03-27 21:11:06.841 DEBUG 16380 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2023-03-27 21:11:06.841 TRACE 16380 --- [http-nio-8080-exec-2] org.hibernate.internal.SessionImpl       : Closing session [7228f727-0d08-4d65-891a-316df00d2914]
+2023-03-27 21:11:06.841 TRACE 16380 --- [http-nio-8080-exec-2] o.h.e.jdbc.internal.JdbcCoordinatorImpl  : Closing JDBC container [org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl@35967379]
+2023-03-27 21:11:06.842 TRACE 16380 --- [http-nio-8080-exec-2] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2023-03-27 21:11:06.842 TRACE 16380 --- [http-nio-8080-exec-2] o.h.r.j.i.LogicalConnectionManagedImpl   : Closing logical connection
+2023-03-27 21:11:06.842 TRACE 16380 --- [http-nio-8080-exec-2] o.h.r.j.i.LogicalConnectionManagedImpl   : Logical connection closed
+2023-03-27 21:11:06.842 DEBUG 16380 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404, headers={masked}
+2023-03-27 21:11:06.842 TRACE 16380 --- [http-nio-8080-exec-2] o.s.b.w.s.f.OrderedRequestContextFilter  : Cleared thread-bound request context: org.apache.catalina.core.ApplicationHttpRequest@7bf97bd3
+2023-03-27 21:11:06.842 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    :  Disabling the response for further output
+2023-03-27 21:11:06.846 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.coyote.http11.Http11InputBuffer      : Before fill(): parsingHeader: [true], parsingRequestLine: [true], parsingRequestLinePhase: [0], parsingRequestLineStart: [0], byteBuffer.position(): [0], byteBuffer.limit(): [0], end: [724]
+2023-03-27 21:11:06.846 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.tomcat.util.net.SocketWrapperBase    : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@57c6dac2:org.apache.tomcat.util.net.NioChannel@365da4ee:java.nio.channels.SocketChannel[connected local=/[0:0:0:0:0:0:0:1]:8080 remote=/[0:0:0:0:0:0:0:1]:53891]], Read from buffer: [0]
+2023-03-27 21:11:06.846 DEBUG 16380 --- [http-nio-8080-exec-2] org.apache.tomcat.util.net.NioEndpoint   : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@57c6dac2:org.apache.tomcat.util.net.NioChannel@365da4ee:java.nio.channels.SocketChannel[connected local=/[0:0:0:0:0:0:0:1]:8080 remote=/[0:0:0:0:0:0:0:1]:53891]], Read direct from socket: [0]
+2023-03-27 21:11:06.846 DEBUG 16380 --- [http-nio-8080-exec-2] o.a.coyote.http11.Http11InputBuffer      : Received []
+2023-03-27 21:11:06.846 DEBUG 16380 --- [http-nio-8080-exec-2] o.apache.coyote.http11.Http11Processor   : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@57c6dac2:org.apache.tomcat.util.net.NioChannel@365da4ee:java.nio.channels.SocketChannel[connected local=/[0:0:0:0:0:0:0:1]:8080 remote=/[0:0:0:0:0:0:0:1]:53891]], Status in: [OPEN_READ], State out: [OPEN]
+2023-03-27 21:11:06.847 DEBUG 16380 --- [http-nio-8080-exec-2] org.apache.tomcat.util.net.NioEndpoint   : Registered read interest for [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@57c6dac2:org.apache.tomcat.util.net.NioChannel@365da4ee:java.nio.channels.SocketChannel[connected local=/[0:0:0:0:0:0:0:1]:8080 remote=/[0:0:0:0:0:0:0:1]:53891]]
+2023-03-27 21:11:06.911 DEBUG 16380 --- [http-nio-8080-exec-1] o.a.coyote.http11.Http11InputBuffer      : Before fill(): parsingHeader: [true], parsingRequestLine: [true], parsingRequestLinePhase: [0], parsingRequestLineStart: [0], byteBuffer.position(): [0], byteBuffer.limit(): [0], end: [724]
+2023-03-27 21:11:06.911 DEBUG 16380 --- [http-nio-8080-exec-1] o.a.tomcat.util.net.SocketWrapperBase    : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@57c6dac2:org.apache.tomcat.util.net.NioChannel@365da4ee:java.nio.channels.SocketChannel[connected local=/[0:0:0:0:0:0:0:1]:8080 remote=/[0:0:0:0:0:0:0:1]:53891]], Read from buffer: [0]
+2023-03-27 21:11:06.912 DEBUG 16380 --- [http-nio-8080-exec-1] org.apache.tomcat.util.net.NioEndpoint   : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@57c6dac2:org.apache.tomcat.util.net.NioChannel@365da4ee:java.nio.channels.SocketChannel[connected local=/[0:0:0:0:0:0:0:1]:8080 remote=/[0:0:0:0:0:0:0:1]:53891]], Read direct from socket: [624]
+2023-03-27 21:11:06.912 DEBUG 16380 --- [http-nio-8080-exec-1] o.a.coyote.http11.Http11InputBuffer      : Received [GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Microsoft Edge";v="111", "Not(A:Brand";v="8", "Chromium";v="111"
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.54
+sec-ch-ua-platform: "Windows"
+Accept: image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-BR,pt;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+
+]
+2023-03-27 21:11:06.913 DEBUG 16380 --- [http-nio-8080-exec-1] o.a.c.authenticator.AuthenticatorBase    : Security checking request GET /favicon.ico
+2023-03-27 21:11:06.913 DEBUG 16380 --- [http-nio-8080-exec-1] org.apache.catalina.realm.RealmBase      :   No applicable constraints defined
+2023-03-27 21:11:06.913 DEBUG 16380 --- [http-nio-8080-exec-1] o.a.c.authenticator.AuthenticatorBase    : Not subject to any constraint
+2023-03-27 21:11:06.913 DEBUG 16380 --- [http-nio-8080-exec-1] o.apache.catalina.core.StandardWrapper   :   Returning non-STM instance
+2023-03-27 21:11:06.914 TRACE 16380 --- [http-nio-8080-exec-1] o.s.b.w.s.f.OrderedRequestContextFilter  : Bound request context to thread: org.apache.catalina.connector.RequestFacade@7bc65927
+2023-03-27 21:11:06.914 DEBUG 16380 --- [http-nio-8080-exec-1] org.apache.tomcat.util.http.Parameters   : Set encoding to UTF-8
+2023-03-27 21:11:06.915 TRACE 16380 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-03-27 21:11:06.918 TRACE 16380 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to HandlerExecutionChain with [ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]] and 4 interceptors
+2023-03-27 21:11:06.918 DEBUG 16380 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2023-03-27 21:11:06.918 TRACE 16380 --- [http-nio-8080-exec-1] .i.SessionFactoryImpl$SessionBuilderImpl : Opening Hibernate Session.  tenant=null
+2023-03-27 21:11:06.918 TRACE 16380 --- [http-nio-8080-exec-1] org.hibernate.internal.SessionImpl       : Opened Session [bc84fb6c-dad6-41ce-9528-4f33d70edfc3] at timestamp: 1679962266918
+2023-03-27 21:11:06.923 DEBUG 16380 --- [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2023-03-27 21:11:06.923 TRACE 16380 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-03-27 21:11:06.923 DEBUG 16380 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2023-03-27 21:11:06.923 TRACE 16380 --- [http-nio-8080-exec-1] org.hibernate.internal.SessionImpl       : Closing session [bc84fb6c-dad6-41ce-9528-4f33d70edfc3]
+2023-03-27 21:11:06.923 TRACE 16380 --- [http-nio-8080-exec-1] o.h.e.jdbc.internal.JdbcCoordinatorImpl  : Closing JDBC container [org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl@1f30772a]
+2023-03-27 21:11:06.923 TRACE 16380 --- [http-nio-8080-exec-1] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2023-03-27 21:11:06.923 TRACE 16380 --- [http-nio-8080-exec-1] o.h.r.j.i.LogicalConnectionManagedImpl   : Closing logical connection
+2023-03-27 21:11:06.923 TRACE 16380 --- [http-nio-8080-exec-1] o.h.r.j.i.LogicalConnectionManagedImpl   : Logical connection closed
+2023-03-27 21:11:06.924 DEBUG 16380 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND, headers={masked}
+2023-03-27 21:11:06.924 TRACE 16380 --- [http-nio-8080-exec-1] o.s.b.w.s.f.OrderedRequestContextFilter  : Cleared thread-bound request context: org.apache.catalina.connector.RequestFacade@7bc65927
+2023-03-27 21:11:06.924 DEBUG 16380 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost]           : Processing ErrorPage[errorCode=0, location=/error]
+2023-03-27 21:11:06.924 DEBUG 16380 --- [http-nio-8080-exec-1] o.apache.catalina.core.StandardWrapper   :   Returning non-STM instance
+2023-03-27 21:11:06.924 TRACE 16380 --- [http-nio-8080-exec-1] o.s.b.w.s.f.OrderedRequestContextFilter  : Bound request context to thread: org.apache.catalina.core.ApplicationHttpRequest@4324c13f
+2023-03-27 21:11:06.925 TRACE 16380 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2023-03-27 21:11:06.925 TRACE 16380 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+2023-03-27 21:11:06.925 TRACE 16380 --- [http-nio-8080-exec-1] o.s.b.f.s.DefaultListableBeanFactory     : Returning cached instance of singleton bean 'basicErrorController'
+2023-03-27 21:11:06.925 TRACE 16380 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-03-27 21:11:06.925 DEBUG 16380 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2023-03-27 21:11:06.925 TRACE 16380 --- [http-nio-8080-exec-1] .i.SessionFactoryImpl$SessionBuilderImpl : Opening Hibernate Session.  tenant=null
+2023-03-27 21:11:06.925 TRACE 16380 --- [http-nio-8080-exec-1] org.hibernate.internal.SessionImpl       : Opened Session [3a153b20-c120-4170-9091-f57533b137bb] at timestamp: 1679962266925
+2023-03-27 21:11:06.926 TRACE 16380 --- [http-nio-8080-exec-1] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.core.ApplicationHttpRequest@4324c13f]
+2023-03-27 21:11:06.944 DEBUG 16380 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2023-03-27 21:11:06.944 TRACE 16380 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Mar 27 21:11:06 BRT 2023, status=404, error=Not Found, message=No message available, path=/favicon.ico}]
+2023-03-27 21:11:07.006 TRACE 16380 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2023-03-27 21:11:07.006 TRACE 16380 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2023-03-27 21:11:07.006 DEBUG 16380 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2023-03-27 21:11:07.006 TRACE 16380 --- [http-nio-8080-exec-1] org.hibernate.internal.SessionImpl       : Closing session [3a153b20-c120-4170-9091-f57533b137bb]
+2023-03-27 21:11:07.006 TRACE 16380 --- [http-nio-8080-exec-1] o.h.e.jdbc.internal.JdbcCoordinatorImpl  : Closing JDBC container [org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl@15154ddd]
+2023-03-27 21:11:07.006 TRACE 16380 --- [http-nio-8080-exec-1] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2023-03-27 21:11:07.006 TRACE 16380 --- [http-nio-8080-exec-1] o.h.r.j.i.LogicalConnectionManagedImpl   : Closing logical connection
+2023-03-27 21:11:07.006 TRACE 16380 --- [http-nio-8080-exec-1] o.h.r.j.i.LogicalConnectionManagedImpl   : Logical connection closed
+2023-03-27 21:11:07.007 DEBUG 16380 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404, headers={masked}
+2023-03-27 21:11:07.007 TRACE 16380 --- [http-nio-8080-exec-1] o.s.b.w.s.f.OrderedRequestContextFilter  : Cleared thread-bound request context: org.apache.catalina.core.ApplicationHttpRequest@4324c13f
+2023-03-27 21:11:07.007 DEBUG 16380 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    :  Disabling the response for further output
+2023-03-27 21:11:07.007 DEBUG 16380 --- [http-nio-8080-exec-1] o.a.coyote.http11.Http11InputBuffer      : Before fill(): parsingHeader: [true], parsingRequestLine: [true], parsingRequestLinePhase: [0], parsingRequestLineStart: [0], byteBuffer.position(): [0], byteBuffer.limit(): [0], end: [624]
+2023-03-27 21:11:07.007 DEBUG 16380 --- [http-nio-8080-exec-1] o.a.tomcat.util.net.SocketWrapperBase    : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@57c6dac2:org.apache.tomcat.util.net.NioChannel@365da4ee:java.nio.channels.SocketChannel[connected local=/[0:0:0:0:0:0:0:1]:8080 remote=/[0:0:0:0:0:0:0:1]:53891]], Read from buffer: [0]
+2023-03-27 21:11:07.007 DEBUG 16380 --- [http-nio-8080-exec-1] org.apache.tomcat.util.net.NioEndpoint   : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@57c6dac2:org.apache.tomcat.util.net.NioChannel@365da4ee:java.nio.channels.SocketChannel[connected local=/[0:0:0:0:0:0:0:1]:8080 remote=/[0:0:0:0:0:0:0:1]:53891]], Read direct from socket: [0]
+2023-03-27 21:11:07.007 DEBUG 16380 --- [http-nio-8080-exec-1] o.a.coyote.http11.Http11InputBuffer      : Received []
+2023-03-27 21:11:07.008 DEBUG 16380 --- [http-nio-8080-exec-1] o.apache.coyote.http11.Http11Processor   : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@57c6dac2:org.apache.tomcat.util.net.NioChannel@365da4ee:java.nio.channels.SocketChannel[connected local=/[0:0:0:0:0:0:0:1]:8080 remote=/[0:0:0:0:0:0:0:1]:53891]], Status in: [OPEN_READ], State out: [OPEN]
+2023-03-27 21:11:07.008 DEBUG 16380 --- [http-nio-8080-exec-1] org.apache.tomcat.util.net.NioEndpoint   : Registered read interest for [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@57c6dac2:org.apache.tomcat.util.net.NioChannel@365da4ee:java.nio.channels.SocketChannel[connected local=/[0:0:0:0:0:0:0:1]:8080 remote=/[0:0:0:0:0:0:0:1]:53891]]
+2023-03-27 21:11:08.008 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=2; now=1679962268008; nextExpiration=1679962267430; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:11:09.020 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=2; now=1679962269020; nextExpiration=1679962269008; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:11:10.020 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=2; now=1679962270020; nextExpiration=1679962270020; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:11:11.027 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=2; now=1679962271027; nextExpiration=1679962271020; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:11:12.028 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=2; now=1679962272028; nextExpiration=1679962272027; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:11:13.028 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=2; now=1679962273028; nextExpiration=1679962273028; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:11:14.032 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=2; now=1679962274032; nextExpiration=1679962274028; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:11:15.032 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=2; now=1679962275032; nextExpiration=1679962275032; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:11:16.044 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=2; now=1679962276044; nextExpiration=1679962276032; keyCount=0; hasEvents=false; eval=false
+2023-03-27 21:11:17.045 DEBUG 16380 --- [http-nio-8080-Poller] org.apache.tomcat.util.net.NioEndpoint   : timeout completed: keys processed=2; now=1679962277045; nextExpiration=1679962277044; keyCount=0; hasEvents=false; eval=false
