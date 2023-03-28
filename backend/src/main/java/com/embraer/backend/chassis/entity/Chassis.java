@@ -27,7 +27,7 @@ public class Chassis {
 	
 	@Id
 	@Column(name="CHASSI_ID")
-	private String chassiId;
+	private Long chassiId;
 	
 	@Column(name="CHASSI_DTREGISTER")
 	@UpdateTimestamp
