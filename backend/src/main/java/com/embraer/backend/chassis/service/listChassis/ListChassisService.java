@@ -21,11 +21,15 @@ public class ListChassisService  {
 		
 		List<Chassis> listChassis = chassisRepository.findAll();
 		
+		if (listChassis==null || listChassis.isEmpty()) {
+			throw new Error("ChassiNotExist");
+		}
+		
 		List<ListChassisDto> listChassiDto = new ArrayList<ListChassisDto>();
 		
 		for (Chassis chassi: listChassis) {
 			ListChassisDto listChassisDto = new ListChassisDto();
-			listChassisDto.setChassi_id(1L);
+			listChassisDto.setChassi_id(chassi.getChassiId());
 			listChassiDto.add(listChassisDto);
 		}
 			
