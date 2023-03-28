@@ -40,7 +40,11 @@ export default {
         
         eventBus.$on('search-term-updated', (searchTerm: string) => {
             this.searchTerm = searchTerm
-        })           
+        });
+        
+        eventBus.$on('click-event-url', (searchTerm: string) => {
+            this.searchTerm = ''
+        });
         
     },
     

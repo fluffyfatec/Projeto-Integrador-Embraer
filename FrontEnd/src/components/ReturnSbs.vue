@@ -1,6 +1,6 @@
 <template>
     <div v-if="searchTerm" class="container-card">
-        <div v-for="sb in filteredItems" class="card" @click="divClickToSbs(sb)"><i class="fa-solid fa-plane-up"></i>{{ c }}</div>
+        <div v-for="sb in filteredItems" class="card" @click="divClickToSbs(sb); clickToReset()"><i class="fa-solid fa-plane-up"></i>{{ c }}</div>
     </div>
 </template>
 
@@ -37,6 +37,12 @@ export default {
                 }
             });
         },
+
+        clickToReset() {
+        
+        eventBus.$emit('click-event-url', this.searchTerm)
+        },
+
 
     },
 
