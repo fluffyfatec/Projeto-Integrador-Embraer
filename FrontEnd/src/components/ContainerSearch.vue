@@ -61,7 +61,7 @@ export default {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 8%;
+  margin-top: 5%;
 }
 
 /* Classes referentes ao formulário de pesquisa */
@@ -79,15 +79,15 @@ export default {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    position: relative;
+            position: absolute;
 }
 .pesquisar h3 {
     -ms-flex-item-align: center;
         align-self: center;
     margin-right: 1rem;
     font-size: 2rem;
-    color: var(--azul-profundo);
-    font-weight: 500;
+    color: var(--azul-principal);
+    font-weight: 900;
     margin-bottom: 1.5rem;
 }
 .pesquisar .formulario {
@@ -97,9 +97,9 @@ export default {
     border: none;
     border-radius: 5px;
     outline: none;
-    color: var(--light-dark-color);
-    width: 500px;
+    width: 450px;
 }
+
 
 /* --------------- Media Queries -------------------- */
 
@@ -108,28 +108,32 @@ export default {
   
 /* Container Pesquisa */
 .container-pesquisa {
-  margin-top: 6%;
+    margin-top: 4%;
+    justify-content: center;
+    align-items: center;
 }
 /* Classes referentes ao formulário de pesquisa */
 .pesquisar h3 {
     margin-right: 1rem;
-    font-size: 2rem;
-    color: var(--azul-profundo);
-    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--azul-principal);
+    font-weight: 800;
     margin-bottom: 1.5rem;
+    margin-top: 4%;
 }
 .pesquisar .formulario {
-    opacity: 0.7;
-    padding: 1rem 1rem;
+    opacity: 0.6;
+    padding: 1rem 2rem;
     font-size: 14pt;
     border: none;
     border-radius: 5px;
     outline: none;
     color: var(--light-dark-color);
-    width: 300px;
-    height: auto;
+    width: 250px;
+    height: 5px;
 }
-  
+
+
 }
 /* Estilos para mobile */
 @media only screen and (max-width: 767px) {
@@ -143,22 +147,23 @@ export default {
     -ms-flex-item-align: center;
         align-self: center;
     margin-right: 1rem;
-    font-size: 2rem;
-    color: var(--azul-profundo);
-    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--azul-principal);
+    font-weight: 900;
     margin-bottom: 1.5rem;
 }
 .pesquisar .formulario {
-    opacity: 0.7;
-    padding: 1rem 0.8rem;
-    font-size: 12pt;
+    opacity: 0.6;
+    padding: 1rem 2rem;
+    font-size: 10pt;
     border: none;
     border-radius: 5px;
     outline: none;
     color: var(--light-dark-color);
-    width: 180px;
-    height: 10px;
+    width: 200px;
+    height: 5px;
 }
+
 }
 
 </style>
