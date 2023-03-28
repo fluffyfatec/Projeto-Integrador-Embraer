@@ -1,7 +1,7 @@
 <template>
     <div v-if="searchTerm" class="container-card">
-        <div v-if="$route.meta.itemsDetails" v-for="c in filteredItems" class="card" @click="divClickToItems(c)"><i class="fa-solid fa-plane-up"></i>Chassi nº{{ c }}</div>
-        <div v-if="$route.meta.planesDetails" v-for="c in filteredItems" class="card" @click="divClickToPlanes(c)"><i class="fa-solid fa-plane-up"></i>Chassi nº{{ c }}</div>
+        <div v-if="$route.meta.itemsDetails" v-for="c in filteredItems" class="card" @click="divClickToItems(c); clickToReset()"><i class="fa-solid fa-plane-up"></i>Chassi nº{{ c }}</div>
+        <div v-if="$route.meta.planesDetails" v-for="c in filteredItems" class="card" @click="divClickToPlanes(c); clickToReset()"><i class="fa-solid fa-plane-up"></i>Chassi nº{{ c }}</div>
     </div>
 </template>
 
@@ -13,23 +13,25 @@ export default {
 
     data() {
         return {
-            chassis: ['000047', '000052', '000067', '000075'],
+            chassis: [],
             searchTerm: '',
         }
     },
 
     mounted() {
-        //this.getChassis();
+        this.getChassis();
 
     },
 
     methods: {
 
         async getChassis() {
-            this.chassis = await (await axios.get('REQUISIÇÃO')).data
+            this.chassis = (await axios.get('https://mocki.io/v1/0cd8a1c7-9c35-4771-81fc-f27151b67f50')).data;
+            console.log(this.chassis);
         },
 
         divClickToItems(chassis: string) {
+
             this.$router.push({
              name: 'items-details',
                 params: {
@@ -39,6 +41,7 @@ export default {
         },
 
         divClickToPlanes(chassis: string) {
+
             this.$router.push({
              name: 'planes-details',
                 params: {
@@ -46,6 +49,12 @@ export default {
                 }
             });
         },
+
+        clickToReset() {
+        
+            eventBus.$emit('click-event-url', this.searchTerm)
+        },
+
     },
 
     created() {
@@ -57,7 +66,7 @@ export default {
 
     computed: {
         filteredItems() {
-             return this.chassis.filter(result => result.toLowerCase().includes(this.searchTerm.toLowerCase()))
+             return this.chassis.map(item => item.chassi).filter(result => result.toLowerCase().includes(this.searchTerm.toLowerCase()))
         },
     },
 }

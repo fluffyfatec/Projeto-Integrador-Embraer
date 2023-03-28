@@ -12,20 +12,21 @@ export default {
 
     data() {
         return {
-            sbs: ['abc', 'daef', 'ghbi', 'kalmo'],
+            sbs: [],
             searchTerm: '',
         }
     },
 
     mounted() {
-        //this.getSbs();
+        this.getSbs();
 
     },
 
     methods: {
 
         async getSbs() {
-            this.sbs = await (await axios.get('REQUISIÇÃO')).data
+            this.sbs = (await axios.get('REQUISIÇÃO')).data;
+            console.log(this.sbs);
         },
 
         divClickToSbs(sb: string) {
@@ -48,7 +49,7 @@ export default {
 
     computed: {
         filteredItems() {
-             return this.sbs.filter(result => result.toLowerCase().includes(this.searchTerm.toLowerCase()))
+             return this.sbs.map(item => item.sb_id).filter(result => result.toLowerCase().includes(this.searchTerm.toLowerCase()))
         },
     },
 }
