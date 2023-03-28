@@ -20,18 +20,18 @@ import lombok.Setter;
 @Setter
 
 @Entity
-@Table(name="CHASSIS_USER")
+@Table(name = "CHASSIS_USER")
 public class ChassisUser {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="CHASSI_USER_ID")
-	private long chassiUserId;
+	@Column(name = "CHASSI_USER_ID")
+	private Long chassiUserId;
 
-	@JoinColumn(name="CHASSI_ID")
+	@JoinColumn(name = "CHASSI_ID")
 	@ManyToOne(fetch = FetchType.LAZY)
 	private Chassis chassiId;
-	
-	@JoinColumn(name="USER_ID")
+
+	@JoinColumn(name = "USER_ID")
 	@ManyToOne(fetch = FetchType.LAZY)
-	private User userId; 
+	private User userId;
 }
