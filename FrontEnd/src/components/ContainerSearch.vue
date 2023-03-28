@@ -2,12 +2,50 @@
     <div class="container-pesquisa">
         <div class="container-pesquisa">
           <div class="pesquisar">
-              <input v-if="$route.meta.showPesquisar" type="text" class="formulario" :placeholder="$route.meta.placeHolderValue">
+              <input v-if="$route.meta.showSearchChassis" 
+              type="text" 
+              class="formulario" 
+              :placeholder="$route.meta.placeHolderValue"
+              v-model="searchTermChassis"
+              @input="updateSearchTermChassis">
+
+              <input v-if="$route.meta.showSearchSbs" 
+              type="text" 
+              class="formulario" 
+              :placeholder="$route.meta.placeHolderValue"
+              v-model="searchTermSbs"
+              @input="updateSearchTermSbs">
+
               <h3 v-if="$route.meta.showH3">{{ $route.meta.tituloValue }}</h3>
           </div>
         </div>
     </div>
 </template>
+
+<script lang="ts">
+import { eventBus } from '@/main.js'
+
+export default {
+  data() {
+    return {
+      searchTermChassis: '',
+      searchTermSbs: '',
+    }
+  },
+
+  methods: {
+    updateSearchTermChassis() {
+        eventBus.$emit('search-term-updated', this.searchTermChassis)
+    },
+    
+    updateSearchTermSbs() {
+        eventBus.$emit('search-term-updated', this.searchTermSbs)
+    }
+  },
+
+}
+</script>
+
 
 <style scoped>
 
