@@ -29,7 +29,7 @@ import lombok.Setter;
 public class ServiceBulletin {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="SB_ID")
 	private Long serviceBulletinId;
 	

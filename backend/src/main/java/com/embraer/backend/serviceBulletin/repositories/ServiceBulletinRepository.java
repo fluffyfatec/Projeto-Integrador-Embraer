@@ -12,5 +12,8 @@ import org.springframework.stereotype.Repository;
 public interface ServiceBulletinRepository extends JpaRepository<ServiceBulletin, Long>{
 	
 	List<ServiceBulletin> findByChassiId(Chassis chassi);
+	
+	ServiceBulletin findByServiceBulletinName (String serviceBulletinName);
+	
 
 }

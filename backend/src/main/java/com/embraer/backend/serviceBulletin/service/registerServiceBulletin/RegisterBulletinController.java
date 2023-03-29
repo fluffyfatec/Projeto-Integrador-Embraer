@@ -21,9 +21,9 @@ public class RegisterBulletinController {
 	
 	
 	@PostMapping
- 	public ResponseEntity<Void> registerBulletinService(@RequestBody List<ServiceBulletinRegisterDTO> chassiRegisterDTO){
+ 	public ResponseEntity<Void> registerBulletinService(@RequestBody List<ServiceBulletinRegisterDTO> serviceBulletinRegisterDTO){
 		
-		bulletinService.execute(chassiRegisterDTO);
+		bulletinService.execute(serviceBulletinRegisterDTO);
 			
 		return new ResponseEntity<Void>(HttpStatus.CREATED);
 		
