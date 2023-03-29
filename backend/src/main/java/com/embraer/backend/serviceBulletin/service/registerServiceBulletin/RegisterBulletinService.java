@@ -13,31 +13,29 @@ import com.embraer.backend.serviceBulletin.service.registerServiceBulletin.util.
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 @Service
 public class RegisterBulletinService {
-	
+
 	@Autowired
 	private ServiceBulletinRepository serviceBulletinRepository;
-	
+
 	@Autowired
 	private VerifyPart verifyPart;
-	
+
 	public void execute(List<ServiceBulletinRegisterDTO> serviceBulletinRegisterDTO) {
-		
+
 		List<ServiceBulletin> service = new ArrayList<>();
-		
+
 		for(ServiceBulletinRegisterDTO serviceDTO: serviceBulletinRegisterDTO) {
-			
-			ServiceBulletin serviceBulletinExist = serviceBulletinRepository
-					.findByServiceBulletinName(serviceDTO.getBulletin_service());
-			
+
 			VerifyDTO serviceInfo = verifyPart.verifyPart(serviceDTO.getBulletin_service());
-			
+
 			ServiceBulletin serviceBulletin = new ServiceBulletin();
-			
+
 			Chassis chassis = new Chassis();
 			chassis.setChassiId(serviceDTO.getChassis());
-			
+
 			serviceBulletin.setChassiId(chassis);
 			serviceBulletin.setServiceBulletinName(serviceInfo.getBulletin());
 			serviceBulletin.setServiceBulletinPart(serviceInfo.getPart());
@@ -45,6 +43,6 @@ public class RegisterBulletinService {
 			service.add(serviceBulletin);
 			}
 		serviceBulletinRepository.saveAllAndFlush(service);
-		
+
 	}
 }
