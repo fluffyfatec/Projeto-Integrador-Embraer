@@ -22,11 +22,14 @@ public class RegisterBulletinService {
 	@Autowired
 	private VerifyPart verifyPart;
 	
-	public void execute(List<ServiceBulletinRegisterDTO> chassiRegisterDTO) {
+	public void execute(List<ServiceBulletinRegisterDTO> serviceBulletinRegisterDTO) {
 		
 		List<ServiceBulletin> service = new ArrayList<>();
 		
-		for(ServiceBulletinRegisterDTO serviceDTO: chassiRegisterDTO) {
+		for(ServiceBulletinRegisterDTO serviceDTO: serviceBulletinRegisterDTO) {
+			
+			ServiceBulletin serviceBulletinExist = serviceBulletinRepository
+					.findByServiceBulletinName(serviceDTO.getBulletin_service());
 			
 			VerifyDTO serviceInfo = verifyPart.verifyPart(serviceDTO.getBulletin_service());
 			
@@ -40,8 +43,8 @@ public class RegisterBulletinService {
 			serviceBulletin.setServiceBulletinPart(serviceInfo.getPart());
 			serviceBulletin.setServiceBulletinStatus(serviceDTO.getStatus());
 			service.add(serviceBulletin);
-		
-		}
+			}
 		serviceBulletinRepository.saveAllAndFlush(service);
+		
 	}
 }
