@@ -26,8 +26,8 @@ export default {
     methods: {
 
         async getChassis() {
-            this.chassis = (await axios.get('https://mocki.io/v1/0cd8a1c7-9c35-4771-81fc-f27151b67f50')).data;
-            console.log(this.chassis);
+            const response = await axios.get('http://localhost:8080/chassi/list');
+            this.chassis = response.data.map((item: String) => ({ chassi_id: item.chassi_id }));
         },
 
         divClickToItems(chassis: string) {
@@ -66,7 +66,9 @@ export default {
 
     computed: {
         filteredItems() {
-             return this.chassis.map(item => item.chassi).filter(result => result.toLowerCase().includes(this.searchTerm.toLowerCase()))
+            return this.chassis
+                .filter(item => String(item.chassi_id).toLowerCase().includes(this.searchTerm.toLowerCase()))
+                .map(item => item.chassi_id);
         },
     },
 }

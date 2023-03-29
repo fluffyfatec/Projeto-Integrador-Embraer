@@ -95,8 +95,8 @@ const router = new VueRouter({
     // Administrative Panel
 
     {
-      path: '/painel-adm',
-      name: 'painel-adm',
+      path: '/admin-panel',
+      name: 'admin-panel',
       //component: () => import('../views/CrudCondition.vue'),
       meta: {
         showH3: true,
@@ -120,8 +120,8 @@ const router = new VueRouter({
     // Notifications
 
     {
-      path: '/notificacoes',
-      name: 'notificacoes',
+      path: '/notifications',
+      name: 'notifications',
       //component: () => import('../views/ImportaDados.vue'),
       meta: {
         showH3: true,
