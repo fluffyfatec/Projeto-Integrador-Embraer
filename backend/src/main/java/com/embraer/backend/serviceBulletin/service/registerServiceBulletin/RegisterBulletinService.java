@@ -28,8 +28,8 @@ public class RegisterBulletinService {
 		
 		for(ServiceBulletinRegisterDTO serviceDTO: serviceBulletinRegisterDTO) {
 			
-			ServiceBulletin serviceBulletinExist = serviceBulletinRepository
-					.findByServiceBulletinName(serviceDTO.getBulletin_service());
+			//ServiceBulletin serviceBulletinExist = serviceBulletinRepository
+				//	.findByServiceBulletinName(serviceDTO.getBulletin_service());
 			
 			VerifyDTO serviceInfo = verifyPart.verifyPart(serviceDTO.getBulletin_service());
 			

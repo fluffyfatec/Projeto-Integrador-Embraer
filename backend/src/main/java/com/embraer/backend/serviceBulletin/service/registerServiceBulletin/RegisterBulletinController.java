@@ -27,7 +27,5 @@ public class RegisterBulletinController {
 			
 		return new ResponseEntity<Void>(HttpStatus.CREATED);
 		
-
 	}
-
 }
