@@ -22,17 +22,11 @@ public class ListBulletinIncorporated {
 	private Timestamp service_bulletin_register;
 
 	@NotNull
-	private String status_incorporated;
+	private String status;
 
 	private String service_bulletin_part;
 
 	@NotNull
 	private Chassis chassi_id;
-
-	/*@NotNull
-	private String user_register_name;
-
-	@NotNull
-	private String user_change_name;*/
 
 }
