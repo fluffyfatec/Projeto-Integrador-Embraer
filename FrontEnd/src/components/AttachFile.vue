@@ -83,7 +83,7 @@ export default {
             // objeto de mapeamento de nomes de chave original para o novo nome de chave
             const keyMap = {
                 "Boletim de serviço": "bulletin_service",
-                "Status": "status",
+                "Status": "Status",
             };
 
             const header = Object.keys(json[0]); // obter as chaves do primeiro objeto como o cabeçalho
@@ -98,6 +98,7 @@ export default {
                 if (index === 0) {
                     // remover a chave "Chassis " com espaço
                     delete newRow["Chassis "];
+                    delete newRow["Chassis"];
                 }
                 newRow["chassis"] = chassisValue;
                 newData.push(newRow);
@@ -128,19 +129,18 @@ export default {
     sendData() {
         if (this.files.length > 0) {
             
-            var i = 1;
+            this.filesJSON.forEach(data => {
+                const jsonData = JSON.stringify(data);
 
-            const formData = new FormData();
-            this.filesJSON.forEach((file) => {
-                
-                formData.append('data' + i, JSON.stringify(file));
-                i++;
-            });
+                console.log(jsonData);
 
-            console.log(formData);
-
-            // enviar arquivos para o servidor
-            axios.post('REQUISIÇÃO', formData); 
+                // enviar arquivos para o servidor
+                axios.post('http://localhost:8080/register/bulletin', jsonData, {
+                    headers: {
+                    'Content-Type': 'application/json'
+                    }
+                });
+            });     
 
             // resetar o valor do input
             this.$refs.file.value = null;

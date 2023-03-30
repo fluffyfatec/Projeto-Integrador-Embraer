@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.embraer.backend.chassisUser.entity.ChassisUser;
 
 @Repository
-public interface chassisUserRepository extends JpaRepository<ChassisUser, String>{
+public interface chassisUserRepository extends JpaRepository<ChassisUser, Long>{
 
 }

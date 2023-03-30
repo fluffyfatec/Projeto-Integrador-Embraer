@@ -14,7 +14,9 @@ public interface ServiceBulletinRepository extends JpaRepository<ServiceBulletin
 	
 	List<ServiceBulletin> findByChassiId(Chassis chassi);
 	
+
 	@Query("SELECT DISTINCT sb.serviceBulletinName FROM ServiceBulletin sb")
 	List<String> findDistinctByServiceBulletinName();
+
 
 }

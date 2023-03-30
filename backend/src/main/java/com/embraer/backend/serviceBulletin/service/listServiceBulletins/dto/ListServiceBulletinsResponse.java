@@ -1,21 +1,22 @@
 package com.embraer.backend.serviceBulletin.service.listServiceBulletins.dto;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 
 import javax.validation.constraints.NotNull;
+
+import com.embraer.backend.chassis.entity.Chassis;
 
 import lombok.Data;
 
 @Data
 public class ListServiceBulletinsResponse {
-	
-	@NotNull
-	private ArrayList<ListBulletinIncorporated> bulletin_incorporated;
-	
-	@NotNull
-	private ArrayList<ListBulletinNotApplicable> bulletin_not_applicables;
 
 	@NotNull
-	private ArrayList<ListBulletinApplicable> bulletin_applicables;
+	private String service_bulleti_name;
+
+	@NotNull
+	private String status;
 	
 }
+

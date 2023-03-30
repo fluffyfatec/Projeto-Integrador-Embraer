@@ -6,6 +6,8 @@ import router from './router'
 
 import './assets/main.css'
 
+export const eventBus = new Vue()
+
 Vue.use(PiniaVuePlugin)
 
 new Vue({

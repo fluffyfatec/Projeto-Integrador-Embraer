@@ -11,49 +11,100 @@ const router = new VueRouter({
     
     {
       path: '/',
-      redirect: '/avioes',
+      redirect: '/items',
       //component: HomeView
     },
 
+
+    // Section of items search and after, section of specific item details, with variable "chassis"
+
     {
-      path: '/avioes',
-      name: 'avioes',
-      //component: () => import(''),
+      path: '/items',
+      name: 'items',
+      component: () => import('../views/SearchItems.vue'),
       meta: {
-        showPesquisar: true,
-        placeHolderValue: 'Pesquise um chassi...',
+        showSearchChassis: true,
+        itemsDetails: true,
+        placeHolderValue: 'Search a chassis...',
       }
     },
+
+    {
+      path: '/items/:chassis',
+      name: 'items-details',
+      component: () => import('../views/ItemsDetails.vue'),
+      props: true,
+      meta: {
+        showSearchChassis: true,
+        itemsDetails: true,
+        placeHolderValue: 'Search a chassis...',
+      }
+    },
+
+
+    // Section of planes search and after, section of specific plane details, with variable "chassis"
+
+    {
+      path: '/planes',
+      name: 'planes',
+      component: () => import('../views/SearchPlanes.vue'),
+      meta: {
+        showSearchChassis: true,
+        planesDetails: true,
+        placeHolderValue: 'Search a chassis...',
+      }
+    },
+
+    {
+      path: '/planes/:chassis',
+      name: 'planes-details',
+      component: () => import('../views/PlanesDetails.vue'),
+      props: true,
+      meta: {
+        showSearchChassis: true,
+        planesDetails: true,
+        placeHolderValue: 'Search a chassis...',
+      }
+    },
+
+
+    // Section of Sbs search and after, section of specific sb details, with variable "sb"
 
     {
       path: '/sbs',
       name: 'SBs',
-      //component: () => import('../views/AboutView.vue'),
+      component: () => import('../views/SearchSbs.vue'),
       meta: {
-        showPesquisar: true,
-        placeHolderValue: 'Pesquise um SB...',
+        showSearchSbs: true,
+        placeHolderValue: 'Search a SB...',
       }
     },
 
     {
-      path: '/painel-adm',
-      name: 'painel-adm',
-      component: () => import('../views/CrudCondition.vue'),
+      path: '/sbs/:sb',
+      name: 'sbs-details',
+      component: () => import('../views/SbsDetails.vue'),
+      props: true,
       meta: {
-        showH3: true,
-        tituloValue: 'Painel Administrativo',
+        showSearchSbs: true,
+        placeHolderValue: 'Search a SB...',
       }
     },
 
+
+    // Administrative Panel
+
     {
-      path: '/notificacoes',
-      name: 'notificacoes',
-      //component: () => import('../views/ImportaDados.vue'),
+      path: '/admin-panel',
+      name: 'admin-panel',
+      //component: () => import('../views/CrudCondition.vue'),
       meta: {
         showH3: true,
-        tituloValue: 'Notificações',
+        tituloValue: 'Administrative Panel',
       }
     },
+
+    // Section of upload files, inside Administrative Panel
 
     {
       path: '/upload',
@@ -61,9 +112,23 @@ const router = new VueRouter({
       component: () => import('../views/DataImport.vue'),
       meta: {
         showH3: true,
-        tituloValue: 'Importar Dados',
+        tituloValue: 'Data Import',
       }
     },
+
+
+    // Notifications
+
+    {
+      path: '/notifications',
+      name: 'notifications',
+      //component: () => import('../views/ImportaDados.vue'),
+      meta: {
+        showH3: true,
+        tituloValue: 'Notifications',
+      }
+    },
+
   ]
 })
 

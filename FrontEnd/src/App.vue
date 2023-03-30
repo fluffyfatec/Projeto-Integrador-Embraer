@@ -20,10 +20,11 @@
         
           <ul class="desktop-nav">
             <li id="user-icone"><router-link to="/"><i class="fa-solid fa-circle-user"></i></router-link></li>
-            <li><router-link to="/notificacoes">Notificações</router-link></li>
-            <li><router-link to="/painel-adm">Admin</router-link></li>
+            <li><router-link to="/notifications">Notifications</router-link></li>
+            <li><router-link to="/admin-panel">Admin</router-link></li>
             <li><router-link to="/sbs">SBs</router-link></li>
-            <li><router-link to="/avioes">Aviões</router-link></li>
+            <li><router-link to="/planes">Planes</router-link></li>
+            <li><router-link to="/items">Items</router-link></li>
           </ul>
         </div>  
       </nav>
@@ -39,10 +40,10 @@
     <footer v-if="isMobile" class="mobile-navbar">
           <nav>
             <ul class="mobile-navbar-itens">
-              <li><router-link to="/avioes"><i class="fa-solid fa-plane-departure"></i></router-link></li>
+              <li><router-link to="/planes"><i class="fa-solid fa-plane-departure"></i></router-link></li>
               <li><router-link to="/sbs"><i class="fa-sharp fa-solid fa-screwdriver-wrench"></i></router-link></li>
-              <li><router-link to="/painel-adm"><i class="fa-solid fa-chart-line"></i></router-link></li>
-              <li><router-link to="/notificacoes"><i class="fa-regular fa-bell"></i></router-link></li>
+              <li><router-link to="/admin-panel"><i class="fa-solid fa-chart-line"></i></router-link></li>
+              <li><router-link to="/notifications"><i class="fa-regular fa-bell"></i></router-link></li>
             </ul>
           </nav>
     </footer>
