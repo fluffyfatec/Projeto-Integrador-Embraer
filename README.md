@@ -20,8 +20,7 @@
 </p>
 
 ## Desafio
-
-
+Atualmente muitos pilotos trabalham como “freelancer” e não operam apenas uma aeronave/frota, o que dificulta o reconhecimento simples e fácil de certos equipamentos e versões de softwares instalados na aeronave. Além disso, nem sempre o piloto tem acesso de forma rápida a todos os manuais e documentos da aeronave, o que prejudica seu conhecimento sobre a mesma e suas capacidades.
 
 <p align="right">(<a href="#top">voltar ao topo</a>)</p>
 
@@ -29,16 +28,31 @@
 
 <details>
 <summary>Requisitos Funcionais</summary>
+      <p></p>
+<p>• Acesso à base de dados de clientes (usuário, senha e equipamento);
+      
+<p>• Usuários devem ter perfis diferentes (administrador, edição e consulta);
 
+<p>• CRUD's de "Clientes" e "Itens";
 
+<p>• Quadro de Administração e Estatísticas;
+
+<p>• Geração de PDF e exportação do mesmo.
 </details>
+      
 
-<details>
+<details>     
 <summary>Requisitos Não Funcionais</summary>
-
-
+<p></p>
+<p>• Linguagem Java
+      
+<p>• Banco de Dados Relacional (Cloud)
+      
+<p>• Sistema WEB
+      
+<p>• Documentação
+      
 </details>
-
 <p align="right">(<a href="#top">voltar ao topo</a>)</p>
 
 ## Solução
@@ -112,11 +126,11 @@
 
 | Avatar            							| Aluno         | Função           		| GitHub                                                      | LinkedIn                                              |
 | -------------------------------------------- | ---------------- | ---------------- | -------------------------------------------------------------- | ----------------------------------------------------- |
-| <img src = "./GIT/avatarpatrick.png" width="60" >|__Patrick Souza__  | *Developer Team* | [![](https://bit.ly/3f9Xo0P)](https://github.com/PatrickSouzza)  | [![](https://bit.ly/2P1ZogM)](https://www.linkedin.com/in/patrick-g-souza/) |
-| <img src = "./GIT/avatarfelipe.png" width="60" >|__Felipe Sobral__  | *Developer Team*  | [![](https://bit.ly/3f9Xo0P)](https://github.com/SoSoJigsaw)| [![](https://bit.ly/2P1ZogM)]() |
-| <img src = "./GIT/avatarluiz.png" width="60" >|__Luiz Felipe Borges__ | *Scrum Master* | [![](https://bit.ly/3f9Xo0P)](https://github.com/luizborges17)   | [![](https://bit.ly/2P1ZogM)](https://www.linkedin.com/in/luizborges17/) |
-| <img src = "./GIT/avatarvictor.png" width="60" >|__Victor Fernandes__  | *Developer Team*  | [![](https://bit.ly/3f9Xo0P)](https://github.com/victornaca)| [![](https://bit.ly/2P1ZogM)](https://www.linkedin.com/in/victor-fernandes-1a61a917b/) |
-
+| <img src = "./GIT/avatarpatrick.png" width="60" >|_Patrick Souza_  | Scrum Master | [![](https://bit.ly/3f9Xo0P)](https://github.com/PatrickSouzza)  | [![](https://bit.ly/2P1ZogM)](https://www.linkedin.com/in/patrick-g-souza/) |
+| <img src = "./GIT/avatarfelipe.png" width="60" >|_Felipe Sobral_  | Product Owner  | [![](https://bit.ly/3f9Xo0P)](https://github.com/SoSoJigsaw)| [![](https://bit.ly/2P1ZogM)]() |
+| <img src = "./GIT/avatarvictor.png" width="60" >|_Júlia Rafaela_  | Developer Team  | [![](https://bit.ly/3f9Xo0P)](https://github.com/jufaela)| [![](https://bit.ly/2P1ZogM)](https://www.linkedin.com/in/j%C3%BAlia-andrade-1195a121a) |
+| <img src = "./GIT/avatarluiz.png" width="60" >|_Luiz Felipe Borges_ | Developer Team | [![](https://bit.ly/3f9Xo0P)](https://github.com/luizborges17)   | [![](https://bit.ly/2P1ZogM)](https://www.linkedin.com/in/luizborges17/) |
+| <img src = "./GIT/avatarvictor.png" width="60" >|_Victor Fernandes_  | Developer Team  | [![](https://bit.ly/3f9Xo0P)](https://github.com/victornaca)| [![](https://bit.ly/2P1ZogM)](https://www.linkedin.com/in/victor-fernandes-1a61a917b/) |
 
 <p align="right">(<a href="#top">voltar ao topo</a>)</p>
 
