@@ -1,6 +1,4 @@
 
-import type CadastrarCondicaoVue from '@/components/CadastrarCondicao.vue';
-
 <template>
     <div>
         <RegisterCondition></RegisterCondition>

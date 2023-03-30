@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.embraer.backend.chassis.entity.Chassis;
-import com.embraer.backend.chassis.repositories.ChassisRepository;
 import com.embraer.backend.serviceBulletin.entity.ServiceBulletin;
 import com.embraer.backend.serviceBulletin.repositories.ServiceBulletinRepository;
 import com.embraer.backend.serviceBulletin.service.registerServiceBulletin.dto.ServiceBulletinRegisterDTO;
@@ -14,14 +13,12 @@ import com.embraer.backend.serviceBulletin.service.registerServiceBulletin.util.
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 @Service
 public class RegisterBulletinService {
 
 	@Autowired
 	private ServiceBulletinRepository serviceBulletinRepository;
-
-	@Autowired
-	private ChassisRepository chassisRepository;
 
 	@Autowired
 	private VerifyPart verifyPart;
@@ -30,41 +27,21 @@ public class RegisterBulletinService {
 
 		List<ServiceBulletin> service = new ArrayList<>();
 
-		for (ServiceBulletinRegisterDTO serviceDTO : serviceBulletinRegisterDTO) {
-
-			Boolean exist = chassisRepository.existsById(serviceDTO.getChassis());
-			System.err.println("1");
+		for(ServiceBulletinRegisterDTO serviceDTO: serviceBulletinRegisterDTO) {
 
 			VerifyDTO serviceInfo = verifyPart.verifyPart(serviceDTO.getBulletin_service());
 
 			ServiceBulletin serviceBulletin = new ServiceBulletin();
-			
-			if (exist) {
-				Chassis chassis = new Chassis();
-				chassis.setChassiId(serviceDTO.getChassis());
 
-				serviceBulletin.setChassiId(chassis);
-				serviceBulletin.setServiceBulletinName(serviceInfo.getBulletin());
-				serviceBulletin.setServiceBulletinPart(serviceInfo.getPart());
-				serviceBulletin.setServiceBulletinStatus(serviceDTO.getStatus());
-				service.add(serviceBulletin);
-			} else {
-				char status = 'A';
-				
-				Chassis newChassi = new Chassis();
-				newChassi.setChassiId(serviceDTO.getChassis());
-				newChassi.setChassiStatus(status);	
+			Chassis chassis = new Chassis();
+			chassis.setChassiId(serviceDTO.getChassis());
 
-				chassisRepository.save(newChassi);
-
-				serviceBulletin.setChassiId(newChassi);
-				serviceBulletin.setServiceBulletinName(serviceInfo.getBulletin());
-				serviceBulletin.setServiceBulletinPart(serviceInfo.getPart());
-				serviceBulletin.setServiceBulletinStatus(serviceDTO.getStatus());
-				service.add(serviceBulletin);
+			serviceBulletin.setChassiId(chassis);
+			serviceBulletin.setServiceBulletinName(serviceInfo.getBulletin());
+			serviceBulletin.setServiceBulletinPart(serviceInfo.getPart());
+			serviceBulletin.setServiceBulletinStatus(serviceDTO.getStatus());
+			service.add(serviceBulletin);
 			}
-
-		}
 		serviceBulletinRepository.saveAllAndFlush(service);
 
 	}
