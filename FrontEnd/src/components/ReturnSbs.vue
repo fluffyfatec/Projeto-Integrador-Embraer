@@ -1,6 +1,6 @@
 <template>
     <div v-if="searchTerm" class="container-card">
-        <div v-for="sb in filteredItems" class="card" @click="divClickToSbs(sb); clickToReset()"><i class="fa-solid fa-plane-up"></i>{{ c }}</div>
+        <div v-for="sb in filteredItems" class="card" @click="divClickToSbs(sb); clickToReset()"><i class="fa-solid fa-plane-up"></i>{{ sb }}</div>
     </div>
 </template>
 
@@ -25,8 +25,8 @@ export default {
     methods: {
 
         async getSbs() {
-            this.sbs = (await axios.get('REQUISIÇÃO')).data;
-            console.log(this.sbs);
+            const response = await axios.get('http://localhost:8080/bulletin/list/all');
+            this.sbs = response.data.map((item: String) => ({ service_bulletin_name: item.service_bulletin_name }));
         },
 
         divClickToSbs(sb: string) {
@@ -55,7 +55,9 @@ export default {
 
     computed: {
         filteredItems() {
-             return this.sbs.map(item => item.sb_id).filter(result => result.toLowerCase().includes(this.searchTerm.toLowerCase()))
+            return this.sbs
+                .filter(item => String(item.service_bulletin_name).toLowerCase().includes(this.searchTerm.toLowerCase()))
+                .map(item => item.service_bulletin_name);
         },
     },
 }

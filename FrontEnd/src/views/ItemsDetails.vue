@@ -45,7 +45,8 @@ export default {
         });
         
         eventBus.$on('click-event-url', (searchTerm: string) => {
-            this.searchTerm = ''
+            this.searchTerm = '';
+            this.getItems();
         });
         
     },
