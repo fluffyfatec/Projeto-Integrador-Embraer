@@ -8,9 +8,14 @@
           <a class="mobile-logo">
             <img src="@/assets/logo.svg" alt="Logo">
           </a>
-          <a class="mobile-user">
-            <router-link to="/"><i class="fa-solid fa-circle-user"></i></router-link> 
-          </a>
+          <div class="mobile-icons">
+            <a class="mobile-notification">
+              <router-link to="/notificacoes"><i class="fa-solid fa-circle-exclamation"></i></router-link>
+            </a>
+            <a class="mobile-user">
+              <router-link to="/"><i class="fa-solid fa-circle-user"></i></router-link> 
+            </a>
+          </div>
         </div>
       </nav>
 
@@ -42,8 +47,8 @@
             <ul class="mobile-navbar-itens">
               <li><router-link to="/planes"><i class="fa-solid fa-plane-departure"></i></router-link></li>
               <li><router-link to="/sbs"><i class="fa-sharp fa-solid fa-screwdriver-wrench"></i></router-link></li>
+              <li><router-link to="/items"><i class="fa-solid fa-clipboard-check"></i></router-link></li>
               <li><router-link to="/admin-panel"><i class="fa-solid fa-chart-line"></i></router-link></li>
-              <li><router-link to="/notifications"><i class="fa-regular fa-bell"></i></router-link></li>
             </ul>
           </nav>
     </footer>
@@ -117,6 +122,21 @@ export default {
   vertical-align: middle;
   color: var(--azul-principal);
   font-size: 25px;
+}
+.mobile-notification{
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+}
+.mobile-notification i{
+  vertical-align: middle;
+  color: var(--azul-principal);
+  font-size: 25px;
+}
+.mobile-icons{
+  float: right;
+  display: flex;
+  gap: 20px;
 }
 /* Navbar Mobile */
 footer {
