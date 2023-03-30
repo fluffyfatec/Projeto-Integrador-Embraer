@@ -83,24 +83,25 @@ export default {
 table {
     background-color: white;
     border-radius: 15px;
+    border-collapse: separate;
     margin-left: 25px;
     margin-right: 25px;
     margin-top: 20px;
     margin-bottom: 30px;
-    border: none;
+    overflow: hidden;
     width: 96%;
     
 }
 
 .table-header {
-    
+    background-color: var(--azul-principal);
     border-radius: 15px;
     
 }
 
 th {
     padding: 25px;
-    color: var(--amarelo);
+    color: var(--white);
 }
 
 td {
@@ -120,6 +121,6 @@ input[type=checkbox] {
 }
 
 
-tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.4);}
+tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
 
 </style>

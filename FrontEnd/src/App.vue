@@ -58,15 +58,21 @@ export default {
   data() {
     return {
       isMobile: false,
-      isDesktop: false,
-    };
+      isDesktop: false,      
+    }
   },
   mounted() {
     window.addEventListener('resize', this.checkIfMobile);
     this.checkIfMobile();
     window.addEventListener('resize', this.checkIfDesktop);
     this.checkIfDesktop();
+
   },
+
+  created() {
+    
+  },
+
   methods: {
     checkIfMobile() {
       this.isMobile = window.innerWidth < 768; // Define como mobile para telas menores que 768px de largura
@@ -74,10 +80,13 @@ export default {
     checkIfDesktop() {
       this.isDesktop = window.innerWidth >= 768; // Define como desktop e tablet para telas maiores ou iguais a 768px de largura
     },
+
+    beforeDestroy() {
+      window.removeEventListener('resize', this.checkIfMobile);
+    },
+
   },
-  beforeDestroy() {
-    window.removeEventListener('resize', this.checkIfMobile);
-  },
+  
   components: {
     ContainerSearch,
   }
@@ -193,19 +202,21 @@ footer {
 
 /* Classe wrapper */
 .wrapper {
-  background-image: url(@/assets/aeroporto.jpg);
-  background-size: cover;                     
+  background-image: url(@/assets/webplanner-desktop.gif);
+  background-size: 100% 377px;                     
   background-repeat: no-repeat;
   background-position: center center;
   height: 377px;
 }
+
 
 /* --------------- Media Queries -------------------- */
 /* Estilos para tablet */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   /* Classe wrapper */
 .wrapper {
-  background-image: url(@/assets/aeroporto.jpg);
+  background-image: url(@/assets/webplanner-mobile.gif);
+  background-size: 100% 200px;
   height: 200px;
 } 
 }
@@ -215,7 +226,8 @@ footer {
 
   /* Classe wrapper */
 .wrapper {
-  background-image: url(@/assets/aeroporto-mobile.jpg);
+  background-image: url(@/assets/webplanner-mobile.gif);
+  background-size: 100% 188px;
   height: 188px;
 }
 }
