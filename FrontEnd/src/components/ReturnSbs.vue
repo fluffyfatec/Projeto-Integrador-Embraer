@@ -3,7 +3,10 @@
         <h1>SB Search</h1>
         <p v-if="!searchTerm">No SBs sought...</p>
         <div v-if="searchTerm" class="container-card">
-            <div v-for="sb in filteredItems" class="card" @click="divClickToSbs(sb); clickToReset()"><i class="fa-solid fa-toolbox"></i>{{ sb }}</div>
+            <div v-for="sb in filteredItems" class="card" 
+            @click="divClickToSbs(sb.service_bulletin_name, sb.part); clickToReset()">
+                <i class="fa-solid fa-toolbox"></i>{{ sb.service_bulletin_name }} <b>{{ sb.part }}</b>
+            </div>
         </div>
     </div>    
 </template>
@@ -30,14 +33,15 @@ export default {
 
         async getSbs() {
             const response = await axios.get('http://localhost:8080/bulletin/list/all');
-            this.sbs = response.data.map((item: String) => ({ service_bulletin_name: item.service_bulletin_name }));
+            this.sbs = response.data.map((item: String) => ({ service_bulletin_name: item.service_bulletin_name, part: item.part }));
         },
 
-        divClickToSbs(sb: string) {
+        divClickToSbs(sb: string, part: string) {
             this.$router.push({
              name: 'sbs-details',
                 params: {
-                    sb: sb
+                    sb: sb,
+                    part: part
                 }
             });
         },
@@ -60,8 +64,11 @@ export default {
     computed: {
         filteredItems() {
             return this.sbs
-                .filter(item => String(item.service_bulletin_name).toLowerCase().includes(this.searchTerm.toLowerCase()))
-                .map(item => item.service_bulletin_name);
+            .filter(item => 
+                String(item.service_bulletin_name).toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+                String(item.part).toLowerCase().includes(this.searchTerm.toLowerCase())
+            )
+            .map(item => ({ service_bulletin_name: item.service_bulletin_name, part: item.part }));
         },
     },
 }

@@ -6,12 +6,14 @@
             <table cellspacing="0">
                 <tr class="table-header">
                     <th>Service Bulletin</th>
+                    <th>Part</th>
                     <th>Applicable</th>
                     <th>Not Applicable</th>
                     <th>Incorporated</th>
                 </tr>
                 <tr v-for="sb in sbs" :key="sb.service_bulleti_name">
                     <td>{{ sb.service_bulleti_name }}</td>
+                    <td>{{ sb.part }}</td>
                     <td><input v-if="sb.status == 'APPLICABLE'" type="checkbox" onclick="return false;" checked readonly><input v-else type="checkbox" onclick="return false;" readonly></td>
                     <td><input v-if="sb.status != 'APPLICABLE' && sb.status != 'INCORP' && sb.status != 'INCORPORATED'" type="checkbox" onclick="return false;" checked readonly><input v-else type="checkbox" onclick="return false;" readonly></td>
                     <td><input v-if="sb.status == 'INCORP' || sb.status == 'INCORPORATED'" type="checkbox" onclick="return false;" checked readonly><input v-else type="checkbox" onclick="return false;" readonly></td>
