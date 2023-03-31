@@ -2,15 +2,52 @@
     <div class="container-pesquisa">
         <div class="container-pesquisa">
           <div class="pesquisar">
-              <input v-if="$route.meta.showPesquisar" type="text" class="formulario" :placeholder="$route.meta.placeHolderValue">
+              <input v-if="$route.meta.showSearchChassis" 
+              type="text" 
+              class="formulario" 
+              :placeholder="$route.meta.placeHolderValue"
+              v-model="searchTermChassis"
+              @input="updateSearchTermChassis">
+
+              <input v-if="$route.meta.showSearchSbs" 
+              type="text" 
+              class="formulario" 
+              :placeholder="$route.meta.placeHolderValue"
+              v-model="searchTermSbs"
+              @input="updateSearchTermSbs">
+
               <h3 v-if="$route.meta.showH3">{{ $route.meta.tituloValue }}</h3>
           </div>
         </div>
     </div>
 </template>
 
-<style scoped>
+<script lang="ts">
+import { eventBus } from '@/main.js'
 
+export default {
+  data() {
+    return {
+      searchTermChassis: '',
+      searchTermSbs: '',
+    }
+  },
+
+  methods: {
+    updateSearchTermChassis() {
+        eventBus.$emit('search-term-updated', this.searchTermChassis)
+    },
+    
+    updateSearchTermSbs() {
+        eventBus.$emit('search-term-updated', this.searchTermSbs)
+    }
+  },
+
+}
+</script>
+
+
+<style scoped>
 
 /* Container Pesquisa */
 .container-pesquisa {
@@ -23,9 +60,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 8%;
+  margin-top: 4%;
 }
-
 /* Classes referentes ao formulário de pesquisa */
 .pesquisar {
     display: -webkit-box;
@@ -48,9 +84,9 @@
         align-self: center;
     margin-right: 1rem;
     font-size: 2rem;
-    color: var(--azul-profundo);
-    font-weight: 500;
-    margin-bottom: 1.5rem;
+    color: var(--azul-principal);
+    font-weight: 900;
+    margin-top: 4%;
 }
 .pesquisar .formulario {
     opacity: 0.6;
@@ -63,6 +99,7 @@
     width: 500px;
 }
 
+
 /* --------------- Media Queries -------------------- */
 
 /* Estilos para tablet */
@@ -70,15 +107,15 @@
   
 /* Container Pesquisa */
 .container-pesquisa {
-  margin-top: 6%;
+    margin-top: 2.5%;
 }
 /* Classes referentes ao formulário de pesquisa */
 .pesquisar h3 {
     margin-right: 1rem;
-    font-size: 2rem;
-    color: var(--azul-profundo);
-    font-weight: 500;
-    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--azul-principal);
+    font-weight: 800;
+    margin-top: 2.5%;
 }
 .pesquisar .formulario {
     opacity: 0.7;
@@ -91,24 +128,25 @@
     width: 300px;
     height: auto;
 }
-  
+
+
 }
 /* Estilos para mobile */
 @media only screen and (max-width: 767px) {
 
 /* Container Pesquisa */
 .container-pesquisa {
-  margin-top: 9%;
+  margin-top: 5%;
 }
 /* Classes referentes ao formulário de pesquisa */
 .pesquisar h3 {
     -ms-flex-item-align: center;
         align-self: center;
     margin-right: 1rem;
-    font-size: 2rem;
-    color: var(--azul-profundo);
-    font-weight: 500;
-    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--azul-principal);
+    font-weight: 900;
+    margin-top: 5%;
 }
 .pesquisar .formulario {
     opacity: 0.7;
@@ -121,6 +159,7 @@
     width: 180px;
     height: 10px;
 }
+
 }
 
 </style>

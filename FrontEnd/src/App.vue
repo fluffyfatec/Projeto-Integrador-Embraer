@@ -6,24 +6,30 @@
       <nav v-if="isMobile" class="mobile-header">
         <div class="mobile-header-itens">
           <a class="mobile-logo">
-            <img src="@/assets/logo.svg" alt="Logo">
+            <img src="@/assets/logo.png" alt="Logo">
           </a>
-          <a class="mobile-user">
-            <router-link to="/"><i class="fa-solid fa-circle-user"></i></router-link> 
-          </a>
+          <div class="mobile-icons">
+            <a class="mobile-notification">
+              <router-link to="/notificacoes"><i class="fa-solid fa-circle-exclamation"></i></router-link>
+            </a>
+            <a class="mobile-user">
+              <router-link to="/"><i class="fa-solid fa-circle-user"></i></router-link> 
+            </a>
+          </div>
         </div>
       </nav>
 
       <nav v-else-if="isDesktop" class="desktop-navbar">
         <div class="desktop-navbar-header">
-          <img src="@/assets/logo.svg" alt="Logo">
+          <img src="@/assets/logo.png" alt="Logo">
         
           <ul class="desktop-nav">
             <li id="user-icone"><router-link to="/"><i class="fa-solid fa-circle-user"></i></router-link></li>
-            <li><router-link to="/notificacoes">Notificações</router-link></li>
-            <li><router-link to="/painel-adm">Admin</router-link></li>
+            <li><router-link to="/notifications">Notifications</router-link></li>
+            <li><router-link to="/admin-panel">Admin</router-link></li>
             <li><router-link to="/sbs">SBs</router-link></li>
-            <li><router-link to="/avioes">Aviões</router-link></li>
+            <li><router-link to="/planes">Planes</router-link></li>
+            <li><router-link to="/items">Items</router-link></li>
           </ul>
         </div>  
       </nav>
@@ -39,10 +45,10 @@
     <footer v-if="isMobile" class="mobile-navbar">
           <nav>
             <ul class="mobile-navbar-itens">
-              <li><router-link to="/avioes"><i class="fa-solid fa-plane-departure"></i></router-link></li>
+              <li><router-link to="/planes"><i class="fa-solid fa-plane-departure"></i></router-link></li>
               <li><router-link to="/sbs"><i class="fa-sharp fa-solid fa-screwdriver-wrench"></i></router-link></li>
-              <li><router-link to="/painel-adm"><i class="fa-solid fa-chart-line"></i></router-link></li>
-              <li><router-link to="/notificacoes"><i class="fa-regular fa-bell"></i></router-link></li>
+              <li><router-link to="/items"><i class="fa-solid fa-clipboard-check"></i></router-link></li>
+              <li><router-link to="/admin-panel"><i class="fa-solid fa-chart-line"></i></router-link></li>
             </ul>
           </nav>
     </footer>
@@ -57,15 +63,21 @@ export default {
   data() {
     return {
       isMobile: false,
-      isDesktop: false,
-    };
+      isDesktop: false,      
+    }
   },
   mounted() {
     window.addEventListener('resize', this.checkIfMobile);
     this.checkIfMobile();
     window.addEventListener('resize', this.checkIfDesktop);
     this.checkIfDesktop();
+
   },
+
+  created() {
+    
+  },
+
   methods: {
     checkIfMobile() {
       this.isMobile = window.innerWidth < 768; // Define como mobile para telas menores que 768px de largura
@@ -73,10 +85,13 @@ export default {
     checkIfDesktop() {
       this.isDesktop = window.innerWidth >= 768; // Define como desktop e tablet para telas maiores ou iguais a 768px de largura
     },
+
+    beforeDestroy() {
+      window.removeEventListener('resize', this.checkIfMobile);
+    },
+
   },
-  beforeDestroy() {
-    window.removeEventListener('resize', this.checkIfMobile);
-  },
+  
   components: {
     ContainerSearch,
   }
@@ -104,7 +119,7 @@ export default {
 }
 .mobile-logo img {
   float: left;
-  height: 25px;
+  height: 30px;
 }
 .mobile-user {
   list-style-type: none;
@@ -116,6 +131,21 @@ export default {
   vertical-align: middle;
   color: var(--azul-principal);
   font-size: 25px;
+}
+.mobile-notification{
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+}
+.mobile-notification i{
+  vertical-align: middle;
+  color: var(--azul-principal);
+  font-size: 25px;
+}
+.mobile-icons{
+  float: right;
+  display: flex;
+  gap: 20px;
 }
 /* Navbar Mobile */
 footer {
@@ -157,7 +187,7 @@ footer {
 }
 .desktop-navbar-header img {
   float: left;
-  height: 25px;
+  height: 40px;
 }
 .desktop-nav {
   list-style-type: none;
@@ -192,19 +222,21 @@ footer {
 
 /* Classe wrapper */
 .wrapper {
-  background-image: url(@/assets/aeroporto.jpg);
-  background-size: cover;                     
+  background-image: url(@/assets/webplanner-desktop.gif);
+  background-size: 100% 377px;                     
   background-repeat: no-repeat;
   background-position: center center;
   height: 377px;
 }
+
 
 /* --------------- Media Queries -------------------- */
 /* Estilos para tablet */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   /* Classe wrapper */
 .wrapper {
-  background-image: url(@/assets/aeroporto.jpg);
+  background-image: url(@/assets/webplanner-mobile.gif);
+  background-size: 100% 200px;
   height: 200px;
 } 
 }
@@ -214,7 +246,8 @@ footer {
 
   /* Classe wrapper */
 .wrapper {
-  background-image: url(@/assets/aeroporto-mobile.jpg);
+  background-image: url(@/assets/webplanner-mobile.gif);
+  background-size: 100% 188px;
   height: 188px;
 }
 }

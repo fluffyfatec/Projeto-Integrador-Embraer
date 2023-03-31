@@ -16,7 +16,3 @@ public interface ServiceBulletinRepository extends JpaRepository<ServiceBulletin
 	ServiceBulletin findByServiceBulletinName (String serviceBulletinName);
 	
 	Boolean existsByChassiIdAndServiceBulletinNameAndServiceBulletinPart(Chassis chassi,String bulletinName, String bulletinPart);
-
-	
-
-}
