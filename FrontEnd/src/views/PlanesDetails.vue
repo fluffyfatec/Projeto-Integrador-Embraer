@@ -1,7 +1,7 @@
 <template>
     <div>
         <ReturnChassis v-if="searchTerm"></ReturnChassis>
-        <div>
+        <div v-else>
             <h1 class="title">SBs of chassis {{ $route.params.chassis }}</h1>
             <table cellspacing="0">
                 <tr class="table-header">
@@ -10,7 +10,7 @@
                     <th>Not Applicable</th>
                     <th>Incorporated</th>
                 </tr>
-                <tr v-for="sb in sbs" :key="sb.id">
+                <tr v-for="sb in sbs" :key="sb.service_bulleti_name">
                     <td>{{ sb.service_bulleti_name }}</td>
                     <td><input v-if="sb.status == 'APPLICABLE'" type="checkbox" onclick="return false;" checked readonly><input v-else type="checkbox" onclick="return false;" readonly></td>
                     <td><input v-if="sb.status != 'APPLICABLE' && sb.status != 'INCORP' && sb.status != 'INCORPORATED'" type="checkbox" onclick="return false;" checked readonly><input v-else type="checkbox" onclick="return false;" readonly></td>
@@ -78,6 +78,7 @@ export default {
 .title {
     color: var(--azul-principal);
     margin-left: 25px;
+    font-weight: var(--medium);
 }
 
 table {
@@ -89,6 +90,7 @@ table {
     margin-top: 20px;
     margin-bottom: 30px;
     overflow: hidden;
+    box-shadow: 2px 2px 20px 5px var(--silver);
     width: 96%;
     
 }
