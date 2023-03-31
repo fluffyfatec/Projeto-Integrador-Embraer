@@ -6,7 +6,7 @@
       <nav v-if="isMobile" class="mobile-header">
         <div class="mobile-header-itens">
           <a class="mobile-logo">
-            <img src="@/assets/logo.svg" alt="Logo">
+            <img src="@/assets/logo.png" alt="Logo">
           </a>
           <div class="mobile-icons">
             <a class="mobile-notification">
@@ -21,7 +21,7 @@
 
       <nav v-else-if="isDesktop" class="desktop-navbar">
         <div class="desktop-navbar-header">
-          <img src="@/assets/logo.svg" alt="Logo">
+          <img src="@/assets/logo.png" alt="Logo">
         
           <ul class="desktop-nav">
             <li id="user-icone"><router-link to="/"><i class="fa-solid fa-circle-user"></i></router-link></li>
@@ -119,7 +119,7 @@ export default {
 }
 .mobile-logo img {
   float: left;
-  height: 25px;
+  height: 30px;
 }
 .mobile-user {
   list-style-type: none;
@@ -187,7 +187,7 @@ footer {
 }
 .desktop-navbar-header img {
   float: left;
-  height: 25px;
+  height: 40px;
 }
 .desktop-nav {
   list-style-type: none;
