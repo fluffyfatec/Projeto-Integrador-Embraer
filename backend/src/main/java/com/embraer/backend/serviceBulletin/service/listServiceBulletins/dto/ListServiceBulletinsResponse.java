@@ -18,5 +18,8 @@ public class ListServiceBulletinsResponse {
 	@NotNull
 	private String status;
 	
+	@NotNull
+	private String part;
+	
 }
 
