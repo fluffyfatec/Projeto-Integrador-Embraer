@@ -13,10 +13,5 @@ import com.embraer.backend.serviceBulletin.entity.ServiceBulletin;
 public interface ServiceBulletinRepository extends JpaRepository<ServiceBulletin, Long>{
 	
 	List<ServiceBulletin> findByChassiId(Chassis chassi);
-	
-
-	@Query("SELECT DISTINCT sb.serviceBulletinName FROM ServiceBulletin sb")
-	List<String> findDistinctByServiceBulletinName();
-
 
 }

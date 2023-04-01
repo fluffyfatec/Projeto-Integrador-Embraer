@@ -25,7 +25,6 @@ public class RegisterBulletinController {
 	
 	@CrossOrigin
 	@PostMapping
-	@CrossOrigin
  	public ResponseEntity<Void> registerBulletinService(@RequestBody List<ServiceBulletinRegisterDTO> serviceBulletinRegisterDTO){
 
 		System.err.println("TESTE SE FUNCIONA:" + serviceBulletinRegisterDTO);
