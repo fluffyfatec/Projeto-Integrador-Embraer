@@ -19,8 +19,8 @@
             />
 
             <label for="fileInput" class="file-label">
-                <div v-if="isDragging">Solte os arquivos aqui</div>
-                <div v-else>Arraste arquivos aqui ou <u>clique aqui</u> para baixar</div>
+                <div v-if="isDragging" class="file-label-text">Drag files here</div>
+                <div v-else class="file-label-text">Drag files here or <u>click here</u> to download</div>
             </label>
 
             <div class="preview-container mt-4" v-if="files.length">
@@ -45,7 +45,7 @@
                 </div>
             </div>
             </div>
-            <button type="submit">Enviar</button>
+            <button type="submit" class="submit">Submit</button>
         </form>    
   </div>
 </template>
@@ -156,19 +156,28 @@ export default {
 
 
 <style scoped>
+@import "../assets/base.css";
+
 .main {
     display: flex;
     flex-grow: 1;
     align-items: center;
-    height: 100vh;
     justify-content: center;
     text-align: center;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .dropzone-container {
     padding: 4rem;
     background: #f7fafc;
     border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px 10px var(--silver);
+    margin-right: 40px;
+    margin-left: 40px;
 }
 
 .hidden-input {
@@ -185,24 +194,69 @@ export default {
     cursor: pointer;
 }
 
+.file-label-text {
+    color: var(--azul-principal);
+    font-weight: var(--medium);
+    font-size: 25px;
+}
+
 .preview-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
     margin-top: 2rem;
 }
 
 .preview-card {
     display: flex;
-    border: 1px solid #a2a2a2;
+    border: 1px solid var(--platinum);
+    border-radius: 10px;
+    background-color: white;
     padding: 5px;
     margin-left: 5px;
+    box-shadow: 2px 2px var(--silver);
+}
+
+.preview-card p {
+    font-weight: var(--light);
+    color: var(--azul-principal);
+    text-align: center;
 }
 
 .preview-img {
     width: 50px;
     height: 50px;
     border-radius: 5px;
-    border: 1px solid #a2a2a2;
-    background-color: #a2a2a2;
+    border: 1px solid white;
+    background-color: white;
+}
+
+.submit {
+    background-color: var(--azul-embraer);
+    color: #ffff;
+    font-size: 14pt;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    transition: 0.1s all;
+    margin-top: 25px;
+    box-shadow: 2px 2px 20px 10px var(--silver);
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+.ml-2 {
+    background-color: transparent;
+    border: none;
+}
+
+.ml-2 b {
+    font-size: 20px;
+    color: var(--azul-principal)
 }
 </style>
   

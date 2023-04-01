@@ -35,6 +35,7 @@ public class ListServiceBulletinsService implements ListServiceBulletinsImpl {
 			ListServiceBulletinsResponse listServiceBulletinsResponse = new ListServiceBulletinsResponse();
 			listServiceBulletinsResponse.setService_bulleti_name(serviceBulletin.getServiceBulletinName());
 			listServiceBulletinsResponse.setStatus(serviceBulletin.getServiceBulletinStatus());
+			listServiceBulletinsResponse.setPart(serviceBulletin.getServiceBulletinPart());
 			bulletinsResponse.add(listServiceBulletinsResponse);
 		}
 

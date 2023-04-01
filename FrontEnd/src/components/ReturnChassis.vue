@@ -1,7 +1,12 @@
 <template>
-    <div v-if="searchTerm" class="container-card">
-        <div v-if="$route.meta.itemsDetails" v-for="c in filteredItems" class="card" @click="divClickToItems(c); clickToReset()"><i class="fa-solid fa-plane-up"></i>Chassi nº{{ c }}</div>
-        <div v-if="$route.meta.planesDetails" v-for="c in filteredItems" class="card" @click="divClickToPlanes(c); clickToReset()"><i class="fa-solid fa-plane-up"></i>Chassi nº{{ c }}</div>
+    <div>
+        <h1 v-if="$route.meta.itemsDetails">Item Search</h1>
+        <h1 v-if="$route.meta.planesDetails">Plane Searh</h1>
+        <p v-if="!searchTerm">No chassis sought...</p>
+        <div v-if="searchTerm" class="container-card">
+            <div v-if="$route.meta.itemsDetails" v-for="c in filteredItems" class="card" @click="divClickToItems(c); clickToReset()"><i class="fa-solid fa-plane-up"></i>Chassis {{ c }}</div>
+            <div v-if="$route.meta.planesDetails" v-for="c in filteredItems" class="card" @click="divClickToPlanes(c); clickToReset()"><i class="fa-solid fa-plane-up"></i>Chassis {{ c }}</div>
+        </div>
     </div>
 </template>
 
@@ -78,6 +83,19 @@ export default {
 <style scoped>
 @import "../assets/base.css";
 
+h1 {
+    color: var(--azul-principal);
+    margin-left: 25px;
+    font-weight: var(--medium);
+}
+
+p {
+    color: var(--silver);
+    font-size: 32px;
+    text-align: center;
+    padding: 25px;
+}
+
 .container-card {
     display: grid;
     grid-template-columns: 24% 24% 24% 24%;
@@ -85,11 +103,23 @@ export default {
     margin-left: 30px;
     margin-right: 15px;
     margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .card {
     background-color: var(--white);
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 20px;
+    text-align: center;
+    color: var(--azul-principal);
+    cursor: pointer;
+    font-weight: var(--light);
+    box-shadow: 2px 2px 20px 5px var(--silver);
+}
+
+i {
+    padding-right: 15px;
+    color: var(--silver);
+    font-size: 40px;
 }
 </style>

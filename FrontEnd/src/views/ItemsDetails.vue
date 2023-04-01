@@ -1,20 +1,26 @@
 <template>
     <div>
         <ReturnChassis v-if="searchTerm"></ReturnChassis>
-        <div v-else class="container-info">
-            <div class="incorporated">
-                <h1>Incorporated</h1>
-                <li v-for="item in items_incorporated">{{ item }}</li>
+        <div v-else>
+            <h1 class="title">Items of chassis {{ $route.params.chassis }}</h1>
+            <div class="container-info">
+                <div class="incorporated">
+                    <h2>Incorporated</h2>
+                    <li v-for="item in items_incorporated">{{ item }}</li>
+                    <p v-if="!items_incorporated">There is nothing here</p>
+                </div>
+                <div class="applicable">
+                    <h2>Applicable</h2>
+                    <li v-for="item in items_applicable">{{ item }}</li>
+                    <p v-if="!items_applicable">There is nothing here</p>
+                </div>
+                <div class="not-applicable">
+                    <h2>Not Applicable</h2>
+                    <li v-for="item in items_not_applicable">{{ item }}</li>
+                    <p v-if="!items_not_applicable">There is nothing here</p>
+                </div>
             </div>
-            <div class="applicable">
-                <h1>Applicable</h1>
-                <li v-for="item in items_applicable">{{ item }}</li>
-            </div>
-            <div class="not-applicable">
-                <h1>Not Applicable</h1>
-                <li v-for="item in items_not_applicable">{{ item }}</li>
-            </div>
-        </div>    
+        </div>        
     </div>
 </template>
 
@@ -45,7 +51,8 @@ export default {
         });
         
         eventBus.$on('click-event-url', (searchTerm: string) => {
-            this.searchTerm = ''
+            this.searchTerm = '';
+            this.getItems();
         });
         
     },
@@ -68,3 +75,36 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.title {
+    color: var(--azul-principal);
+    margin-left: 25px;
+    font-weight: var(--medium);
+}
+
+.container-info {
+
+}
+
+.incorporated {
+
+}
+
+.applicable {
+
+}
+
+.not-applicable {
+
+}
+
+li {
+
+}
+
+p {
+
+}
+
+</style>
