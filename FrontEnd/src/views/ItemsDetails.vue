@@ -140,6 +140,7 @@ export default {
     margin-right: 25px;
     margin-top: 10px;
     margin-bottom: 30px;
+    padding-bottom: 50px;
 }
 
 .h2-button {
@@ -222,5 +223,156 @@ p {
     color: var(--silver);
     font-weight: var(--medium);
 }
+
+/* --------------- Media Queries -------------------- */
+
+/* Estilos para tablet */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .title {
+        margin-left: 25px;
+    }
+
+    .container-info {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: 20px;
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        margin-left: 25px;
+    }
+
+    .show-button {
+        margin-right: 40px;
+        margin-top: 40px;
+    }
+
+    .button-inactive {
+        padding: 0;
+    }
+
+    .button-inactive i {
+        font-size: 30px;
+    }
+
+    .button-active {
+        padding: 0;
+    }
+
+    .button-active i {
+        font-size: 30px;
+    }
+
+    .incorporated {
+        box-shadow: 2px 2px 20px 10px var(--silver);
+        padding-bottom: 30px;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .applicable {
+        box-shadow: 2px 2px 20px 10px var(--silver);
+        padding-bottom: 30px;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .not-applicable {
+        box-shadow: 2px 2px 20px 10px var(--silver);
+        padding-bottom: 30px;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    li {
+        margin-left: 25px;
+        padding-top: 5px;
+    }
+
+    p {
+        font-size: 16pt;
+    }
+
+}
+
+/* Estilos para mobile */
+@media only screen and (max-width: 767px) {
+
+    .title {
+        margin-left: 25px;
+    }
+
+    .container-info {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        padding-bottom: 80px;
+    }
+
+    h2 {
+        margin-left: 25px;
+    }
+
+    .show-button {
+        margin-right: 30px;
+        margin-top: 30px;
+    }
+
+    .button-inactive {
+        padding: 0;
+    }
+
+    .button-inactive i {
+        font-size: 25px;
+    }
+
+    .button-active {
+        padding: 0;
+    }
+
+    .button-active i {
+        font-size: 25px;
+    }
+
+    .incorporated {
+        box-shadow: 2px 2px 20px 10px var(--silver);
+        padding-bottom: 30px;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .applicable {
+        box-shadow: 2px 2px 20px 10px var(--silver);
+        padding-bottom: 30px;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .not-applicable {
+        box-shadow: 2px 2px 20px 10px var(--silver);
+        padding-bottom: 30px;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    li {
+        margin-left: 25px;
+        padding-top: 5px;
+    }
+
+    p {
+        font-size: 12pt;
+    }
+
+}    
 
 </style>
