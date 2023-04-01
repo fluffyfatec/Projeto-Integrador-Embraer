@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="##About the project">About the project</a> •
+  <a href="#About-the-project">About the project</a> •
   <a href="#Timeline">Timeline</a> •
   <a href="#burndown">Burndown</a> •
   <a href="#Team">Team</a> •
@@ -25,6 +25,8 @@ Currently, many pilots work as “freelancers” and do not operate just one air
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
 ## Goal
+
+
 
 <details>
 <summary>Functional Requirements</summary>
@@ -59,11 +61,14 @@ Currently, many pilots work as “freelancers” and do not operate just one air
 
 ## Solution
 
+Our team will develop a web software for the company "Embraer" that allows the easy import, manipulation and processing of data, visualization of data for its customers and administrators and the persistence of data in the database in a simplified way. In addition, it will be possible to filter this data by chassis, service bulletins and applicability of the improvement. However, Fluffy will also deliver three levels of access: Pilot, Client and Administrator, along with an administrative panel allowing the visualization of data in dashboards and modifications of users.
 
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
 ## Timeline
+
+ <img src="GIT/timeline.png" width="100%" height="100%">
 
 <p align="center">
       <img src="" width="100%" height="100%">
@@ -119,7 +124,7 @@ Currently, many pilots work as “freelancers” and do not operate just one air
 
 ## User Manual
 
-[click here to access the User Manual]()
+[Click here to access the User Manual]()
 
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
@@ -159,6 +164,8 @@ Currently, many pilots work as “freelancers” and do not operate just one air
 <details>
 <summary>Database</summary>
 
+* [Oracle Autonomous Database 19c] (https://www.oracle.com/br/autonomous-database/)
+
 </details>
 <details>
 <summary>Meetings and Communication</summary>
@@ -187,7 +194,7 @@ Currently, many pilots work as “freelancers” and do not operate just one air
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
 <p align="center">
-      <img src="" height="100%">
+      <img src=" GIT/rodape.png" height="100%">
 <p align="center">
 
 ---
