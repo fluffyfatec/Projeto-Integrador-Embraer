@@ -10,9 +10,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ServiceBulletinRepository extends JpaRepository<ServiceBulletin, Long>{
-	
-	List<ServiceBulletin> findByChassiId(Chassis chassi);
-	
-	ServiceBulletin findByServiceBulletinName (String serviceBulletinName);
-	
-	Boolean existsByChassiIdAndServiceBulletinNameAndServiceBulletinPart(Chassis chassi,String bulletinName, String bulletinPart);
+		
+	ServiceBulletin findByServiceBulletinNameAndServiceBulletinPart(String bulletinName, String bulletinPart);
+}

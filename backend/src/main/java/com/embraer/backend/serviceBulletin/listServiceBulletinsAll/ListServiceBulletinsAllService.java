@@ -18,15 +18,15 @@ public class ListServiceBulletinsAllService {
 	
 	public List<ListServiceBulletinAllDto> execute() {
 		
-		List<String> listServiceBulletin = serviceBulletinRepository.findDistinctByServiceBulletinName();
+		//List<String> listServiceBulletin = serviceBulletinRepository.findDistinctByServiceBulletinName();
 		
 		List<ListServiceBulletinAllDto> listServiceBulletinsAllDto = new ArrayList<ListServiceBulletinAllDto>();
 		
-		for (String bulletin: listServiceBulletin) {
+		//for (String bulletin: listServiceBulletin) {
 			ListServiceBulletinAllDto listServiceBulletinAllDto = new ListServiceBulletinAllDto();
-			listServiceBulletinAllDto.setService_bulletin_name(bulletin);
+		//	listServiceBulletinAllDto.setService_bulletin_name(bulletin);
 			listServiceBulletinsAllDto.add(listServiceBulletinAllDto);
-		}
+	//	}
 		
 		return listServiceBulletinsAllDto;
 			

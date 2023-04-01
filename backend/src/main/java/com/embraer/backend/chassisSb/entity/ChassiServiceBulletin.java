@@ -1,6 +1,4 @@
-package com.embraer.backend.serviceBulletin.entity;
-
-import java.sql.Timestamp;
+package com.embraer.backend.chassisSb.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,11 +11,10 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-import org.hibernate.annotations.UpdateTimestamp;
-
 import com.embraer.backend.chassis.entity.Chassis;
-import com.embraer.backend.user.entity.User;
+import com.embraer.backend.serviceBulletin.entity.ServiceBulletin;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,27 +22,24 @@ import lombok.Setter;
 @Setter
 
 @Entity
-@Table(name="SERVICE_BULLETIN")
-public class ServiceBulletin {
+@Table(name="SB_CHASSI")
+public class ChassiServiceBulletin {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="SB_ID")
-	private Long serviceBulletinId;
+	@Column(name="SB_CHASSI_ID")
+	private Long sbChassiId;
 	
-	@Column(name="SB_NAME")
+	@Column(name="SB_STATUSSERVICE")
 	@NotNull
-	private String serviceBulletinName;
+	private String serviceBulletinStatus;
 	
-	@Column(name="SB_DTREGISTER")
-	@UpdateTimestamp
-	private Timestamp serviceBulletinDtRegister;
-	
-	@Column(name="SB_PARTSERVICE")
-	private String serviceBulletinPart;
-	
-	@JoinColumn(name="USER_ID_REGISTER")
+	@JoinColumn(name="SB_ID")
 	@ManyToOne(fetch = FetchType.LAZY)
-	private User userRegister;
+	private ServiceBulletin serviceBulletinId;
+	
+	@JoinColumn(name="CHASSI_ID")
+	@ManyToOne(fetch = FetchType.LAZY)
+	private Chassis chassiId;
 	
 }
