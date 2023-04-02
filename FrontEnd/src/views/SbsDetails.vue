@@ -14,8 +14,8 @@
                     <tr v-for="plane in planes" :key="plane.id">
                         <td>{{ plane.id }}</td>
                         <td><input v-if="plane.status == 'APPLICABLE'" type="checkbox" onclick="return false;" checked readonly><input v-else type="checkbox" onclick="return false;" readonly></td>
-                        <td><input v-if="plane.status != 'APPLICABLE' && sb.status != 'INCORP' && sb.status != 'INCORPORATED'" type="checkbox" onclick="return false;" checked readonly><input v-else type="checkbox" onclick="return false;" readonly></td>
-                        <td><input v-if="plane.status == 'INCORP' || sb.status == 'INCORPORATED'" type="checkbox" onclick="return false;" checked readonly><input v-else type="checkbox" onclick="return false;" readonly></td>
+                        <td><input v-if="plane.status != 'APPLICABLE' && plane.status != 'INCORP' && plane.status != 'INCORPORATED' && plane.status != 'INCOPORATED'" type="checkbox" onclick="return false;" checked readonly><input v-else type="checkbox" onclick="return false;" readonly></td>
+                        <td><input v-if="plane.status == 'INCORP' || plane.status == 'INCORPORATED' || plane.status == 'INCOPORATED'" type="checkbox" onclick="return false;" checked readonly><input v-else type="checkbox" onclick="return false;" readonly></td>
                     </tr>
                 </table>
             </div>    
