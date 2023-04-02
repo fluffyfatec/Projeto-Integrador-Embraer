@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import javax.validation.constraints.NotNull;
 
@@ -17,9 +18,9 @@ import com.embraer.backend.chassis.entity.Chassis;
 import com.embraer.backend.serviceBulletin.entity.ServiceBulletin;
 
 import lombok.Data;
-
 import lombok.Getter;
 import lombok.Setter;
+
 
 @Getter
 @Setter

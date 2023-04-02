@@ -45,10 +45,12 @@ public class RegisterBulletinService {
 
 			Chassis exist = chassisRepository.findById(serviceDTO.getChassis()).orElse(null);
 
+
 			if (exist == null) {
 				
 				User user = new User();
 				user.setUserId(2L);
+
 
 				char status = 'A';
 				
