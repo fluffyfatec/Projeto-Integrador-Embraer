@@ -9,5 +9,8 @@ public class ListServiceBulletinAllDto {
 
 	@NotNull
 	private String service_bulletin_name;
+	
+	@NotNull
+	private String service_bulletin_part;
 
 }
