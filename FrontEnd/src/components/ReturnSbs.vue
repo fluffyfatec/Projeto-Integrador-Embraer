@@ -35,7 +35,7 @@ export default {
             const response = await axios.get('http://localhost:8080/bulletin/list/all');
             this.sbs = response.data.map((item: String) => ({ 
                 service_bulletin_name: item.service_bulletin_name, 
-                part: item.part === 'UNICO' ? 'UNIQUE' : item.part }));
+                part: item.service_bulletin_part === 'UNICO' ? 'UNIQUE' : item.service_bulletin_part }));
         },
 
         divClickToSbs(sb: string, part: string) {

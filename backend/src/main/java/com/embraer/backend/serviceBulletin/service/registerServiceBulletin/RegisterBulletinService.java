@@ -77,8 +77,7 @@ public class RegisterBulletinService {
 			service.add(chassiServiceBulletin);
 			
 		}
-		chassiServiceBullet
-inRepository.saveAllAndFlush(service);
+		chassiServiceBulletinRepository.saveAllAndFlush(service);
 
 
 	}

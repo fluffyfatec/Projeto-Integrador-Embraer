@@ -60,7 +60,7 @@ export default {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: fixed;
+  position: absolute;
   left: 50%;
   top: 75px;
   transform: translateX(-50%);
