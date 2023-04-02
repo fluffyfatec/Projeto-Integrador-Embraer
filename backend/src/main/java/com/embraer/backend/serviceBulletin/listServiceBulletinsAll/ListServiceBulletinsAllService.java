@@ -23,7 +23,7 @@ public class ListServiceBulletinsAllService {
 		
 		List<ListServiceBulletinAllDto> listServiceBulletinsAllDto = new ArrayList<ListServiceBulletinAllDto>();
 		
-		//for (String bulletin: listServiceBulletin) {
+		for (ServiceBulletin bulletin: listServiceBulletin) {
 			ListServiceBulletinAllDto listServiceBulletinAllDto = new ListServiceBulletinAllDto();
 			listServiceBulletinAllDto.setService_bulletin_name(bulletin.getServiceBulletinName());
 			listServiceBulletinAllDto.setService_bulletin_part(bulletin.getServiceBulletinPart());

@@ -2,7 +2,7 @@
     <div>
         <ReturnSbs v-if="searchTerm"></ReturnSbs>
         <div v-else>
-            <h1 class="title">Chassis of {{ $route.params.sb }}</h1>
+            <h1 class="title">Chassis of {{ $route.params.sb }} ({{ $route.params.part === 'UNICO' ? 'UNIQUE' : $route.params.part }})</h1>
             <div class="table-wrapper">
                 <table cellspacing="0">
                     <tr class="table-header">
