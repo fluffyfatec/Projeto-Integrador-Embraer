@@ -79,7 +79,7 @@ export default {
         async getItems() {
             const chassis = this.$route.params.chassis;
 
-            const response = await axios.get('REQUISIÇÃO/' + chassis);
+            const response = await axios.get('http://localhost:8080/items/list/' + chassis);
             const { incorporated, applicable, not_applicable } = response.data;
 
             this.items_incorporated = incorporated.map((item: { name_item: string }) => ({
