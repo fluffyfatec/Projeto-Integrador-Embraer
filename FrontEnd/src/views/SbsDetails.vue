@@ -11,8 +11,8 @@
                         <th>Not Applicable</th>
                         <th>Incorporated</th>
                     </tr>
-                    <tr v-for="plane in planes" :key="plane.id">
-                        <td>{{ plane.id }}</td>
+                    <tr v-for="plane in planes" :key="plane.chassi">
+                        <td>{{ plane.chassi }}</td>
                         <td><input v-if="plane.status == 'APPLICABLE'" type="checkbox" onclick="return false;" checked readonly><input v-else type="checkbox" onclick="return false;" readonly></td>
                         <td><input v-if="plane.status != 'APPLICABLE' && plane.status != 'INCORP' && plane.status != 'INCORPORATED' && plane.status != 'INCOPORATED'" type="checkbox" onclick="return false;" checked readonly><input v-else type="checkbox" onclick="return false;" readonly></td>
                         <td><input v-if="plane.status == 'INCORP' || plane.status == 'INCORPORATED' || plane.status == 'INCOPORATED'" type="checkbox" onclick="return false;" checked readonly><input v-else type="checkbox" onclick="return false;" readonly></td>
@@ -59,8 +59,13 @@ export default {
             const sb = this.$route.params.sb;
             const part = this.$route.params.part;
 
-            this.planes = (await axios.get('REQUISIÇÃO/' + sb + '/' + part)).data
+            const response = await axios.get('http://localhost:8080/chassi/sb/' + sb + '/' + part);
+            this.planes = response.data.map((item: String) => ({
+                chassi: item.chassi,
+                status: item.sb_status
+            }));
         },
+   
     },
 
     components: {

@@ -60,7 +60,7 @@ export default {
         async getSbs() {
             const chassis = this.$route.params.chassis;
 
-            const response = (await axios.get('http://localhost:8080/bulletins/listar/' + chassis));
+            const response = await axios.get('http://localhost:8080/bulletins/listar/' + chassis);
             this.sbs = response.data.map((item: String) => ({ 
                 service_bulleti_name: item.service_bulleti_name,
                 status: item.status,

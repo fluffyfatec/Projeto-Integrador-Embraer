@@ -118,6 +118,8 @@ i {
     padding-right: 15px;
     color: var(--silver);
     font-size: 40px;
+    position:relative;
+    top: 20%;
 }
 
 

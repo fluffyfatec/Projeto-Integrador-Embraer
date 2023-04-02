@@ -11,7 +11,7 @@
                             <i :class="classIconIncorporated"></i>
                         </button>
                     </div>    
-                    <li v-if="showLiIncorporated" v-for="item in items_incorporated">- {{ item.item }}</li>
+                    <li v-if="showLiIncorporated" v-for="item in items_incorporated">- {{ item.name_item }}</li>
                     <p v-if="items_incorporated.length === 0 ? showLiIncorporated : false">There is nothing here</p>
                 </div>
                 <div class="applicable">
@@ -21,7 +21,7 @@
                             <i :class="classIconApplicable"></i>
                         </button>
                     </div>    
-                    <li v-if="showLiApplicable" v-for="item in items_applicable">- {{ item.item }}</li>
+                    <li v-if="showLiApplicable" v-for="item in items_applicable">- {{ item.name_item }}</li>
                     <p v-if="items_applicable.length === 0 ? showLiApplicable : false">There is nothing here</p>
                 </div>
                 <div class="not-applicable">
@@ -31,7 +31,7 @@
                             <i :class="classIconNotApplicable"></i>
                         </button>
                     </div>    
-                    <li v-if="showLiNotApplicable" v-for="item in items_not_applicable">- {{ item.item }}</li>
+                    <li v-if="showLiNotApplicable" v-for="item in items_not_applicable">- {{ item.name_item }}</li>
                     <p v-if="items_not_applicable.length === 0 ? showLiNotApplicable : false">There is nothing here</p>
                 </div>
             </div>
@@ -79,14 +79,21 @@ export default {
         async getItems() {
             const chassis = this.$route.params.chassis;
 
-            //this.items_incorporated = (await axios.get('REQUISIÇÃO/' + chassis)).data.items_incorporated;
-            this.items_incorporated = (await axios.get('https://mocki.io/v1/21a80894-7469-4a55-a8d1-f187edcb2c95')).data;
+            const response = await axios.get('REQUISIÇÃO/' + chassis);
+            const { incorporated, applicable, not_applicable } = response.data;
 
-            //this.items_applicable = (await axios.get('REQUISIÇÃO/' + chassis)).data.items_applicable;
-            this.items_applicable = (await axios.get('https://mocki.io/v1/469e4b8a-df3b-4689-8f3b-439c6ed34ef4')).data;
+            this.items_incorporated = incorporated.map((item: { name_item: string }) => ({
+                name_item: item.name_item
+            }));
 
-            //this.items_not_applicable = (await axios.get('REQUISIÇÃO/' + chassis)).data.items_not_applicable;
-            this.items_not_applicable = (await axios.get('https://mocki.io/v1/a95e7109-bde3-479e-87e1-e719481cf70a')).data;
+            this.items_applicable = applicable.map((item: { name_item: string }) => ({
+                name_item: item.name_item
+            }));
+
+            this.items_not_applicable = not_applicable.map((item: { name_item: string }) => ({
+                name_item: item.name_item
+            }));
+            
         },
 
     },
