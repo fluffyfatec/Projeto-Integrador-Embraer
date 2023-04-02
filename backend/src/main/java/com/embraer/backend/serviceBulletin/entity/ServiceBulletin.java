@@ -41,10 +41,6 @@ public class ServiceBulletin {
 	@UpdateTimestamp
 	private Timestamp serviceBulletinDtRegister;
 	
-	@Column(name="SB_STATUSSERVICE")
-	@NotNull
-	private String serviceBulletinStatus;
-	
 	@Column(name="SB_PARTSERVICE")
 	private String serviceBulletinPart;
 	

@@ -10,12 +10,20 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import javax.validation.constraints.NotNull;
+
+
 import com.embraer.backend.chassis.entity.Chassis;
 import com.embraer.backend.serviceBulletin.entity.ServiceBulletin;
 
 import lombok.Data;
 
-@Data
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+
 
 @Entity
 @Table(name="SB_CHASSI")
@@ -26,6 +34,12 @@ public class ChassiServiceBulletin {
 	@Column(name="SB_CHASSI_ID")
 	private Long sbChassiId;
 	
+
+	@Column(name="SB_STATUSSERVICE")
+	@NotNull
+	private String serviceBulletinStatus;
+	
+
 	@JoinColumn(name="SB_ID")
 	@ManyToOne(fetch = FetchType.LAZY)
 	private ServiceBulletin serviceBulletinId;
@@ -34,4 +48,6 @@ public class ChassiServiceBulletin {
 	@ManyToOne(fetch = FetchType.LAZY)
 	private Chassis chassiId;
 	
+
 }
+
