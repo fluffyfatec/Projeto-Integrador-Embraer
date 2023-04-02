@@ -45,7 +45,7 @@
                 </div>
             </div>
             </div>
-            <button type="submit" class="submit">Submit</button>
+            <button v-if="this.files.length !== 0" type="submit" class="submit">Submit</button>
         </form>    
   </div>
 </template>
@@ -62,11 +62,13 @@ export default {
       excel: 'src/assets/Excel.png'
     };
   },
+
   mounted() {
     this.$refs.file.addEventListener('change', event => {
         this.files = Array.from(event.target.files)
     })
   },
+
   methods: {
     onChange() {
       this.files = this.$refs.file.files;
@@ -150,6 +152,7 @@ export default {
             alert("Data sent to database succesfully!");
         }
     },
+
   },
 };
 </script>
@@ -168,6 +171,7 @@ export default {
     margin-right: 25px;
     margin-top: 50px;
     margin-bottom: 50px;
+    padding-bottom: 80px;
 }
 
 .dropzone-container {
@@ -258,5 +262,144 @@ button:hover{
     font-size: 20px;
     color: var(--azul-principal)
 }
+
+
+/* --------------- Media Queries -------------------- */
+
+/* Estilos para tablet */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .main {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-bottom: 80px;
+    }
+
+    .dropzone-container {
+        padding: 4rem;
+        box-shadow: 2px 2px 20px 10px var(--silver);
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+    .hidden-input {
+        width: 1px;
+        height: 1px;
+    }
+
+    .file-label {
+        font-size: 20px;
+    }
+
+    .file-label-text {
+        font-size: 25px;
+    }
+
+    .preview-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 10px;
+        margin-top: 2rem;
+    }
+
+    .preview-card {
+        padding: 5px;
+        margin-left: 5px;
+        box-shadow: 2px 2px var(--silver);
+    }
+
+    .preview-card p {
+        
+    }
+
+    .preview-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .submit {
+        font-size: 14pt;
+        width: 100px;
+        height: 40px;
+        margin-top: 25px;
+        box-shadow: 2px 2px 20px 10px var(--silver);
+    }
+
+    .ml-2 b {
+        font-size: 20px;
+    }
+
+}
+
+/* Estilos para mobile */
+@media only screen and (max-width: 767px) {
+
+    .main {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 40px;
+        margin-bottom: 50px;
+        width: 95%;
+        padding-bottom: 80px;
+    }
+
+    .dropzone-container {
+        padding: 1rem;
+        box-shadow: 2px 2px 50px 5px var(--silver);
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .hidden-input {
+        width: 1px;
+        height: 1px;
+    }
+
+    .file-label {
+        font-size: 20px;
+    }
+
+    .file-label-text {
+        font-size: 18px;
+    }
+
+    .preview-container {
+        display: grid;
+        grid-template-columns: 47% 47%;
+        grid-gap: 10px;
+        margin-top: 2rem;
+    }
+
+    .preview-card {
+        padding: 5px;
+        margin-left: 5px;
+        box-shadow: 2px 2px var(--silver);
+    }
+
+    .preview-card p {
+        
+    }
+
+    .preview-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .submit {
+        font-size: 12pt;
+        width: 90px;
+        height: 40px;
+        margin-top: 25px;
+        box-shadow: 2px 2px 20px 10px var(--silver);
+    }
+
+    .ml-2 b {
+        font-size: 20px;
+    }
+
+}    
+
 </style>
   

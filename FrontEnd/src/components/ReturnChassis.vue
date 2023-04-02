@@ -104,6 +104,7 @@ p {
     margin-right: 15px;
     margin-top: 25px;
     margin-bottom: 25px;
+    padding-bottom: 25px;
 }
 
 .card {
@@ -122,4 +123,61 @@ i {
     color: var(--silver);
     font-size: 40px;
 }
+
+
+/* --------------- Media Queries -------------------- */
+
+/* Estilos para tablet */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    p {
+        font-size: 26px;
+    }
+
+    .container-card {
+        display: grid;
+        grid-template-columns: 32% 32% 32%;
+        grid-gap: 8px;
+        padding-bottom: 25px;
+    }
+
+    .card {
+        padding: 12px;
+        box-shadow: 2px 2px 10px 2px var(--silver);
+    }
+
+    i {
+        font-size: 30px;
+    }
+
+}
+
+/* Estilos para mobile */
+@media only screen and (max-width: 767px) {
+
+    p {
+        font-size: 22px;
+    }
+
+    .container-card {
+        display: grid;
+        grid-template-columns: 99%;
+        grid-gap: 8px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-bottom: 80px;
+    }
+
+    .card {
+        padding: 15px;
+        font-size: 23px;
+        box-shadow: 2px 2px 50px 5px var(--silver);
+    }
+
+    i {
+        font-size: 35px;
+    }
+
+}    
+
 </style>

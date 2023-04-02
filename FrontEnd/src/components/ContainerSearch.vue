@@ -60,7 +60,10 @@ export default {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 4%;
+  position: fixed;
+  left: 50%;
+  top: 75px;
+  transform: translateX(-50%);
 }
 /* Classes referentes ao formulário de pesquisa */
 .pesquisar {
@@ -87,6 +90,7 @@ export default {
     color: var(--azul-principal);
     font-weight: 900;
     margin-top: 4%;
+    text-align: center;
 }
 .pesquisar .formulario {
     opacity: 0.6;
@@ -107,7 +111,9 @@ export default {
   
 /* Container Pesquisa */
 .container-pesquisa {
-    margin-top: 2.5%;
+    left: 50%;
+    top: 40px;
+    transform: translateX(-50%); 
 }
 /* Classes referentes ao formulário de pesquisa */
 .pesquisar h3 {
@@ -115,12 +121,11 @@ export default {
     font-size: 1.5rem;
     color: var(--azul-principal);
     font-weight: 800;
-    margin-top: 2.5%;
 }
 .pesquisar .formulario {
     opacity: 0.7;
     padding: 1rem 1rem;
-    font-size: 14pt;
+    font-size: 16pt;
     border: none;
     border-radius: 5px;
     outline: none;
@@ -136,7 +141,9 @@ export default {
 
 /* Container Pesquisa */
 .container-pesquisa {
-  margin-top: 5%;
+    left: 50%;
+    top: 40px;
+    transform: translateX(-50%);
 }
 /* Classes referentes ao formulário de pesquisa */
 .pesquisar h3 {
@@ -146,17 +153,16 @@ export default {
     font-size: 1.5rem;
     color: var(--azul-principal);
     font-weight: 900;
-    margin-top: 5%;
 }
 .pesquisar .formulario {
     opacity: 0.7;
     padding: 1rem 0.8rem;
-    font-size: 12pt;
+    font-size: 14pt;
     border: none;
     border-radius: 5px;
     outline: none;
     color: var(--light-dark-color);
-    width: 180px;
+    width: 225px;
     height: 10px;
 }
 
