@@ -29,7 +29,7 @@ import lombok.Setter;
 public class ServiceBulletin {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="SB_ID")
 	private Long serviceBulletinId;
 	
@@ -41,16 +41,8 @@ public class ServiceBulletin {
 	@UpdateTimestamp
 	private Timestamp serviceBulletinDtRegister;
 	
-	@Column(name="SB_STATUSSERVICE")
-	@NotNull
-	private String serviceBulletinStatus;
-	
 	@Column(name="SB_PARTSERVICE")
 	private String serviceBulletinPart;
-	
-	@JoinColumn(name="CHASSI_ID")
-	@ManyToOne(fetch = FetchType.LAZY)
-	private Chassis chassiId;
 	
 	@JoinColumn(name="USER_ID_REGISTER")
 	@ManyToOne(fetch = FetchType.LAZY)
