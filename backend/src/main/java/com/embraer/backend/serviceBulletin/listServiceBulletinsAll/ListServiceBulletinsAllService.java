@@ -17,16 +17,19 @@ public class ListServiceBulletinsAllService {
 	ServiceBulletinRepository serviceBulletinRepository;
 	
 	public List<ListServiceBulletinAllDto> execute() {
+
 		List<ServiceBulletin> listServiceBulletin = serviceBulletinRepository.findAll();
+
 		
 		List<ListServiceBulletinAllDto> listServiceBulletinsAllDto = new ArrayList<ListServiceBulletinAllDto>();
 		
-		for (ServiceBulletin bulletin: listServiceBulletin) {
+		//for (String bulletin: listServiceBulletin) {
 			ListServiceBulletinAllDto listServiceBulletinAllDto = new ListServiceBulletinAllDto();
 			listServiceBulletinAllDto.setService_bulletin_name(bulletin.getServiceBulletinName());
 			listServiceBulletinAllDto.setService_bulletin_part(bulletin.getServiceBulletinPart());
 			listServiceBulletinsAllDto.add(listServiceBulletinAllDto);
 		}
+
 		return listServiceBulletinsAllDto;
 			
 	}
