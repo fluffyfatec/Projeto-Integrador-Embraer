@@ -24,7 +24,8 @@ public class ListServiceBulletinsController {
 		
 		List<ListServiceBulletinsResponse> serviceBulletinsResponses = listBulletinsService.execute(id);
 		
-		return ResponseEntity.status(HttpStatus.OK).body(serviceBulletinsResponses);
+		return ResponseEntity
+				.status(HttpStatus.OK).body(serviceBulletinsResponses);
 	}
 
 }

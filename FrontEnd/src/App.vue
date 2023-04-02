@@ -197,6 +197,7 @@ export default {
   padding: 40px;
   box-shadow: 2px 2px 20px 5px var(--silver);
   transition: 2s;
+  z-index: 9999;
 }
 
 .dropdown-menu-mobile li a {
