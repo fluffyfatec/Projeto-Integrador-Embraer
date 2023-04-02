@@ -4,7 +4,6 @@ import lombok.Data;
 
 @Data
 public class ListItemsResponseDTO {
-
 	
 	private String name_item;
 	
