@@ -1,11 +1,10 @@
 package com.embraer.backend.serviceBulletin.service.registerServiceBulletin;
 
-import java.sql.Timestamp;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.embraer.backend.chassis.entity.Chassis;
 import com.embraer.backend.chassis.repositories.ChassisRepository;
@@ -18,11 +17,8 @@ import com.embraer.backend.serviceBulletin.service.registerServiceBulletin.dto.V
 import com.embraer.backend.serviceBulletin.service.registerServiceBulletin.util.VerifyPart;
 import com.embraer.backend.user.entity.User;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 @Service
-@Transactional
 public class RegisterBulletinService {
 
 	@Autowired
@@ -40,7 +36,6 @@ public class RegisterBulletinService {
 	public void execute(List<ServiceBulletinRegisterDTO> serviceBulletinRegisterDTO) {
 
 		List<ChassiServiceBulletin> service = new ArrayList<>();
-
 		for (ServiceBulletinRegisterDTO serviceDTO : serviceBulletinRegisterDTO) {
 
 			Chassis exist = chassisRepository.findById(serviceDTO.getChassis()).orElse(null);
@@ -79,7 +74,5 @@ public class RegisterBulletinService {
 		}
 		chassiServiceBulletinRepository.saveAllAndFlush(service);
 
-
 	}
 }
-
