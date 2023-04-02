@@ -13,3 +13,4 @@ public interface ServiceBulletinRepository extends JpaRepository<ServiceBulletin
 		
 	ServiceBulletin findByServiceBulletinNameAndServiceBulletinPart(String bulletinName, String bulletinPart);
 }
+

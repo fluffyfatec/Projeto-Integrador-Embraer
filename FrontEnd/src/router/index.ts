@@ -81,7 +81,7 @@ const router = new VueRouter({
     },
 
     {
-      path: '/sbs/:sb',
+      path: '/sbs/:sb/:part',
       name: 'sbs-details',
       component: () => import('../views/SbsDetails.vue'),
       props: true,
