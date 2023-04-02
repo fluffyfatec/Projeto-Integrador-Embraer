@@ -48,10 +48,6 @@ public class ServiceBulletin {
 	@Column(name="SB_PARTSERVICE")
 	private String serviceBulletinPart;
 	
-	@JoinColumn(name="CHASSI_ID")
-	@ManyToOne(fetch = FetchType.LAZY)
-	private Chassis chassiId;
-	
 	@JoinColumn(name="USER_ID_REGISTER")
 	@ManyToOne(fetch = FetchType.LAZY)
 	private User userRegister;

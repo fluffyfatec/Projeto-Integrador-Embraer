@@ -6,19 +6,12 @@ import com.embraer.backend.chassis.entity.Chassis;
 import com.embraer.backend.serviceBulletin.entity.ServiceBulletin;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ServiceBulletinRepository extends JpaRepository<ServiceBulletin, Long> {
-
-	List<ServiceBulletin> findByChassiId(Chassis chassi);
-
-	ServiceBulletin findByServiceBulletinName(String serviceBulletinName);
-
-	@Query("SELECT DISTINCT sb.serviceBulletinName FROM ServiceBulletin sb")
-	List<String> findDistinctByServiceBulletinName();
-
-	Boolean existsByChassiIdAndServiceBulletinNameAndServiceBulletinPart(Chassis chassi, String bulletinName, String bulletinPart);
-
+public interface ServiceBulletinRepository extends JpaRepository<ServiceBulletin, Long>{
+	
+	List<ServiceBulletin> findByChassiId(Chassis chassi);	
+	ServiceBulletin findByServiceBulletinName (String serviceBulletinName);
+	
 }
