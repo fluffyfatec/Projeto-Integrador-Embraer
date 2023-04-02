@@ -66,7 +66,7 @@ public class RegisterBulletinService {
 
 			ServiceBulletin serviceBulletin = serviceBulletinRepository
 					.findByServiceBulletinNameAndServiceBulletinPart(serviceInfo.getBulletin(), serviceInfo.getPart());
-
+			
 			Chassis chassiExist = new Chassis();
 			chassiExist.setChassiId(serviceDTO.getChassis());
 			
@@ -77,8 +77,7 @@ public class RegisterBulletinService {
 			service.add(chassiServiceBulletin);
 			
 		}
-		chassiServiceBullet
-inRepository.saveAllAndFlush(service);
+		chassiServiceBulletinRepository.saveAllAndFlush(service);
 
 
 	}

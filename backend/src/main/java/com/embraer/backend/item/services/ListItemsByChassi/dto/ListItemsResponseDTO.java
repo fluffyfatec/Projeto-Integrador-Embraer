@@ -11,4 +11,8 @@ public class ListItemsResponseDTO {
 	
 	List<ListNotApplicable> not_applicable;
 	
+	List<ListApplicable> applicable;
+	
+	
+	
 }

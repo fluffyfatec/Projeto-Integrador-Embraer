@@ -12,7 +12,7 @@ public class ListItemsByChassiService {
 	@Autowired
 	ContainsItems containsItems;
 
-	public ListItemsResponseDTO execute(Long chassiId) {
+	public ListItemsResponseDTO execute(Integer chassiId) {
 		ListItemsResponseDTO items = containsItems.items(chassiId);
 
 		return items;

@@ -18,7 +18,7 @@ public class ListItemsByChassiController {
 	ListItemsByChassiService itemsByChassiService;
 	
 	@GetMapping
-	public ResponseEntity<ListItemsResponseDTO> listItemsByChassy(@PathVariable("chassi") Long chassi) {
+	public ResponseEntity<ListItemsResponseDTO> listItemsByChassy(@PathVariable("chassi") Integer chassi) {
 		
 		ListItemsResponseDTO listItems = itemsByChassiService.execute(chassi);
 		
