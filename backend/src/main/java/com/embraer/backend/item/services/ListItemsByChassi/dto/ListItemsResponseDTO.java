@@ -1,11 +1,14 @@
 package com.embraer.backend.item.services.ListItemsByChassi.dto;
 
+import java.util.List;
+
 import lombok.Data;
 
 @Data
 public class ListItemsResponseDTO {
 	
-	private String name_item;
+	List<ListIncorporated> incorporated;
 	
-	private String status;
+	List<ListNotApplicable> not_applicable;
+	
 }
