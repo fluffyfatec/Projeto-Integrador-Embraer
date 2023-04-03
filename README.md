@@ -12,7 +12,7 @@
 
 <p align="center">
   <a href="#About-the-project">About the project</a> •
-  <a href="#Timeline">Timeline</a> •
+  <a href="#Schedule">Schedule</a> •
   <a href="#burndown">Burndown</a> •
   <a href="#Team">Team</a> •
   <a href="#User Manual">User Manual</a> •
@@ -23,9 +23,6 @@
 Currently, many pilots work as “freelancers” and do not operate just one aircraft/fleet, which makes it difficult to recognize certain equipment and software versions installed on the aircraft. Furthermore, the pilot does not always have quick access to all aircraft manuals and documents, which impairs his knowledge of the aircraft and its capabilities.
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
-
-## Goal
-
 
 
 <details>
@@ -66,49 +63,124 @@ Our team will develop a web software for the company "Embraer" that allows the e
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
-## Timeline
+## Schedule
 
  <img src="GIT/timeline.png" width="100%" height="100%">
 
-<p align="center">
-      <img src="" width="100%" height="100%">
-<p align="center">
-
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
-## Product Backlog
 
-<p align="center">
-      <img src="" width="100%" height="100%">
-<p align="center">
 
-<p align="right">(<a href="#top">Back to top</a>)</p>
-
-## Sprints
-
-<p align="center">
-      <img src="" width="100%" height="100%">
-<p align="center">
-
-<p align="right">(<a href="#top">Back to top</a>)</p>
 
 ##  Sprint Goals
+<details>
+<summary><b>Sprint 1</b></summary>
+                  <details>
+                  <summary>Essential</summary>
+                        <p>•Data automation.
+                  </details>
+                  <details>
+                  <summary>Important</summary>                  
+                        <p>•Search by Sb's.
+                        <p>•Search by Items.
+                        <p>•Search by Chassis.
+                  </details>
+                   <details>
+                  <summary>Good to Have</summary>                  
+                        <p>•Item Search by Chassis.
+                        <p>•Search of Sb's by Chassis.                      
+                  </details>
+ </details>   
+ 
+ <details>              
+<summary><b>Sprint 2</b></summary>
+                  <details>
+                  <summary>Essential</summary>
+                        <p>•User Authentication and Authorization.
+                  </details>
+                  <details>
+                  <summary>Important</summary>                  
+                        <p>•Access levels.                    
+                  </details>
+                   <details>
+                  <summary>Good to Have</summary>                  
+                        <p>•Registration of New Items.
+                  </details>
+             
+</details>
+
+ <details>              
+<summary><b>Sprint 3</b></summary>
+                  <details>
+                  <summary>Essential</summary>
+                        <p>•Generate aircraft reports.
+                  </details>
+                  <details>
+                  <summary>Important</summary>                  
+                        <p>•Edition of the Planes.
+                        <p>•Edition of Sb's.      
+                  </details>
+                   <details>
+                  <summary>Good to Have</summary>                  
+                        <p>•Notifications of edits (via email).
+                  </details>
+             
+</details>
+
+ <details>              
+<summary><b>Sprint 4</b></summary>
+                  <details>
+                  <summary>Essential</summary>
+                        <p>•Administrative panel.
+                  </details>
+                  <details>
+                  <summary>Important</summary>                  
+                        <p>•Log Generation.                    
+                  </details>
+                 
+             
+</details>
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
-
-## DER 
+## Mockup
+<p align="center">
+WEB
+<p align="center">
 
 <p align="center">
-      <img src="" width="100%" height="100%">
+      <img src="GIT/mockup-web.gif" width="100%" height="100%">
+<p align="center">
+
+<p align="center">
+Mobile
+<p align="center">
+
+<p align="center">
+      <img src="GIT/mockup-mobile.gif" width="40%" height="20%">
 <p align="center">
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
+## ERD
+
+<p align="center">
+      <img src="GIT/der.png" width="100%" height="100%">
+<p align="center">
+
+<p align="right">(<a href="#top">Back to top</a>)</p>
+
+## Logical Model
+
+<p align="center">
+      <img src="GIT/logico.png" width="100%" height="100%">
+<p align="center">
+
+<p align="right">(<a href="#top">Back to top</a>)</p>
 
 ## Data dictionary
 
-[Click here to access the data dictionary]()
+[Click here to access the data dictionary](https://github.com/fluffyfatec/Projeto-Integrador-Embraer/blob/GIT_MODIFICATION/GIT/datadic.pdf)
 
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
@@ -117,14 +189,8 @@ Our team will develop a web software for the company "Embraer" that allows the e
 ## Burndown
 
 <p align="center">
-      <img src="" width="100%" height="100%">
+      <img src="GIT/burndown.png" width="100%" height="100%">
 <p align="center">
-
-<p align="right">(<a href="#top">Back to top</a>)</p>
-
-## User Manual
-
-[Click here to access the User Manual]()
 
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
@@ -164,7 +230,7 @@ Our team will develop a web software for the company "Embraer" that allows the e
 <details>
 <summary>Database</summary>
 
-* [Oracle Autonomous Database 19c] (https://www.oracle.com/br/autonomous-database/)
+* [Oracle Autonomous Database](https://www.oracle.com/br/autonomous-database/)
 
 </details>
 <details>
