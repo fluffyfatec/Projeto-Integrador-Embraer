@@ -15,7 +15,7 @@
   <a href="#Schedule">Schedule</a> •
   <a href="#burndown">Burndown</a> •
   <a href="#Team">Team</a> •
-  <a href="#User Manual">User Manual</a> •
+  <a href="#Data Dictionary">Data Dictionary</a> •
   <a href="#Technologies Used">Technologies Used</a>
 </p>
 
@@ -31,8 +31,6 @@ Currently, many pilots work as “freelancers” and do not operate just one air
 <p>• Access to the customer database (user, password and equipment);
       
 <p>• Users must have different profiles (administrator, editing and query);
-
-<p>• "Clients" and "Items" CRUD's;
 
 <p>• Board of Administration and Statistics;
 
@@ -189,7 +187,7 @@ Mobile
 ## Burndown
 
 <p align="center">
-      <img src="GIT/burndown.png" width="100%" height="100%">
+      <img src="" width="100%" height="100%">
 <p align="center">
 
 
@@ -201,8 +199,6 @@ Mobile
 | -------------------------------------------- | ---------------- | ---------------- | -------------------------------------------------------------- | ----------------------------------------------------- |
 | <img src = "./GIT/avatarpatrick.png" width="60" >|_Patrick Souza_  | Scrum Master | [![](https://bit.ly/3f9Xo0P)](https://github.com/PatrickSouzza)  | [![](https://bit.ly/2P1ZogM)](https://www.linkedin.com/in/patrick-g-souza/) |
 | <img src = "./GIT/avatarfelipe.png" width="60" >|_Felipe Sobral_  | Product Owner  | [![](https://bit.ly/3f9Xo0P)](https://github.com/SoSoJigsaw)| [![](https://bit.ly/2P1ZogM)]() |
-| <img src = "./GIT/avatarluiz.png" width="60" >|_Luiz Felipe Borges_ | Developer Team | [![](https://bit.ly/3f9Xo0P)](https://github.com/luizborges17)   | [![](https://bit.ly/2P1ZogM)](https://www.linkedin.com/in/luizborges17/) |
-| <img src = "./GIT/avatarvictor.png" width="60" >|_Victor Fernandes_  | Developer Team  | [![](https://bit.ly/3f9Xo0P)](https://github.com/victornaca)| [![](https://bit.ly/2P1ZogM)](https://www.linkedin.com/in/victor-fernandes-1a61a917b/) |
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
@@ -260,7 +256,7 @@ Mobile
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
 <p align="center">
-      <img src=" GIT/rodape.png" height="100%">
+      <img src=" " height="100%">
 <p align="center">
 
 ---
