@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts">
-import { eventBus } from '@/main.js'
+import { eventBus } from '@/main'
 
 export default {
   data() {
