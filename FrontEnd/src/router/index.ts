@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import jwt_decode from 'jwt-decode';
 
 
 Vue.use(VueRouter)
@@ -11,8 +12,16 @@ const router = new VueRouter({
     
     {
       path: '/',
-      redirect: '/items',
-      //component: HomeView
+      redirect: '/login',
+    },
+
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/Login.vue'),
+      meta: {
+        appVueHide: true,
+      }
     },
 
 
@@ -26,6 +35,7 @@ const router = new VueRouter({
         showSearchChassis: true,
         itemsDetails: true,
         placeHolderValue: 'Search a chassis...',
+        requiresAuth: true,
       }
     },
 
@@ -38,6 +48,7 @@ const router = new VueRouter({
         showSearchChassis: true,
         itemsDetails: true,
         placeHolderValue: 'Search a chassis...',
+        requiresAuth: true,
       }
     },
 
@@ -52,6 +63,7 @@ const router = new VueRouter({
         showSearchChassis: true,
         planesDetails: true,
         placeHolderValue: 'Search a chassis...',
+        requiresAuth: true,
       }
     },
 
@@ -64,6 +76,7 @@ const router = new VueRouter({
         showSearchChassis: true,
         planesDetails: true,
         placeHolderValue: 'Search a chassis...',
+        requiresAuth: true,
       }
     },
 
@@ -77,6 +90,7 @@ const router = new VueRouter({
       meta: {
         showSearchSbs: true,
         placeHolderValue: 'Search a SB...',
+        requiresAuth: true,
       }
     },
 
@@ -88,6 +102,7 @@ const router = new VueRouter({
       meta: {
         showSearchSbs: true,
         placeHolderValue: 'Search a SB...',
+        requiresAuth: true,
       }
     },
 
@@ -101,6 +116,7 @@ const router = new VueRouter({
       meta: {
         showH3: true,
         tituloValue: 'Administrative Panel',
+        requiresAuth: true,
       }
     },
 
@@ -113,6 +129,7 @@ const router = new VueRouter({
       meta: {
         showH3: true,
         tituloValue: 'Data Import',
+        requiresAuth: true,
       }
     },
 
@@ -126,10 +143,55 @@ const router = new VueRouter({
       meta: {
         showH3: true,
         tituloValue: 'Notifications',
+        requiresAuth: true,
       }
     },
 
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+  const token = localStorage.getItem('token');
+
+  interface DecodedToken {
+    sub: string;
+    exp: number;
+  };
+
+  const isAuthenticated = token ? true : false;
+
+  if (isAuthenticated && to.path === '/login') {
+    next('/planes');
+    return;
+  }
+
+  if (requiresAuth && !token) {
+    next('/login');
+  } else if (token) {
+    const decodedToken = jwt_decode<DecodedToken>(token);
+    const currentTime = Date.now() / 1000;
+    if (decodedToken.exp < currentTime) {
+      localStorage.removeItem('token');
+      next('/login');
+    } else {
+      next();
+    }
+  } else {
+    next();
+  }
+});
+
+window.addEventListener('beforeunload', () => {
+  localStorage.setItem('local-storage', JSON.stringify(localStorage));
+});
+
+if (localStorage.getItem('local-storage')) {
+  const data = JSON.parse(localStorage.getItem('local-storage') || '');
+  Object.keys(data).forEach((key) => {
+    localStorage.setItem(key, data[key]);
+  });
+  localStorage.removeItem('local-storage');
+}
 
 export default router
