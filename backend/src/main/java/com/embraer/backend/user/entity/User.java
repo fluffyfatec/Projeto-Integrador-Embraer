@@ -19,7 +19,7 @@ import lombok.Setter;
 @Setter
 
 @Entity
-@Table(name="USER")
+@Table(name="USERS")
 public class User {
 
 	@Id
@@ -32,10 +32,7 @@ public class User {
 	
 	@Column(name="USER_PASSWORD")
 	private String userPassword;
-	
-	@Column(name = "STATUS")
-	private Character userStatus;
-	
+
 	@JoinColumn(name="PERMISSION_ID")
 	@ManyToOne(fetch = FetchType.LAZY)
 	private Permission permissionId;
