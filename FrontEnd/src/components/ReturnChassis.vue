@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import axios from 'axios';
-import { eventBus } from '@/main.js'
+import { eventBus } from '@/main';
 
 export default {
 
