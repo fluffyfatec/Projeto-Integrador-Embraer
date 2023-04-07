@@ -41,7 +41,7 @@
 
 <script lang="ts">
 import axios from 'axios';
-import { eventBus } from '@/main.js'
+import { eventBus } from '@/main';
 import ReturnChassis from '@/components/ReturnChassis.vue';
 
 export default {

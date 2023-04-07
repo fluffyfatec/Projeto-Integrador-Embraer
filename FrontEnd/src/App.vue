@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 
-    <div class="wrapper">
+    <div class="wrapper" v-if="!$route.meta.appVueHide">
 
       <nav v-if="isMobile" class="mobile-header">
         <div class="mobile-header-itens">
@@ -9,14 +9,14 @@
             <img src="@/assets/logo.png" alt="Logo">
           </a>
           <div class="mobile-icons">
-            <a class="mobile-notification">
+            <a v-if="g.adminAuth || g.editorAuth" class="mobile-notification">
               <router-link to="/notificacoes"><i class="fa-solid fa-bell"></i></router-link>
             </a>
             <li class="mobile-user" @click="showDropdown = !showDropdown" v-bind:class="{ 'active': showDropdown }">
               <a><i class="fa-solid fa-circle-user"></i></a>
               <ul v-if="showDropdown" class="dropdown-menu-mobile">
-                <li><router-link to="/admin-panel"><i class="fa-solid fa-lock"></i> Admin Panel</router-link></li>
-                <li><router-link to="/upload"><i class="fa-solid fa-file-import"></i> Import Data</router-link></li>
+                <li v-if="g.adminAuth"><router-link to="/admin-panel"><i class="fa-solid fa-lock"></i> Admin Panel</router-link></li>
+                <li v-if="g.adminAuth"><router-link to="/upload"><i class="fa-solid fa-file-import"></i> Import Data</router-link></li>
                 <li><a href="#" @click.prevent="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
               </ul>
             </li>
@@ -32,16 +32,16 @@
             <li id="user-icone" @click="showDropdown = !showDropdown" v-bind:class="{ 'active': showDropdown }">
               <a><i class="fa-solid fa-circle-user"></i></a>
               <ul v-if="showDropdown" class="dropdown-menu">
-                <li><router-link to="/admin-panel"><i class="fa-solid fa-lock"></i> Admin Panel</router-link></li>
-                <li><router-link to="/upload"><i class="fa-solid fa-file-import"></i> Import Data</router-link></li>
+                <li v-if="g.adminAuth"><router-link to="/admin-panel"><i class="fa-solid fa-lock"></i> Admin Panel</router-link></li>
+                <li v-if="g.adminAuth"><router-link to="/upload"><i class="fa-solid fa-file-import"></i> Import Data</router-link></li>
                 <li><a href="#" @click.prevent="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
               </ul>
             </li>
-            <li id="notification-icone"><router-link to="/notifications"><i class="fa-solid fa-bell"></i></router-link></li>
-            <li><router-link to="/analytics">Analytics</router-link></li>
-            <li><router-link to="/sbs">SBs</router-link></li>
-            <li><router-link to="/planes">Planes</router-link></li>
-            <li><router-link to="/items">Items</router-link></li>
+            <li v-if="g.adminAuth || g.editorAuth" id="notification-icone"><router-link to="/notifications"><i class="fa-solid fa-bell"></i></router-link></li>
+            <li v-if="g.adminAuth"><router-link to="/analytics">Analytics</router-link></li>
+            <li v-if="g.adminAuth || g.editorAuth"><router-link to="/sbs">SBs</router-link></li>
+            <li v-if="g.adminAuth || g.editorAuth"><router-link to="/planes">Planes</router-link></li>
+            <li v-if="g.adminAuth || g.editorAuth"><router-link to="/items">Items</router-link></li>
           </ul>
         </div>  
       </nav>
@@ -54,9 +54,17 @@
     <router-view />
 
 
-    <footer v-if="isMobile" class="mobile-navbar">
+    <footer v-if="isMobile && !$route.meta.appVueHide && (g.adminAuth || g.editorAuth)" class="mobile-navbar">
           <nav>
-            <ul class="mobile-navbar-itens">
+            <ul class="mobile-navbar-itens" 
+            :style="() => {
+                return {
+                  '.mobile-navbar-itens li': {
+                    'grid-template-columns': g.adminAuth ? '26.6% 26.6% 26.6%' : '20% 20% 20% 20%'
+                  }
+                };
+              }"
+            >
               <li>
                 <router-link to="/items">
                   <i class="fa-solid fa-clipboard"></i>
@@ -75,7 +83,7 @@
                   <span>SBs</span>
                 </router-link>
               </li>
-              <li>
+              <li v-if="g.adminAuth">
                 <router-link to="/analytics">
                   <i class="fa-solid fa-chart-line"></i>
                   <span>Analytics</span>
@@ -91,13 +99,16 @@
 <script lang="ts">
 import ContainerSearch from './components/ContainerSearch.vue'
 import clickOutside from '@/utils/click-outside.js';
+import globalData from '@/globals'
+import router from '@/router';
 
 export default {
   data() {
     return {
       isMobile: false,
       isDesktop: false,
-      showDropdown: false,      
+      showDropdown: false,
+      g: globalData,     
     }
   },
 
@@ -119,8 +130,13 @@ export default {
 
   },
 
-  created() {
-    
+  updated() {
+
+    if (this.$route.path !== this.g.previousPath) {
+        this.g.previousPath = this.$route.path;
+        this.g.getUserAuthenticated();
+      };     
+  
   },
 
   methods: {
@@ -132,7 +148,11 @@ export default {
     },
 
     logout() {
-    
+
+      localStorage.removeItem('token');
+
+      router.push('/login');
+   
     },
 
   },

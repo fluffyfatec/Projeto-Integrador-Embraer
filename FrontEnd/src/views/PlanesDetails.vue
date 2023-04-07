@@ -3,6 +3,13 @@
         <ReturnChassis v-if="searchTerm"></ReturnChassis>
         <div v-else>
             <h1 class="title">SBs of chassis {{ $route.params.chassis }}</h1>
+            <input type="checkbox" v-model="ApplicableFilter">
+            <label>Applicable</label>
+            <input type="checkbox" v-model="NotApplicableFilter">
+            <label>Not Applicable</label>
+            <input type="checkbox" v-model="IncorporatedFilter">
+            <label>Incorporated</label>
+            <h1>Valor {{ ApplicableFilter }}</h1>
             <div class="table-wrapper">
                 <table cellspacing="0">
                     <tr class="table-header">
@@ -12,7 +19,7 @@
                         <th>Not Applicable</th>
                         <th>Incorporated</th>
                     </tr>
-                    <tr v-for="sb in sbs" :key="sb.service_bulleti_name">
+                    <tr v-for="sb in sbs" :key="sb.service_bulleti_name + (i++)">
                         <td>{{ sb.service_bulleti_name }}</td>
                         <td>{{ sb.part }}</td>
                         <td><input v-if="sb.status == 'APPLICABLE'" type="checkbox" onclick="return false;" checked readonly><input v-else type="checkbox" onclick="return false;" readonly></td>
@@ -27,7 +34,7 @@
 
 <script lang="ts">
 import axios from 'axios';
-import { eventBus } from '@/main.js'
+import { eventBus } from '@/main';
 import ReturnChassis from '@/components/ReturnChassis.vue';
 
 export default {
@@ -35,7 +42,14 @@ export default {
     data() {
         return {
             sbs: [],
+            i: 1,
             searchTerm: '',
+            ApplicableFilter: true,
+            NotApplicableFilter: true,
+            IncorporatedFilter: true,
+            sbsApplicable: [],
+            sbsNotApplicable: [],
+            sbsIncorporated: [],
         }
     },
 
@@ -54,7 +68,25 @@ export default {
             this.getSbs();
         });
         
+        this.filterApplicable();
+        this.filterNotApplicable();
+        this.filterIncorporated();
     },
+
+  watch: {
+    ApplicableFilter: function() {
+      this.filterApplicable();
+    },
+
+    NotApplicableFilter: function() {
+      this.filterNotApplicable();
+    },
+
+    IncorporatedFilter: function() {
+      this.filterIncorporated();
+    },
+
+  },
     
     methods: {
         async getSbs() {
@@ -66,6 +98,54 @@ export default {
                 status: item.status,
                 part: item.part === 'UNICO' ? 'UNIQUE' : item.part
             }));
+
+        },
+
+        filterApplicable() {
+            if (!this.ApplicableFilter) {
+                this.sbsApplicable = this.sbs.filter(item => String(item.status) === 'APPLICABLE');
+                this.sbs = this.sbs.filter(item => String(item.status) !== 'APPLICABLE');
+                console.log(this.sbsApplicable);
+            } else {
+               this.sbs.push(...this.sbsApplicable);
+               
+               
+            }
+        },
+
+        filterNotApplicable() {
+            if (!this.NotApplicableFilter) {
+                this.sbsNotApplicable = this.sbs.filter(item => String(item.status) !== 'APPLICABLE' && String(item.status) !== 'INCORP' && 
+                                                   String(item.status) !== 'INCORPORATED' && String(item.status) !== 'INCOPORATED'); 
+                this.sbs = this.sbs.filter(item => String(item.status) === 'APPLICABLE' || String(item.status) || 'INCORP' || 
+                                                   String(item.status) === 'INCORPORATED' || String(item.status) === 'INCOPORATED');
+            } else {
+                this.sbs.push(...this.sbsNotApplicable);
+            }
+        },
+
+        filterIncorporated() {
+            if (!this.IncorporatedFilter) {
+                this.sbsIncorporated = this.sbs.filter(item => String(item.status) === 'INCORP' || String(item.status) === 'INCORPORATED' || String(item.status) === 'INCOPORATED'); 
+                this.sbs = this.sbs.filter(item => String(item.status) !== 'INCORP' && String(item.status) !== 'INCORPORATED' && String(item.status) !== 'INCOPORATED');
+            } else {
+                this.sbs.push(...this.sbsIncorporated);
+            }
+        },
+
+    },
+
+    computed: {
+        filteredApplicable() {
+        return this.sbs;
+        },
+
+        filteredNotApplicable() {
+        return this.sbs;
+        },
+
+        filteredIncorporated() {
+        return this.sbs;
         },
 
     },

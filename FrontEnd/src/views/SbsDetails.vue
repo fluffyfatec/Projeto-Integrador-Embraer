@@ -25,7 +25,7 @@
 
 <script lang="ts">
 import axios from 'axios';
-import { eventBus } from '@/main.js'
+import { eventBus } from '@/main';
 import ReturnSbs from '@/components/ReturnSbs.vue';
 
 export default {
@@ -52,6 +52,15 @@ export default {
             this.getPlanes();
         });
         
+    },
+
+    updated() {
+
+        if (this.$route.path !== this.previousPath) {
+            this.previousPath = this.$route.path;
+            this.getUserAuthenticated();
+        };
+
     },
     
     methods: {
