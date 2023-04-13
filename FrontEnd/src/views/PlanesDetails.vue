@@ -9,7 +9,6 @@
             <label>Not Applicable</label>
             <input type="checkbox" v-model="IncorporatedFilter">
             <label>Incorporated</label>
-            <h1>Valor {{ ApplicableFilter }}</h1>
             <div class="table-wrapper">
                 <table cellspacing="0">
                     <tr class="table-header">
@@ -19,7 +18,7 @@
                         <th>Not Applicable</th>
                         <th>Incorporated</th>
                     </tr>
-                    <tr v-for="sb in sbs" :key="sb.service_bulleti_name + (i++)">
+                    <tr v-for="sb in sbs" :key="sb.service_bulleti_name + sb.part">
                         <td>{{ sb.service_bulleti_name }}</td>
                         <td>{{ sb.part }}</td>
                         <td><input v-if="sb.status == 'APPLICABLE'" type="checkbox" onclick="return false;" checked readonly><input v-else type="checkbox" onclick="return false;" readonly></td>
@@ -42,7 +41,6 @@ export default {
     data() {
         return {
             sbs: [],
-            i: 1,
             searchTerm: '',
             ApplicableFilter: true,
             NotApplicableFilter: true,

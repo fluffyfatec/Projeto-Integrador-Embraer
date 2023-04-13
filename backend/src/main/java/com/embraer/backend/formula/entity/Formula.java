@@ -17,11 +17,11 @@ import lombok.Setter;
 @Table(name="FORMULA")
 public class Formula {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="FORMULA_ID")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "FORMULA_ID")
 	private Long formulaId;
 
-	@Column(name="FORMULA_DESC")
+	@Column(name = "FORMULA_DESC")
 	private String formulaDescription;
-	
+
 }
