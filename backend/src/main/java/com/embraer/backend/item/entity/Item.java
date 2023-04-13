@@ -2,12 +2,7 @@ package com.embraer.backend.item.entity;
 
 import java.sql.Timestamp;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import com.embraer.backend.permission.entity.Permission;
 
@@ -18,11 +13,12 @@ import lombok.Setter;
 @Setter
 
 @Entity
-@Table(name="ITEM")
+@Table(name="ITEMS")
 public class Item {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "item_seq_generator")
+	@SequenceGenerator(name="item_seq_generator", sequenceName = "ITEM_ID_SEQ",  allocationSize = 1)
 	@Column(name="ITEM_ID")
 	private Long itemId;
 	
