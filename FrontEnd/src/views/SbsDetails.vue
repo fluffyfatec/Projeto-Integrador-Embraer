@@ -3,6 +3,12 @@
         <ReturnSbs v-if="searchTerm"></ReturnSbs>
         <div v-else>
             <h1 class="title">Chassis of {{ $route.params.sb }} ({{ $route.params.part === 'UNICO' ? 'UNIQUE' : $route.params.part }})</h1>
+            <input type="checkbox" v-model="ApplicableFilter">
+            <label>Applicable</label>
+            <input type="checkbox" v-model="NotApplicableFilter">
+            <label>Not Applicable</label>
+            <input type="checkbox" v-model="IncorporatedFilter">
+            <label>Incorporated</label>
             <div class="table-wrapper">
                 <table cellspacing="0">
                     <tr class="table-header">
@@ -34,6 +40,12 @@ export default {
         return {
             planes: [],
             searchTerm: '',
+            ApplicableFilter: true,
+            NotApplicableFilter: true,
+            IncorporatedFilter: true,
+            planesApplicable: [],
+            planesNotApplicable: [],
+            planesIncorporated: [],
         }
     },
 
@@ -51,15 +63,30 @@ export default {
             this.searchTerm = '';
             this.getPlanes();
         });
+
+
+        this.filterApplicable();
+        this.filterNotApplicable();
+        this.filterIncorporated();
         
     },
 
-    updated() {
+    watch: {
+    ApplicableFilter: function() {
+      this.filterApplicable();
+    },
 
-        if (this.$route.path !== this.previousPath) {
-            this.previousPath = this.$route.path;
-            this.getUserAuthenticated();
-        };
+    NotApplicableFilter: function() {
+      this.filterNotApplicable();
+    },
+
+    IncorporatedFilter: function() {
+      this.filterIncorporated();
+    },
+
+  },
+
+    updated() {
 
     },
     
@@ -74,8 +101,57 @@ export default {
                 status: item.sb_status
             }));
         },
+
+        filterApplicable() {
+            if (!this.ApplicableFilter) {
+                this.planesApplicable = this.planes.filter(item => String(item.status) === 'APPLICABLE');
+                this.planes = this.planes.filter(item => String(item.status) !== 'APPLICABLE');
+                console.log(this.planesApplicable);
+            } else {
+               this.planes.push(...this.planesApplicable);
+               
+               
+            }
+        },
+
+        filterNotApplicable() {
+            if (!this.NotApplicableFilter) {
+                this.planesNotApplicable = this.planes.filter(item => String(item.status) !== 'APPLICABLE' && String(item.status) !== 'INCORP' && 
+                                                   String(item.status) !== 'INCORPORATED' && String(item.status) !== 'INCOPORATED'); 
+                this.planes = this.planes.filter(item => String(item.status) === 'APPLICABLE' || String(item.status) || 'INCORP' || 
+                                                   String(item.status) === 'INCORPORATED' || String(item.status) === 'INCOPORATED');
+            } else {
+                this.planes.push(...this.planesNotApplicable);
+            }
+        },
+
+        filterIncorporated() {
+            if (!this.IncorporatedFilter) {
+                this.planesIncorporated = this.planes.filter(item => String(item.status) === 'INCORP' || String(item.status) === 'INCORPORATED' || String(item.status) === 'INCOPORATED'); 
+                this.planes = this.planes.filter(item => String(item.status) !== 'INCORP' && String(item.status) !== 'INCORPORATED' && String(item.status) !== 'INCOPORATED');
+            } else {
+                this.planes.push(...this.planesIncorporated);
+            }
+        },
+
    
     },
+
+    computed: {
+        filteredApplicable() {
+        return this.planes;
+        },
+
+        filteredNotApplicable() {
+        return this.planes;
+        },
+
+        filteredIncorporated() {
+        return this.planes;
+        },
+
+    },
+
 
     components: {
         ReturnSbs,
