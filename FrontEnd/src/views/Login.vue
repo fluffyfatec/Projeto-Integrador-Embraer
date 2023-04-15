@@ -1,13 +1,13 @@
 <template>
     <div class="login-container">
-        <img src="@/assets/logo.png">
+        
         <div class="login">
             <form @submit.prevent="login">
-                <label for="username">Username</label>
-                <input type="text" id="username" v-model="username">
+                <img src="@/assets/logo.png">
                 <br>
-                <label for="password">Password</label>
-                <input type="password" id="password" v-model="password">
+                <input type="text" id="username" placeholder="USERNAME" v-model="username">
+                <br>
+                <input type="password" id="password" placeholder="PASSWORD" v-model="password">
                 <br>
                 <button type="submit">Login</button>
             </form>
@@ -67,7 +67,8 @@ export default {
     margin-right: 300px;
     text-align: center;
     vertical-align: middle;
-    
+    display: flex;
+    flex-direction: column;
 }
 
 .login {
@@ -76,30 +77,42 @@ export default {
     padding-bottom: 50px;
     left: 50%;
     border-radius: 15px;
-}
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
-label {
-    color: var(--azul-principal);
-    margin-left: 15px;
-    text-align: left !important;
 }
 
 input {
-    border-radius: 5px;
-    margin-left: 15px;
-    width: 30%;
+    transition: 0.5s;
+    width: 50%;
     height: 30px;
+    border:2px solid ; 
+    border-top:none;
+    border-left: none;
+    border-right: none ;
+    border-color: var(--azul-embraer-dark);
+    
+}
+input:focus{
+  outline: none !important;
+  border-radius: 3px;
+  border-color: var(--azul-embraer-light);
+  background-color: var(--platinum);
 }
 
+
 button {
+    width: 50%;
+    height: 30px;
     border-radius: 5px;
+    border-color: var(--azul-embraer-light) ;
     background-color: var(--azul-principal);
     color: var(--white);
     padding: 5px;
+    cursor:pointer;
 }
 
 img {
-    left: 50%;
+    padding-right: 5px;
     height: 50px;
     width: auto;
 }
