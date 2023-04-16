@@ -112,7 +112,7 @@ const router = new VueRouter({
     {
       path: '/admin-panel',
       name: 'admin-panel',
-      //component: () => import('../views/CrudCondition.vue'),
+      component: () => import('../views/CrudCondition.vue'),
       meta: {
         showH3: true,
         tituloValue: 'Administrative Panel',
