@@ -1,13 +1,13 @@
 <template>
     <div class="login-container">
-        <img src="@/assets/logo.png">
+        
         <div class="login">
             <form @submit.prevent="login">
-                <label for="username">Username</label>
-                <input type="text" id="username" v-model="username">
+                <img src="@/assets/logo.png">
                 <br>
-                <label for="password">Password</label>
-                <input type="password" id="password" v-model="password">
+                <input type="text" id="username" placeholder="USERNAME" v-model="username">
+                <br>
+                <input type="password" id="password" placeholder="PASSWORD" v-model="password">
                 <br>
                 <button type="submit">Login</button>
             </form>
@@ -62,46 +62,107 @@ export default {
 @import "../assets/base.css";
 
 .login-container {
-    padding: 150px;
-    margin-left: 300px;
-    margin-right: 300px;
+    padding-top: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-left: 20rem;
+    margin-right: 20rem;
     text-align: center;
     vertical-align: middle;
-    
+    display: flex;
+    flex-direction: column;
 }
 
 .login {
+
     background-color: var(--white);
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     left: 50%;
     border-radius: 15px;
-}
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
-label {
-    color: var(--azul-principal);
-    margin-left: 15px;
-    text-align: left !important;
 }
 
 input {
-    border-radius: 5px;
-    margin-left: 15px;
-    width: 30%;
+    transition: 0.5s;
+    width: 50%;
     height: 30px;
+    border:2px solid ; 
+    border-top:none;
+    border-left: none;
+    border-right: none ;
+    border-color: var(--azul-embraer-dark);
+    
+}
+input:focus{
+  outline: none !important;
+  border-radius: 3px;
+  border-color: var(--azul-embraer-light);
+  background-color: var(--platinum);
 }
 
+
 button {
+    margin: 1rem;
+    width: 50%;
+    height: 30px;
     border-radius: 5px;
+    border-color: var(--azul-embraer-light) ;
     background-color: var(--azul-principal);
     color: var(--white);
     padding: 5px;
+    cursor:pointer;
 }
 
 img {
-    left: 50%;
-    height: 50px;
-    width: auto;
+  max-width: 50%;
+  height: auto;
 }
+
+/* --------------- Media Queries -------------------- */
+
+/* Estilos para tablet */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .login-container {
+    padding-top: 50%;
+    margin-left: 50px;
+    margin-right: 50px;
+    vertical-align: middle;
+  }
+
+  input {
+    width: 80%;
+  }
+
+  button {
+    width: 80%;
+  }
+}
+
+/* Estilos para mobile */
+@media only screen and (max-width: 767px) {
+
+  app {
+    vertical-align: middle;
+  }
+  .login-container {
+    padding-top: 70%;
+    margin: 0 auto;
+    }
+
+    .login {
+      width: 100%;
+      border-radius: 1rem;
+      
+    }
+    input {
+    width: 80%;
+  }
+
+  button {
+    width: 80%;
+  }
+  }  
 
 </style>
