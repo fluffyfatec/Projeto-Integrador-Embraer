@@ -1,0 +1,113 @@
+<template>
+    <form @submit.prevent="saveConditionAndItem">
+        <div class="sbs">
+            <select class="select-sb1" v-model="conditionDTO.sb1">
+                <option class="select-placeholder" disabled :value="null">Choose sb1...</option>
+                <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                    {{ sb.sb_name }}
+                </option>
+            </select>
+            <select v-if="conditionDTO.sb1 !== null" class="select-sb1-part" 
+            v-model="conditionDTO.sb1_part">
+                <option class="select-placeholder" disabled :value="null">Part</option>
+                <option v-for="part in filteredParts1" :key="part.part">
+                    {{ part.part }}
+                </option>
+            </select>
+        </div>
+        <div class="clause">
+            <h3>AND</h3>
+        </div>
+        <div class="item">
+            <input type="text" v-model="conditionDTO.item" placeholder="Name of item...">
+        </div>    
+    
+
+        <button v-if="conditionDTO.item !== null && conditionDTO.item.length > 4  && conditionDTO.formulaDesc !== null && 
+                      conditionDTO.sb1 !== null && conditionDTO.sb1_part !== null" 
+        type="submit" class="submit">Submit</button>
+    </form>
+</template>
+
+<script lang="ts">
+import axios from 'axios';
+import { eventBus } from '@/main';
+
+export default {
+    data() {
+        return {
+
+            edition: false,
+            sbs_options: [],
+            filteredParts1: [],
+            conditionDTO: {
+                item: null,
+                formulaDesc: 'sb1',
+                chassis: null,
+                sb1: null,
+                sb1_part: null,
+                sb2: null,
+                sb2_part: null,
+                sb3: null,
+                sb3_part: null
+            },
+
+        }
+    },
+
+    mounted() {
+        this.getSbs();
+    },
+
+    methods: {
+
+        updategetItems() {
+            eventBus.$emit('update-getItems', this.edition);
+        },
+
+        async saveConditionAndItem() {
+
+            if (this.conditionDTO.sb1_part === 'UNIQUE') { 
+                this.conditionDTO.sb1_part = 'UNICO';
+            };
+
+            await axios.post('http://localhost:8080/register-condition', this.conditionDTO, {
+                    headers: {
+                    'Content-Type': 'application/json'
+                    }
+
+                });
+            
+            this.updategetItems();   
+            
+            this.conditionDTO.sb1 = null;
+            this.conditionDTO.sb1_part = null;
+            this.conditionDTO.item = null;
+                
+        },
+
+        async getSbs() {
+            const response = await axios.get('http://localhost:8080/bulletin/list/all');
+            this.sbs_options = response.data.map((item: String) => ({ 
+                sb_name: item.service_bulletin_name, 
+                part: item.service_bulletin_part === 'UNICO' ? 'UNIQUE' : item.service_bulletin_part }));
+        },
+
+        filteredPartsBySb1() {
+            this.filteredParts1 = this.sbs_options.filter(item => String(item.sb_name) === this.conditionDTO.sb1);
+        }
+
+    },
+
+    watch: {
+
+    'conditionDTO.sb1': function () {
+      this.filteredPartsBySb1();
+    },
+
+  },
+
+
+}
+
+</script>
