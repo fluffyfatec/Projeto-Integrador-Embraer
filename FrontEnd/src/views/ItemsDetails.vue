@@ -133,6 +133,9 @@ export default {
 <style scoped>
 @import "../assets/base.css";
 
+button{
+    background-color: black;
+}
 .title {
     color: var(--azul-principal);
     margin-left: 25px;

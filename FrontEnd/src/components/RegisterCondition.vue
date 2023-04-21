@@ -1,7 +1,8 @@
 <template>
     <div>
-        <h1>Register of Item</h1>
-        <select class="select-condit-formula" v-model="condition_formula" placeholder="Select a formula...">
+        <h1 class="title">Register of Item</h1>
+        <select class="select-condit-formula" v-model="condition_formula">
+            <option value="" disabled selected hidden>Select a formula...</option>
             <option>chassis ></option>
             <option>sb1</option>
             <option>(sb1 OR sb2) AND sb3</option>
@@ -51,5 +52,21 @@ export default {
 </script>
 
 <style scoped>
+.title{
+    color: var(--azul-principal);
+    margin-left: 25px;
+    font-weight: var(--medium);
+}
+select{
+    margin-left: 40px;
+    border-color: var(--azul-claro-light);
+    border-radius: 5px;
+    width: 15rem;
+    height: 1.5rem;
+}
+select:focus-within .dropdown-toggle {
+  border: 2px solid var(--azul-principal);
+}
+
 
 </style>
