@@ -24,6 +24,7 @@ public class ConditionController {
             conditionService.saveConditionAndItem(conditionDTO);
             return ResponseEntity.ok("SUCCESS");
         } catch (Exception e) {
+            e.printStackTrace();
             return ResponseEntity.ok("NOT SUCCESS");
         }
 
