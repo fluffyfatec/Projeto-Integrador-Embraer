@@ -14,7 +14,11 @@
                     <tr>
                         <td>{{ item.name }}</td>
                         <td>{{ item.dt_register }}</td>
-                        <td v-if="itemSelected !== item.id"><button @click.prevent="ItemEdit(item.id)"><font-awesome-icon :icon="['fas', 'pen-to-square']" style="color: #c31d1d;" /></button></td>  
+                        <td v-if="itemSelected !== item.id">
+                            <button @click.prevent="ItemEdit(item.id)">
+                                <font-awesome-icon :icon="['fas', 'pen-to-square']"></font-awesome-icon>
+                            </button>
+                        </td>
                     </tr>
                         <div v-if="edition && itemSelected === item.id">
                             <select class="select-condit-formula" v-model="condition_formula" placeholder="Select a formula...">
