@@ -14,7 +14,7 @@
                     <tr>
                         <td>{{ item.name }}</td>
                         <td>{{ item.dt_register }}</td>
-                        <td v-if="itemSelected !== item.id"><button @click.prevent="ItemEdit(item.id)">Edit</button></td>  
+                        <td v-if="itemSelected !== item.id"><button @click.prevent="ItemEdit(item.id)"><font-awesome-icon :icon="['fas', 'pen-to-square']" style="color: #c31d1d;" /></button></td>  
                     </tr>
                         <div v-if="edition && itemSelected === item.id">
                             <select class="select-condit-formula" v-model="condition_formula" placeholder="Select a formula...">
@@ -120,6 +120,15 @@ export default {
 <style scoped>
 @import "../assets/base.css";
 
+button{
+
+    color: aliceblue;
+    background-color: var(--azul-principal);
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
 .title {
     color: var(--azul-principal);
     margin-left: 25px;
