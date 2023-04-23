@@ -3,12 +3,21 @@
         <ReturnChassis v-if="searchTerm"></ReturnChassis>
         <div v-else>
             <h1 class="title">SBs of chassis {{ $route.params.chassis }}</h1>
-            <input type="checkbox" v-model="ApplicableFilter">
-            <label>Applicable</label>
-            <input type="checkbox" v-model="NotApplicableFilter">
-            <label>Not Applicable</label>
-            <input type="checkbox" v-model="IncorporatedFilter">
-            <label>Incorporated</label>
+            <div class="filter">
+                <div class="micro-container">
+                    <input type="checkbox" v-model="ApplicableFilter">
+                    <label>Applicable</label>
+                </div>
+                <div class="micro-container">
+                    <input type="checkbox" v-model="NotApplicableFilter">
+                    <label>Not Applicable</label>
+                </div>
+                <div class="micro-container">
+                    <input type="checkbox" v-model="IncorporatedFilter">
+                    <label>Incorporated</label>
+                </div>
+                
+            </div>  
             <div class="table-wrapper">
                 <table cellspacing="0">
                     <tr class="table-header">
@@ -158,6 +167,11 @@ export default {
 <style scoped>
 @import "../assets/base.css";
 
+.filter{
+    display: flex;  
+    justify-content: center;
+}
+
 .title {
     color: var(--azul-principal);
     margin-left: 25px;
@@ -201,14 +215,36 @@ td {
 }
 
 input[type=checkbox] {
-  -ms-transform: scale(1.5); /* IE */
-  -moz-transform: scale(1.5); /* FF */
-  -webkit-transform: scale(1.5); /* Safari and Chrome */
-  -o-transform: scale(1.5); /* Opera */
-  transform: scale(1.5);
-  padding: 10px;
+border: 1px solid var(--silver);
+width: 15px;
+height: 15px;
+border-radius: 4px;
+outline: none;
+cursor: pointer;
+-ms-transform: scale(1.5); /* IE */
+-moz-transform: scale(1.5); /* FF */
+-webkit-transform: scale(1.5); /* Safari and Chrome */
+-o-transform: scale(1.5); /* Opera */
+transform: scale(1.5);
+margin: 10px;
 }
 
+input[type="checkbox"]:checked {
+  background-color: var(--azul-principal) !important; /* define a cor vermelha para o checkbox quando selecionado */
+  border-color: var(--azul-claro);
+}
+label{
+        color: var(--azul-principal);
+    }
+.micro-container{
+    border: 1px solid;
+    border-color: var(--azul-principal);
+    border-radius: 5px;
+    background-color: var(--platinum);
+    margin-right: 20px;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
 
 tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
 
@@ -263,6 +299,8 @@ tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
         transform: scale(1.5);
         padding: 10px;
     }
+  
+
 
 }
 
@@ -313,7 +351,6 @@ tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
         transform: scale(1);
         padding: 10px;
     }
-
 }    
 
 </style>

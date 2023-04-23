@@ -1,7 +1,7 @@
 <template>
     <form @submit.prevent="EditionConfirm">
         <div class="sbs">
-            <select class="select-sb1" v-model="conditionDTO.sb1">
+            <select class="select-sb1 select-chassis" v-model="conditionDTO.sb1">
                 <option class="select-placeholder" disabled :value="null">Choose sb1...</option>
                 <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                     {{ sb.sb_name }}
@@ -26,8 +26,11 @@
         <button v-if="conditionDTO.item !== null && conditionDTO.formulaDesc !== null && 
                       conditionDTO.sb1 !== null && conditionDTO.sb1_part !== null" 
         type="submit" class="submit">Submit</button>
-        <button @click.prevent="EditionCancel">Cancel</button>
-        <button @click.prevent="ItemDelete">Delete</button>
+        <div>
+            <button @click.prevent="EditionCancel">Cancel</button>
+            <button @click.prevent="ItemDelete">Delete</button>
+        </div>
+
     </form>
 </template>
 

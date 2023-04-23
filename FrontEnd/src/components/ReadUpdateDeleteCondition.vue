@@ -14,9 +14,14 @@
                     <tr>
                         <td>{{ item.name }}</td>
                         <td>{{ item.dt_register }}</td>
-                        <td v-if="itemSelected !== item.id"><button @click.prevent="ItemEdit(item.id)">Edit</button></td>  
+                        <td v-if="itemSelected !== item.id">
+                            <button @click.prevent="ItemEdit(item.id)">
+                                <font-awesome-icon :icon="['fas', 'pen-to-square']"></font-awesome-icon>
+                            </button>
+                        </td>
                     </tr>
-                        <div v-if="edition && itemSelected === item.id">
+                        <td colspan="3" class="full-width">
+                        <div v-if="edition && itemSelected === item.id" class="table-new-line">
                             <select class="select-condit-formula" v-model="condition_formula" placeholder="Select a formula...">
                                 <option>chassis ></option>
                                 <option>sb1</option>
@@ -28,6 +33,7 @@
                             <EditFormula3 v-else-if="condition_formula === '(sb1 OR sb2) AND sb3'" :itemId="item.id" :toString="item.id" :toLocaleString="item.id"></EditFormula3>
                             <EditFormula4 v-else-if="condition_formula === 'sb1 AND sb2'" :itemId="item.id" :toString="item.id" :toLocaleString="item.id"></EditFormula4>
                         </div>
+                        </td>
                     
                 </tbody>    
                                   
@@ -119,7 +125,27 @@ export default {
 
 <style scoped>
 @import "../assets/base.css";
+.table-new-line{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+.full-width {
+  width: 100%;
+  
+}
 
+
+button{
+
+    color: aliceblue;
+    background-color: var(--azul-principal);
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
 .title {
     color: var(--azul-principal);
     margin-left: 25px;

@@ -72,6 +72,42 @@ body {
 
 }
 
+/* ------------------------------- ↓↓↓↓↓ Modificações repetitivas ↓↓↓↓↓ --------------------------------*/
+select{
+  border-color: var(--azul-claro-light);
+  border-radius: 5px;
+  width: 18rem;
+  height: 2rem;
+  font-size:large;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+button{
+  margin-left: 10px;
+  width: 6rem;
+  height: 1.5rem;
+  border-radius: 5px;
+  background-color: var(--azul-principal);
+  color: var(--white);
+  border-color: var(--azul-claro-light);
+
+}
+
+.sbs{
+  display: flex;
+  flex-direction: row;
+}
+
+input{
+  border-color: var(--azul-claro-light);
+  border-radius: 5px;
+  width: 18rem;
+  height: 2rem;
+  font-size:large;
+  margin-top: 10px;
+  margin-left: 10px;
+}
 
 /* ------------------------------- ↓↓↓↓↓ Fonte Responsiva ↓↓↓↓↓ --------------------------------*/
 
