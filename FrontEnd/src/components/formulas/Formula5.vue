@@ -1,53 +1,56 @@
 <template>
-    <form @submit.prevent="saveConditionAndItem">
-        <div class="condition-or">
-            <div class="sb1">
-                <select class="select-sb1" v-model="conditionDTO.sb1">
-                    <option class="select-placeholder" disabled :value="null">Choose sb1...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb1 !== null" class="select-sb1-part" 
-                v-model="conditionDTO.sb1_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts1" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>
+    <form @submit.prevent="saveConditionAndItem" class="center">
+        <div class="align">
+            <div class="condition-or">
+                <div class="sb1">
+                    <select class="select-sb1" v-model="conditionDTO.sb1">
+                        <option class="select-placeholder" disabled :value="null">Choose sb1...</option>
+                        <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                            {{ sb.sb_name }}
+                        </option>
+                    </select>
+                    <select v-if="conditionDTO.sb1 !== null" class="select-sb-part" 
+                    v-model="conditionDTO.sb1_part">
+                        <option class="select-placeholder" disabled :value="null">Part</option>
+                        <option v-for="part in filteredParts1" :key="part.part">
+                            {{ part.part }}
+                        </option>
+                    </select>
+                </div>
+                <div class="clause">
+                    <h3>OR</h3>
+                </div>
+                <div class="sb2">
+                    <select class="select-sb2" v-model="conditionDTO.sb2">
+                        <option class="select-placeholder" disabled :value="null">Choose sb2...</option>
+                        <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                            {{ sb.sb_name }}
+                        </option>
+                    </select>
+                    <select v-if="conditionDTO.sb2 !== null" class="select-sb-part" 
+                    v-model="conditionDTO.sb2_part">
+                        <option class="select-placeholder" disabled :value="null">Part</option>
+                        <option v-for="part in filteredParts2" :key="part.part">
+                            {{ part.part }}
+                        </option>
+                    </select>    
+                </div>    
             </div>
             <div class="clause">
-                <h3>OR</h3>
-            </div>
-            <div class="sb2">
-                <select class="select-sb2" v-model="conditionDTO.sb2">
-                    <option class="select-placeholder" disabled :value="null">Choose sb2...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb2 !== null" class="select-sb2-part" 
-                v-model="conditionDTO.sb2_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts2" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>    
+                <h3>AND</h3>
             </div>    
-        </div>
-        <div class="clause">
-            <h3>AND</h3>
-        </div>    
-        <div class="item">
-            <input type="text" v-model="conditionDTO.item" placeholder="Name of item...">
-        </div>
+            <div class="item">
+                <input type="text" v-model="conditionDTO.item" placeholder="Name of item...">
+            </div>
 
-
-        <button v-if="conditionDTO.item !== null && conditionDTO.item.length > 4  && 
-                      conditionDTO.formulaDesc !== null &&
-                      conditionDTO.sb1 !== null && conditionDTO.sb1_part !== null &&
-                      conditionDTO.sb2 !== null && conditionDTO.sb2_part !== null" 
-        type="submit" class="submit">Submit</button>
+            <div class="center">
+                <button v-if="conditionDTO.item !== null && conditionDTO.item.length > 4  && 
+                            conditionDTO.formulaDesc !== null &&
+                            conditionDTO.sb1 !== null && conditionDTO.sb1_part !== null &&
+                            conditionDTO.sb2 !== null && conditionDTO.sb2_part !== null" 
+                type="submit" class="submit">Submit</button>
+            </div>
+        </div>
     </form>
 </template>
 
@@ -149,3 +152,18 @@ export default {
 }
 
 </script>
+<style scoped>
+.condition-or{
+    border: 2px solid var(--azul-principal);
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    color: var(--azul-principal);
+}
+
+</style>

@@ -1,31 +1,35 @@
 <template>
-    <form @submit.prevent="saveConditionAndItem">
-        <div class="sbs">
-            <select class="select-sb1" v-model="conditionDTO.sb1">
-                <option class="select-placeholder" disabled :value="null">Choose sb1...</option>
-                <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                    {{ sb.sb_name }}
-                </option>
-            </select>
-            <select v-if="conditionDTO.sb1 !== null" class="select-sb1-part" 
-            v-model="conditionDTO.sb1_part">
-                <option class="select-placeholder" disabled :value="null">Part</option>
-                <option v-for="part in filteredParts1" :key="part.part">
-                    {{ part.part }}
-                </option>
-            </select>
-        </div>
-        <div class="clause">
-            <h3>AND</h3>
-        </div>
-        <div class="item">
-            <input type="text" v-model="conditionDTO.item" placeholder="Name of item...">
-        </div>    
-    
+    <form @submit.prevent="saveConditionAndItem" class="center">
+        <div class="align">
+            <div class="sbs">
+                <select class="select-sb1" v-model="conditionDTO.sb1">
+                    <option class="select-placeholder" disabled :value="null">Choose sb1...</option>
+                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                        {{ sb.sb_name }}
+                    </option>
+                </select>
+                <select v-if="conditionDTO.sb1 !== null" class="select-sb-part" 
+                v-model="conditionDTO.sb1_part">
+                    <option class="select-placeholder" disabled :value="null">Part</option>
+                    <option v-for="part in filteredParts1" :key="part.part">
+                        {{ part.part }}
+                    </option>
+                </select>
+            </div>
+            <div class="clause">
+                <h3>=</h3>
+            </div>
+            <div class="item">
+                <input type="text" v-model="conditionDTO.item" placeholder="Name of item...">
+            </div> 
+           
+            <div class="center">
+                <button v-if="conditionDTO.item !== null && conditionDTO.item.length > 4  && conditionDTO.formulaDesc !== null && 
+                            conditionDTO.sb1 !== null && conditionDTO.sb1_part !== null" 
+                type="submit" class="submit">Submit</button>
+            </div>
 
-        <button v-if="conditionDTO.item !== null && conditionDTO.item.length > 4  && conditionDTO.formulaDesc !== null && 
-                      conditionDTO.sb1 !== null && conditionDTO.sb1_part !== null" 
-        type="submit" class="submit">Submit</button>
+        </div>
     </form>
 </template>
 
@@ -111,3 +115,17 @@ export default {
 }
 
 </script>
+<style scoped>
+h3{
+    font-size: 4rem;
+    margin-left: 47%;
+    color: var(--azul-principal);
+}
+.sbs{
+    display: flex;
+    justify-content: center;
+}
+.select-sb1{
+    font-size: x-large;
+}
+</style>
