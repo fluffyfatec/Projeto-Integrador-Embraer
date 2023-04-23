@@ -7,6 +7,7 @@
                     <tr class="table-header">
                         <th>Item</th>
                         <th>Date Register</th>
+                        <th>Status</th>
                         <th>Option</th>
                     </tr>
                 </thead>    
@@ -14,9 +15,11 @@
                     <tr>
                         <td>{{ item.name }}</td>
                         <td>{{ item.dt_register }}</td>
+                        <td class="status-item" @click="itemUpdateStatus(item.id, item.status)"
+                        :style="item.status === 'Active' ? 'color: #548644' : 'color: #AE2A32'">{{ item.status }}</td>
                         <td v-if="itemSelected !== item.id">
                             <button @click.prevent="ItemEdit(item.id)">
-                                <font-awesome-icon :icon="['fas', 'pen-to-square']"></font-awesome-icon>
+                                <i class="fa-regular fa-pen-to-square"></i>
                             </button>
                         </td>
                     </tr>
@@ -30,6 +33,9 @@
                                 <option>(sb1 OR sb2) AND sb3</option>
                                 <option>sb1 AND sb2</option>
                                 <option>sb1 OR sb2</option>
+                                <option v-if="condition_formula !== 'chassis >' && condition_formula !== 'chassis >' && 
+                                    condition_formula !== 'chassis >' && condition_formula !== 'chassis >' && 
+                                    condition_formula !== 'chassis >' && condition_formula !== 'others'">{{ condition_formula }}</option> 
                                 <option>others</option>        
                             </select>
                             <EditFormula1 v-if="condition_formula === 'chassis >'" :itemId="item.id" :toString="item.id" :toLocaleString="item.id"></EditFormula1>
@@ -37,7 +43,7 @@
                             <EditFormula3 v-else-if="condition_formula === '(sb1 OR sb2) AND sb3'" :itemId="item.id" :toString="item.id" :toLocaleString="item.id"></EditFormula3>
                             <EditFormula4 v-else-if="condition_formula === 'sb1 AND sb2'" :itemId="item.id" :toString="item.id" :toLocaleString="item.id"></EditFormula4>
                             <EditFormula5 v-else-if="condition_formula === 'sb1 OR sb2'" :itemId="item.id" :toString="item.id" :toLocaleString="item.id"></EditFormula5>
-                            <EditFormulaX v-else-if="condition_formula === 'others'" :itemId="item.id" :toString="item.id" :toLocaleString="item.id"></EditFormulaX>
+                            <EditFormulaX v-else :itemId="item.id" :toString="item.id" :toLocaleString="item.id"></EditFormulaX>
                         </div>
                         </td>
                     
@@ -59,7 +65,6 @@ import EditFormula3 from './EditCrudCondition/EditFormula3.vue';
 import EditFormula4 from './EditCrudCondition/EditFormula4.vue';
 import EditFormula5 from './EditCrudCondition/EditFormula5.vue';
 import EditFormulaX from './EditCrudCondition/EditFormulaX.vue';
-
 
 export default {
     data() {
@@ -91,8 +96,20 @@ export default {
             this.items = response.data.map((item: String) => ({ 
                 id: item.itemId,
                 name: item.itemName,
-                dt_register: item.itemDtregister 
+                dt_register: item.itemDtregister, 
+                status: item.status
             }));
+
+
+            for (let i = 0; i < this.items.length; i++) {
+                if (this.items[i].status === 'A') {
+                    this.items[i].status = 'Active';
+                }
+
+                if (this.items[i].status === 'I') {
+                    this.items[i].status = 'Inactive';
+                }
+            };    
 
          },
 
@@ -105,6 +122,12 @@ export default {
             this.edition = true;
 
         },
+
+        async itemUpdateStatus(itemId: String, status: String) {
+            await axios.get('http://localhost:8080/update-item-status/' + itemId + '/' + status);
+
+            this.getItems();
+        }
         
     },
 
@@ -198,6 +221,10 @@ td {
 }
 
 tbody:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
+
+.status-item {
+    cursor: pointer;
+}
 
 
 /* --------------- Media Queries -------------------- */
