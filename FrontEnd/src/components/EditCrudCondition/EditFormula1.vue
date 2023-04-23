@@ -1,26 +1,30 @@
 <template>
-    <form @submit.prevent="EditionConfirm">
-        <div class="chassis">
-            <select class="select-chassis" v-model="conditionDTO.chassis">
-                <option class="select-placeholder" disabled :value="null">Chassis > then...</option>
-                <option v-for="c in chassis_options" :key="c.chassi_id">
-                    {{ c.chassi_id }}
-                </option>
-            </select>
-        </div>
-        <div class="clause">
-            <h3>AND</h3>
-        </div>
-        <div class="item">
-            <input type="text" v-model="conditionDTO.item" placeholder="Name of item..." disabled>
-        </div>    
+    <form @submit.prevent="EditionConfirm" class="center">
+        <div class="align">
+            <div class="chassis">
+                <select class="select-chassis" v-model="conditionDTO.chassis">
+                    <option class="select-placeholder" disabled :value="null">Chassis > then...</option>
+                    <option v-for="c in chassis_options" :key="c.chassi_id">
+                        {{ c.chassi_id }}
+                    </option>
+                </select>
+            </div>
+            <div class="clause">
+                <h3>=</h3>
+            </div>
+            <div class="item">
+                <input type="text" v-model="conditionDTO.item" placeholder="Name of item..." disabled>
+            </div> 
 
-        <button 
-        v-if="conditionDTO.item !== null && conditionDTO.formulaDesc !== null && 
-              conditionDTO.chassis !== null"
-         type="submit" class="submit">Submit</button>
-        <button @click.prevent="EditionCancel">Cancel</button>
-        <button @click.prevent="ItemDelete">Delete</button>
+            <div class="center">
+                <button 
+                v-if="conditionDTO.item !== null && conditionDTO.formulaDesc !== null && 
+                    conditionDTO.chassis !== null"
+                type="submit" class="submit">Submit</button>
+                <button @click.prevent="EditionCancel">Cancel</button>
+                <button @click.prevent="ItemDelete">Delete</button>
+            </div>
+        </div>
     </form>
 </template>
 
