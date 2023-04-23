@@ -632,6 +632,12 @@
 <script lang="ts">
 import axios from 'axios';
 import { eventBus } from '@/main';
+import { macroWithUniqueMicroLogic } from '@/conditions';
+import { macroWithTwoMicroLogics } from '@/conditions';
+import { macroWithTwoMicroLogics_Sb1 } from '@/conditions';
+import { macroWithThreeMicroLogics_Sb1 } from '@/conditions';
+import { macroWithThreeMicroLogics } from '@/conditions';
+
 
 export default {
 
@@ -893,8 +899,6 @@ export default {
                 this.conditionDTO.sb30_part = 'UNIQUE';
             };
 
-
-            
 
             if (this.conditionDTO.sb7 !== null) {
                 this.showCondition2 = true;
@@ -1194,6 +1198,14 @@ export default {
             if (this.conditionDTO.sb30_part === 'UNIQUE') { 
                 this.conditionDTO.sb30_part = 'UNICO';
             };
+
+
+            macroWithUniqueMicroLogic(this.conditionDTO);
+            macroWithTwoMicroLogics_Sb1(this.conditionDTO);
+            macroWithThreeMicroLogics_Sb1(this.conditionDTO);
+            macroWithTwoMicroLogics(this.conditionDTO);
+            macroWithThreeMicroLogics(this.conditionDTO);
+
 
             await axios.post('http://localhost:8080/edit-condition', this.conditionDTO,  {
                     headers: {
