@@ -2,13 +2,13 @@
     <div>
         <h1 class="title">Register of Item</h1>
         <div class="select">
-        <select class="select-condit-formula" v-model="condition_formula">
-            <option value="" disabled selected hidden>Select a formula...</option>
-            <option>chassis ></option>
-            <option>sb1</option>
-            <option>(sb1 OR sb2) AND sb3</option>
-            <option>sb1 AND sb2</option>        
-        </select>
+            <select class="select-condit-formula" v-model="condition_formula">
+                <option value="" disabled selected hidden>Select a formula...</option>
+                <option>chassis ></option>
+                <option>sb1</option>
+                <option>(sb1 OR sb2) AND sb3</option>
+                <option>sb1 AND sb2</option>        
+            </select>
         </div>
         <Formula1 v-if="condition_formula === 'chassis >'"></Formula1>
         <Formula2 v-else-if="condition_formula === 'sb1'"></Formula2>
@@ -62,6 +62,7 @@ export default {
 .select{
     display: flex;
     justify-content: center;
+    border-color: var(--azul-claro-light);
 }
 select{
     border-color: var(--azul-claro-light);
