@@ -199,11 +199,5 @@ h3{
     font-size: 4rem;
     color: var(--azul-principal);
 }
-.chassis{
-    display: flex;
-    justify-content: center;
-}
-.select-chassis{
-    font-size: x-large;
-}
+
 </style>
