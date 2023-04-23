@@ -8,6 +8,7 @@
                 <option>sb1</option>
                 <option>(sb1 OR sb2) AND sb3</option>
                 <option>sb1 AND sb2</option>
+                <option>sb1 OR sb2</option>
             </select>
         </div>
         <Formula1 v-if="condition_formula === 'chassis >'"></Formula1>
