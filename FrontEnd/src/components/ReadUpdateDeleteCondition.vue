@@ -22,18 +22,22 @@
                     </tr>
                         <td colspan="3" class="full-width">
                         <div v-if="edition && itemSelected === item.id" class="table-new-line">
-                            <div> 
-                                <select class="select-condit-formula" v-model="condition_formula">
-                                    <option>chassis ></option>
-                                    <option>sb1</option>
-                                    <option>(sb1 OR sb2) AND sb3</option>
-                                    <option>sb1 AND sb2</option>        
-                                </select>
-                            </div>
+
+
+                            <select class="select-condit-formula" v-model="condition_formula" placeholder="Select a formula...">
+                                <option>chassis ></option>
+                                <option>sb1</option>
+                                <option>(sb1 OR sb2) AND sb3</option>
+                                <option>sb1 AND sb2</option>
+                                <option>sb1 OR sb2</option>
+                                <option>others</option>        
+                            </select>
                             <EditFormula1 v-if="condition_formula === 'chassis >'" :itemId="item.id" :toString="item.id" :toLocaleString="item.id"></EditFormula1>
                             <EditFormula2 v-else-if="condition_formula === 'sb1'" :itemId="item.id" :toString="item.id" :toLocaleString="item.id""></EditFormula2>
                             <EditFormula3 v-else-if="condition_formula === '(sb1 OR sb2) AND sb3'" :itemId="item.id" :toString="item.id" :toLocaleString="item.id"></EditFormula3>
                             <EditFormula4 v-else-if="condition_formula === 'sb1 AND sb2'" :itemId="item.id" :toString="item.id" :toLocaleString="item.id"></EditFormula4>
+                            <EditFormula5 v-else-if="condition_formula === 'sb1 OR sb2'" :itemId="item.id" :toString="item.id" :toLocaleString="item.id"></EditFormula5>
+                            <EditFormulaX v-else-if="condition_formula === 'others'"></EditFormulaX>
                         </div>
                         </td>
                     
@@ -53,6 +57,8 @@ import EditFormula1 from './EditCrudCondition/EditFormula1.vue';
 import EditFormula2 from './EditCrudCondition/EditFormula2.vue';
 import EditFormula3 from './EditCrudCondition/EditFormula3.vue';
 import EditFormula4 from './EditCrudCondition/EditFormula4.vue';
+import EditFormula5 from './EditCrudCondition/EditFormula5.vue';
+import EditFormulaX from './EditCrudCondition/EditFormulaX.vue';
 
 
 export default {
@@ -118,7 +124,9 @@ export default {
         EditFormula1,
         EditFormula2,
         EditFormula3,
-        EditFormula4
+        EditFormula4,
+        EditFormula5,
+        EditFormulaX,
     }
 
 }
