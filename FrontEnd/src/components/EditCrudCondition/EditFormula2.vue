@@ -27,8 +27,8 @@
                       conditionDTO.sb1 !== null && conditionDTO.sb1_part !== null" 
         type="submit" class="submit">Submit</button>
         <div>
-            <button @click.prevent="EditionCancel" class="button-logica">Cancel</button>
-            <button @click.prevent="ItemDelete" class="button-logica">Delete</button>
+            <button @click.prevent="EditionCancel">Cancel</button>
+            <button @click.prevent="ItemDelete">Delete</button>
         </div>
 
     </form>

@@ -99,6 +99,16 @@ button{
   flex-direction: row;
 }
 
+input{
+  border-color: var(--azul-claro-light);
+  border-radius: 5px;
+  width: 18rem;
+  height: 2rem;
+  font-size:large;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
 /* ------------------------------- ↓↓↓↓↓ Fonte Responsiva ↓↓↓↓↓ --------------------------------*/
 
 @media all and (min-width: 100px)  {  body  { font-size: 0.9em;  } }
