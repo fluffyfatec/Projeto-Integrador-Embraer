@@ -39,6 +39,8 @@ public class ConditionController {
             conditionService.updateCondition(conditionDTO);
             return ResponseEntity.ok("SUCCESS");
         } catch (Exception e) {
+            e.printStackTrace();
+
             return ResponseEntity.ok("NOT SUCCESS");
         }
 
