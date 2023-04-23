@@ -71,20 +71,23 @@ Our team will develop a web software for the company "Embraer" that allows the e
 
 
 ##  Sprint Goals
+
+<p>All items are organized from 0 to 2 according to the needs of each sprint.</p>
+<p>Items that are not finalized will be reworked in other sprints.</p>
 <details>
 <summary><b>Sprint 1</b></summary>
                   <details>
-                  <summary>Essential</summary>
+                  <summary>0</summary>
                         <p>•Data automation.
                   </details>
                   <details>
-                  <summary>Important</summary>                  
+                  <summary>1</summary>                  
                         <p>•Search by Sb's.
                         <p>•Search by Items.
                         <p>•Search by Chassis.
                   </details>
                    <details>
-                  <summary>Good to Have</summary>                  
+                  <summary>2</summary>                  
                         <p>•Item Search by Chassis.
                         <p>•Search of Sb's by Chassis.                      
                   </details>
@@ -93,15 +96,15 @@ Our team will develop a web software for the company "Embraer" that allows the e
  <details>              
 <summary><b>Sprint 2</b></summary>
                   <details>
-                  <summary>Essential</summary>
+                  <summary>0</summary>
                         <p>•User Authentication and Authorization.
                   </details>
                   <details>
-                  <summary>Important</summary>                  
+                  <summary>1</summary>                  
                         <p>•Access levels.                    
                   </details>
                    <details>
-                  <summary>Good to Have</summary>                  
+                  <summary>2</summary>                  
                         <p>•Registration of New Items.
                   </details>
              
@@ -110,16 +113,16 @@ Our team will develop a web software for the company "Embraer" that allows the e
  <details>              
 <summary><b>Sprint 3</b></summary>
                   <details>
-                  <summary>Essential</summary>
+                  <summary>0</summary>
                         <p>•Generate aircraft reports.
                   </details>
                   <details>
-                  <summary>Important</summary>                  
+                  <summary>1</summary>                  
                         <p>•Edition of the Planes.
                         <p>•Edition of Sb's.      
                   </details>
                    <details>
-                  <summary>Good to Have</summary>                  
+                  <summary>2</summary>                  
                         <p>•Notifications of edits (via email).
                   </details>
              
@@ -128,11 +131,11 @@ Our team will develop a web software for the company "Embraer" that allows the e
  <details>              
 <summary><b>Sprint 4</b></summary>
                   <details>
-                  <summary>Essential</summary>
+                  <summary>0</summary>
                         <p>•Administrative panel.
                   </details>
                   <details>
-                  <summary>Important</summary>                  
+                  <summary>1</summary>                  
                         <p>•Log Generation.                    
                   </details>
                  
@@ -187,7 +190,7 @@ Mobile
 ## Burndown
 
 <p align="center">
-      <img src="" width="100%" height="100%">
+      <img src="GIT/burndown2.png" width="100%" height="100%">
 <p align="center">
 
 
@@ -256,7 +259,7 @@ Mobile
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
 <p align="center">
-      <img src=" " height="100%">
+      <img src="GIT/rodape.png" height="100%">
 <p align="center">
 
 ---
