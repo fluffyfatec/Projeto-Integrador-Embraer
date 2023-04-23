@@ -1,6 +1,6 @@
 <template>
-    <form @submit.prevent="saveConditionAndItem" class="form">
-    <div class = "aling">
+    <form @submit.prevent="saveConditionAndItem" class="center">
+    <div class = "align">
         <div class="chassis">
             <select class="select-chassis" v-model="conditionDTO.chassis">
                 <option class="select-placeholder" disabled hidden :value="null">Chassis > then...</option>
@@ -15,11 +15,12 @@
         <div class="item">
             <input type="text" v-model="conditionDTO.item" placeholder="Name of item...">
         </div>    
-
-        <button 
-        v-if="conditionDTO.item !== null && conditionDTO.item.length > 4  && conditionDTO.formulaDesc !== null && 
-              conditionDTO.chassis !== null"
-         type="submit" class="submit">Submit</button>
+        <div class="center">
+            <button 
+            v-if="conditionDTO.item !== null && conditionDTO.item.length > 4  && conditionDTO.formulaDesc !== null && 
+                conditionDTO.chassis !== null"
+            type="submit" class="submit">Submit</button>
+        </div>
     </div>
     </form>
 </template>
@@ -85,6 +86,7 @@ export default {
 
 </script>
 <style scoped>
+
 h3{
     font-size: 4rem;
     margin-left: 47%;
