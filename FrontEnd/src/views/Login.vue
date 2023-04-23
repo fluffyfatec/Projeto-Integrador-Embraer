@@ -62,9 +62,11 @@ export default {
 @import "../assets/base.css";
 
 .login-container {
-    padding: 150px;
-    margin-left: 300px;
-    margin-right: 300px;
+    padding-top: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-left: 20rem;
+    margin-right: 20rem;
     text-align: center;
     vertical-align: middle;
     display: flex;
@@ -72,9 +74,10 @@ export default {
 }
 
 .login {
+
     background-color: var(--white);
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     left: 50%;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -101,6 +104,7 @@ input:focus{
 
 
 button {
+    margin: 1rem;
     width: 50%;
     height: 30px;
     border-radius: 5px;
@@ -112,9 +116,53 @@ button {
 }
 
 img {
-    padding-right: 5px;
-    height: 50px;
-    width: auto;
+  max-width: 50%;
+  height: auto;
 }
+
+/* --------------- Media Queries -------------------- */
+
+/* Estilos para tablet */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .login-container {
+    padding-top: 50%;
+    margin-left: 50px;
+    margin-right: 50px;
+    vertical-align: middle;
+  }
+
+  input {
+    width: 80%;
+  }
+
+  button {
+    width: 80%;
+  }
+}
+
+/* Estilos para mobile */
+@media only screen and (max-width: 767px) {
+
+  app {
+    vertical-align: middle;
+  }
+  .login-container {
+    padding-top: 70%;
+    margin: 0 auto;
+    }
+
+    .login {
+      width: 100%;
+      border-radius: 1rem;
+      
+    }
+    input {
+    width: 80%;
+  }
+
+  button {
+    width: 80%;
+  }
+  }  
 
 </style>

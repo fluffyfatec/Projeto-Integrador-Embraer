@@ -1,15 +1,16 @@
 <template>
-    <form @submit.prevent="saveConditionAndItem">
+    <form @submit.prevent="saveConditionAndItem" class="form">
+    <div class = "aling">
         <div class="chassis">
             <select class="select-chassis" v-model="conditionDTO.chassis">
-                <option class="select-placeholder" disabled :value="null">Chassis > then...</option>
+                <option class="select-placeholder" disabled hidden :value="null">Chassis > then...</option>
                 <option v-for="c in chassis_options" :key="c.chassi_id">
                     {{ c.chassi_id }}
                 </option>
             </select>
         </div>
         <div class="clause">
-            <h3>AND</h3>
+            <h3>=</h3>
         </div>
         <div class="item">
             <input type="text" v-model="conditionDTO.item" placeholder="Name of item...">
@@ -19,6 +20,7 @@
         v-if="conditionDTO.item !== null && conditionDTO.item.length > 4  && conditionDTO.formulaDesc !== null && 
               conditionDTO.chassis !== null"
          type="submit" class="submit">Submit</button>
+    </div>
     </form>
 </template>
 
@@ -82,3 +84,17 @@ export default {
 }
 
 </script>
+<style scoped>
+h3{
+    font-size: 4rem;
+    margin-left: 47%;
+    color: var(--azul-principal);
+}
+.chassis{
+    display: flex;
+    justify-content: center;
+}
+.select-chassis{
+    font-size: x-large;
+}
+</style>

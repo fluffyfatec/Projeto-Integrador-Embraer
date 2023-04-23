@@ -1,5 +1,5 @@
 <template>
-    <form @submit.prevent="EditionConfirm">
+    <form @submit.prevent="EditionConfirm" class="form">
         <div class="sbs">
             <select class="select-sb1 select-chassis" v-model="conditionDTO.sb1">
                 <option class="select-placeholder" disabled :value="null">Choose sb1...</option>
@@ -22,13 +22,13 @@
             <input type="text" v-model="conditionDTO.item" placeholder="Name of item...">
         </div>    
     
-
-        <button v-if="conditionDTO.item !== null && conditionDTO.formulaDesc !== null && 
-                      conditionDTO.sb1 !== null && conditionDTO.sb1_part !== null" 
-        type="submit" class="submit">Submit</button>
         <div>
-            <button @click.prevent="EditionCancel">Cancel</button>
-            <button @click.prevent="ItemDelete">Delete</button>
+            <button v-if="conditionDTO.item !== null && conditionDTO.formulaDesc !== null && 
+                        conditionDTO.sb1 !== null && conditionDTO.sb1_part !== null" 
+            type="submit" class="submit">Submit</button>
+        
+                <button @click.prevent="EditionCancel">Cancel</button>
+                <button @click.prevent="ItemDelete">Delete</button>
         </div>
 
     </form>
