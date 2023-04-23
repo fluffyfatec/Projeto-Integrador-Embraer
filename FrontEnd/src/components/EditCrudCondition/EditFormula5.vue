@@ -36,39 +36,18 @@
                     </select>    
                 </div>    
             </div>
-            <div class="condition-and">
-                <div class="clause">
-                    <h3>AND</h3>
-                </div>
-                <div class="sb3">
-                    <select class="select-sb3" v-model="conditionDTO.sb3">
-                        <option class="select-placeholder" disabled :value="null">Choose sb3...</option>
-                        <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                            {{ sb.sb_name }}
-                        </option>
-                    </select>
-                    <select v-if="conditionDTO.sb3 !== null" class="select-sb-part" 
-                    v-model="conditionDTO.sb3_part">
-                        <option class="select-placeholder" disabled :value="null">Part</option>
-                        <option v-for="part in filteredParts3" :key="part.part">
-                            {{ part.part }}
-                        </option>
-                    </select>    
-                </div>
-            </div>
             <div class="clause">
                 <h3>=</h3>
             </div>    
             <div class="item">
                 <input type="text" v-model="conditionDTO.item" placeholder="Name of item...">
-            </div>    
-        
+            </div>
+
             <div class="center">
-                <button v-if="conditionDTO.item !== null &&  
+                <button v-if="conditionDTO.item !== null && 
                             conditionDTO.formulaDesc !== null &&
                             conditionDTO.sb1 !== null && conditionDTO.sb1_part !== null &&
-                            conditionDTO.sb2 !== null && conditionDTO.sb2_part !== null &&
-                            conditionDTO.sb3 !== null && conditionDTO.sb3_part !== null" 
+                            conditionDTO.sb2 !== null && conditionDTO.sb2_part !== null" 
                 type="submit" class="submit">Submit</button>
                 <button @click.prevent="EditionCancel">Cancel</button>
                 <button @click.prevent="ItemDelete">Delete</button>
@@ -92,11 +71,10 @@ export default {
             sbs_options: [],
             filteredParts1: [],
             filteredParts2: [],
-            filteredParts3: [],
             conditionDTO: {
                 conditionId: null,
                 item: null,
-                formulaDesc: '(sb1 OR sb2) AND sb3',
+                formulaDesc: 'sb1 OR sb2',
                 chassis: null,
                 sb1: null,
                 sb1_part: null,
@@ -137,11 +115,6 @@ export default {
             if (this.conditionDTO.sb2_part === 'UNICO') { 
                 this.conditionDTO.sb2_part = 'UNIQUE';
             };
-
-            if (this.conditionDTO.sb3_part === 'UNICO') { 
-                this.conditionDTO.sb3_part = 'UNIQUE';
-            };
-
             
         },
 
@@ -150,10 +123,9 @@ export default {
             this.sbs_options = response.data.map((item: String) => ({ 
                 sb_name: item.service_bulletin_name, 
                 part: item.service_bulletin_part === 'UNICO' ? 'UNIQUE' : item.service_bulletin_part }));
-
+            
             this.filteredPartsBySb1();
-            this.filteredPartsBySb2();
-            this.filteredPartsBySb3();    
+            this.filteredPartsBySb2();    
         },
 
         filteredPartsBySb1() {
@@ -164,22 +136,14 @@ export default {
             this.filteredParts2 = this.sbs_options.filter(item => String(item.sb_name) === this.conditionDTO.sb2);
         },
 
-        filteredPartsBySb3() {
-            this.filteredParts3 = this.sbs_options.filter(item => String(item.sb_name) === this.conditionDTO.sb3);
-        },
-
         async EditionConfirm() {
 
             if (this.conditionDTO.sb1_part === 'UNIQUE') { 
                 this.conditionDTO.sb1_part = 'UNICO';
             };
-            
+
             if (this.conditionDTO.sb2_part === 'UNIQUE') { 
                 this.conditionDTO.sb2_part = 'UNICO';
-            };
-
-            if (this.conditionDTO.sb3_part === 'UNIQUE') { 
-                this.conditionDTO.sb3_part = 'UNICO';
             };
 
             await axios.post('http://localhost:8080/edit-condition', this.conditionDTO,  {
@@ -210,6 +174,7 @@ export default {
         },
 
 
+
     },
 
     watch: {
@@ -222,27 +187,10 @@ export default {
         this.filteredPartsBySb2();
         },
 
-        'conditionDTO.sb3': function () {
-        this.filteredPartsBySb3();
-        },
-
     },
+
+
 
 }
 
 </script>
-<style scoped>
-.condition-or{
-    border: 2px solid var(--azul-principal);
-    border-radius: 5px;
-    padding: 1rem;
-}
-
-h3{
-    display: flex;
-    justify-content: center;
-    font-size: 4rem;
-    color: var(--azul-principal);
-}
-
-</style>

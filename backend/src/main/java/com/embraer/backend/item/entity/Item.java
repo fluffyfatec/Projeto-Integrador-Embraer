@@ -27,5 +27,8 @@ public class Item {
 	
 	@Column(name="ITEM_DTREGISTER")
 	private Timestamp itemDtregister;
+
+	@Column(name="STATUS")
+	private String status;
 	
 }

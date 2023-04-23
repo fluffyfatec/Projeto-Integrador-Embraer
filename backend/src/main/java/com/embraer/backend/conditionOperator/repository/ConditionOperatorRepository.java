@@ -15,36 +15,36 @@ import org.springframework.transaction.annotation.Transactional;
 public interface ConditionOperatorRepository extends JpaRepository<ConditionOperator, Long> {
 
     @Modifying
-    @Query("UPDATE ConditionOperator c SET c.operator1 = :operator1 WHERE c.condition = :conditionId")
+    @Query("UPDATE ConditionOperator c SET c.operator1 = :operator1 WHERE c.condition.conditionId = :conditionId")
     @Transactional
     void updateOperator1(@Param("conditionId") Long conditionId, @Param("operator1") Operator operator);
 
     @Modifying
-    @Query("UPDATE ConditionOperator c SET c.operator2 = :operator2 WHERE c.condition = :conditionId")
+    @Query("UPDATE ConditionOperator c SET c.operator2 = :operator2 WHERE c.condition.conditionId = :conditionId")
     @Transactional
     void updateOperator2(@Param("conditionId") Long conditionId, @Param("operator2") Operator operator);
 
     @Modifying
-    @Query("UPDATE ConditionOperator c SET c.operator3 = :operator3 WHERE c.condition = :conditionId")
+    @Query("UPDATE ConditionOperator c SET c.operator3 = :operator3 WHERE c.condition.conditionId = :conditionId")
     @Transactional
     void updateOperator3(@Param("conditionId") Long conditionId, @Param("operator3") Operator operator);
 
     @Modifying
-    @Query("UPDATE ConditionOperator c SET c.operator4 = :operator4 WHERE c.condition = :conditionId")
+    @Query("UPDATE ConditionOperator c SET c.operator4 = :operator4 WHERE c.condition.conditionId = :conditionId")
     @Transactional
     void updateOperator4(@Param("conditionId") Long conditionId, @Param("operator4") Operator operator);
 
     @Modifying
-    @Query("UPDATE ConditionOperator c SET c.operator5 = :operator5 WHERE c.condition = :conditionId")
+    @Query("UPDATE ConditionOperator c SET c.operator5 = :operator5 WHERE c.condition.conditionId = :conditionId")
     @Transactional
     void updateOperator5(@Param("conditionId") Long conditionId, @Param("operator5") Operator operator);
 
     @Modifying
-    @Query("DELETE FROM ConditionOperator c WHERE c.condition = :conditionId")
+    @Query("DELETE FROM ConditionOperator c WHERE c.condition.conditionId = :conditionId")
     @Transactional
     void deleteByCondition(@Param("conditionId") Long conditionId);
 
-    @Query("SELECT c FROM ConditionOperator c WHERE c.condition = :conditionId")
+    @Query("SELECT c FROM ConditionOperator c WHERE c.condition.conditionId = :conditionId")
     ConditionOperator listAllByCondition(@Param("conditionId") Long conditionId);
 
 }

@@ -7,6 +7,7 @@
                     <tr class="table-header">
                         <th>Item</th>
                         <th>Date Register</th>
+                        <th>Status</th>
                         <th>Option</th>
                     </tr>
                 </thead>    
@@ -14,20 +15,37 @@
                     <tr>
                         <td>{{ item.name }}</td>
                         <td>{{ item.dt_register }}</td>
-                        <td v-if="itemSelected !== item.id"><button @click.prevent="ItemEdit(item.id)">Edit</button></td>  
+                        <td class="status-item" @click="itemUpdateStatus(item.id, item.status)"
+                        :style="item.status === 'Active' ? 'color: #548644' : 'color: #AE2A32'">{{ item.status }}</td>
+                        <td v-if="itemSelected !== item.id">
+                            <button @click.prevent="ItemEdit(item.id)">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </button>
+                        </td>
                     </tr>
-                        <div v-if="edition && itemSelected === item.id">
+                        <td colspan="3" class="full-width">
+                        <div v-if="edition && itemSelected === item.id" class="table-new-line">
+
+
                             <select class="select-condit-formula" v-model="condition_formula" placeholder="Select a formula...">
                                 <option>chassis ></option>
                                 <option>sb1</option>
                                 <option>(sb1 OR sb2) AND sb3</option>
-                                <option>sb1 AND sb2</option>        
+                                <option>sb1 AND sb2</option>
+                                <option>sb1 OR sb2</option>
+                                <option v-if="condition_formula !== 'chassis >' && condition_formula !== 'chassis >' && 
+                                    condition_formula !== 'chassis >' && condition_formula !== 'chassis >' && 
+                                    condition_formula !== 'chassis >' && condition_formula !== 'others'">{{ condition_formula }}</option> 
+                                <option>others</option>        
                             </select>
                             <EditFormula1 v-if="condition_formula === 'chassis >'" :itemId="item.id" :toString="item.id" :toLocaleString="item.id"></EditFormula1>
                             <EditFormula2 v-else-if="condition_formula === 'sb1'" :itemId="item.id" :toString="item.id" :toLocaleString="item.id""></EditFormula2>
                             <EditFormula3 v-else-if="condition_formula === '(sb1 OR sb2) AND sb3'" :itemId="item.id" :toString="item.id" :toLocaleString="item.id"></EditFormula3>
                             <EditFormula4 v-else-if="condition_formula === 'sb1 AND sb2'" :itemId="item.id" :toString="item.id" :toLocaleString="item.id"></EditFormula4>
+                            <EditFormula5 v-else-if="condition_formula === 'sb1 OR sb2'" :itemId="item.id" :toString="item.id" :toLocaleString="item.id"></EditFormula5>
+                            <EditFormulaX v-else :itemId="item.id" :toString="item.id" :toLocaleString="item.id"></EditFormulaX>
                         </div>
+                        </td>
                     
                 </tbody>    
                                   
@@ -45,7 +63,8 @@ import EditFormula1 from './EditCrudCondition/EditFormula1.vue';
 import EditFormula2 from './EditCrudCondition/EditFormula2.vue';
 import EditFormula3 from './EditCrudCondition/EditFormula3.vue';
 import EditFormula4 from './EditCrudCondition/EditFormula4.vue';
-
+import EditFormula5 from './EditCrudCondition/EditFormula5.vue';
+import EditFormulaX from './EditCrudCondition/EditFormulaX.vue';
 
 export default {
     data() {
@@ -77,8 +96,20 @@ export default {
             this.items = response.data.map((item: String) => ({ 
                 id: item.itemId,
                 name: item.itemName,
-                dt_register: item.itemDtregister 
+                dt_register: item.itemDtregister, 
+                status: item.status
             }));
+
+
+            for (let i = 0; i < this.items.length; i++) {
+                if (this.items[i].status === 'A') {
+                    this.items[i].status = 'Active';
+                }
+
+                if (this.items[i].status === 'I') {
+                    this.items[i].status = 'Inactive';
+                }
+            };    
 
          },
 
@@ -91,6 +122,12 @@ export default {
             this.edition = true;
 
         },
+
+        async itemUpdateStatus(itemId: String, status: String) {
+            await axios.get('http://localhost:8080/update-item-status/' + itemId + '/' + status);
+
+            this.getItems();
+        }
         
     },
 
@@ -110,7 +147,9 @@ export default {
         EditFormula1,
         EditFormula2,
         EditFormula3,
-        EditFormula4
+        EditFormula4,
+        EditFormula5,
+        EditFormulaX,
     }
 
 }
@@ -119,7 +158,26 @@ export default {
 
 <style scoped>
 @import "../assets/base.css";
+.table-new-line{
 
+    margin: 0;
+    padding: 0;
+}
+.full-width {
+  width: 100%;
+  
+}
+
+
+button{
+
+    color: aliceblue;
+    background-color: var(--azul-principal);
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
 .title {
     color: var(--azul-principal);
     margin-left: 25px;
@@ -164,6 +222,10 @@ td {
 
 tbody:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
 
+.status-item {
+    cursor: pointer;
+}
+
 
 /* --------------- Media Queries -------------------- */
 
@@ -192,10 +254,6 @@ tbody:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
         margin-bottom: 30px;
         box-shadow: 2px 2px 20px 5px var(--silver);
         width: 93%;
-        
-    }
-
-    .table-header {
         
     }
 
@@ -234,10 +292,6 @@ tbody:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
         margin-bottom: 30px;
         box-shadow: 2px 2px 20px 5px var(--silver);
         width: 96%;
-    }
-
-    .table-header {
-        
     }
 
     th {

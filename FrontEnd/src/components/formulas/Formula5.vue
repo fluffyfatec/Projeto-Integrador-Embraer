@@ -1,5 +1,5 @@
 <template>
-    <form @submit.prevent="EditionConfirm" class="center">
+    <form @submit.prevent="saveConditionAndItem" class="center">
         <div class="align">
             <div class="condition-or">
                 <div class="sb1">
@@ -36,42 +36,19 @@
                     </select>    
                 </div>    
             </div>
-            <div class="condition-and">
-                <div class="clause">
-                    <h3>AND</h3>
-                </div>
-                <div class="sb3">
-                    <select class="select-sb3" v-model="conditionDTO.sb3">
-                        <option class="select-placeholder" disabled :value="null">Choose sb3...</option>
-                        <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                            {{ sb.sb_name }}
-                        </option>
-                    </select>
-                    <select v-if="conditionDTO.sb3 !== null" class="select-sb-part" 
-                    v-model="conditionDTO.sb3_part">
-                        <option class="select-placeholder" disabled :value="null">Part</option>
-                        <option v-for="part in filteredParts3" :key="part.part">
-                            {{ part.part }}
-                        </option>
-                    </select>    
-                </div>
-            </div>
             <div class="clause">
-                <h3>=</h3>
+                <h3>AND</h3>
             </div>    
             <div class="item">
                 <input type="text" v-model="conditionDTO.item" placeholder="Name of item...">
-            </div>    
-        
+            </div>
+
             <div class="center">
-                <button v-if="conditionDTO.item !== null &&  
+                <button v-if="conditionDTO.item !== null && conditionDTO.item.length > 4  && 
                             conditionDTO.formulaDesc !== null &&
                             conditionDTO.sb1 !== null && conditionDTO.sb1_part !== null &&
-                            conditionDTO.sb2 !== null && conditionDTO.sb2_part !== null &&
-                            conditionDTO.sb3 !== null && conditionDTO.sb3_part !== null" 
+                            conditionDTO.sb2 !== null && conditionDTO.sb2_part !== null" 
                 type="submit" class="submit">Submit</button>
-                <button @click.prevent="EditionCancel">Cancel</button>
-                <button @click.prevent="ItemDelete">Delete</button>
             </div>
         </div>
     </form>
@@ -82,21 +59,16 @@ import axios from 'axios';
 import { eventBus } from '@/main';
 
 export default {
-
-    props: ['itemId'],
-
     data() {
         return {
 
-            edition: true,
+            edition: false,
             sbs_options: [],
             filteredParts1: [],
             filteredParts2: [],
-            filteredParts3: [],
             conditionDTO: {
-                conditionId: null,
                 item: null,
-                formulaDesc: '(sb1 OR sb2) AND sb3',
+                formulaDesc: 'sb1 OR sb2',
                 chassis: null,
                 sb1: null,
                 sb1_part: null,
@@ -110,39 +82,40 @@ export default {
     },
 
     mounted() {
-        this.getCondition();
         this.getSbs();
     },
 
     methods: {
 
-        updateEditionValue() {
-            eventBus.$emit('edition', this.edition);
-        },
-
         updategetItems() {
             eventBus.$emit('update-getItems', this.edition);
         },
 
-        async getCondition() {
+        async saveConditionAndItem() {
 
-            const response = await axios.get('http://localhost:8080/list/condition/' + this.itemId);
-                    
-            this.conditionDTO = response.data;
-
-            if (this.conditionDTO.sb1_part === 'UNICO') { 
-                this.conditionDTO.sb1_part = 'UNIQUE';
-            };
-            
-            if (this.conditionDTO.sb2_part === 'UNICO') { 
-                this.conditionDTO.sb2_part = 'UNIQUE';
+            if (this.conditionDTO.sb1_part === 'UNIQUE') { 
+                this.conditionDTO.sb1_part = 'UNICO';
             };
 
-            if (this.conditionDTO.sb3_part === 'UNICO') { 
-                this.conditionDTO.sb3_part = 'UNIQUE';
+            if (this.conditionDTO.sb2_part === 'UNIQUE') { 
+                this.conditionDTO.sb2_part = 'UNICO';
             };
 
-            
+            await axios.post('http://localhost:8080/register-condition', this.conditionDTO, {
+                    headers: {
+                    'Content-Type': 'application/json'
+                    }
+
+                });
+
+            this.updategetItems();    
+
+            this.conditionDTO.sb1 = null;
+            this.conditionDTO.sb1_part = null;
+            this.conditionDTO.sb2 = null;
+            this.conditionDTO.sb2_part = null;
+            this.conditionDTO.item = null;
+                
         },
 
         async getSbs() {
@@ -150,10 +123,6 @@ export default {
             this.sbs_options = response.data.map((item: String) => ({ 
                 sb_name: item.service_bulletin_name, 
                 part: item.service_bulletin_part === 'UNICO' ? 'UNIQUE' : item.service_bulletin_part }));
-
-            this.filteredPartsBySb1();
-            this.filteredPartsBySb2();
-            this.filteredPartsBySb3();    
         },
 
         filteredPartsBySb1() {
@@ -163,52 +132,6 @@ export default {
         filteredPartsBySb2() {
             this.filteredParts2 = this.sbs_options.filter(item => String(item.sb_name) === this.conditionDTO.sb2);
         },
-
-        filteredPartsBySb3() {
-            this.filteredParts3 = this.sbs_options.filter(item => String(item.sb_name) === this.conditionDTO.sb3);
-        },
-
-        async EditionConfirm() {
-
-            if (this.conditionDTO.sb1_part === 'UNIQUE') { 
-                this.conditionDTO.sb1_part = 'UNICO';
-            };
-            
-            if (this.conditionDTO.sb2_part === 'UNIQUE') { 
-                this.conditionDTO.sb2_part = 'UNICO';
-            };
-
-            if (this.conditionDTO.sb3_part === 'UNIQUE') { 
-                this.conditionDTO.sb3_part = 'UNICO';
-            };
-
-            await axios.post('http://localhost:8080/edit-condition', this.conditionDTO,  {
-                    headers: {
-                    'Content-Type': 'application/json'
-                    }
-
-            });
-
-            this.edition = false;
-
-            this.updateEditionValue();
-
-        },
-
-        EditionCancel() {
-            this.edition = false;
-            this.updateEditionValue();
-        },
-
-        async ItemDelete() {
-            await axios.get('http://localhost:8080/delete/' + this.conditionDTO.conditionId + '/' + this.itemId);
-
-            this.edition = false;
-
-            this.updateEditionValue();
-            this.updategetItems();
-        },
-
 
     },
 
@@ -222,11 +145,9 @@ export default {
         this.filteredPartsBySb2();
         },
 
-        'conditionDTO.sb3': function () {
-        this.filteredPartsBySb3();
-        },
-
     },
+
+
 
 }
 

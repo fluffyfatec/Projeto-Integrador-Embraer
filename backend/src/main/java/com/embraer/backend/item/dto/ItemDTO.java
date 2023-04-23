@@ -11,4 +11,6 @@ public class ItemDTO {
     private String itemName;
     private String itemDtregister;
 
+    private String status;
+
 }

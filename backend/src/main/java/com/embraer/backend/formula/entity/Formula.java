@@ -1,11 +1,6 @@
 package com.embraer.backend.formula.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -17,7 +12,8 @@ import lombok.Setter;
 @Table(name="FORMULA")
 public class Formula {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "formula_seq_generator")
+	@SequenceGenerator(name="formula_seq_generator", sequenceName = "FORMULA_ID_SEQ", allocationSize = 1)
 	@Column(name = "FORMULA_ID")
 	private Long formulaId;
 
