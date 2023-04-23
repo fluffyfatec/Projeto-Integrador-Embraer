@@ -25,6 +25,9 @@ import Formula1 from './formulas/Formula1.vue';
 import Formula2 from './formulas/Formula2.vue';
 import Formula3 from './formulas/Formula3.vue';
 import Formula4 from './formulas/Formula4.vue';
+import Formula5 from './formulas/Formula5.vue';
+import FormulaX from './formulas/FormulaX.vue';
+
 
 export default {
     data() {

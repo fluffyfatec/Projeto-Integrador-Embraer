@@ -37,7 +37,7 @@
                             <EditFormula3 v-else-if="condition_formula === '(sb1 OR sb2) AND sb3'" :itemId="item.id" :toString="item.id" :toLocaleString="item.id"></EditFormula3>
                             <EditFormula4 v-else-if="condition_formula === 'sb1 AND sb2'" :itemId="item.id" :toString="item.id" :toLocaleString="item.id"></EditFormula4>
                             <EditFormula5 v-else-if="condition_formula === 'sb1 OR sb2'" :itemId="item.id" :toString="item.id" :toLocaleString="item.id"></EditFormula5>
-                            <EditFormulaX v-else-if="condition_formula === 'others'"></EditFormulaX>
+                            <EditFormulaX v-else-if="condition_formula === 'others'" :itemId="item.id" :toString="item.id" :toLocaleString="item.id"></EditFormulaX>
                         </div>
                         </td>
                     
