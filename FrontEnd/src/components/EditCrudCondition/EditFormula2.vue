@@ -1,36 +1,37 @@
 <template>
-    <form @submit.prevent="EditionConfirm" class="form">
-        <div class="sbs">
-            <select class="select-sb1 select-chassis" v-model="conditionDTO.sb1">
-                <option class="select-placeholder" disabled :value="null">Choose sb1...</option>
-                <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                    {{ sb.sb_name }}
-                </option>
-            </select>
-            <select v-if="conditionDTO.sb1 !== null" class="select-sb1-part" 
-            v-model="conditionDTO.sb1_part">
-                <option class="select-placeholder" disabled :value="null">Part</option>
-                <option v-for="part in filteredParts1" :key="part.part">
-                    {{ part.part }}    
-                </option>
-            </select>
-        </div>
-        <div class="clause">
-            <h3>AND</h3>
-        </div>
-        <div class="item">
-            <input type="text" v-model="conditionDTO.item" placeholder="Name of item...">
-        </div>    
-    
-        <div>
-            <button v-if="conditionDTO.item !== null && conditionDTO.formulaDesc !== null && 
-                        conditionDTO.sb1 !== null && conditionDTO.sb1_part !== null" 
-            type="submit" class="submit">Submit</button>
+    <form @submit.prevent="EditionConfirm" class="center">
+        <div class="align">
+            <div class="sbs">
+                <select class="select-sb1 select-chassis" v-model="conditionDTO.sb1">
+                    <option class="select-placeholder" disabled :value="null">Choose sb1...</option>
+                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                        {{ sb.sb_name }}
+                    </option>
+                </select>
+                <select v-if="conditionDTO.sb1 !== null" class="select-sb-part" 
+                v-model="conditionDTO.sb1_part">
+                    <option class="select-placeholder" disabled :value="null">Part</option>
+                    <option v-for="part in filteredParts1" :key="part.part">
+                        {{ part.part }}    
+                    </option>
+                </select>
+            </div>
+            <div class="clause">
+                <h3>=</h3>
+            </div>
+            <div class="item">
+                <input type="text" v-model="conditionDTO.item" placeholder="Name of item...">
+            </div>    
         
-                <button @click.prevent="EditionCancel">Cancel</button>
-                <button @click.prevent="ItemDelete">Delete</button>
+            <div class="center">
+                <button v-if="conditionDTO.item !== null && conditionDTO.formulaDesc !== null && 
+                            conditionDTO.sb1 !== null && conditionDTO.sb1_part !== null" 
+                type="submit" class="submit">Submit</button>
+            
+                    <button @click.prevent="EditionCancel">Cancel</button>
+                    <button @click.prevent="ItemDelete">Delete</button>
+            </div>
         </div>
-
     </form>
 </template>
 
