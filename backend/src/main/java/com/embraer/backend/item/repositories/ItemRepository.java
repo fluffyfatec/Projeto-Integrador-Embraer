@@ -23,4 +23,9 @@ public interface ItemRepository extends JpaRepository<Item, Long>{
     @Transactional
     void deleteByItemId(@Param("itemId") Long itemId);
 
+    @Modifying
+    @Query("UPDATE Item i SET i.status = :status WHERE i.itemId = :itemId")
+    @Transactional
+    void updateItemStatus(@Param("status") String status, @Param("itemId") Long itemId);
+
 }
