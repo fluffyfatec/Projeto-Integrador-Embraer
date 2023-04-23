@@ -122,7 +122,8 @@
                 </select>    
             </div>    
         </div>
-        <div class="condition2">
+        <button v-if="!showCondition2" @click.prevent="showCondition2 = true"><i class="fa-solid fa-plus"></i> New micro-logic</button>
+        <div v-if="showCondition2" class="condition2">
             <div class="sb7">
                 <select class="select-sb7" v-model="conditionDTO.sb7">
                     <option class="select-placeholder" disabled :value="null">Choose sb7...</option>
@@ -244,7 +245,8 @@
                 </select>    
             </div> 
         </div>
-        <div class="condition3">
+        <button v-if="!showCondition3 && showCondition2" @click.prevent="showCondition3 = true"><i class="fa-solid fa-plus"></i> New micro-logic</button>
+        <div v-if="showCondition3" class="condition3">
             <div class="sb13">
                 <select class="select-sb13" v-model="conditionDTO.sb13">
                     <option class="select-placeholder" disabled :value="null">Choose sb13...</option>
@@ -366,7 +368,8 @@
                 </select>    
             </div>
         </div>    
-        <div class="condition4">
+        <button v-if="!showCondition4 && showCondition3" @click.prevent="showCondition4 = true"><i class="fa-solid fa-plus"></i> New micro-logic</button>
+        <div v-if="showCondition4" class="condition4">
             <div class="sb19">
                 <select class="select-sb19" v-model="conditionDTO.sb19">
                     <option class="select-placeholder" disabled :value="null">Choose sb19...</option>
@@ -488,7 +491,8 @@
                 </select>    
             </div> 
         </div>
-        <div class="condition5">
+        <button v-if="!showCondition5 && showCondition4" @click.prevent="showCondition5 = true"><i class="fa-solid fa-plus"></i> New micro-logic</button>
+        <div v-if="showCondition5" class="condition5">
             <div class="sb25">
                 <select class="select-sb25" v-model="conditionDTO.sb25">
                     <option class="select-placeholder" disabled :value="null">Choose sb25...</option>
@@ -734,6 +738,11 @@ export default {
                 operator_condit_4: null,
                 operator_condit_5: null
             },
+
+            showCondition2: false,
+            showCondition3: false,
+            showCondition4: false,
+            showCondition5: false,
 
         }
     },
