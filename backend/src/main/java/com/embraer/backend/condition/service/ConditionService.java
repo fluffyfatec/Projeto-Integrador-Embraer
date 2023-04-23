@@ -52,11 +52,23 @@ public class ConditionService {
             Item newItem = new Item();
             newItem.setItemName(conditionDTO.getItem());
             newItem.setItemDtregister(new Timestamp(System.currentTimeMillis()));
+            newItem.setStatus("A");
             itemRepository.save(newItem);
 
             Condition newCondition = new Condition();
             newCondition.setItemIdLong(itemRepository.findItemIdByItemName(conditionDTO.getItem()));
+
+            // If formulaId don't exist, create a a new insert in Formula
+            if (formulaRepository.findFormulaIdByFormulaDesc(conditionDTO.getFormulaDesc()) == null) {
+                Formula newFormula = new Formula();
+                newFormula.setFormulaDescription(conditionDTO.getFormulaDesc());
+
+                formulaRepository.save(newFormula);
+            }
+
             newCondition.setFormulaIdLong(formulaRepository.findFormulaIdByFormulaDesc(conditionDTO.getFormulaDesc()));
+
+
             if (conditionDTO.getChassis() == null) {
                 Chassis chassis = null;
                 newCondition.setChassisBiggerThenId(chassis);
@@ -313,6 +325,15 @@ public class ConditionService {
                 Formula formula = null;
                 newCondition.setFormulaId(formula);
             } else {
+
+                // If formulaId don't exist, create a a new insert in Formula
+                if (formulaRepository.findFormulaIdByFormulaDesc(conditionDTO.getFormulaDesc()) == null) {
+                    Formula newFormula = new Formula();
+                    newFormula.setFormulaDescription(conditionDTO.getFormulaDesc());
+
+                    formulaRepository.save(newFormula);
+                }
+
                 newCondition.setFormulaIdLong(formulaRepository.findFormulaIdByFormulaDesc(conditionDTO.getFormulaDesc()));
             }
 
