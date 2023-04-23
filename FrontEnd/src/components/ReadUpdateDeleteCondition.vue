@@ -230,10 +230,6 @@ tbody:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
         
     }
 
-    .table-header {
-        
-    }
-
     th {
         padding: 25px;
     }
@@ -269,10 +265,6 @@ tbody:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
         margin-bottom: 30px;
         box-shadow: 2px 2px 20px 5px var(--silver);
         width: 96%;
-    }
-
-    .table-header {
-        
     }
 
     th {
