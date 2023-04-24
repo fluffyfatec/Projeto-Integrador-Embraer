@@ -40,7 +40,7 @@
                 <h3>=</h3>
             </div>    
             <div class="item">
-                <input type="text" v-model="conditionDTO.item" placeholder="Name of item...">
+                <input type="text" v-model="conditionDTO.item" placeholder="Name of item..." disabled>
             </div>
 
             <div class="center">
@@ -81,7 +81,8 @@ export default {
                 sb2: null,
                 sb2_part: null,
                 sb3: null,
-                sb3_part: null
+                sb3_part: null,
+                operator_condit_1: 'OR',
             },
 
         }

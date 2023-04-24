@@ -6,6 +6,7 @@ import java.util.List;
 import com.embraer.backend.chassis.entity.Chassis;
 import com.embraer.backend.chassisSb.entity.ChassiServiceBulletin;
 import com.embraer.backend.chassisSb.repository.ChassiServiceBulletinRepository;
+import com.embraer.backend.item.repositories.ItemRepository;
 import com.embraer.backend.item.services.ListItemsByChassi.dto.ListApplicable;
 import com.embraer.backend.item.services.ListItemsByChassi.dto.ListIncorporated;
 import com.embraer.backend.item.services.ListItemsByChassi.dto.ListItemsResponseDTO;
@@ -19,6 +20,9 @@ public class ContainsItems {
 
 	@Autowired
 	ChassiServiceBulletinRepository chassiServiceBulletinRepository;
+
+	@Autowired
+	ItemRepository itemRepository;
 
 	public ListItemsResponseDTO items(Integer id) {
 
@@ -397,6 +401,11 @@ public class ContainsItems {
 			item.setStatus("APPLICABLE");
 			applicable.add(item);
 		}
+
+		applicable.removeIf(item -> itemRepository.checkIfItemIsActive(item.getName_item()) == null);
+		notApplicable.removeIf(item -> itemRepository.checkIfItemIsActive(item.getName_item()) == null);
+		incorporated.removeIf(item -> itemRepository.checkIfItemIsActive(item.getName_item()) == null);
+
 
 		listItemsResponseDTOs.setIncorporated(incorporated);
 		listItemsResponseDTOs.setNot_applicable(notApplicable);

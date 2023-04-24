@@ -17,13 +17,15 @@
                         <td>{{ item.dt_register }}</td>
                         <td class="status-item" @click="itemUpdateStatus(item.id, item.status)"
                         :style="item.status === 'Active' ? 'color: #548644' : 'color: #AE2A32'">{{ item.status }}</td>
-                        <td v-if="itemSelected !== item.id">
+                        <td class="edit-item" v-if="itemSelected !== item.id">
                             <button @click.prevent="ItemEdit(item.id)">
                                 <i class="fa-regular fa-pen-to-square"></i>
-                            </button>
+                            </button>   
                         </td>
+                        <td v-else></td> 
                     </tr>
-                        <td colspan="3" class="full-width">
+                    <tr>
+                        <td colspan="4" class="full-width">
                         <div v-if="edition && itemSelected === item.id" class="table-new-line">
 
 
@@ -46,7 +48,7 @@
                             <EditFormulaX v-else :itemId="item.id" :toString="item.id" :toLocaleString="item.id"></EditFormulaX>
                         </div>
                         </td>
-                    
+                    </tr>
                 </tbody>    
                                   
                     
@@ -224,6 +226,10 @@ tbody:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
 
 .status-item {
     cursor: pointer;
+}
+
+.edit-item {
+    height: fit-content;
 }
 
 
