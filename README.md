@@ -103,7 +103,6 @@ Our team will develop a web software for the company "Embraer" that allows the e
 <summary><b>Sprint 2</b></summary>
                   <details>
                   <summary>0</summary>
-                        
                         <p>• Registration of New Items.
                         <p>• Update of the Condition of an Item.
                         <p>• Activate and Inactivate Items.
@@ -123,7 +122,7 @@ Our team will develop a web software for the company "Embraer" that allows the e
              
 </details>
 
- <details>              
+<details>              
 <summary><b>Sprint 3</b></summary>
                   <details>
                   <summary>0</summary>
