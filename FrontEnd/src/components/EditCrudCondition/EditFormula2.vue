@@ -20,7 +20,7 @@
                 <h3>=</h3>
             </div>
             <div class="item">
-                <input type="text" v-model="conditionDTO.item" placeholder="Name of item...">
+                <input type="text" v-model="conditionDTO.item" placeholder="Name of item..." disabled>
             </div>    
         
             <div class="center">

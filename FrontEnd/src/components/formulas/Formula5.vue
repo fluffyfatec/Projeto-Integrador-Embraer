@@ -37,7 +37,7 @@
                 </div>    
             </div>
             <div class="clause">
-                <h3>AND</h3>
+                <h3>=</h3>
             </div>    
             <div class="item">
                 <input type="text" v-model="conditionDTO.item" placeholder="Name of item...">
