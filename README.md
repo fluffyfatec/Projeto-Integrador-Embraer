@@ -15,7 +15,10 @@
   <a href="#Schedule">Schedule</a> •
   <a href="#burndown">Burndown</a> •
   <a href="#Team">Team</a> •
-  <a href="#Technologies Used">Technologies Used</a> •
+
+  <a href="#Data Dictionary">Data Dictionary</a> •
+  <a href="#Technologies Used">Technologies Used</a>
+
 </p>
 
 ## Challenge
@@ -30,8 +33,6 @@ Currently, many pilots work as “freelancers” and do not operate just one air
 <p>• Access to the customer database (user, password and equipment);
       
 <p>• Users must have different profiles (administrator, editing and query);
-
-<p>• "Clients" and "Items" CRUD's;
 
 <p>• Board of Administration and Statistics;
 
@@ -72,20 +73,23 @@ Our team will develop a web software for the company "Embraer" that allows the e
 
 
 ##  Sprint Goals
+
+<p>All items are organized from 0 to 2 according to the needs of each sprint.</p>
+<p>Items that are not finalized will be reworked in other sprints.</p>
 <details>
 <summary><b>Sprint 1</b></summary>
                   <details>
-                  <summary>Essential</summary>
+                  <summary>0</summary>
                         <p>•Data automation.
                   </details>
                   <details>
-                  <summary>Important</summary>                  
+                  <summary>1</summary>                  
                         <p>•Search by Sb's.
                         <p>•Search by Items.
                         <p>•Search by Chassis.
                   </details>
                    <details>
-                  <summary>Good to Have</summary>                  
+                  <summary>2</summary>                  
                         <p>•Item Search by Chassis.
                         <p>•Search of Sb's by Chassis.                      
                   </details>
@@ -94,15 +98,15 @@ Our team will develop a web software for the company "Embraer" that allows the e
  <details>              
 <summary><b>Sprint 2</b></summary>
                   <details>
-                  <summary>Essential</summary>
+                  <summary>0</summary>
                         <p>•User Authentication and Authorization.
                   </details>
                   <details>
-                  <summary>Important</summary>                  
+                  <summary>1</summary>                  
                         <p>•Access levels.                    
                   </details>
                    <details>
-                  <summary>Good to Have</summary>                  
+                  <summary>2</summary>                  
                         <p>•Registration of New Items.
                   </details>
              
@@ -111,16 +115,16 @@ Our team will develop a web software for the company "Embraer" that allows the e
  <details>              
 <summary><b>Sprint 3</b></summary>
                   <details>
-                  <summary>Essential</summary>
+                  <summary>0</summary>
                         <p>•Generate aircraft reports.
                   </details>
                   <details>
-                  <summary>Important</summary>                  
+                  <summary>1</summary>                  
                         <p>•Edition of the Planes.
                         <p>•Edition of Sb's.      
                   </details>
                    <details>
-                  <summary>Good to Have</summary>                  
+                  <summary>2</summary>                  
                         <p>•Notifications of edits (via email).
                   </details>
              
@@ -129,11 +133,11 @@ Our team will develop a web software for the company "Embraer" that allows the e
  <details>              
 <summary><b>Sprint 4</b></summary>
                   <details>
-                  <summary>Essential</summary>
+                  <summary>0</summary>
                         <p>•Administrative panel.
                   </details>
                   <details>
-                  <summary>Important</summary>                  
+                  <summary>1</summary>                  
                         <p>•Log Generation.                    
                   </details>
                  
@@ -188,7 +192,7 @@ Mobile
 ## Burndown
 
 <p align="center">
-      <img src="GIT/burndown.png" width="100%" height="100%">
+      <img src="GIT/burndown2.png" width="100%" height="100%">
 <p align="center">
 
 
@@ -200,8 +204,6 @@ Mobile
 | -------------------------------------------- | ---------------- | ---------------- | -------------------------------------------------------------- | ----------------------------------------------------- |
 | <img src = "./GIT/avatarpatrick.png" width="60" >|_Patrick Souza_  | Scrum Master | [![](https://bit.ly/3f9Xo0P)](https://github.com/PatrickSouzza)  | [![](https://bit.ly/2P1ZogM)](https://www.linkedin.com/in/patrick-g-souza/) |
 | <img src = "./GIT/avatarfelipe.png" width="60" >|_Felipe Sobral_  | Product Owner  | [![](https://bit.ly/3f9Xo0P)](https://github.com/SoSoJigsaw)| [![](https://bit.ly/2P1ZogM)]() |
-| <img src = "./GIT/avatarluiz.png" width="60" >|_Luiz Felipe Borges_ | Developer Team | [![](https://bit.ly/3f9Xo0P)](https://github.com/luizborges17)   | [![](https://bit.ly/2P1ZogM)](https://www.linkedin.com/in/luizborges17/) |
-| <img src = "./GIT/avatarvictor.png" width="60" >|_Victor Fernandes_  | Developer Team  | [![](https://bit.ly/3f9Xo0P)](https://github.com/victornaca)| [![](https://bit.ly/2P1ZogM)](https://www.linkedin.com/in/victor-fernandes-1a61a917b/) |
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
@@ -259,7 +261,7 @@ Mobile
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
 <p align="center">
-      <img src=" GIT/rodape.png" height="100%">
+      <img src="GIT/rodape.png" height="100%">
 <p align="center">
 
 ---
