@@ -72,7 +72,68 @@ body {
 
 }
 
+/* ------------------------------- ↓↓↓↓↓ Modificações repetitivas ↓↓↓↓↓ --------------------------------*/
+select{
+  border-color: var(--azul-claro-light);
+  border-radius: 5px;
+  width: 18rem;
+  height: 2rem;
+  font-size:large;
 
+}
+
+button{
+  margin-left: 10px;
+  width: 9rem;
+  height: 2rem;
+  border-radius: 5px;
+  background-color: var(--azul-principal);
+  color: var(--white);
+  border-color: var(--azul-claro-light);
+
+}
+
+
+
+input{
+  border-color: var(--azul-claro-light);
+  border-radius: 5px;
+  width: 25rem;
+  height: 2rem;
+  font-size:large;
+  margin-top: 10px;
+  margin-left: 2px;
+  font-size: x-large;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.align{
+  background-color: white;
+  margin-top: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid var(--azul-principal);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.sbs{
+  padding-top: 20px;
+}
+
+.item{
+ padding-top: 16px;
+}
+
+.select-sb-part{
+  width: 6.5rem;
+}
 /* ------------------------------- ↓↓↓↓↓ Fonte Responsiva ↓↓↓↓↓ --------------------------------*/
 
 @media all and (min-width: 100px)  {  body  { font-size: 0.9em;  } }

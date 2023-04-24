@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import jwt_decode from 'jwt-decode';
 
 
 Vue.use(VueRouter)
@@ -11,50 +12,186 @@ const router = new VueRouter({
     
     {
       path: '/',
-      redirect: '/avioes',
-      //component: HomeView
+      redirect: '/login',
     },
 
     {
-      path: '/avioes',
-      name: 'avioes',
-      //component: () => import(''),
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/Login.vue'),
       meta: {
-        showPesquisar: true,
-        placeHolderValue: 'Pesquise um chassi...',
+        appVueHide: true,
       }
     },
+
+
+    // Section of items search and after, section of specific item details, with variable "chassis"
+
+    {
+      path: '/items',
+      name: 'items',
+      component: () => import('../views/SearchItems.vue'),
+      meta: {
+        showSearchChassis: true,
+        itemsDetails: true,
+        placeHolderValue: 'Search a chassis...',
+        requiresAuth: true,
+      }
+    },
+
+    {
+      path: '/items/:chassis',
+      name: 'items-details',
+      component: () => import('../views/ItemsDetails.vue'),
+      props: true,
+      meta: {
+        showSearchChassis: true,
+        itemsDetails: true,
+        placeHolderValue: 'Search a chassis...',
+        requiresAuth: true,
+      }
+    },
+
+
+    // Section of planes search and after, section of specific plane details, with variable "chassis"
+
+    {
+      path: '/planes',
+      name: 'planes',
+      component: () => import('../views/SearchPlanes.vue'),
+      meta: {
+        showSearchChassis: true,
+        planesDetails: true,
+        placeHolderValue: 'Search a chassis...',
+        requiresAuth: true,
+      }
+    },
+
+    {
+      path: '/planes/:chassis',
+      name: 'planes-details',
+      component: () => import('../views/PlanesDetails.vue'),
+      props: true,
+      meta: {
+        showSearchChassis: true,
+        planesDetails: true,
+        placeHolderValue: 'Search a chassis...',
+        requiresAuth: true,
+      }
+    },
+
+
+    // Section of Sbs search and after, section of specific sb details, with variable "sb"
 
     {
       path: '/sbs',
       name: 'SBs',
-      //component: () => import('../views/AboutView.vue'),
+      component: () => import('../views/SearchSbs.vue'),
       meta: {
-        showPesquisar: true,
-        placeHolderValue: 'Pesquise um SB...',
+        showSearchSbs: true,
+        placeHolderValue: 'Search a SB...',
+        requiresAuth: true,
       }
     },
 
     {
-      path: '/painel-adm',
-      name: 'painel-adm',
-      component: () => import('../views/CrudChassi.vue'),
+      path: '/sbs/:sb/:part',
+      name: 'sbs-details',
+      component: () => import('../views/SbsDetails.vue'),
+      props: true,
       meta: {
-        showH3: true,
-        tituloValue: 'Painel Administrativo',
+        showSearchSbs: true,
+        placeHolderValue: 'Search a SB...',
+        requiresAuth: true,
       }
     },
 
+
+    // Administrative Panel
+
     {
-      path: '/notificacoes',
-      name: 'notificacoes',
-      //component: () => import('../views/AboutView.vue'),
+      path: '/admin-panel',
+      name: 'admin-panel',
+      component: () => import('../views/CrudCondition.vue'),
       meta: {
         showH3: true,
-        tituloValue: 'Notificações',
+        tituloValue: 'Administrative Panel',
+        requiresAuth: true,
       }
-    }
+    },
+
+    // Section of upload files, inside Administrative Panel
+
+    {
+      path: '/upload',
+      name: 'importarDados',
+      component: () => import('../views/DataImport.vue'),
+      meta: {
+        showH3: true,
+        tituloValue: 'Data Import',
+        requiresAuth: true,
+      }
+    },
+
+
+    // Notifications
+
+    {
+      path: '/notifications',
+      name: 'notifications',
+      //component: () => import('../views/ImportaDados.vue'),
+      meta: {
+        showH3: true,
+        tituloValue: 'Notifications',
+        requiresAuth: true,
+      }
+    },
+
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+  const token = localStorage.getItem('token');
+
+  interface DecodedToken {
+    sub: string;
+    exp: number;
+  };
+
+  const isAuthenticated = token ? true : false;
+
+  if (isAuthenticated && to.path === '/login') {
+    next('/planes');
+    return;
+  }
+
+  if (requiresAuth && !token) {
+    next('/login');
+  } else if (token) {
+    const decodedToken = jwt_decode<DecodedToken>(token);
+    const currentTime = Date.now() / 1000;
+    if (decodedToken.exp < currentTime) {
+      localStorage.removeItem('token');
+      next('/login');
+    } else {
+      next();
+    }
+  } else {
+    next();
+  }
+});
+
+window.addEventListener('beforeunload', () => {
+  localStorage.setItem('local-storage', JSON.stringify(localStorage));
+});
+
+if (localStorage.getItem('local-storage')) {
+  const data = JSON.parse(localStorage.getItem('local-storage') || '');
+  Object.keys(data).forEach((key) => {
+    localStorage.setItem(key, data[key]);
+  });
+  localStorage.removeItem('local-storage');
+}
 
 export default router

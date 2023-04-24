@@ -15,8 +15,10 @@
   <a href="#Schedule">Schedule</a> •
   <a href="#burndown">Burndown</a> •
   <a href="#Team">Team</a> •
+
   <a href="#Data Dictionary">Data Dictionary</a> •
   <a href="#Technologies Used">Technologies Used</a>
+
 </p>
 
 ## Challenge

@@ -19,25 +19,22 @@ import lombok.Setter;
 @Setter
 
 @Entity
-@Table(name="USER")
+@Table(name="USERS")
 public class User {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="USER_ID")
 	private Long userId;
 	
 	@Column(name="USER_USERNAME")
-	private String username;
+	private String userUsername;
 	
 	@Column(name="USER_PASSWORD")
-	private String password;
-	
-	@Column(name = "STATUS")
-	private Character status;
-	
+	private String userPassword;
+
 	@JoinColumn(name="PERMISSION_ID")
 	@ManyToOne(fetch = FetchType.LAZY)
-	private Permission permission;
+	private Permission permissionId;
 	
 }
