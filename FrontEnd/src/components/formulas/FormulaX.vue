@@ -124,8 +124,10 @@
                     </select> 
                     </div>   
                 </div>    
+            </div>  
+            <div class = "button">
+                <button v-if="!showCondition2" @click.prevent="showCondition2 = true"><i class="fa-solid fa-plus"></i> New micro-logic</button>
             </div>
-            <button v-if="!showCondition2" @click.prevent="showCondition2 = true"><i class="fa-solid fa-plus"></i> New micro-logic</button>
             <div v-if="showCondition2" class="condition2">
                 <div class="micro">
                     <div class="sb7">
@@ -250,7 +252,9 @@
                     </div> 
                 </div>
             </div>
-            <button v-if="!showCondition3 && showCondition2" @click.prevent="showCondition3 = true"><i class="fa-solid fa-plus"></i> New micro-logic</button>
+            <div class = "button">
+                <button v-if="!showCondition3 && showCondition2" @click.prevent="showCondition3 = true"><i class="fa-solid fa-plus"></i> New micro-logic</button>
+            </div>
             <div v-if="showCondition3" class="condition3">
                 <div class="micro">
                     <div class="sb13">
@@ -374,8 +378,10 @@
                         </select>    
                     </div>
                 </div>
-            </div>    
-            <button v-if="!showCondition4 && showCondition3" @click.prevent="showCondition4 = true"><i class="fa-solid fa-plus"></i> New micro-logic</button>
+            </div>  
+            <div class="button">  
+                <button v-if="!showCondition4 && showCondition3" @click.prevent="showCondition4 = true"><i class="fa-solid fa-plus"></i> New micro-logic</button>
+            </div>
             <div v-if="showCondition4" class="condition4">
                 <div class="micro">
                     <div class="sb19">
@@ -499,7 +505,9 @@
                         </select>    
                     </div> 
                 </div>
-                <button v-if="!showCondition5 && showCondition4" @click.prevent="showCondition5 = true"><i class="fa-solid fa-plus"></i> New micro-logic</button>
+                <div class="button">
+                    <button v-if="!showCondition5 && showCondition4" @click.prevent="showCondition5 = true"><i class="fa-solid fa-plus"></i> New micro-logic</button>
+                </div>
                 <div v-if="showCondition5" class="condition5">
                     <div class="micro">
                         <div class="sb25">
@@ -1247,4 +1255,8 @@ select{
     margin-bottom: 1rem;
 }
 
+.button{
+    display: flex;
+    justify-content: center;
+}
 </style>
