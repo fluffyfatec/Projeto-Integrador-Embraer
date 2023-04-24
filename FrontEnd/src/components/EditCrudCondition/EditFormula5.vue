@@ -81,7 +81,8 @@ export default {
                 sb2: null,
                 sb2_part: null,
                 sb3: null,
-                sb3_part: null
+                sb3_part: null,
+                operator_condit_1: 'OR',
             },
 
         }

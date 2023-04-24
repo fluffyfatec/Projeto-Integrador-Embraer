@@ -44,7 +44,7 @@ export default {
             conditionDTO: {
                 conditionId: null,
                 item: null,
-                formulaDesc: null,
+                formulaDesc: 'chassis >',
                 chassis: null,
                 sb1: null,
                 sb1_part: null,
