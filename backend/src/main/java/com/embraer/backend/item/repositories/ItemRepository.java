@@ -28,4 +28,7 @@ public interface ItemRepository extends JpaRepository<Item, Long>{
     @Transactional
     void updateItemStatus(@Param("status") String status, @Param("itemId") Long itemId);
 
+    @Query("SELECT i FROM Item i WHERE i.itemName = :itemName AND i.status = 'A'")
+    Item checkIfItemIsActive(@Param("itemName") String itemName);
+
 }
