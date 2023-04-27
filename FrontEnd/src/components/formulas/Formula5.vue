@@ -44,7 +44,7 @@
             </div>
 
             <div class="center">
-                <button v-if="conditionDTO.item !== null && conditionDTO.item.length > 4  && 
+                <button v-if="conditionDTO.item !== null && conditionDTO.item.length > 2  && 
                             conditionDTO.formulaDesc !== null &&
                             conditionDTO.sb1 !== null && conditionDTO.sb1_part !== null &&
                             conditionDTO.sb2 !== null && conditionDTO.sb2_part !== null" 

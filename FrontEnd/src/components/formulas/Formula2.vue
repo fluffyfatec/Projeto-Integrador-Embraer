@@ -24,7 +24,7 @@
             </div> 
            
             <div class="center">
-                <button v-if="conditionDTO.item !== null && conditionDTO.item.length > 4  && conditionDTO.formulaDesc !== null && 
+                <button v-if="conditionDTO.item !== null && conditionDTO.item.length > 2  && conditionDTO.formulaDesc !== null && 
                             conditionDTO.sb1 !== null && conditionDTO.sb1_part !== null" 
                 type="submit" class="submit">Submit</button>
             </div>
