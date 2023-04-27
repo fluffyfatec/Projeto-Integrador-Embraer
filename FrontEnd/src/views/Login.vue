@@ -62,7 +62,7 @@ export default {
 @import "../assets/base.css";
 
 .login-container {
-    padding-top: 20%;
+  padding-top: 12%;
     padding-left: 10%;
     padding-right: 10%;
     margin-left: 20rem;
@@ -74,7 +74,8 @@ export default {
 }
 
 .login {
-
+    display: flex;
+    justify-content: center;
     background-color: var(--white);
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -164,5 +165,20 @@ img {
     width: 80%;
   }
   }  
+  @media only screen and (width: 1440px) {
 
+    .login-container {
+    padding-top: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+}
+
+
+  }
 </style>
