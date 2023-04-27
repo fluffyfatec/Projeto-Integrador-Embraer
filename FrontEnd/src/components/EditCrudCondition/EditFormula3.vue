@@ -246,4 +246,26 @@ h3{
     color: var(--azul-principal);
 }
 
+@media only screen and (max-width: 767px) {
+
+    h3{
+        font-size: 50px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+
+    .align{
+        width: 70%;
+    }
+
+    input{
+        width: 80%;
+    }
+    
+    select{
+        width: 90%;
+    }
+
+}
+
 </style>

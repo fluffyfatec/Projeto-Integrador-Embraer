@@ -116,8 +116,6 @@ h3{
     input{ 
         width: 90%;
     }
-    select{
-        
-    }
+
 }
 </style>

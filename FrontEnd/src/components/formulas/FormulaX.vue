@@ -19,7 +19,7 @@
                     </select>
                 </div>
                 <div v-if="conditionDTO.sb1 !== null && conditionDTO.sb2 !== null" class="clause">
-                    <select class="select-clause-1" v-model="conditionDTO.operator_condit_1">
+                    <select class="select-clause" v-model="conditionDTO.operator_condit_1">
                         <option>AND</option>
                         <option>OR</option>
                     </select>
@@ -40,7 +40,7 @@
                     </select>    
                 </div>
                 <div v-if="conditionDTO.sb2 !== null && conditionDTO.sb3 !== null" class="clause">
-                    <select class="select-clause-1" v-model="conditionDTO.operator_condit_1">
+                    <select class="select-clause" v-model="conditionDTO.operator_condit_1">
                         <option>AND</option>
                         <option>OR</option>
                     </select>
@@ -61,7 +61,7 @@
                     </select>
                 </div>
                 <div v-if="conditionDTO.sb3 !== null && conditionDTO.sb4 !== null" class="clause">
-                    <select class="select-clause-1" v-model="conditionDTO.operator_condit_1">
+                    <select class="select-clause" v-model="conditionDTO.operator_condit_1">
                         <option>AND</option>
                         <option>OR</option>
                     </select>
@@ -82,7 +82,7 @@
                     </select>    
                 </div>
                 <div v-if="conditionDTO.sb4 !== null && conditionDTO.sb5 !== null" class="clause">
-                    <select class="select-clause-1" v-model="conditionDTO.operator_condit_1">
+                    <select class="select-clause" v-model="conditionDTO.operator_condit_1">
                         <option>AND</option>
                         <option>OR</option>
                     </select>
@@ -103,7 +103,7 @@
                     </select>
                 </div>
                 <div v-if="conditionDTO.sb5 !== null && conditionDTO.sb6 !== null" class="clause">
-                    <select class="select-clause-1" v-model="conditionDTO.operator_condit_1">
+                    <select class="select-clause" v-model="conditionDTO.operator_condit_1">
                         <option>AND</option>
                         <option>OR</option>
                     </select>
@@ -146,7 +146,7 @@
                         </select>
                     </div>
                     <div v-if="conditionDTO.sb7 !== null && conditionDTO.sb8 !== null" class="clause">
-                        <select class="select-clause-2" v-model="conditionDTO.operator_condit_2">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_2">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
@@ -167,7 +167,7 @@
                         </select>    
                     </div>
                     <div v-if="conditionDTO.sb8 !== null && conditionDTO.sb9 !== null" class="clause">
-                        <select class="select-clause-2" v-model="conditionDTO.operator_condit_2">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_2">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
@@ -188,7 +188,7 @@
                         </select>
                     </div>
                     <div v-if="conditionDTO.sb9 !== null && conditionDTO.sb10 !== null" class="clause">
-                        <select class="select-clause-2" v-model="conditionDTO.operator_condit_2">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_2">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
@@ -209,7 +209,7 @@
                         </select>    
                     </div>
                     <div v-if="conditionDTO.sb10 !== null && conditionDTO.sb11 !== null" class="clause">
-                        <select class="select-clause-2" v-model="conditionDTO.operator_condit_2">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_2">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
@@ -230,7 +230,7 @@
                         </select>
                     </div>
                     <div v-if="conditionDTO.sb11 !== null && conditionDTO.sb12 !== null" class="clause">
-                        <select class="select-clause-2" v-model="conditionDTO.operator_condit_2">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_2">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
@@ -273,7 +273,7 @@
                         </select>
                     </div>
                     <div v-if="conditionDTO.sb13 !== null && conditionDTO.sb14 !== null" class="clause">
-                        <select class="select-clause-3" v-model="conditionDTO.operator_condit_3">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_3">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
@@ -294,7 +294,7 @@
                         </select>    
                     </div>
                     <div v-if="conditionDTO.sb14 !== null && conditionDTO.sb15 !== null" class="clause">
-                        <select class="select-clause-3" v-model="conditionDTO.operator_condit_3">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_3">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
@@ -315,7 +315,7 @@
                         </select>
                     </div>
                     <div v-if="conditionDTO.sb15 !== null && conditionDTO.sb16 !== null" class="clause">
-                        <select class="select-clause-3" v-model="conditionDTO.operator_condit_3">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_3">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
@@ -336,7 +336,7 @@
                         </select>    
                     </div>
                     <div v-if="conditionDTO.sb16 !== null && conditionDTO.sb17 !== null" class="clause">
-                        <select class="select-clause-3" v-model="conditionDTO.operator_condit_3">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_3">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
@@ -357,7 +357,7 @@
                         </select>
                     </div>
                     <div v-if="conditionDTO.sb17 !== null && conditionDTO.sb18 !== null" class="clause">
-                        <select class="select-clause-3" v-model="conditionDTO.operator_condit_3">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_3">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
@@ -400,7 +400,7 @@
                         </select>
                     </div>
                     <div v-if="conditionDTO.sb19 !== null && conditionDTO.sb20 !== null" class="clause">
-                        <select class="select-clause-4" v-model="conditionDTO.operator_condit_4">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_4">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
@@ -421,7 +421,7 @@
                         </select>    
                     </div>
                     <div v-if="conditionDTO.sb20 !== null && conditionDTO.sb21 !== null" class="clause">
-                        <select class="select-clause-4" v-model="conditionDTO.operator_condit_4">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_4">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
@@ -442,7 +442,7 @@
                         </select>
                     </div>
                     <div v-if="conditionDTO.sb21 !== null && conditionDTO.sb22 !== null" class="clause">
-                        <select class="select-clause-4" v-model="conditionDTO.operator_condit_4">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_4">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
@@ -463,7 +463,7 @@
                         </select>    
                     </div>
                     <div v-if="conditionDTO.sb22 !== null && conditionDTO.sb23 !== null" class="clause">
-                        <select class="select-clause-4" v-model="conditionDTO.operator_condit_4">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_4">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
@@ -484,7 +484,7 @@
                         </select>
                     </div>
                     <div v-if="conditionDTO.sb23 !== null && conditionDTO.sb24 !== null" class="clause">
-                        <select class="select-clause-4" v-model="conditionDTO.operator_condit_4">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_4">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
@@ -527,7 +527,7 @@
                         </div>
                     </div>
                     <div v-if="conditionDTO.sb25 !== null && conditionDTO.sb26 !== null" class="clause">
-                        <select class="select-clause-5" v-model="conditionDTO.operator_condit_5">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_5">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
@@ -548,7 +548,7 @@
                         </select>    
                     </div>
                     <div v-if="conditionDTO.sb26 !== null && conditionDTO.sb27 !== null" class="clause">
-                        <select class="select-clause-5" v-model="conditionDTO.operator_condit_5">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_5">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
@@ -569,7 +569,7 @@
                         </select>
                     </div>
                     <div v-if="conditionDTO.sb27 !== null && conditionDTO.sb28 !== null" class="clause">
-                        <select class="select-clause-5" v-model="conditionDTO.operator_condit_5">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_5">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
@@ -590,7 +590,7 @@
                         </select>    
                     </div>
                     <div v-if="conditionDTO.sb28 !== null && conditionDTO.sb29 !== null" class="clause">
-                        <select class="select-clause-5" v-model="conditionDTO.operator_condit_5">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_5">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
@@ -611,7 +611,7 @@
                         </select>
                     </div>
                     <div v-if="conditionDTO.sb29 !== null && conditionDTO.sb30 !== null" class="clause">
-                        <select class="select-clause-5" v-model="conditionDTO.operator_condit_5">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_5">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
@@ -1258,5 +1258,31 @@ select{
 .button{
     display: flex;
     justify-content: center;
+}
+
+@media only screen and (max-width: 767px) {
+
+h3{
+    font-size: 50px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.align{
+    width: 70%;
+}
+
+select{
+    width: 97%;
+}
+
+.item{
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    width: 80%;
+}
 }
 </style>

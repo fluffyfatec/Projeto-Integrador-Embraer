@@ -128,4 +128,28 @@ h3{
 .select-sb1{
     font-size: x-large;
 }
+
+@media only screen and (max-width: 767px) {
+
+    h3{
+        font-size: 90px;
+        margin-left: 105px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+
+    .align{
+        width: 70%;
+    }
+
+    .item{
+        display: flex;
+        justify-content: center;
+    }
+    input{
+        width: 80%;
+    }
+}
+
+
 </style>

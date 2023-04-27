@@ -195,15 +195,25 @@ export default {
 }
 
 </script>
-.condition-or{
-    border: 2px solid var(--azul-principal);
-    border-radius: 5px;
-    padding: 1rem;
+<style scoped>
+
+
+@media only screen and (max-width: 767px) {
+
+    h3{
+        font-size: 50px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+
+    .align{
+        width: 70%;
+    }
+
+    input{
+        width: 80%;
+    }
 }
 
-h3{
-    display: flex;
-    justify-content: center;
-    font-size: 4rem;
-    color: var(--azul-principal);
-}
+
+</style>

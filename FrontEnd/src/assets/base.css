@@ -72,7 +72,7 @@ body {
 
 }
 
-/* ------------------------------- ↓↓↓↓↓ Modificações repetitivas ↓↓↓↓↓ --------------------------------*/
+/* ------------------------------- ↓↓↓↓↓ Modificações repetitivas ou globais↓↓↓↓↓ --------------------------------*/
 select{
   border-color: var(--azul-claro-light);
   border-radius: 5px;
@@ -138,6 +138,12 @@ input{
 
 .select-sb-part{
   width: 6.5rem;
+}
+
+.select-clause{
+  background-color: var(--azul-embraer-light);
+  color: var(--white);
+  border-color: var(--azul-embraer-dark);
 }
 /* ------------------------------- ↓↓↓↓↓ Fonte Responsiva ↓↓↓↓↓ --------------------------------*/
 
