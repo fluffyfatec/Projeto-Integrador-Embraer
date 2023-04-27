@@ -1,4 +1,4 @@
-<template>
+<template class = "teste">
     <form @submit.prevent="saveConditionAndItem" class="center">
     <div class = "align">
         <div class="chassis">
@@ -98,5 +98,26 @@ h3{
 }
 .select-chassis{
     font-size: x-large;
+}
+
+@media only screen and (max-width: 767px) {
+    .align{
+        width: 80%;
+    }
+
+    h3{
+        margin-left: 45%;
+    }
+    .item{
+        display: flex;
+        justify-content: center;
+    }
+
+    input{ 
+        width: 90%;
+    }
+    select{
+        
+    }
 }
 </style>
