@@ -2,7 +2,10 @@ package com.embraer.backend.chassisSb.repository;
 
 import java.util.List;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.embraer.backend.chassis.entity.Chassis;
@@ -15,5 +18,11 @@ public interface ChassiServiceBulletinRepository  extends JpaRepository<ChassiSe
 	List<ChassiServiceBulletin> findByChassiId(Chassis chassi);
 
 	List<ChassiServiceBulletin> findByServiceBulletinId(ServiceBulletin serviceBulletin);
+
+	@Query("SELECT csb.serviceBulletinStatus FROM ChassiServiceBulletin csb WHERE csb.serviceBulletinId.serviceBulletinId = :sbId" +
+			" AND csb.chassiId.chassiId = :chassiId")
+	@Cacheable("findSbStatusBySbId")
+	String findSbStatusBySbId(@Param("sbId") Long sbId, @Param("chassiId") Long chassiId);
+
 
 }

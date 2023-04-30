@@ -14,6 +14,8 @@ import org.springframework.stereotype.Repository;
 import com.embraer.backend.condition.entity.Condition;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Repository
 public interface conditionRepository extends JpaRepository<Condition, Long> {
 
@@ -183,5 +185,8 @@ public interface conditionRepository extends JpaRepository<Condition, Long> {
 
     @Query("SELECT c FROM Condition c WHERE c.itemId.itemId = :itemId")
     Condition listAllByItemId(@Param("itemId") Long itemId);
+
+    @Query("SELECT c FROM Condition c")
+    List<Condition> listAllConditions();
 
 }

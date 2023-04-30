@@ -84,5 +84,10 @@ select:focus-within .dropdown-toggle {
   border: 2px solid var(--azul-principal);
 }
 
+@media only screen and (max-width: 767px) {
+    select{
+        width: 90%;
+    }
+}
 
 </style>

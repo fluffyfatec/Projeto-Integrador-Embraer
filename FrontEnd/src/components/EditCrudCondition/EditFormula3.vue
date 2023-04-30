@@ -71,7 +71,7 @@
                             conditionDTO.sb3 !== null && conditionDTO.sb3_part !== null" 
                 type="submit" class="submit">Submit</button>
                 <button @click.prevent="EditionCancel">Cancel</button>
-                <button @click.prevent="ItemDelete">Delete</button>
+               <!-- <button @click.prevent="ItemDelete">Delete</button> -->
             </div>
         </div>
     </form>
@@ -244,6 +244,28 @@ h3{
     justify-content: center;
     font-size: 4rem;
     color: var(--azul-principal);
+}
+
+@media only screen and (max-width: 767px) {
+
+    h3{
+        font-size: 50px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+
+    .align{
+        width: 70%;
+    }
+
+    input{
+        width: 80%;
+    }
+    
+    select{
+        width: 90%;
+    }
+
 }
 
 </style>

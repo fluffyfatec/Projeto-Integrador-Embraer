@@ -1,5 +1,6 @@
 package com.embraer.backend.item.repositories;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -16,6 +17,7 @@ public interface ItemRepository extends JpaRepository<Item, Long>{
     Long findItemIdByItemName(@Param("itemName") String itemName);
 
     @Query("SELECT i.itemName FROM Item i WHERE i.itemId = :itemId")
+    @Cacheable("findItemNameItemId")
     String findItemNameByItemId(@Param("itemId") Long itemId);
 
     @Modifying
@@ -29,6 +31,7 @@ public interface ItemRepository extends JpaRepository<Item, Long>{
     void updateItemStatus(@Param("status") String status, @Param("itemId") Long itemId);
 
     @Query("SELECT i FROM Item i WHERE i.itemName = :itemName AND i.status = 'A'")
+    @Cacheable("checkIfItemIsActive")
     Item checkIfItemIsActive(@Param("itemName") String itemName);
 
 }

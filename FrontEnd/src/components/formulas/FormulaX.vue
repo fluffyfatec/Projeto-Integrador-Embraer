@@ -5,7 +5,7 @@
                 <div class="micro">
                 <div class="sb1">
                     <select class="select-sb1" v-model="conditionDTO.sb1">
-                        <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                        <option class="select-placeholder" :value="null">Choose sb...</option>
                         <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                             {{ sb.sb_name }}
                         </option>
@@ -19,14 +19,14 @@
                     </select>
                 </div>
                 <div v-if="conditionDTO.sb1 !== null && conditionDTO.sb2 !== null" class="clause">
-                    <select class="select-clause-1" v-model="conditionDTO.operator_condit_1">
+                    <select class="select-clause" v-model="conditionDTO.operator_condit_1">
                         <option>AND</option>
                         <option>OR</option>
                     </select>
                 </div>
                 <div class="sb2">
                     <select v-if="conditionDTO.sb1 !== null" class="select-sb2" v-model="conditionDTO.sb2">
-                        <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                        <option class="select-placeholder" :value="null">Choose sb...</option>
                         <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                             {{ sb.sb_name }}
                         </option>
@@ -40,14 +40,14 @@
                     </select>    
                 </div>
                 <div v-if="conditionDTO.sb2 !== null && conditionDTO.sb3 !== null" class="clause">
-                    <select class="select-clause-1" v-model="conditionDTO.operator_condit_1">
+                    <select class="select-clause" v-model="conditionDTO.operator_condit_1">
                         <option>AND</option>
                         <option>OR</option>
                     </select>
                 </div>    
                 <div class="sb3">
                     <select v-if="conditionDTO.sb2 !== null" class="select-sb3" v-model="conditionDTO.sb3">
-                        <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                        <option class="select-placeholder" :value="null">Choose sb...</option>
                         <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                             {{ sb.sb_name }}
                         </option>
@@ -61,14 +61,14 @@
                     </select>
                 </div>
                 <div v-if="conditionDTO.sb3 !== null && conditionDTO.sb4 !== null" class="clause">
-                    <select class="select-clause-1" v-model="conditionDTO.operator_condit_1">
+                    <select class="select-clause" v-model="conditionDTO.operator_condit_1">
                         <option>AND</option>
                         <option>OR</option>
                     </select>
                 </div>
                 <div class="sb4">
                     <select v-if="conditionDTO.sb3 !== null" class="select-sb4" v-model="conditionDTO.sb4">
-                        <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                        <option class="select-placeholder" :value="null">Choose sb...</option>
                         <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                             {{ sb.sb_name }}
                         </option>
@@ -82,14 +82,14 @@
                     </select>    
                 </div>
                 <div v-if="conditionDTO.sb4 !== null && conditionDTO.sb5 !== null" class="clause">
-                    <select class="select-clause-1" v-model="conditionDTO.operator_condit_1">
+                    <select class="select-clause" v-model="conditionDTO.operator_condit_1">
                         <option>AND</option>
                         <option>OR</option>
                     </select>
                 </div>    
                 <div class="sb5">
                     <select v-if="conditionDTO.sb4 !== null" class="select-sb5" v-model="conditionDTO.sb5">
-                        <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                        <option class="select-placeholder" :value="null">Choose sb...</option>
                         <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                             {{ sb.sb_name }}
                         </option>
@@ -103,14 +103,14 @@
                     </select>
                 </div>
                 <div v-if="conditionDTO.sb5 !== null && conditionDTO.sb6 !== null" class="clause">
-                    <select class="select-clause-1" v-model="conditionDTO.operator_condit_1">
+                    <select class="select-clause" v-model="conditionDTO.operator_condit_1">
                         <option>AND</option>
                         <option>OR</option>
                     </select>
                 </div>
                 <div class="sb6">
                     <select v-if="conditionDTO.sb5 !== null" class="select-sb6" v-model="conditionDTO.sb6">
-                        <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                        <option class="select-placeholder" :value="null">Choose sb...</option>
                         <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                             {{ sb.sb_name }}
                         </option>
@@ -132,7 +132,7 @@
                 <div class="micro">
                     <div class="sb7">
                         <select class="select-sb7" v-model="conditionDTO.sb7">
-                            <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
                             <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                                 {{ sb.sb_name }}
                             </option>
@@ -146,14 +146,14 @@
                         </select>
                     </div>
                     <div v-if="conditionDTO.sb7 !== null && conditionDTO.sb8 !== null" class="clause">
-                        <select class="select-clause-2" v-model="conditionDTO.operator_condit_2">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_2">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
                     </div>
                     <div class="sb8">
                         <select v-if="conditionDTO.sb7 !== null" class="select-sb8" v-model="conditionDTO.sb8">
-                            <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
                             <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                                 {{ sb.sb_name }}
                             </option>
@@ -167,14 +167,14 @@
                         </select>    
                     </div>
                     <div v-if="conditionDTO.sb8 !== null && conditionDTO.sb9 !== null" class="clause">
-                        <select class="select-clause-2" v-model="conditionDTO.operator_condit_2">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_2">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
                     </div>    
                     <div class="sb9">
                         <select v-if="conditionDTO.sb8 !== null" class="select-sb9" v-model="conditionDTO.sb9">
-                            <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
                             <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                                 {{ sb.sb_name }}
                             </option>
@@ -188,14 +188,14 @@
                         </select>
                     </div>
                     <div v-if="conditionDTO.sb9 !== null && conditionDTO.sb10 !== null" class="clause">
-                        <select class="select-clause-2" v-model="conditionDTO.operator_condit_2">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_2">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
                     </div>
                     <div class="sb10">
                         <select v-if="conditionDTO.sb9 !== null" class="select-sb10" v-model="conditionDTO.sb10">
-                            <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
                             <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                                 {{ sb.sb_name }}
                             </option>
@@ -209,14 +209,14 @@
                         </select>    
                     </div>
                     <div v-if="conditionDTO.sb10 !== null && conditionDTO.sb11 !== null" class="clause">
-                        <select class="select-clause-2" v-model="conditionDTO.operator_condit_2">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_2">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
                     </div>    
                     <div class="sb11">
                         <select v-if="conditionDTO.sb10 !== null" class="select-sb11" v-model="conditionDTO.sb11">
-                            <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
                             <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                                 {{ sb.sb_name }}
                             </option>
@@ -230,14 +230,14 @@
                         </select>
                     </div>
                     <div v-if="conditionDTO.sb11 !== null && conditionDTO.sb12 !== null" class="clause">
-                        <select class="select-clause-2" v-model="conditionDTO.operator_condit_2">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_2">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
                     </div>
                     <div class="sb12">
                         <select v-if="conditionDTO.sb11 !== null" class="select-sb12" v-model="conditionDTO.sb12">
-                            <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
                             <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                                 {{ sb.sb_name }}
                             </option>
@@ -259,7 +259,7 @@
                 <div class="micro">
                     <div class="sb13">
                         <select class="select-sb13" v-model="conditionDTO.sb13">
-                            <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
                             <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                                 {{ sb.sb_name }}
                             </option>
@@ -273,14 +273,14 @@
                         </select>
                     </div>
                     <div v-if="conditionDTO.sb13 !== null && conditionDTO.sb14 !== null" class="clause">
-                        <select class="select-clause-3" v-model="conditionDTO.operator_condit_3">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_3">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
                     </div>
                     <div class="sb14">
                         <select v-if="conditionDTO.sb13 !== null" class="select-sb14" v-model="conditionDTO.sb14">
-                            <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
                             <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                                 {{ sb.sb_name }}
                             </option>
@@ -294,14 +294,14 @@
                         </select>    
                     </div>
                     <div v-if="conditionDTO.sb14 !== null && conditionDTO.sb15 !== null" class="clause">
-                        <select class="select-clause-3" v-model="conditionDTO.operator_condit_3">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_3">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
                     </div>    
                     <div class="sb15">
                         <select v-if="conditionDTO.sb14 !== null" class="select-sb15" v-model="conditionDTO.sb15">
-                            <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
                             <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                                 {{ sb.sb_name }}
                             </option>
@@ -315,14 +315,14 @@
                         </select>
                     </div>
                     <div v-if="conditionDTO.sb15 !== null && conditionDTO.sb16 !== null" class="clause">
-                        <select class="select-clause-3" v-model="conditionDTO.operator_condit_3">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_3">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
                     </div>
                     <div class="sb16">
                         <select v-if="conditionDTO.sb15 !== null" class="select-sb16" v-model="conditionDTO.sb16">
-                            <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
                             <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                                 {{ sb.sb_name }}
                             </option>
@@ -336,14 +336,14 @@
                         </select>    
                     </div>
                     <div v-if="conditionDTO.sb16 !== null && conditionDTO.sb17 !== null" class="clause">
-                        <select class="select-clause-3" v-model="conditionDTO.operator_condit_3">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_3">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
                     </div>    
                     <div class="sb17">
                         <select v-if="conditionDTO.sb16 !== null" class="select-sb17" v-model="conditionDTO.sb17">
-                            <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
                             <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                                 {{ sb.sb_name }}
                             </option>
@@ -357,14 +357,14 @@
                         </select>
                     </div>
                     <div v-if="conditionDTO.sb17 !== null && conditionDTO.sb18 !== null" class="clause">
-                        <select class="select-clause-3" v-model="conditionDTO.operator_condit_3">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_3">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
                     </div>
                     <div class="sb18">
                         <select v-if="conditionDTO.sb17 !== null" class="select-sb18" v-model="conditionDTO.sb18">
-                            <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
                             <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                                 {{ sb.sb_name }}
                             </option>
@@ -386,7 +386,7 @@
                 <div class="micro">
                     <div class="sb19">
                         <select class="select-sb19" v-model="conditionDTO.sb19">
-                            <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
                             <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                                 {{ sb.sb_name }}
                             </option>
@@ -400,14 +400,14 @@
                         </select>
                     </div>
                     <div v-if="conditionDTO.sb19 !== null && conditionDTO.sb20 !== null" class="clause">
-                        <select class="select-clause-4" v-model="conditionDTO.operator_condit_4">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_4">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
                     </div>
                     <div class="sb20">
                         <select v-if="conditionDTO.sb19 !== null" class="select-sb20" v-model="conditionDTO.sb20">
-                            <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
                             <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                                 {{ sb.sb_name }}
                             </option>
@@ -421,14 +421,14 @@
                         </select>    
                     </div>
                     <div v-if="conditionDTO.sb20 !== null && conditionDTO.sb21 !== null" class="clause">
-                        <select class="select-clause-4" v-model="conditionDTO.operator_condit_4">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_4">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
                     </div>    
                     <div class="sb21">
                         <select v-if="conditionDTO.sb20 !== null" class="select-sb21" v-model="conditionDTO.sb21">
-                            <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
                             <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                                 {{ sb.sb_name }}
                             </option>
@@ -442,14 +442,14 @@
                         </select>
                     </div>
                     <div v-if="conditionDTO.sb21 !== null && conditionDTO.sb22 !== null" class="clause">
-                        <select class="select-clause-4" v-model="conditionDTO.operator_condit_4">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_4">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
                     </div>
                     <div class="sb22">
                         <select v-if="conditionDTO.sb21 !== null" class="select-sb22" v-model="conditionDTO.sb22">
-                            <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
                             <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                                 {{ sb.sb_name }}
                             </option>
@@ -463,14 +463,14 @@
                         </select>    
                     </div>
                     <div v-if="conditionDTO.sb22 !== null && conditionDTO.sb23 !== null" class="clause">
-                        <select class="select-clause-4" v-model="conditionDTO.operator_condit_4">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_4">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
                     </div>    
                     <div class="sb23">
                         <select v-if="conditionDTO.sb22 !== null" class="select-sb23" v-model="conditionDTO.sb23">
-                            <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
                             <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                                 {{ sb.sb_name }}
                             </option>
@@ -484,14 +484,14 @@
                         </select>
                     </div>
                     <div v-if="conditionDTO.sb23 !== null && conditionDTO.sb24 !== null" class="clause">
-                        <select class="select-clause-4" v-model="conditionDTO.operator_condit_4">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_4">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
                     </div>
                     <div class="sb24">
                         <select v-if="conditionDTO.sb23 !== null" class="select-sb24" v-model="conditionDTO.sb24">
-                            <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
                             <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                                 {{ sb.sb_name }}
                             </option>
@@ -512,7 +512,7 @@
                     <div class="micro">
                         <div class="sb25">
                             <select class="select-sb25" v-model="conditionDTO.sb25">
-                                <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                                <option class="select-placeholder" :value="null">Choose sb...</option>
                                 <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                                     {{ sb.sb_name }}
                                 </option>
@@ -527,14 +527,14 @@
                         </div>
                     </div>
                     <div v-if="conditionDTO.sb25 !== null && conditionDTO.sb26 !== null" class="clause">
-                        <select class="select-clause-5" v-model="conditionDTO.operator_condit_5">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_5">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
                     </div>
                     <div class="sb26">
                         <select v-if="conditionDTO.sb25 !== null" class="select-sb26" v-model="conditionDTO.sb26">
-                            <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
                             <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                                 {{ sb.sb_name }}
                             </option>
@@ -548,14 +548,14 @@
                         </select>    
                     </div>
                     <div v-if="conditionDTO.sb26 !== null && conditionDTO.sb27 !== null" class="clause">
-                        <select class="select-clause-5" v-model="conditionDTO.operator_condit_5">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_5">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
                     </div>    
                     <div class="sb27">
                         <select v-if="conditionDTO.sb26 !== null" class="select-sb27" v-model="conditionDTO.sb27">
-                            <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
                             <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                                 {{ sb.sb_name }}
                             </option>
@@ -569,14 +569,14 @@
                         </select>
                     </div>
                     <div v-if="conditionDTO.sb27 !== null && conditionDTO.sb28 !== null" class="clause">
-                        <select class="select-clause-5" v-model="conditionDTO.operator_condit_5">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_5">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
                     </div>
                     <div class="sb28">
                         <select v-if="conditionDTO.sb27 !== null" class="select-sb28" v-model="conditionDTO.sb28">
-                            <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
                             <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                                 {{ sb.sb_name }}
                             </option>
@@ -590,14 +590,14 @@
                         </select>    
                     </div>
                     <div v-if="conditionDTO.sb28 !== null && conditionDTO.sb29 !== null" class="clause">
-                        <select class="select-clause-5" v-model="conditionDTO.operator_condit_5">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_5">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
                     </div>    
                     <div class="sb29">
                         <select v-if="conditionDTO.sb28 !== null" class="select-sb29" v-model="conditionDTO.sb29">
-                            <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
                             <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                                 {{ sb.sb_name }}
                             </option>
@@ -611,14 +611,14 @@
                         </select>
                     </div>
                     <div v-if="conditionDTO.sb29 !== null && conditionDTO.sb30 !== null" class="clause">
-                        <select class="select-clause-5" v-model="conditionDTO.operator_condit_5">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_5">
                             <option>AND</option>
                             <option>OR</option>
                         </select>
                     </div>
                     <div class="sb30">
                         <select v-if="conditionDTO.sb29 !== null" class="select-sb30" v-model="conditionDTO.sb30">
-                            <option class="select-placeholder" disabled :value="null">Choose sb...</option>
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
                             <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
                                 {{ sb.sb_name }}
                             </option>
@@ -641,7 +641,8 @@
             </div>    
         
             <div class="center">
-                <button v-if="conditionDTO.item !== null && conditionDTO.item.length > 4" 
+                <button v-if="conditionDTO.item !== null && conditionDTO.item.length > 2 && 
+                    conditionDTO.sb1 !== null && conditionDTO.sb1_part !== null" 
                 type="submit" class="submit">Submit</button>
             </div>
         </div>
@@ -1258,5 +1259,35 @@ select{
 .button{
     display: flex;
     justify-content: center;
+}
+
+@media only screen and (max-width: 767px) {
+
+h3{
+    font-size: 50px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.align{
+    width: 70%;
+}
+
+select{
+    width: 97%;
+}
+
+.item{
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    width: 80%;
+}
+}
+
+.select-placeholder {
+    background-color: #E0E0E1;
 }
 </style>

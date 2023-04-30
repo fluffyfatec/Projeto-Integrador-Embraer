@@ -24,7 +24,7 @@
             </div> 
            
             <div class="center">
-                <button v-if="conditionDTO.item !== null && conditionDTO.item.length > 4  && conditionDTO.formulaDesc !== null && 
+                <button v-if="conditionDTO.item !== null && conditionDTO.item.length > 2  && conditionDTO.formulaDesc !== null && 
                             conditionDTO.sb1 !== null && conditionDTO.sb1_part !== null" 
                 type="submit" class="submit">Submit</button>
             </div>
@@ -128,4 +128,28 @@ h3{
 .select-sb1{
     font-size: x-large;
 }
+
+@media only screen and (max-width: 767px) {
+
+    h3{
+        font-size: 90px;
+        margin-left: 105px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+
+    .align{
+        width: 70%;
+    }
+
+    .item{
+        display: flex;
+        justify-content: center;
+    }
+    input{
+        width: 80%;
+    }
+}
+
+
 </style>

@@ -50,7 +50,7 @@
                             conditionDTO.sb2 !== null && conditionDTO.sb2_part !== null" 
                 type="submit" class="submit">Submit</button>
                 <button @click.prevent="EditionCancel">Cancel</button>
-                <button @click.prevent="ItemDelete">Delete</button>
+                <!-- <button @click.prevent="ItemDelete">Delete</button> -->
             </div>
         </div>
     </form>
@@ -195,3 +195,25 @@ export default {
 }
 
 </script>
+<style scoped>
+
+
+@media only screen and (max-width: 767px) {
+
+    h3{
+        font-size: 50px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+
+    .align{
+        width: 70%;
+    }
+
+    input{
+        width: 80%;
+    }
+}
+
+
+</style>

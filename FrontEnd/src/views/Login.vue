@@ -19,14 +19,26 @@
 <script lang="ts">
 import axios from 'axios';
 import router from '@/router';
+import globalData from '@/globals'
 
 export default {
   data() {
     return {
       username: '',
       password: '',
+      g: globalData,
     };
   },
+
+  mounted() {
+        if (this.g.userRole == "PILOT" || this.g.userRole == "EDITOR" || this.g.userRole == "ADMIN") {
+          this.$router.go(-1);
+        } else {
+            return
+        }
+
+    },
+
   methods: {
     async login() {
       const data = {
@@ -62,7 +74,7 @@ export default {
 @import "../assets/base.css";
 
 .login-container {
-    padding-top: 20%;
+  padding-top: 12%;
     padding-left: 10%;
     padding-right: 10%;
     margin-left: 20rem;
@@ -74,7 +86,8 @@ export default {
 }
 
 .login {
-
+    display: flex;
+    justify-content: center;
     background-color: var(--white);
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -147,7 +160,7 @@ img {
     vertical-align: middle;
   }
   .login-container {
-    padding-top: 70%;
+    padding-top: 50%;
     margin: 0 auto;
     }
 
@@ -164,5 +177,20 @@ img {
     width: 80%;
   }
   }  
+  @media only screen and (width: 1440px) {
 
+    .login-container {
+    padding-top: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+}
+
+
+  }
 </style>

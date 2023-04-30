@@ -1,4 +1,4 @@
-<template>
+<template class = "teste">
     <form @submit.prevent="saveConditionAndItem" class="center">
     <div class = "align">
         <div class="chassis">
@@ -17,7 +17,7 @@
         </div>    
         <div class="center">
             <button 
-            v-if="conditionDTO.item !== null && conditionDTO.item.length > 4  && conditionDTO.formulaDesc !== null && 
+            v-if="conditionDTO.item !== null && conditionDTO.item.length > 2  && conditionDTO.formulaDesc !== null && 
                 conditionDTO.chassis !== null"
             type="submit" class="submit">Submit</button>
         </div>
@@ -98,5 +98,24 @@ h3{
 }
 .select-chassis{
     font-size: x-large;
+}
+
+@media only screen and (max-width: 767px) {
+    .align{
+        width: 80%;
+    }
+
+    h3{
+        margin-left: 45%;
+    }
+    .item{
+        display: flex;
+        justify-content: center;
+    }
+
+    input{ 
+        width: 90%;
+    }
+
 }
 </style>
