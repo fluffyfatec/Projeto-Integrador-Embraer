@@ -19,14 +19,26 @@
 <script lang="ts">
 import axios from 'axios';
 import router from '@/router';
+import globalData from '@/globals'
 
 export default {
   data() {
     return {
       username: '',
       password: '',
+      g: globalData,
     };
   },
+
+  mounted() {
+        if (this.g.userRole == "PILOT" || this.g.userRole == "EDITOR" || this.g.userRole == "ADMIN") {
+          this.$router.go(-1);
+        } else {
+            return
+        }
+
+    },
+
   methods: {
     async login() {
       const data = {
@@ -148,7 +160,7 @@ img {
     vertical-align: middle;
   }
   .login-container {
-    padding-top: 70%;
+    padding-top: 50%;
     margin: 0 auto;
     }
 

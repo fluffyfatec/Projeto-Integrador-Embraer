@@ -6,6 +6,7 @@ import com.embraer.backend.item.repositories.ItemRepository;
 import com.embraer.backend.item.services.ListItemsByChassi.dto.ListApplicable;
 import com.embraer.backend.item.services.ListItemsByChassi.dto.ListNotApplicable;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.Objects;
@@ -19,6 +20,7 @@ public class FiveConditionsNotApplicable {
     @Autowired
     ItemRepository itemRepository;
 
+    @Cacheable("FiveConditionsListNotApplicable")
     public ListNotApplicable fiveConditionsListNotApplicable(Condition condition, Long id) {
 
         if (condition.getSb1IdLong() != null && condition.getSb7IdLong() != null &&

@@ -5,6 +5,7 @@ import java.util.List;
 import com.embraer.backend.chassis.entity.Chassis;
 import com.embraer.backend.serviceBulletin.entity.ServiceBulletin;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -19,7 +20,9 @@ public interface ServiceBulletinRepository extends JpaRepository<ServiceBulletin
 	@Query("SELECT sb.serviceBulletinId FROM ServiceBulletin sb WHERE sb.serviceBulletinName = :sbName AND sb.serviceBulletinPart = :sbPartService")
 	Long findServiceBulletinIdBySbNameAndSbPartService(@Param("sbName") String sbName, @Param("sbPartService") String sbPartService);
 
+
 	@Query("SELECT sb.serviceBulletinName FROM ServiceBulletin sb WHERE sb.serviceBulletinId = :sbId")
+	@Cacheable("findSbNameByServiceBulletinId")
 	String findSbNameByServiceBulletinId(@Param("sbId") Long sbId);
 
 	@Query("SELECT sb.serviceBulletinPart FROM ServiceBulletin sb WHERE sb.serviceBulletinId = :sbId")

@@ -50,7 +50,7 @@
                         conditionDTO.sb2 !== null && conditionDTO.sb2_part !== null" 
             type="submit" class="submit">Submit</button>
             <button @click.prevent="EditionCancel">Cancel</button>
-            <button @click.prevent="ItemDelete">Delete</button>
+            <!-- <button @click.prevent="ItemDelete">Delete</button> -->
             </div>
         </div>
     </form>

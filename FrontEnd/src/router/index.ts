@@ -162,7 +162,7 @@ router.beforeEach((to, from, next) => {
   const isAuthenticated = token ? true : false;
 
   if (isAuthenticated && to.path === '/login') {
-    next('/planes');
+    next('/items');
     return;
   }
 

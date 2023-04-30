@@ -41,6 +41,7 @@
 import axios from 'axios';
 import { eventBus } from '@/main';
 import ReturnSbs from '@/components/ReturnSbs.vue';
+import globalData from '@/globals'
 
 export default {
     
@@ -54,11 +55,18 @@ export default {
             planesApplicable: [],
             planesNotApplicable: [],
             planesIncorporated: [],
+            g: globalData,
         }
     },
 
     mounted() {
         this.getPlanes();
+
+        if (this.g.userRole == "EDITOR" || this.g.userRole == "ADMIN") {
+            return
+        } else {
+            this.$router.push('/items');
+        };
     },
 
     created() {

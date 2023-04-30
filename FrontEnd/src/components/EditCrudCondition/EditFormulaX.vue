@@ -644,6 +644,8 @@
                 <button v-if="conditionDTO.item !== null && 
                     conditionDTO.sb1 !== null && conditionDTO.sb1_part !== null" 
                 type="submit" class="submit">Submit</button>
+                <button @click.prevent="EditionCancel">Cancel</button>
+              <!--  <button @click.prevent="ItemDelete">Delete</button> -->
             </div>
         </div>
     </form>

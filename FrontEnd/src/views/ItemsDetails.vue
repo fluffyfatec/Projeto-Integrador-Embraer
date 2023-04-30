@@ -43,6 +43,7 @@
 import axios from 'axios';
 import { eventBus } from '@/main';
 import ReturnChassis from '@/components/ReturnChassis.vue';
+import globalData from '@/globals'
 
 export default {
     
@@ -55,11 +56,18 @@ export default {
             showLiIncorporated: false,
             showLiApplicable: false,
             showLiNotApplicable: false,
+            g: globalData,
         }
     },
 
     mounted() {
         this.getItems();
+
+        if (this.g.userRole == "PILOT" || this.g.userRole == "EDITOR" || this.g.userRole == "ADMIN") {
+            return
+        } else {
+            this.$router.push('/login');
+        };
     },
 
     created() {

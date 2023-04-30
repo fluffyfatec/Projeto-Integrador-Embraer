@@ -145,6 +145,30 @@ input{
   color: var(--white);
   border-color: var(--azul-embraer-dark);
 }
+
+/* Estilos para tablet */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {}
+
+/* Estilos para mobile */
+@media only screen and (max-width: 767px) {
+
+  select {
+    max-width: 100%; 
+    display: block;
+    font-size: 18px;
+  }
+
+  option {
+    font-size: 12px; 
+    overflow-x: scroll;
+    max-width: 100%;
+  }
+
+  input {
+    font-size: 21px;
+  }
+
+}
 /* ------------------------------- ↓↓↓↓↓ Fonte Responsiva ↓↓↓↓↓ --------------------------------*/
 
 @media all and (min-width: 100px)  {  body  { font-size: 0.9em;  } }

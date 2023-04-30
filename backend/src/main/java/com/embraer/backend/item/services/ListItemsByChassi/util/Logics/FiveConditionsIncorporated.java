@@ -6,6 +6,7 @@ import com.embraer.backend.item.repositories.ItemRepository;
 import com.embraer.backend.item.services.ListItemsByChassi.dto.ListApplicable;
 import com.embraer.backend.item.services.ListItemsByChassi.dto.ListIncorporated;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.Objects;
@@ -21,7 +22,9 @@ public class FiveConditionsIncorporated {
     @Autowired
     ItemRepository itemRepository;
 
+    @Cacheable("FiveConditionsListIncorporated")
     public ListIncorporated FiveConditionsListIncorporated(Condition condition, Long id) {
+
         if (condition.getSb1IdLong() != null && condition.getSb7IdLong() != null &&
                 condition.getSb13IdLong() != null && condition.getSb19IdLong() != null &&
                 condition.getSb25IdLong() != null) {

@@ -44,6 +44,7 @@
 import axios from 'axios';
 import { eventBus } from '@/main';
 import ReturnChassis from '@/components/ReturnChassis.vue';
+import globalData from '@/globals'
 
 export default {
     
@@ -57,11 +58,18 @@ export default {
             sbsApplicable: [],
             sbsNotApplicable: [],
             sbsIncorporated: [],
+            g: globalData,
         }
     },
 
     mounted() {
         this.getSbs();
+
+        if (this.g.userRole == "EDITOR" || this.g.userRole == "ADMIN") {
+            return
+        } else {
+            this.$router.push('/items');
+        };
     },
 
     created() {
