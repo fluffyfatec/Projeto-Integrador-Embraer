@@ -28,6 +28,11 @@ public interface ServiceBulletinRepository extends JpaRepository<ServiceBulletin
 	@Query("SELECT sb.serviceBulletinPart FROM ServiceBulletin sb WHERE sb.serviceBulletinId = :sbId")
 	String findSbPartByServiceBulletinId(@Param("sbId") Long sbId);
 
+	@Query("SELECT sb FROM ServiceBulletin sb, ChassisUserOwner o, ChassiServiceBulletin cs WHERE " +
+			"o.chassis = cs.chassiId AND cs.serviceBulletinId = sb.serviceBulletinId AND " +
+			"o.user.userId = :userId")
+	List<ServiceBulletin> getServiceBulletinsEditor(@Param("userId") Long userId);
+
 
 
 

@@ -19,6 +19,11 @@ public interface ChassiServiceBulletinRepository  extends JpaRepository<ChassiSe
 
 	List<ChassiServiceBulletin> findByServiceBulletinId(ServiceBulletin serviceBulletin);
 
+	@Query("SELECT cs FROM ServiceBulletin sb, ChassisUserOwner o, ChassiServiceBulletin cs WHERE " +
+			"o.chassis = cs.chassiId AND cs.serviceBulletinId = sb.serviceBulletinId AND " +
+			"o.user.userId = :userId AND cs.serviceBulletinId.serviceBulletinId = :sbId")
+	List<ChassiServiceBulletin> findByServiceBulletinIdEditor(@Param("sbId") Long sbId, @Param("userId") Long userId);
+
 	@Query("SELECT csb.serviceBulletinStatus FROM ChassiServiceBulletin csb WHERE csb.serviceBulletinId.serviceBulletinId = :sbId" +
 			" AND csb.chassiId.chassiId = :chassiId")
 	@Cacheable("findSbStatusBySbId")
