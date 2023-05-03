@@ -14,18 +14,28 @@ import org.springframework.web.bind.annotation.RestController;
 import com.embraer.backend.chassi.services.ListChassisBySb.dto.ListChassiBySbDto;
 
 @RestController
-@RequestMapping(value = "/chassi/sb/{sb}/{part}")
+@RequestMapping
 public class ListChassisBySbController {
 
 	@Autowired
 	ListChassisBySbService listChassisBySbService;
 	
 	@CrossOrigin
-	@GetMapping
-	public ResponseEntity<List<ListChassiBySbDto>>listChassiByDto(@PathVariable("sb") String name_sb,
+	@GetMapping("/chassi/sb/{sb}/{part}")
+	public ResponseEntity<List<ListChassiBySbDto>>listChassiByDtoAdmin(@PathVariable("sb") String name_sb,
 			@PathVariable("part") String part_sb) {
 		
-		List<ListChassiBySbDto> listChassiBySbDtos = listChassisBySbService.execute(name_sb,part_sb);
+		List<ListChassiBySbDto> listChassiBySbDtos = listChassisBySbService.executeAdmin(name_sb,part_sb);
+		return ResponseEntity.status(HttpStatus.OK).body(listChassiBySbDtos);
+
+	}
+
+	@CrossOrigin
+	@GetMapping("/chassi/sb/editor/{sb}/{part}")
+	public ResponseEntity<List<ListChassiBySbDto>>listChassiByDtoEditor(@PathVariable("sb") String name_sb,
+																  @PathVariable("part") String part_sb) {
+
+		List<ListChassiBySbDto> listChassiBySbDtos = listChassisBySbService.executeEditor(name_sb,part_sb);
 		return ResponseEntity.status(HttpStatus.OK).body(listChassiBySbDtos);
 
 	}

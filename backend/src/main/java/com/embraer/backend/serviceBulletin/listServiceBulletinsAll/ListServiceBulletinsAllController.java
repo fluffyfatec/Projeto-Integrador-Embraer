@@ -12,17 +12,25 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.embraer.backend.serviceBulletin.listServiceBulletinsAll.dto.ListServiceBulletinAllDto;
 
-@CrossOrigin
+
 @RestController
-@RequestMapping(value="/bulletin/list/all")
+@RequestMapping
 public class ListServiceBulletinsAllController {
 	
 	@Autowired
 	ListServiceBulletinsAllService listServiceBulletinsAllService;
-	
-	@GetMapping
-	public ResponseEntity<List<ListServiceBulletinAllDto>> listServiceBulletinsAll(){
-		List<ListServiceBulletinAllDto> listServiceBulletinAllDto = listServiceBulletinsAllService.execute();
+
+	@CrossOrigin
+	@GetMapping("/bulletin/list/all")
+	public ResponseEntity<List<ListServiceBulletinAllDto>> listServiceBulletinsAllAdmin(){
+		List<ListServiceBulletinAllDto> listServiceBulletinAllDto = listServiceBulletinsAllService.executeAdmin();
+		return ResponseEntity.status(HttpStatus.OK).body(listServiceBulletinAllDto);
+	}
+
+	@CrossOrigin
+	@GetMapping("/bulletin/list/all/editor")
+	public ResponseEntity<List<ListServiceBulletinAllDto>> listServiceBulletinsAllEditor(){
+		List<ListServiceBulletinAllDto> listServiceBulletinAllDto = listServiceBulletinsAllService.executeEditor();
 		return ResponseEntity.status(HttpStatus.OK).body(listServiceBulletinAllDto);
 	}
 
