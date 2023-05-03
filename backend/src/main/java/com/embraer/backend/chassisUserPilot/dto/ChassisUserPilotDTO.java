@@ -9,7 +9,7 @@ import lombok.Setter;
 public class ChassisUserPilotDTO {
 
     private Long id;
-    private Long owner;
+    private String owner;
     private String pilot;
     private Long chassis;
 

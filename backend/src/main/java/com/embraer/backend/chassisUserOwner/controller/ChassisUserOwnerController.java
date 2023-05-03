@@ -20,7 +20,7 @@ public class ChassisUserOwnerController {
 
     @CrossOrigin
     @PostMapping("/register-chassis-owner")
-    public ResponseEntity<?> registerChassisOwner(@RequestBody ChassisUserOwnerDTO dto){
+    public ResponseEntity<?> registerChassisOwner(@RequestBody ChassisUserOwnerDTO dto) {
         try {
 
             chassisUserOwnerService.registerChassisOwner(dto.getOwner(), dto.getChassis());
