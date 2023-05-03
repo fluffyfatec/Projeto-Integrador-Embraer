@@ -1,132 +1,232 @@
 <div id="top"></div>
 <p align="center">
-      <img src="" width="100%" height="100%">
+      <img src="GIT/head.jpeg" width="100%" height="100%">
 <p align="center">
 
 <p align="center"> 
  <a href="https://www.java.com/pt-BR/"><img src="https://img.shields.io/badge/Backend Language%3A-JAVA-orange"/></a>
  <a href="https://www.javascript.com/"><img src="https://img.shields.io/badge/Frontend Language%3A-JAVASCRIPT-yellow"/></a>
- <a href="https://www.iacit.com.br"><img src="https://img.shields.io/badge/Client%3A-EMBRAER-blue"/></a>
+ <a href="https://embraer.com/br/pt"><img src="https://img.shields.io/badge/Client%3A-EMBRAER-blue"/></a>
  <a href="http://fatecsjc-prd.azurewebsites.net/"><img src="https://img.shields.io/badge/Institution%3A-FATEC-red"/></a>
 </p>
 
 <p align="center">
-  <a href="#desafio">Sobre o Projeto</a> •
-  <a href="#cronograma">Cronograma</a> •
+  <a href="#About-the-project">About the project</a> •
+  <a href="#Schedule">Schedule</a> •
   <a href="#burndown">Burndown</a> •
-  <a href="#equipe">Equipe</a> •
-  <a href="#manual-do-usuario">Manual do Usuario</a> •
-  <a href="#tecnologias-utilizadas">Tecnologias Utilizadas</a>
+  <a href="#Team">Team</a> •
+
+  <a href="#Data Dictionary">Data Dictionary</a> •
+  <a href="#Technologies Used">Technologies Used</a>
+
 </p>
 
-## Desafio
+## Challenge
+Currently, many pilots work as “freelancers” and do not operate just one aircraft/fleet, which makes it difficult to recognize certain equipment and software versions installed on the aircraft. Furthermore, the pilot does not always have quick access to all aircraft manuals and documents, which impairs his knowledge of the aircraft and its capabilities.
 
+<p align="right">(<a href="#top">Back to top</a>)</p>
 
-
-<p align="right">(<a href="#top">voltar ao topo</a>)</p>
-
-## Objetivo
 
 <details>
-<summary>Requisitos Funcionais</summary>
+<summary>Functional Requirements</summary>
+      <p></p>
+<p>• Access to the customer database (user, password and equipment);
+      
+<p>• Users must have different profiles with different access levels (administrator, editing and query);
 
+<p>• Items CRUD, with register of the condition of each item;
 
+<p>• Board of Administration and Statistics;
+
+<p>• PDF generation and export.
+
+<p>• Notifications when a Service Bulletin is changed;
 </details>
+      
 
+<details>     
+<summary>Non-Functional Requirements</summary>
+<p></p>
+<p>• Java Language
+      
+<p>• Relational Database (Cloud)
+
+<p>• Vue.js 2
+      
+<p>• Web System
+      
+<p>• Documentation
+      
+</details>
+<p align="right">(<a href="#top">Back to top</a>)</p>
+
+## Solution
+
+Our team will develop a web software for the company "Embraer" that allows the easy import, manipulation and processing of data, visualization of data for its customers and administrators and the persistence of data in the database in a simplified way. In addition, it will be possible to filter this data by chassis, service bulletins and applicability of the improvement. However, Fluffy will also deliver three levels of access: Pilot, Client and Administrator, along with an administrative panel allowing the visualization of data in dashboards and modifications of users.
+
+
+<p align="right">(<a href="#top">Back to top</a>)</p>
+
+## Schedule
+
+ <img src="GIT/timeline.png" width="100%" height="100%">
+
+<p align="right">(<a href="#top">Back to top</a>)</p>
+
+
+
+
+##  Sprint Goals
+
+<p>All items are organized from 0 to 2 according to the needs of each sprint.</p>
+<p>Items that are not finalized will be reworked in other sprints.</p>
 <details>
-<summary>Requisitos Não Funcionais</summary>
-
-
+<summary><b>Sprint 1</b></summary>
+                  <details>
+                  <summary>0</summary>
+                        <p>• Data automation.
+                  </details>
+                  <details>
+                  <summary>1</summary>                  
+                        <p>• Search by Sb's.
+                        <p>• Search by Items.
+                        <p>• Search by Chassis.
+                  </details>
+                   <details>
+                  <summary>2</summary>                  
+                        <p>• Item Search by Chassis.
+                        <p>• Search of Sb's by Chassis.                      
+                  </details>
+ </details>   
+ 
+ <details>              
+<summary><b>Sprint 2</b></summary>
+                  <details>
+                  <summary>0</summary>
+                        <p>• Registration of New Items.
+                        <p>• Update of the Condition of an Item.
+                        <p>• Activate and Inactivate Items.
+                        <p>• Show new items in Item Search by Chassis.
+                  </details>
+                  <details>
+                  <summary>1</summary>                  
+                        <p>• User Authentication and Authorization.
+                        <p>• Access levels. 
+                        <p>• List items registered in database.
+                  </details>
+                   <details>
+                  <summary>2</summary>
+                        <p>• Improvement of search methods.
+                        <p>• Search filters in tables of Data.
+                  </details>
+             
 </details>
 
-<p align="right">(<a href="#top">voltar ao topo</a>)</p>
+<details>              
+<summary><b>Sprint 3</b></summary>
+                  <details>
+                  <summary>0</summary>
+                        <p>• Notifications of edits to the users.
+                        <p>• Edition of the Planes, with different access levels.
+                        <p>• Edition of Sb's, with different access levels.
+                  </details>
+                  <details>
+                  <summary>1</summary>
+                        <p>• Registration of Chassis owner by Administrator.
+                        <p>• Registration of Chassis pilot by Chassis owner.
+                  </details>
+                   <details>
+                  <summary>2</summary>                  
+                        <p>• Generate aircraft reports.
+                  </details>
+             
+</details>
 
-## Solução
+ <details>              
+<summary><b>Sprint 4</b></summary>
+                  <details>
+                  <summary>0</summary>
+                        <p>• Administrative panel.
+                  </details>
+                  <details>
+                  <summary>1</summary>                  
+                        <p>• Log Generation.                    
+                  </details>
+                 
+             
+</details>
 
+<p align="right">(<a href="#top">Back to top</a>)</p>
 
-
-<p align="right">(<a href="#top">voltar ao topo</a>)</p>
-
-## Cronograma
-
+## Mockup
 <p align="center">
-      <img src="" width="100%" height="100%">
-<p align="center">
-
-<p align="right">(<a href="#top">voltar ao topo</a>)</p>
-
-## Backlog do Produto
-
-<p align="center">
-      <img src="" width="100%" height="100%">
-<p align="center">
-
-<p align="right">(<a href="#top">voltar ao topo</a>)</p>
-
-## Sprints
-
-<p align="center">
-      <img src="" width="100%" height="100%">
-<p align="center">
-
-<p align="right">(<a href="#top">voltar ao topo</a>)</p>
-
-## Metas das Sprints
-
-<p align="right">(<a href="#top">voltar ao topo</a>)</p>
-
-
-## DER 
-
-<p align="center">
-      <img src="" width="100%" height="100%">
+WEB
 <p align="center">
 
-<p align="right">(<a href="#top">voltar ao topo</a>)</p>
+<p align="center">
+      <img src="GIT/mockup-web.gif" width="100%" height="100%">
+<p align="center">
+
+<p align="center">
+Mobile
+<p align="center">
+
+<p align="center">
+      <img src="GIT/mockup-mobile.gif" width="40%" height="20%">
+<p align="center">
+
+<p align="right">(<a href="#top">Back to top</a>)</p>
+
+## ERD
+
+<p align="center">
+      <img src="GIT/der_embraer.png" width="100%" height="100%">
+<p align="center">
+
+<p align="right">(<a href="#top">Back to top</a>)</p>
+
+## Logical Model
+
+<p align="center">
+      <img src="GIT/Lógico_1.png" width="100%" height="100%">
+<p align="center">
+
+<p align="right">(<a href="#top">Back to top</a>)</p>
+
+## Data dictionary
+
+[Click here to access the data dictionary](https://github.com/fluffyfatec/Projeto-Integrador-Embraer/blob/GIT_MODIFICATION/GIT/datadic.pdf)
 
 
-## Dicionário de dados
-
-[Clique aqui para acessar o dicionário de dados]()
-
-
-<p align="right">(<a href="#top">voltar ao topo</a>)</p>
+<p align="right">(<a href="#top">Back to top</a>)</p>
 
 
 ## Burndown
 
 <p align="center">
-      <img src="" width="100%" height="100%">
+      <img src="GIT/burndown2.png" width="100%" height="100%">
 <p align="center">
 
-<p align="right">(<a href="#top">voltar ao topo</a>)</p>
 
-## Manual do usuario
+<p align="right">(<a href="#top">Back to top</a>)</p>
 
-[Clique aqui para acessar o manual do usuario]()
+## Team
 
-
-<p align="right">(<a href="#top">voltar ao topo</a>)</p>
-
-## Equipe
-
-| Avatar            							| Aluno         | Função           		| GitHub                                                      | LinkedIn                                              |
+| Avatar            							| Student         | Function          		| GitHub                                                      | LinkedIn                                              |
 | -------------------------------------------- | ---------------- | ---------------- | -------------------------------------------------------------- | ----------------------------------------------------- |
-| <img src = "./GIT/avatarpatrick.png" width="60" >|__Patrick Souza__  | *Developer Team* | [![](https://bit.ly/3f9Xo0P)](https://github.com/PatrickSouzza)  | [![](https://bit.ly/2P1ZogM)](https://www.linkedin.com/in/patrick-g-souza/) |
-| <img src = "./GIT/avatarfelipe.png" width="60" >|__Felipe Sobral__  | *Developer Team*  | [![](https://bit.ly/3f9Xo0P)](https://github.com/SoSoJigsaw)| [![](https://bit.ly/2P1ZogM)]() |
-| <img src = "./GIT/avatarluiz.png" width="60" >|__Luiz Felipe Borges__ | *Scrum Master* | [![](https://bit.ly/3f9Xo0P)](https://github.com/luizborges17)   | [![](https://bit.ly/2P1ZogM)](https://www.linkedin.com/in/luizborges17/) |
-| <img src = "./GIT/avatarvictor.png" width="60" >|__Victor Fernandes__  | *Developer Team*  | [![](https://bit.ly/3f9Xo0P)](https://github.com/victornaca)| [![](https://bit.ly/2P1ZogM)](https://www.linkedin.com/in/victor-fernandes-1a61a917b/) |
+| <img src = "./GIT/avatarpatrick.png" width="60" >|_Patrick Souza_  | Scrum Master | [![](https://bit.ly/3f9Xo0P)](https://github.com/PatrickSouzza)  | [![](https://bit.ly/2P1ZogM)](https://www.linkedin.com/in/patrick-g-souza/) |
+| <img src = "./GIT/avatarfelipe.png" width="60" >|_Felipe Sobral_  | Product Owner  | [![](https://bit.ly/3f9Xo0P)](https://github.com/SoSoJigsaw)| [![](https://bit.ly/2P1ZogM)](https://www.linkedin.com/in/sosojigsaw/) |
 
+<p align="right">(<a href="#top">Back to top</a>)</p>
 
-<p align="right">(<a href="#top">voltar ao topo</a>)</p>
-
-## Tecnologias Utilizadas
+## Technologies Used
 <details>
 <summary>Front-End</summary>
 
-* [JavaScript](https://www.javascript.com)
-* [HTML](https://www.w3schools.com/css/)
-* [CSS](https://www.w3schools.com/css/)
+* [JavaScript (ES6)](https://www.javascript.com)
+* [HTML5](https://www.w3schools.com/css/)
+* [CSS3](https://www.w3schools.com/css/)
+* [Vue.js 2](https://vuejs.org/)
 
 
 </details>
@@ -136,18 +236,18 @@
 
 * [Java](https://www.java.com/pt-BR/?msclkid=7faa842eb8f811ecab39772d4c1ae90b)
 
-* [Python](https://www.python.org/downloads/)
-
 * [Spring boot](https://spring.io/projects/spring-boot)
 
 </details>
 
 <details>
-<summary>Banco de Dados</summary>
+<summary>Database</summary>
+
+* [Oracle Autonomous Database](https://www.oracle.com/br/autonomous-database/)
 
 </details>
 <details>
-<summary>Reuniões e Comunicação</summary>
+<summary>Meetings and Communication</summary>
 
 * [Discord](https://discord.com/?msclkid=b4f5af84b8f811ecbd81c127a0ae68a7)
 
@@ -157,7 +257,7 @@
 </details>
 
 <details>
-<summary>Outras Ferramentas</summary>
+<summary>Other Tools</summary>
 
 * [Github](https://github.com/)
 
@@ -170,10 +270,10 @@
 * [Photoshop](https://www.adobe.com/br/products/photoshop.html?sdid=KQPOM&mv=search&ef_id=d67181c6b224183a4875e395ae54f4bf:G:s&s_kwcid=AL!3085!10!79302406606568!79302288716688&msclkid=d67181c6b224183a4875e395ae54f4bf)
 </details>
 
-<p align="right">(<a href="#top">voltar ao topo</a>)</p>
+<p align="right">(<a href="#top">Back to top</a>)</p>
 
 <p align="center">
-      <img src="" height="100%">
+      <img src="GIT/rodape.png" height="100%">
 <p align="center">
 
 ---

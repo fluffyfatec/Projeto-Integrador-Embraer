@@ -18,4 +18,8 @@ public interface ChassisRepository extends JpaRepository<Chassis, Long>{
     @Query("SELECT c FROM Chassis c, ChassisUserPilot p WHERE c.chassiId = p.chassis AND p.pilot.userId = :pilotId")
     List<Chassis> getChassisPilot(@Param("pilotId") Long pilotId);
 
+    @Query("SELECT c FROM Chassis c LEFT JOIN ChassisUserOwner o ON o.chassis = c.chassiId " +
+            "WHERE o.chassis IS NULL")
+    List<Chassis> getChassisThatDontHaveOwner();
+
 }

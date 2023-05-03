@@ -111,11 +111,22 @@ export default {
             const sb = this.$route.params.sb;
             const part = this.$route.params.part;
 
+            if (this.g.userRole === 'ADMIN') {
             const response = await axios.get('http://localhost:8080/chassi/sb/' + sb + '/' + part);
             this.planes = response.data.map((item: String) => ({
                 chassi: item.chassi,
                 status: item.sb_status
-            }));
+                }));
+            };
+
+            if (this.g.userRole === 'EDITOR') {
+            const response = await axios.get('http://localhost:8080/chassi/sb/editor/' + sb + '/' + part);
+            this.planes = response.data.map((item: String) => ({
+                chassi: item.chassi,
+                status: item.sb_status
+                }));
+            };
+
         },
 
         filterApplicable() {

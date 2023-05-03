@@ -91,5 +91,24 @@ public class ListChassisService  {
 
 	}
 
+	public List<ListChassisDto> showChassisThatDontHaveOwner() {
+
+
+		List<Chassis> listChassis = chassisRepository.getChassisThatDontHaveOwner();
+
+		if (listChassis==null || listChassis.isEmpty()) {
+			throw new Error("ChassiNotExist");
+		}
+
+		List<ListChassisDto> listChassiDto = new ArrayList<ListChassisDto>();
+
+		for (Chassis chassi: listChassis) {
+			ListChassisDto listChassisDto = new ListChassisDto();
+			listChassisDto.setChassi_id(chassi.getChassiId());
+			listChassiDto.add(listChassisDto);
+		}
+
+		return listChassiDto;
+	}
 
 }
