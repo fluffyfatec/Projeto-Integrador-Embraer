@@ -2,7 +2,15 @@
     <div>
         <ReturnChassis v-if="searchTerm"></ReturnChassis>
         <div v-else>
-            <h1 class="title">SBs of chassis {{ $route.params.chassis }}</h1>
+            <div class="div-header">
+                <h1 class="title">SBs of chassis {{ $route.params.chassis }}</h1>
+                <div class="div-btn-download">
+                    <button class="btn-download">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <i class="txt-btn-download">Download PDF</i>
+                    </button>
+                </div>
+            </div>
             <div class="filter">
                 <div class="micro-container">
                     <input type="checkbox" v-model="ApplicableFilter">
