@@ -16,7 +16,8 @@ import javax.persistence.*;
 public class ChassisUserPilot {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "pilot_seq_generator")
+    @SequenceGenerator(name="pilot_seq_generator", sequenceName = "CHASSIS_USER_PILOT_SEQ", allocationSize = 1)
     @Column(name = "CHASSIS_USER_PILOT_ID")
     private Long id;
 
@@ -31,5 +32,36 @@ public class ChassisUserPilot {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CHASSI_ID")
     private Chassis chassis;
+
+
+    public Long getOwnerLong() {
+        return owner.getId();
+    }
+
+    public void setOwnerLong(Long owner) {
+        ChassisUserOwner newChassisUserOwner = new ChassisUserOwner();
+        newChassisUserOwner.setId(owner);
+        this.owner = newChassisUserOwner;
+    }
+
+    public Long getPilotLong() {
+        return pilot.getUserId();
+    }
+
+    public void setPilotLong(Long pilot) {
+        User newUser = new User();
+        newUser.setUserId(pilot);
+        this.pilot = newUser;
+    }
+
+    public Long getChassisLong() {
+        return chassis.getChassiId();
+    }
+
+    public void setChassisLong(Long chassis) {
+        Chassis newChassis = new Chassis();
+        newChassis.setChassiId(chassis);
+        this.chassis = newChassis;
+    }
 
 }
