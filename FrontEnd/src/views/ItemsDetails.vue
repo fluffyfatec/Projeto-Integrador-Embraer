@@ -2,7 +2,16 @@
     <div>
         <ReturnChassis v-if="searchTerm"></ReturnChassis>
         <div v-else>
-            <h1 class="title">Items of chassis {{ $route.params.chassis }}</h1>
+            <div class="div-header">
+                <h1 class="title">Items of chassis {{ $route.params.chassis }}</h1>
+                <div class="div-btn-download">
+                    <button class="btn-download">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <i class="txt-btn-download">Download PDF</i>
+                    </button>
+                </div>
+
+            </div>
             <div class="container-info">
                 <div class="incorporated">
                     <div class="h2-button">
