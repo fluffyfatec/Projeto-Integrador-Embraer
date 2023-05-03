@@ -43,4 +43,15 @@ public class ListChassisController {
 		return ResponseEntity.status(HttpStatus.OK).body(listChassisDto);
 	}
 
+	@CrossOrigin
+	@GetMapping("/chassi/list/without-owner")
+	public ResponseEntity<List<ListChassisDto>> listAllChassisWithoutOwner() {
+
+		List<ListChassisDto> listChassisDto = listChassisService.showChassisThatDontHaveOwner();
+
+		return ResponseEntity.status(HttpStatus.OK).body(listChassisDto);
+
+	}
+
+
 }
