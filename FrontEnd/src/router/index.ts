@@ -147,6 +147,31 @@ const router = new VueRouter({
       }
     },
 
+
+    // CRUD Chassis Owner
+    {
+      path: '/register-owner',
+      name: 'registerOwner',
+      component: () => import('../views/CrudChassisOwner.vue'),
+      meta: {
+        showH3: true,
+        tituloValue: 'Register Owner',
+        requiresAuth: true,
+      }
+    },
+
+    // CRUD Chassis Pilot
+    {
+      path: '/register-pilot',
+      name: 'registerPilot',
+      component: () => import('../views/CrudChassisPilot.vue'),
+      meta: {
+        showH3: true,
+        tituloValue: 'Register Pilot',
+        requiresAuth: true,
+      }
+    },
+
   ]
 })
 

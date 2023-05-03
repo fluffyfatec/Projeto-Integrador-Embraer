@@ -98,6 +98,8 @@ export default {
 
 <style scoped>
 @import "../assets/base.css";
+@import '@fortawesome/fontawesome-free/css/all.css';
+
 
 h1 {
     color: var(--azul-principal);
