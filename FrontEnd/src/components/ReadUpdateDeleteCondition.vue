@@ -1,4 +1,5 @@
 <template>
+
     <div>
         <div class="div-header">
             <h1 class="title">List of Items</h1>
@@ -7,9 +8,7 @@
                     <i class="fa-solid fa-file-arrow-down"></i>
                     <i class="txt-btn-download">Download PDF</i>
                 </button>
-
             </div>
-            
         </div>
         
         
