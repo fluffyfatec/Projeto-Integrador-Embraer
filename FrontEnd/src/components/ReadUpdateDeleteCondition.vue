@@ -1,6 +1,17 @@
 <template>
+
     <div>
-        <h1 class="title">List of Items</h1>
+        <div class="div-header">
+            <h1 class="title">List of Items</h1>
+            <div class="div-btn-download">
+                <button class="btn-download">
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                    <i class="txt-btn-download">Download PDF</i>
+                </button>
+            </div>
+        </div>
+        
+        
         <div class="table-wrapper">
             <table cellspacing="0">
                 <thead>

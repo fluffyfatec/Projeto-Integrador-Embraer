@@ -2,7 +2,15 @@
     <div>
         <ReturnSbs v-if="searchTerm"></ReturnSbs>
         <div v-else>
-            <h1 class="title">Chassis of {{ $route.params.sb }} ({{ $route.params.part === 'UNICO' ? 'UNIQUE' : $route.params.part }})</h1>
+            <div class="div-header">
+                <h1 class="title">Chassis of {{ $route.params.sb }} ({{ $route.params.part === 'UNICO' ? 'UNIQUE' : $route.params.part }})</h1>
+                <div class="div-btn-download">
+                    <button class="btn-download">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <i class="txt-btn-download">Download PDF</i>
+                    </button>
+                </div>
+            </div>
             <div class="filter">
                 <div class="micro-container">
                     <input type="checkbox" v-model="ApplicableFilter">
