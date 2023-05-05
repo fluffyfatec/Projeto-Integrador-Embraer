@@ -12,5 +12,6 @@ public class ChassisUserPilotDTO {
     private String owner;
     private String pilot;
     private Long chassis;
+    private String date_register;
 
 }

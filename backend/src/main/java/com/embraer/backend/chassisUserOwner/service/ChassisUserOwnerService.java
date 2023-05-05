@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,6 +37,7 @@ public class ChassisUserOwnerService {
 
             newChassisUserOwner.setUserLong(userId);
             newChassisUserOwner.setChassisLong(chassis);
+            newChassisUserOwner.setDtregister(new Timestamp(System.currentTimeMillis()));
 
             chassisUserOwnerRepository.save(newChassisUserOwner);
 
@@ -50,14 +53,19 @@ public class ChassisUserOwnerService {
 
         List<ChassisUserOwner> listOwners = chassisUserOwnerRepository.findAll();
 
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+
         for (ChassisUserOwner list : listOwners) {
             ChassisUserOwnerDTO dto = new ChassisUserOwnerDTO();
 
             String owner = userRepository.getUserNameByUserId(list.getUserLong());
 
+            String formatedDate = dateFormat.format(list.getDtregister());
+
             dto.setId(list.getId());
             dto.setOwner(owner);
             dto.setChassis(list.getChassisLong());
+            dto.setDate_register(formatedDate);
 
             listDTO.add(dto);
 

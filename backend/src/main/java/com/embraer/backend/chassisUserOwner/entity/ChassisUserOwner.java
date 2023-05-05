@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 
 @Getter
 @Setter
@@ -28,6 +29,9 @@ public class ChassisUserOwner {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CHASSI_ID")
     private Chassis chassis;
+
+    @Column(name="DATE_REGISTER")
+    private Timestamp Dtregister;
 
     public Long getUserLong() {
         return user.getUserId();
