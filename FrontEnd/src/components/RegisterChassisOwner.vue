@@ -2,18 +2,20 @@
     <div>
         <h1 class="title">Register of Chassis Owner</h1>
         <form @submit.prevent="registerNewOwner" class="center">
-            <div class="form-selects">
-                <select class="owner" v-model="chassisOwnerDTO.owner">
-                    <option class="select-placeholder" :value="null">Choose the user owner...</option>
-                    <option v-for="u in users" :key="u.username">{{ u.username }}</option>
-                </select>
-                <select class="chassis" v-model="chassisOwnerDTO.chassis">
-                    <option class="select-placeholder" :value="null">Choose the chassis...</option>
-                    <option v-for="c in chassis_options" :key="c.chassi_id">{{ c.chassi_id }}</option>
-                </select>
-            </div>
-            <div class="button-submit">
-            <button v-if="chassisOwnerDTO.owner !== null && chassisOwnerDTO.chassis !== null" type="submit" class="submit">Submit</button>
+            <div>
+                <div class="form-selects">
+                    <select class="owner" v-model="chassisOwnerDTO.owner">
+                        <option class="select-placeholder" :value="null">Choose the user owner...</option>
+                        <option v-for="u in users" :key="u.username">{{ u.username }}</option>
+                    </select>
+                    <select class="chassis" v-model="chassisOwnerDTO.chassis">
+                        <option class="select-placeholder" :value="null">Choose the chassis...</option>
+                        <option v-for="c in chassis_options" :key="c.chassi_id">{{ c.chassi_id }}</option>
+                    </select>
+                </div>
+                <div class="button-submit">
+                    <button v-if="chassisOwnerDTO.owner !== null && chassisOwnerDTO.chassis !== null" type="submit" class="submit">Submit</button>
+                </div>
             </div>
         </form>
     </div>
@@ -113,9 +115,56 @@ select:focus-within .dropdown-toggle {
     background-color: #C0C0C0;
 }
 
+.form-selects{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.button-submit{
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem;
+
+}
+/* Estilos para tablet */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .form-selects select{
+        width: 60%;
+        height: auto;
+        font-size: 22px;
+}
+
+    .form-selects option{
+        font-size: 16px;
+        overflow-x: scroll;
+        max-width: 100%;
+    }
+
+
+}
+
+/* Estilos para mobile */
 @media only screen and (max-width: 767px) {
     select{
         width: 90%;
+    }
+
+    .form-selects{
+        gap: 0.8rem;
+    }
+    .form-selects select{
+        width: 45%;
+        height: auto;
+        font-size: 20px;
+}
+
+    .form-selects option{
+        font-size: 18px;
+        overflow-x: scroll;
+        max-width: 100%;
     }
 }
 

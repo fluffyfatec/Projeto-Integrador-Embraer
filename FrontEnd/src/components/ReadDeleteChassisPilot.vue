@@ -1,7 +1,9 @@
 <template>
     <div>
         <h1 class="title">List of Chassis Pilots</h1>
-        <input class="search-term" type="text" placeholder="Search a pilot..." v-model="searchTerm">
+        <div class="search-container">
+            <input class="search-term" type="text" placeholder="Search a pilot..." v-model="searchTerm">
+        </div>
         <div class="table-wrapper">
             <table cellspacing="0">
                 <thead>
@@ -178,6 +180,11 @@ tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
     height: fit-content;
 }
 
+.search-container{
+    display: flex;
+    justify-content: center;
+}
+
 /* --------------- Media Queries -------------------- */
 
 /* Estilos para tablet */
@@ -216,6 +223,11 @@ tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
         padding: 10px;
     }
 
+    .search-container input{
+        width: 45%;
+        height: auto;
+        font-size: 22px;
+    }
 }
 
 /* Estilos para mobile */
@@ -251,6 +263,12 @@ tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
 
     td {
         padding: 10px;
+    }
+
+    .search-container input{
+        width: 60%;
+        height: auto;
+        font-size: 20px;
     }
 
 }    
