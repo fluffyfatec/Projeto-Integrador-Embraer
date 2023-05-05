@@ -8,6 +8,7 @@
                     <tr class="table-header">
                         <th>User Owner</th>
                         <th>Chassis</th>
+                        <th>Date Register</th>
                         <th>Options</th>
                     </tr>
                 </thead>    
@@ -15,6 +16,7 @@
                     <tr v-if="searchTerm.length < 3" v-for="o in owners" :key="o.id">
                         <td>{{ o.owner }}</td>
                         <td>{{ o.chassis }}</td>
+                        <td>{{ o.date_register }}</td>
                         <td class="edit-item">
                             <button @click.prevent="deleteOwner(o.id)">
                                 <i class="fa-solid fa-trash-can"></i>
@@ -24,6 +26,7 @@
                     <tr v-if="searchTerm.length >= 3" v-for="o in filteredOwners" :key="o.id">
                         <td>{{ o.owner }}</td>
                         <td>{{ o.chassis }}</td>
+                        <td>{{ o.date_register }}</td>
                         <td class="edit-item">
                             <button @click.prevent="deleteOwner(o.id)">
                                 <i class="fa-solid fa-trash-can"></i>
@@ -71,7 +74,8 @@ export default {
             this.owners = response.data.map((item: String) => ({ 
                 id: item.id,
                 owner: item.owner,
-                chassis: item.chassis
+                chassis: item.chassis,
+                date_register: item.date_register
             }));
 
         },
@@ -161,7 +165,7 @@ td {
     vertical-align: middle;
 }
 
-tbody:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
+tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
 
 .status-item {
     cursor: pointer;

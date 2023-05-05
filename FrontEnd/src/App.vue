@@ -15,7 +15,10 @@
             <li class="mobile-user" @click="showDropdown = !showDropdown" v-bind:class="{ 'active': showDropdown }">
               <a><i class="fa-solid fa-circle-user"></i></a>
               <ul v-if="showDropdown" class="dropdown-menu-mobile">
-                <li v-if="g.adminAuth"><router-link to="/admin-panel"><i class="fa-solid fa-lock"></i> Admin Panel</router-link></li>
+                <li v-if="g.adminAuth"><router-link to="/logs"><i class="fa-solid fa-lock"></i> Logs</router-link></li>
+                <li v-if="g.adminAuth"><router-link to="/register-condition"><i class="fa-sharp fa-solid fa-sitemap"></i> Condition</router-link></li>
+                <li v-if="g.adminAuth"><router-link to="/register-owner"><img src="./assets/plane.png"> Register Owner</router-link></li>
+                <li v-if="g.editorAuth"><router-link to="/register-pilot"><img src="./assets/plane.png"> Register Pilot</router-link></li>
                 <li v-if="g.adminAuth"><router-link to="/upload"><i class="fa-solid fa-file-import"></i> Import Data</router-link></li>
                 <li><a href="#" @click.prevent="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
               </ul>
@@ -29,10 +32,16 @@
           <img src="@/assets/logo.png" alt="Logo">
         
           <ul class="desktop-nav">
-            <li id="user-icone" @click="showDropdown = !showDropdown" v-bind:class="{ 'active': showDropdown }">
+            <li id="user-icone" @click="showDropdown = !showDropdown" v-bind:class="{ 'active': showDropdown }"
+            :style="showDropdown && g.adminAuth ? { 'padding-bottom': '225px', 'padding-left':'60px' } : {} ||
+            showDropdown && g.editorAuth ? { 'padding-bottom': '100px' } : {} || 
+            showDropdown && g.pilotAuth ? { 'padding-bottom': '50px', 'padding-left':'50px' } : {}">
               <a><i class="fa-solid fa-circle-user"></i></a>
               <ul v-if="showDropdown" class="dropdown-menu">
-                <li v-if="g.adminAuth"><router-link to="/admin-panel"><i class="fa-solid fa-lock"></i> Admin Panel</router-link></li>
+                <li v-if="g.adminAuth"><router-link to="/logs"><i class="fa-solid fa-lock"></i> Logs</router-link></li>
+                <li v-if="g.adminAuth"><router-link to="/register-condition"><i class="fa-sharp fa-solid fa-sitemap"></i> Condition</router-link></li>
+                <li v-if="g.adminAuth"><router-link to="/register-owner"><img src="./assets/plane.png"> Register Owner</router-link></li>
+                <li v-if="g.editorAuth"><router-link to="/register-pilot"><img src="./assets/plane.png"> Register Pilot</router-link></li>
                 <li v-if="g.adminAuth"><router-link to="/upload"><i class="fa-solid fa-file-import"></i> Import Data</router-link></li>
                 <li><a href="#" @click.prevent="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
               </ul>
@@ -235,6 +244,12 @@ export default {
   font-size: 30px;
 }
 
+.dropdown-menu-mobile li a img {
+  height: 43px;
+  width: auto;
+  vertical-align: middle;
+}
+
 .mobile-header li.active i {
     background-color: var(--white);
     border: 2px;
@@ -392,6 +407,13 @@ span {
   font-size: 21px;
 }
 
+.dropdown-menu li a img {
+  height: 30px;
+  width: auto;
+  padding-right: 2px;
+  vertical-align: middle;
+}
+
 .desktop-nav li.active i {
     background-color: var(--white);
     border: 2px;
@@ -401,8 +423,8 @@ span {
 .desktop-nav li.active {
   right: 0;
   background-color: var(--white);
-  padding-bottom: 150px;
-  padding-left: 50px;
+  padding-bottom: 225px;
+  padding-left: 60px;
   padding-right: 50px;
   border-radius: 10px;
   box-shadow: 2px 2px 20px 5px var(--silver);
@@ -480,10 +502,16 @@ span {
     font-size: 20px;
   }
 
+  .dropdown-menu li a img {
+  height: 30px;
+  width: auto;
+  padding-right: 1px;
+}
+
   .desktop-nav li.active {
     right: 0;
-    padding-bottom: 125px;
-    padding-left: 50px;
+    padding-bottom: 190px;
+    padding-left: 70px;
     padding-right: 50px;
     border-radius: 10px;
     box-shadow: 2px 2px 20px 5px var(--silver);

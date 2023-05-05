@@ -34,6 +34,7 @@ export default {
                 owner: null,
                 pilot: null,
                 chassis: null,
+                date_register: null,
             },
         }
     },

@@ -33,6 +33,7 @@ export default {
                 id: null,
                 owner: null,
                 chassis: null,
+                date_register: null,
             },
             
         }

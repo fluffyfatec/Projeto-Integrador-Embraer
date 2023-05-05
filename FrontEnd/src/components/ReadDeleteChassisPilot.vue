@@ -9,6 +9,7 @@
                         <th>Owner</th>
                         <th>Chassis</th>
                         <th>Pilot</th>
+                        <th>Date Register</th>
                         <th>Options</th>
                     </tr>
                 </thead>    
@@ -17,6 +18,7 @@
                         <td>{{ p.owner }}</td>
                         <td>{{ p.chassis }}</td>
                         <td>{{ p.pilot }}</td>
+                        <td>{{ p.date_register }}</td>
                         <td class="edit-item">
                             <button @click.prevent="deletePilot(p.id)">
                                 <i class="fa-solid fa-trash-can"></i>
@@ -27,6 +29,7 @@
                         <td>{{ p.owner }}</td>
                         <td>{{ p.chassis }}</td>
                         <td>{{ p.pilot }}</td>
+                        <td>{{ p.date_register }}</td>
                         <td class="edit-item">
                             <button @click.prevent="deletePilot(p.id)">
                                 <i class="fa-solid fa-trash-can"></i>
@@ -75,7 +78,8 @@ export default {
                 id: item.id,
                 owner: item.owner,
                 pilot: item.pilot,
-                chassis: item.chassis
+                chassis: item.chassis,
+                date_register: item.date_register
             }));
 
         },
@@ -164,7 +168,7 @@ td {
     vertical-align: middle;
 }
 
-tbody:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
+tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
 
 .status-item {
     cursor: pointer;
