@@ -1,6 +1,14 @@
 <template>
     <div>
-        <h1 class="title">List of Chassis Owners</h1>
+        <div class="div-header">
+            <h1 class="title">List of Chassis Owners</h1>
+            <div class="div-btn-download">
+                    <button class="btn-download">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <i class="txt-btn-download">Download PDF</i>
+                    </button>
+            </div>
+        </div>
         <div class="search-container">
             <input class="search-term" type="text" placeholder="Search a owner..." v-model="searchTerm">
         </div>
