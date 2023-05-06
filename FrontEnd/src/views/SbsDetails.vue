@@ -279,8 +279,12 @@ export default {
         },
 
         async getSelectChassis() {
-            const sb = this.$route.params.sb;
-            const part = this.$route.params.part;
+            var sb = this.$route.params.sb;
+            var part = this.$route.params.part;
+
+            if (part === 'UNIQUE') {
+                part = 'UNICO';
+            };
 
             if (this.g.userRole === 'ADMIN') {
             const response = await axios.get('http://localhost:8080/chassi/list/admin/exclude-how-have-sb/' + sb + '/' + part);
@@ -291,7 +295,7 @@ export default {
 
             if (this.g.userRole === 'EDITOR') {
             const response = await axios.get('http://localhost:8080/chassi/list/editor/exclude-how-have-sb/' + sb + '/' + part);
-            this.planes = response.data.map((item: String) => ({
+            this.select_chassis = response.data.map((item: String) => ({
                 chassi: item.chassi_id,
                 }));
             };
