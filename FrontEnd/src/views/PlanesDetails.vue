@@ -258,7 +258,12 @@ export default {
 
                 });
 
-            this.getSbs();    
+            this.getSbs();   
+            
+            this.createNew = false;
+            this.newSb.name = '';
+            this.newSb.part = null;
+            this.newSb.status = null;
 
         },
 

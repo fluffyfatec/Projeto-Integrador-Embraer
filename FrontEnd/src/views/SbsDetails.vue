@@ -274,7 +274,11 @@ export default {
                 });
 
             this.getPlanes();
-            this.getSelectChassis();    
+            this.getSelectChassis();   
+            
+            this.createNew = false;
+            this.newSb.status = null;
+            this.newSb.chassis = null;
 
         },
 
