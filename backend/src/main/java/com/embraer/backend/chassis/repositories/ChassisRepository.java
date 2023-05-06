@@ -22,4 +22,13 @@ public interface ChassisRepository extends JpaRepository<Chassis, Long>{
             "WHERE o.chassis IS NULL")
     List<Chassis> getChassisThatDontHaveOwner();
 
+    @Query("SELECT c FROM Chassis c, ChassiServiceBulletin cs WHERE c.chassiId = cs.chassiId.chassiId AND" +
+            " cs.serviceBulletinId.serviceBulletinId = :sbId")
+    List<Chassis> getChassisChassisThatDontHaveTheSbAdmin(@Param("sbId") Long sbId);
+
+    @Query("SELECT c FROM Chassis c, ChassiServiceBulletin cs, ChassisUserOwner o WHERE " +
+            "c.chassiId = cs.chassiId.chassiId AND cs.chassiId.chassiId = o.chassis.chassiId AND o.user.userId = :userId" +
+            " AND cs.serviceBulletinId.serviceBulletinId = :sbId")
+    List<Chassis> getChassisChassisThatDontHaveTheSbEditor(@Param("userId") Long userId, @Param("sbId") Long sbId);
+
 }

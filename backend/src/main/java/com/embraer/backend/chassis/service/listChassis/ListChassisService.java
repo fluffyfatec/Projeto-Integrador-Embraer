@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 
 import com.embraer.backend.chassi.services.ListChassisBySb.ListChassisBySbService;
 import com.embraer.backend.chassi.services.ListChassisBySb.dto.ListChassiBySbDto;
+import com.embraer.backend.serviceBulletin.repositories.ServiceBulletinRepository;
 import com.embraer.backend.user.repositories.UserRepository;
 import com.embraer.backend.userAuthenticated.dto.UserAuthenticationDto;
 import com.embraer.backend.webConfig.UserSession;
@@ -31,6 +32,9 @@ public class ListChassisService  {
 
 	@Autowired
 	ListChassisBySbService listChassisBySbService;
+
+	@Autowired
+	ServiceBulletinRepository serviceBulletinRepository;
 	
 	public List<ListChassisDto> executeAdmin() {
 		
@@ -129,29 +133,19 @@ public class ListChassisService  {
 
 		List<ListChassisDto> listChassiDto = new ArrayList<ListChassisDto>();
 
+		Long sbId = serviceBulletinRepository.findServiceBulletinIdBySbNameAndSbPartService(sb, part);
+
+		List<Chassis> listChassis2 = chassisRepository.getChassisChassisThatDontHaveTheSbAdmin(sbId);
+
+		listChassis.removeAll(listChassis2);
+
 		for (Chassis chassi: listChassis) {
 			ListChassisDto listChassisDto = new ListChassisDto();
 			listChassisDto.setChassi_id(chassi.getChassiId());
 			listChassiDto.add(listChassisDto);
 		}
 
-		List<ListChassiBySbDto> listChassiBySbDto = listChassisBySbService.executeAdmin(sb, part);
-
-		List<ListChassisDto> removeList = new ArrayList<>();
-
-		for (ListChassiBySbDto list : listChassiBySbDto) {
-			for (ListChassisDto list2 : listChassiDto) {
-				if (!Objects.equals(list.getChassi(), list2.getChassi_id())) {
-					removeList.add(list2);
-				}
-			}
-		}
-
-		List<ListChassisDto> finalList = removeList.stream().distinct().collect(Collectors.toList());
-
-
-
-		return finalList;
+		return listChassiDto;
 	}
 
 	public List<ListChassisDto> showChassisThatDontHaveTheSbEditor(String sb, String part) {
@@ -168,28 +162,19 @@ public class ListChassisService  {
 
 		List<ListChassisDto> listChassiDto = new ArrayList<ListChassisDto>();
 
+		Long sbId = serviceBulletinRepository.findServiceBulletinIdBySbNameAndSbPartService(sb, part);
+
+		List<Chassis> listChassis2 = chassisRepository.getChassisChassisThatDontHaveTheSbEditor(userId, sbId);
+
+		listChassis.removeAll(listChassis2);
+
 		for (Chassis chassi: listChassis) {
 			ListChassisDto listChassisDto = new ListChassisDto();
 			listChassisDto.setChassi_id(chassi.getChassiId());
 			listChassiDto.add(listChassisDto);
 		}
 
-		List<ListChassiBySbDto> listChassiBySbDto = listChassisBySbService.executeEditor(sb, part);
-
-		List<ListChassisDto> removeList = new ArrayList<>();
-
-		for (ListChassiBySbDto list : listChassiBySbDto) {
-			for (ListChassisDto list2 : listChassiDto) {
-				if (!Objects.equals(list.getChassi(), list2.getChassi_id())) {
-					removeList.add(list2);
-				}
-			}
-		}
-
-		List<ListChassisDto> finalList = removeList.stream().distinct().collect(Collectors.toList());
-
-		return finalList;
-
+		return listChassiDto;
 	}
 
 

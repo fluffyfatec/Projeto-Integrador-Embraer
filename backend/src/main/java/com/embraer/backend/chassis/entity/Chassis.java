@@ -11,6 +11,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
+import com.embraer.backend.item.entity.Item;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import com.embraer.backend.user.entity.User;
