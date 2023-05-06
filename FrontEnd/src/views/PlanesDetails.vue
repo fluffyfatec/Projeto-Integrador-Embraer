@@ -24,6 +24,11 @@
                     <input type="checkbox" v-model="IncorporatedFilter">
                     <label>Incorporated</label>
                 </div>
+                <div v-if="!createNew" class="new-sb">
+                    <button @click.prevent="createNew = true">
+                        <i class="fa-solid fa-plus"></i> New Service Bulletin
+                    </button>
+                </div>
                 
             </div>  
             <div class="table-wrapper">
@@ -34,14 +39,72 @@
                         <th>Applicable</th>
                         <th>Not Applicable</th>
                         <th>Incorporated</th>
+                        <th>Options</th>
+                    </tr>
+                    <tr v-if="createNew">
+                        <td colspan="6" class="full-width">
+                            <form @submit.prevent="registerNew" class="center">
+                                <div class="create-container">
+                                    <div class="sb-name-part">
+                                        <input type="text" v-model="newSb.name" placeholder="Insert a SB name...">
+                                        <select v-model="newSb.part">
+                                            <option>UNIQUE</option>
+                                            <option>PART 1</option>
+                                            <option>PART 2</option>
+                                            <option>PART 3</option>
+                                            <option>PART 4</option>
+                                            <option>PART 5</option>
+                                        </select>
+                                    </div>
+                                    <div class="sb-status">
+                                        <select v-model="newSb.status">
+                                            <option>APPLICABLE</option>
+                                            <option>NOT APPLICABLE</option>
+                                            <option>INCORPORATED</option>
+                                        </select>
+                                    </div>
+                                    <div class="button-submit">
+                                        <button v-if="newSb.name.length > 5 && newSb.part !== null && newSb.status !== null" type="submit" class="submit">
+                                            <i class="fa-solid fa-check"></i>            
+                                        </button>
+                                    </div>
+                                    <div class="button-cancel">
+                                        <button @click.prevent="createNew = false">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>    
+                        </td>
                     </tr>
                     <tr v-for="sb in sbs" :key="sb.service_bulleti_name + sb.part">
                         <td>{{ sb.service_bulleti_name }}</td>
                         <td>{{ sb.part }}</td>
-                        <td><input v-if="sb.status == 'APPLICABLE'" type="checkbox" onclick="return false;" checked readonly><input v-else type="checkbox" onclick="return false;" readonly></td>
-                        <td><input v-if="sb.status != 'APPLICABLE' && sb.status != 'INCORP' && sb.status != 'INCORPORATED' && sb.status != 'INCOPORATED'" type="checkbox" onclick="return false;" checked readonly><input v-else type="checkbox" onclick="return false;" readonly></td>
-                        <td><input v-if="sb.status == 'INCORP' || sb.status == 'INCORPORATED' || sb.status == 'INCOPORATED'" type="checkbox" onclick="return false;" checked readonly><input v-else type="checkbox" onclick="return false;" readonly></td>
+                        <td>
+                            <input v-if="!sb.edition" type="checkbox" :class="{ 'disabled': !edition }" v-model="sb.checkbox1" value="APPLICABLE" :checked="sb.status == 'APPLICABLE' ? sb.checkbox1 = true : sb.checkbox1 = false">
+                            <input v-else type="checkbox" :value="sb.id" :checked="sb.selectedStatus === 'APPLICABLE'" @change="sb.selectedStatus = 'APPLICABLE'">
+                        </td>
+                        <td>
+                            <input v-if="!sb.edition" type="checkbox" :class="{ 'disabled': !edition }" v-model="sb.checkbox2" value="NOT APPLICABLE" :checked="sb.status != 'APPLICABLE' && sb.status != 'INCORP' && sb.status != 'INCORPORATED' && sb.status != 'INCOPORATED' ? sb.checkbox2 = true : sb.checkbox2 = false">
+                            <input v-else type="checkbox" :value="sb.id" :checked="sb.selectedStatus === 'NOT APPLICABLE'" @change="sb.selectedStatus = 'NOT APPLICABLE'">
+                        </td>
+                        <td>
+                            <input v-if="!sb.edition" type="checkbox" :class="{ 'disabled': !edition }" v-model="sb.checkbox3" value="INCORPORATED" :checked="sb.status == 'INCORP' || sb.status == 'INCORPORATED' || sb.status == 'INCOPORATED' ? sb.checkbox3 = true : sb.checkbox3 = false">
+                            <input v-else type="checkbox" :value="sb.id" :checked="sb.selectedStatus === 'INCORPORATED'" @change="sb.selectedStatus = 'INCORPORATED'">
+                        </td>                    
+                        <td>
+                            <button v-if="!sb.edition" @click.prevent="sb.edition = true">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </button>
+                            <button v-if="sb.edition" @click.prevent="saveNewStatus(sb.service_bulleti_name, sb.part, sb.selectedStatus); sb.edition = false">
+                                <i class="fa-solid fa-check"></i>
+                            </button>
+                            <button v-if="sb.edition" @click.prevent="sb.edition = false">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </td>
                     </tr>
+
                 </table>
             </div>    
         </div>
@@ -58,6 +121,7 @@ export default {
     
     data() {
         return {
+            createNew: false,
             sbs: [],
             searchTerm: '',
             ApplicableFilter: true,
@@ -67,6 +131,12 @@ export default {
             sbsNotApplicable: [],
             sbsIncorporated: [],
             g: globalData,
+            newSb: {
+                name: '',
+                part: null,
+                status: null,
+                chassis: this.$route.params.chassis,
+            },
         }
     },
 
@@ -116,10 +186,16 @@ export default {
             const chassis = this.$route.params.chassis;
 
             const response = await axios.get('http://localhost:8080/bulletins/listar/' + chassis);
-            this.sbs = response.data.map((item: String) => ({ 
+            this.sbs = response.data.map((item: String, index: number) => ({ 
+                id: index,
                 service_bulleti_name: item.service_bulleti_name,
                 status: item.status,
-                part: item.part === 'UNICO' ? 'UNIQUE' : item.part
+                part: item.part === 'UNICO' ? 'UNIQUE' : item.part,
+                checkbox1: false,
+                checkbox2: false,
+                checkbox3: false,
+                edition: false,
+                selectedStatus: null,
             }));
 
         },
@@ -154,6 +230,36 @@ export default {
             } else {
                 this.sbs.push(...this.sbsIncorporated);
             }
+        },
+
+        async saveNewStatus(sb: string, part: string, status: string) {
+            
+            if (part === 'UNIQUE') {
+                part = 'UNICO';
+            };
+
+            const chassis = this.$route.params.chassis;
+            
+            await axios.get('http://localhost:8080/edit-sb-status/' + sb + '/' + part + '/' + chassis + '/' + status);
+
+            this.getSbs();
+        },
+
+        async registerNew() {
+
+            if (this.newSb.part === 'UNIQUE') {
+                this.newSb.part = 'UNICO';
+            };
+
+            await axios.post('http://localhost:8080/register-new-sb-or-chassi', this.newSb, {
+                    headers: {
+                    'Content-Type': 'application/json'
+                    }
+
+                });
+
+            this.getSbs();    
+
         },
 
     },
@@ -260,6 +366,10 @@ label{
     margin-right: 20px;
     padding: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+input[type=checkbox].disabled {
+    pointer-events: none;
 }
 
 tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
