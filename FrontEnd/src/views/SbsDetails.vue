@@ -23,7 +23,12 @@
                 <div class="micro-container">
                     <input type="checkbox" v-model="IncorporatedFilter">
                     <label>Incorporated</label>
-                </div>               
+                </div>           
+                <div v-if="!createNew" class="new-sb">
+                    <button @click.prevent="createNew = true">
+                        <i class="fa-solid fa-plus"></i> New Chassis
+                    </button>
+                </div>    
             </div> 
             <div class="table-wrapper">
                 <table cellspacing="0">
@@ -32,12 +37,63 @@
                         <th>Applicable</th>
                         <th>Not Applicable</th>
                         <th>Incorporated</th>
+                        <th>Options</th>
+                    </tr>
+                    <tr v-if="createNew">
+                        <td colspan="5" class="full-width">
+                            <form @submit.prevent="registerNew" class="center">
+                                <div class="create-container">
+                                    <div class="chassis">
+                                        <select v-model="newSb.chassis">
+                                            <option v-for="c in select_chassis">{{ c.chassi }}</option>
+                                        </select>
+                                    </div>
+                                    <div class="sb-status">
+                                        <select v-model="newSb.status">
+                                            <option>APPLICABLE</option>
+                                            <option>NOT APPLICABLE</option>
+                                            <option>INCORPORATED</option>
+                                        </select>
+                                    </div>
+                                    <div class="button-submit">
+                                        <button v-if="newSb.chassis !== null && newSb.status !== null" type="submit" class="submit">
+                                            <i class="fa-solid fa-check"></i>            
+                                        </button>
+                                    </div>
+                                    <div class="button-cancel">
+                                        <button @click.prevent="createNew = false">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>    
+                        </td>
                     </tr>
                     <tr v-for="plane in planes" :key="plane.chassi">
                         <td>{{ plane.chassi }}</td>
-                        <td><input v-if="plane.status == 'APPLICABLE'" type="checkbox" onclick="return false;" checked readonly><input v-else type="checkbox" onclick="return false;" readonly></td>
-                        <td><input v-if="plane.status != 'APPLICABLE' && plane.status != 'INCORP' && plane.status != 'INCORPORATED' && plane.status != 'INCOPORATED'" type="checkbox" onclick="return false;" checked readonly><input v-else type="checkbox" onclick="return false;" readonly></td>
-                        <td><input v-if="plane.status == 'INCORP' || plane.status == 'INCORPORATED' || plane.status == 'INCOPORATED'" type="checkbox" onclick="return false;" checked readonly><input v-else type="checkbox" onclick="return false;" readonly></td>
+                        <td>
+                            <input v-if="!plane.edition" type="checkbox" :class="{ 'disabled': !plane.edition }" v-model="plane.checkbox1" value="APPLICABLE" :checked="plane.status == 'APPLICABLE' ? plane.checkbox1 = true : plane.checkbox1 = false">
+                            <input v-else type="checkbox" :value="plane.id" :checked="plane.selectedStatus === 'APPLICABLE'" @change="plane.selectedStatus = 'APPLICABLE'">
+                        </td>
+                        <td>
+                            <input v-if="!plane.edition" type="checkbox" :class="{ 'disabled': !plane.edition }" v-model="plane.checkbox2" value="NOT APPLICABLE" :checked="plane.status != 'APPLICABLE' && plane.status != 'INCORP' && plane.status != 'INCORPORATED' && plane.status != 'INCOPORATED' ? plane.checkbox2 = true : plane.checkbox2 = false">
+                            <input v-else type="checkbox" :value="plane.id" :checked="plane.selectedStatus === 'NOT APPLICABLE'" @change="plane.selectedStatus = 'NOT APPLICABLE'">
+                        </td>
+                        <td>
+                            <input v-if="!plane.edition" type="checkbox" :class="{ 'disabled': !plane.edition }" v-model="plane.checkbox3" value="INCORPORATED" :checked="plane.status == 'INCORP' || plane.status == 'INCORPORATED' || plane.status == 'INCOPORATED' ? plane.checkbox3 = true : plane.checkbox3 = false">
+                            <input v-else type="checkbox" :value="plane.id" :checked="plane.selectedStatus === 'INCORPORATED'" @change="plane.selectedStatus = 'INCORPORATED'">
+                        </td>                    
+                        <td>
+                            <button v-if="!plane.edition" @click.prevent="plane.edition = true">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </button>
+                            <button v-if="plane.edition" @click.prevent="saveNewStatus(plane.chassi, plane.selectedStatus); plane.edition = false">
+                                <i class="fa-solid fa-check"></i>
+                            </button>
+                            <button v-if="plane.edition" @click.prevent="plane.edition = false">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </td>
                     </tr>
                 </table>
             </div>    
@@ -55,7 +111,9 @@ export default {
     
     data() {
         return {
+            createNew: false,
             planes: [],
+            select_chassis: [],
             searchTerm: '',
             ApplicableFilter: true,
             NotApplicableFilter: true,
@@ -64,11 +122,18 @@ export default {
             planesNotApplicable: [],
             planesIncorporated: [],
             g: globalData,
+            newSb: {
+                name: this.$route.params.sb,
+                part: this.$route.params.part,
+                status: null,
+                chassis: null,
+            },
         }
     },
 
     mounted() {
         this.getPlanes();
+        this.getSelectChassis();
 
         if (this.g.userRole == "EDITOR" || this.g.userRole == "ADMIN") {
             return
@@ -121,17 +186,29 @@ export default {
 
             if (this.g.userRole === 'ADMIN') {
             const response = await axios.get('http://localhost:8080/chassi/sb/' + sb + '/' + part);
-            this.planes = response.data.map((item: String) => ({
+            this.planes = response.data.map((item: String, index: number) => ({
+                id: index,
                 chassi: item.chassi,
-                status: item.sb_status
+                status: item.sb_status,
+                checkbox1: false,
+                checkbox2: false,
+                checkbox3: false,
+                edition: false,
+                selectedStatus: null
                 }));
             };
 
             if (this.g.userRole === 'EDITOR') {
             const response = await axios.get('http://localhost:8080/chassi/sb/editor/' + sb + '/' + part);
-            this.planes = response.data.map((item: String) => ({
+            this.planes = response.data.map((item: String, index: number) => ({
+                id: index,
                 chassi: item.chassi,
-                status: item.sb_status
+                status: item.sb_status,
+                checkbox1: false,
+                checkbox2: false,
+                checkbox3: false,
+                edition: false,
+                selectedStatus: null
                 }));
             };
 
@@ -168,6 +245,59 @@ export default {
                 this.planes.push(...this.planesIncorporated);
             }
         },
+
+        async saveNewStatus(chassis: number, status: string) {
+
+            var sb = this.$route.params.sb;
+            var part = this.$route.params.part;
+
+            if (part === 'UNIQUE') {
+                part = 'UNICO';
+            };
+            
+            await axios.get('http://localhost:8080/edit-sb-status/' + sb + '/' + part + '/' + chassis + '/' + status);
+
+            this.getPlanes();
+        },
+
+        async registerNew() {
+
+            if (this.newSb.part === 'UNIQUE') {
+                this.newSb.part = 'UNICO';
+            };
+
+            await axios.post('http://localhost:8080/register-new-sb-or-chassi', this.newSb, {
+                    headers: {
+                    'Content-Type': 'application/json'
+                    }
+
+                });
+
+            this.getPlanes();
+            this.getSelectChassis();    
+
+        },
+
+        async getSelectChassis() {
+            const sb = this.$route.params.sb;
+            const part = this.$route.params.part;
+
+            if (this.g.userRole === 'ADMIN') {
+            const response = await axios.get('http://localhost:8080/chassi/list/admin/exclude-how-have-sb/' + sb + '/' + part);
+            this.select_chassis = response.data.map((item: String) => ({
+                chassi: item.chassi_id,
+                }));
+            };
+
+            if (this.g.userRole === 'EDITOR') {
+            const response = await axios.get('http://localhost:8080/chassi/list/editor/exclude-how-have-sb/' + sb + '/' + part);
+            this.planes = response.data.map((item: String) => ({
+                chassi: item.chassi_id,
+                }));
+            };
+
+        },
+
 
    
     },
@@ -275,6 +405,9 @@ td {
    
     }
 
+    input[type=checkbox].disabled {
+    pointer-events: none;
+    }
 
     tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
 

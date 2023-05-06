@@ -81,15 +81,15 @@
                         <td>{{ sb.service_bulleti_name }}</td>
                         <td>{{ sb.part }}</td>
                         <td>
-                            <input v-if="!sb.edition" type="checkbox" :class="{ 'disabled': !edition }" v-model="sb.checkbox1" value="APPLICABLE" :checked="sb.status == 'APPLICABLE' ? sb.checkbox1 = true : sb.checkbox1 = false">
+                            <input v-if="!sb.edition" type="checkbox" :class="{ 'disabled': !sb.edition }" v-model="sb.checkbox1" value="APPLICABLE" :checked="sb.status == 'APPLICABLE' ? sb.checkbox1 = true : sb.checkbox1 = false">
                             <input v-else type="checkbox" :value="sb.id" :checked="sb.selectedStatus === 'APPLICABLE'" @change="sb.selectedStatus = 'APPLICABLE'">
                         </td>
                         <td>
-                            <input v-if="!sb.edition" type="checkbox" :class="{ 'disabled': !edition }" v-model="sb.checkbox2" value="NOT APPLICABLE" :checked="sb.status != 'APPLICABLE' && sb.status != 'INCORP' && sb.status != 'INCORPORATED' && sb.status != 'INCOPORATED' ? sb.checkbox2 = true : sb.checkbox2 = false">
+                            <input v-if="!sb.edition" type="checkbox" :class="{ 'disabled': !sb.edition }" v-model="sb.checkbox2" value="NOT APPLICABLE" :checked="sb.status != 'APPLICABLE' && sb.status != 'INCORP' && sb.status != 'INCORPORATED' && sb.status != 'INCOPORATED' ? sb.checkbox2 = true : sb.checkbox2 = false">
                             <input v-else type="checkbox" :value="sb.id" :checked="sb.selectedStatus === 'NOT APPLICABLE'" @change="sb.selectedStatus = 'NOT APPLICABLE'">
                         </td>
                         <td>
-                            <input v-if="!sb.edition" type="checkbox" :class="{ 'disabled': !edition }" v-model="sb.checkbox3" value="INCORPORATED" :checked="sb.status == 'INCORP' || sb.status == 'INCORPORATED' || sb.status == 'INCOPORATED' ? sb.checkbox3 = true : sb.checkbox3 = false">
+                            <input v-if="!sb.edition" type="checkbox" :class="{ 'disabled': !sb.edition }" v-model="sb.checkbox3" value="INCORPORATED" :checked="sb.status == 'INCORP' || sb.status == 'INCORPORATED' || sb.status == 'INCOPORATED' ? sb.checkbox3 = true : sb.checkbox3 = false">
                             <input v-else type="checkbox" :value="sb.id" :checked="sb.selectedStatus === 'INCORPORATED'" @change="sb.selectedStatus = 'INCORPORATED'">
                         </td>                    
                         <td>
