@@ -47,7 +47,7 @@
                                 <div class="create-container">
                                     <div class="sb-name-part">
                                         <input type="text" v-model="newSb.name" placeholder="Insert a SB name...">
-                                        <select v-model="newSb.part">
+                                        <select v-model="newSb.part" class="select-part">
                                             <option>UNIQUE</option>
                                             <option>PART 1</option>
                                             <option>PART 2</option>
@@ -63,15 +63,17 @@
                                             <option>INCORPORATED</option>
                                         </select>
                                     </div>
-                                    <div class="button-submit">
-                                        <button v-if="newSb.name.length > 5 && newSb.part !== null && newSb.status !== null" type="submit" class="submit">
-                                            <i class="fa-solid fa-check"></i>            
-                                        </button>
-                                    </div>
-                                    <div class="button-cancel">
-                                        <button @click.prevent="createNew = false">
-                                            <i class="fa-solid fa-xmark"></i>
-                                        </button>
+                                    <div class="create-btn">
+                                        <div class="button-submit">
+                                            <button v-if="newSb.name.length > 5 && newSb.part !== null && newSb.status !== null" type="submit" class="submit">
+                                                <i class="fa-solid fa-check"></i>            
+                                            </button>
+                                        </div>
+                                        <div class="button-cancel">
+                                            <button @click.prevent="createNew = false">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </form>    
@@ -94,7 +96,7 @@
                         </td>                    
                         <td>
                             <button v-if="!sb.edition" @click.prevent="sb.edition = true">
-                                <i class="fa-regular fa-pen-to-square"></i>
+                                <i class="fa-regular fa-pen-to-square edit-btn"></i>
                             </button>
                             <button v-if="sb.edition" @click.prevent="saveNewStatus(sb.service_bulleti_name, sb.part, sb.selectedStatus); sb.edition = false">
                                 <i class="fa-solid fa-check"></i>
@@ -379,7 +381,56 @@ input[type=checkbox].disabled {
 
 tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
 
+    .select-part{
+        border-color: var(--azul-claro-light);
+        border-radius: 5px;
+        width: 7rem;
+        height: 2.3rem;
+        font-size:large;
+    }
 
+    .sb-status select{
+        border-color: var(--azul-claro-light);
+        border-radius: 5px;
+        width: 12rem;
+        height: 2.3rem;
+        font-size:large;
+    }
+
+    .create-container{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    input{
+        margin: 0;
+    }
+    .sb-name-part{
+        display: flex;
+        justify-content: center;
+        gap:10px;
+    }
+
+    .create-btn{
+        display: flex;
+        flex-direction: row;
+        padding-left: 10rem;
+    }
+    .new-sb button{
+        margin-left: 10px;
+        width: 9rem;
+        height: 2.2rem;
+        border-radius: 5px;
+        background-color: var(--azul-principal);
+        color: var(--white);
+        border-color: var(--azul-claro-light);
+    }
+
+    button{
+        height: 30px;
+        width: 30px;
+    }
 /* --------------- Media Queries -------------------- */
 
 /* Estilos para tablet */

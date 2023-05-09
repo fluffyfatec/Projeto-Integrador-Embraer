@@ -55,15 +55,17 @@
                                             <option>INCORPORATED</option>
                                         </select>
                                     </div>
-                                    <div class="button-submit">
-                                        <button v-if="newSb.chassis !== null && newSb.status !== null" type="submit" class="submit">
-                                            <i class="fa-solid fa-check"></i>            
-                                        </button>
-                                    </div>
-                                    <div class="button-cancel">
-                                        <button @click.prevent="createNew = false">
-                                            <i class="fa-solid fa-xmark"></i>
-                                        </button>
+                                    <div class="create-btn">
+                                        <div class="button-submit">
+                                            <button v-if="newSb.chassis !== null && newSb.status !== null" type="submit" class="submit">
+                                                <i class="fa-solid fa-check"></i>            
+                                            </button>
+                                        </div>
+                                        <div class="button-cancel">
+                                            <button @click.prevent="createNew = false">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </form>    
@@ -419,6 +421,51 @@ td {
 
     tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
 
+    .select-part{
+        border-color: var(--azul-claro-light);
+        border-radius: 5px;
+        width: 7rem;
+        height: 6rem;
+        font-size:large;
+    }
+
+    .sb-status select{
+        border-color: var(--azul-claro-light);
+        border-radius: 5px;
+        width: 12rem;
+        height: 2.1rem;
+        font-size:large;
+    }
+
+    .create-container{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    input{
+        margin: 0;
+    }
+
+    .create-btn{
+        display: flex;
+        flex-direction: row;
+        padding-left: 23.1rem;
+    }
+    .new-sb button{
+        margin-left: 10px;
+        width: 9rem;
+        height: 2.2rem;
+        border-radius: 5px;
+        background-color: var(--azul-principal);
+        color: var(--white);
+        border-color: var(--azul-claro-light);
+    }
+
+    button{
+        height: 30px;
+        width: 30px;
+    }
 
 /* --------------- Media Queries -------------------- */
 
