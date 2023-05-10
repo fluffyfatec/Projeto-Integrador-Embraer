@@ -13,5 +13,6 @@ public class ChassisUserOwnerDTO {
     private String owner;
     private Long chassis;
     private String date_register;
+    private String status;
 
 }

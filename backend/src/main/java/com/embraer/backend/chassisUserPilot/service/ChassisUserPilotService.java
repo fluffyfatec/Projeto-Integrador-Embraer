@@ -49,6 +49,7 @@ public class ChassisUserPilotService {
            newChassisUserPilot.setPilotLong(pilotId);
            newChassisUserPilot.setChassisLong(chassis);
            newChassisUserPilot.setDtregister(new Timestamp(System.currentTimeMillis()));
+           newChassisUserPilot.setStatus("A");
 
            chassisUserPilotRepository.save(newChassisUserPilot);
 
@@ -79,6 +80,7 @@ public class ChassisUserPilotService {
             dto.setPilot(pilot);
             dto.setChassis(list.getChassisLong());
             dto.setDate_register(formatedDate);
+            dto.setStatus(list.getStatus());
 
             listDTO.add(dto);
 
@@ -100,6 +102,25 @@ public class ChassisUserPilotService {
 
             chassisUserPilotRepository.delete(chassisUserPilot);
 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Transactional
+    public void updatePilotStatus(Long id, String status) {
+
+        try {
+
+
+            if (Objects.equals(status, "Active")) {
+                chassisUserPilotRepository.updatePilotStatus("I", id);
+            }
+
+            if (Objects.equals(status, "Inactive")) {
+                chassisUserPilotRepository.updatePilotStatus("A", id);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }

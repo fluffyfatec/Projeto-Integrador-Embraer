@@ -57,4 +57,20 @@ public class ChassisUserPilotController {
 
     }
 
+    @CrossOrigin
+    @GetMapping("/update-pilot-status/{id}/{status}")
+    public ResponseEntity<?> updatePilotStatus(@PathVariable("id") Long id,
+                                              @PathVariable("status") String status) {
+        try {
+            chassisUserPilotService.updatePilotStatus(id, status);
+
+            return ResponseEntity.ok("SUCCESS");
+        } catch (Exception e) {
+            e.printStackTrace();
+
+            return ResponseEntity.ok("NOT SUCCESS");
+        }
+
+    }
+
 }

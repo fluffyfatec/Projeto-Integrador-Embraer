@@ -30,7 +30,7 @@ public interface ServiceBulletinRepository extends JpaRepository<ServiceBulletin
 
 	@Query("SELECT sb FROM ServiceBulletin sb, ChassisUserOwner o, ChassiServiceBulletin cs WHERE " +
 			"o.chassis = cs.chassiId AND cs.serviceBulletinId = sb.serviceBulletinId AND " +
-			"o.user.userId = :userId")
+			"o.user.userId = :userId AND o.status = 'A'")
 	List<ServiceBulletin> getServiceBulletinsEditor(@Param("userId") Long userId);
 
 

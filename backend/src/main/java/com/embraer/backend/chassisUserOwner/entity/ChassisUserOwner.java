@@ -33,6 +33,9 @@ public class ChassisUserOwner {
     @Column(name="DATE_REGISTER")
     private Timestamp Dtregister;
 
+    @Column(name="STATUS")
+    private String status;
+
     public Long getUserLong() {
         return user.getUserId();
     }

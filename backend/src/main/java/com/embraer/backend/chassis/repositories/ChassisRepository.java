@@ -12,14 +12,16 @@ import java.util.List;
 @Repository
 public interface ChassisRepository extends JpaRepository<Chassis, Long>{
 
-    @Query("SELECT c FROM Chassis c, ChassisUserOwner o WHERE c.chassiId = o.chassis AND o.user.userId = :userId")
+    @Query("SELECT c FROM Chassis c, ChassisUserOwner o WHERE c.chassiId = o.chassis AND o.user.userId = :userId " +
+            "AND o.status = 'A'")
     List<Chassis> getChassisEditor(@Param("userId") Long userId);
 
-    @Query("SELECT c FROM Chassis c, ChassisUserPilot p WHERE c.chassiId = p.chassis AND p.pilot.userId = :pilotId")
+    @Query("SELECT c FROM Chassis c, ChassisUserPilot p WHERE c.chassiId = p.chassis AND p.pilot.userId = :pilotId " +
+            "AND p.status = 'A'")
     List<Chassis> getChassisPilot(@Param("pilotId") Long pilotId);
 
     @Query("SELECT c FROM Chassis c LEFT JOIN ChassisUserOwner o ON o.chassis = c.chassiId " +
-            "WHERE o.chassis IS NULL")
+            "WHERE o.chassis IS NULL OR (o.status = 'I' AND o.chassis = c.chassiId)")
     List<Chassis> getChassisThatDontHaveOwner();
 
     @Query("SELECT c FROM Chassis c, ChassiServiceBulletin cs WHERE c.chassiId = cs.chassiId.chassiId AND" +
@@ -28,7 +30,7 @@ public interface ChassisRepository extends JpaRepository<Chassis, Long>{
 
     @Query("SELECT c FROM Chassis c, ChassiServiceBulletin cs, ChassisUserOwner o WHERE " +
             "c.chassiId = cs.chassiId.chassiId AND cs.chassiId.chassiId = o.chassis.chassiId AND o.user.userId = :userId" +
-            " AND cs.serviceBulletinId.serviceBulletinId = :sbId")
+            " AND cs.serviceBulletinId.serviceBulletinId = :sbId AND o.status = 'A'")
     List<Chassis> getChassisChassisThatDontHaveTheSbEditor(@Param("userId") Long userId, @Param("sbId") Long sbId);
 
 }

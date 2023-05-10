@@ -13,6 +13,7 @@ import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class ChassisUserOwnerService {
@@ -38,6 +39,7 @@ public class ChassisUserOwnerService {
             newChassisUserOwner.setUserLong(userId);
             newChassisUserOwner.setChassisLong(chassis);
             newChassisUserOwner.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newChassisUserOwner.setStatus("A");
 
             chassisUserOwnerRepository.save(newChassisUserOwner);
 
@@ -66,6 +68,7 @@ public class ChassisUserOwnerService {
             dto.setOwner(owner);
             dto.setChassis(list.getChassisLong());
             dto.setDate_register(formatedDate);
+            dto.setStatus(list.getStatus());
 
             listDTO.add(dto);
 
@@ -90,6 +93,26 @@ public class ChassisUserOwnerService {
         }
 
     }
+
+    @Transactional
+    public void updateOwnerStatus(Long id, String status) {
+
+        try {
+
+
+            if (Objects.equals(status, "Active")) {
+                chassisUserOwnerRepository.updateOwnerStatus("I", id);
+            }
+
+            if (Objects.equals(status, "Inactive")) {
+                chassisUserOwnerRepository.updateOwnerStatus("A", id);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
 
 
 }

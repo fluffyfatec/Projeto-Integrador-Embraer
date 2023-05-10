@@ -37,6 +37,9 @@ public class ChassisUserPilot {
     @Column(name="DATE_REGISTER")
     private Timestamp Dtregister;
 
+    @Column(name="STATUS")
+    private String status;
+
 
     public Long getOwnerLong() {
         return owner.getId();

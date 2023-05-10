@@ -24,7 +24,7 @@ public interface ChassiServiceBulletinRepository  extends JpaRepository<ChassiSe
 
 	@Query("SELECT cs FROM ServiceBulletin sb, ChassisUserOwner o, ChassiServiceBulletin cs WHERE " +
 			"o.chassis = cs.chassiId AND cs.serviceBulletinId = sb.serviceBulletinId AND " +
-			"o.user.userId = :userId AND cs.serviceBulletinId.serviceBulletinId = :sbId")
+			"o.user.userId = :userId AND cs.serviceBulletinId.serviceBulletinId = :sbId AND o.status = 'A'")
 	List<ChassiServiceBulletin> findByServiceBulletinIdEditor(@Param("sbId") Long sbId, @Param("userId") Long userId);
 
 	@Query("SELECT csb.serviceBulletinStatus FROM ChassiServiceBulletin csb WHERE csb.serviceBulletinId.serviceBulletinId = :sbId" +
