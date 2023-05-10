@@ -20,6 +20,7 @@
                         <th>Chassis</th>
                         <th>Pilot</th>
                         <th>Date Register</th>
+                        <th>Status</th>
                         <th>Options</th>
                     </tr>
                 </thead>    
@@ -29,6 +30,8 @@
                         <td>{{ p.chassis }}</td>
                         <td>{{ p.pilot }}</td>
                         <td>{{ p.date_register }}</td>
+                        <td class="status-pilot" @click="pilotUpdateStatus(p.id, p.status)"
+                        :style="p.status === 'Active' ? 'color: #548644' : 'color: #AE2A32'">{{ p.status }}</td>
                         <td class="edit-item">
                             <button @click.prevent="deletePilot(p.id)">
                                 <i class="fa-solid fa-trash-can"></i>
@@ -40,6 +43,8 @@
                         <td>{{ p.chassis }}</td>
                         <td>{{ p.pilot }}</td>
                         <td>{{ p.date_register }}</td>
+                        <td class="status-pilot" @click="pilotUpdateStatus(p.id, p.status)"
+                        :style="p.status === 'Active' ? 'color: #548644' : 'color: #AE2A32'">{{ p.status }}</td>
                         <td class="edit-item">
                             <button @click.prevent="deletePilot(p.id)">
                                 <i class="fa-solid fa-trash-can"></i>
@@ -89,9 +94,26 @@ export default {
                 owner: item.owner,
                 pilot: item.pilot,
                 chassis: item.chassis,
-                date_register: item.date_register
+                date_register: item.date_register,
+                status: item.status
             }));
 
+            for (let i = 0; i < this.pilots.length; i++) {
+                if (this.pilots[i].status === 'A') {
+                    this.pilots[i].status = 'Active';
+                }
+
+                if (this.pilots[i].status === 'I') {
+                    this.pilots[i].status = 'Inactive';
+                }
+            };    
+
+        },
+
+        async pilotUpdateStatus(id: String, status: String) {
+            await axios.get('http://localhost:8080/update-pilot-status/' + id + '/' + status);
+
+            this.getPilots();
         },
 
     },
@@ -180,7 +202,7 @@ td {
 
 tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
 
-.status-item {
+.status-pilot {
     cursor: pointer;
 }
 

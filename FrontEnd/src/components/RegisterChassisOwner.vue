@@ -48,6 +48,12 @@ export default {
 
     },
 
+    created() {
+        eventBus.$on('update-getChassisThatDontHaveOwner', (edition: any) => {
+            this.getChassisThatDontHaveOwner();
+        });
+    },
+
     methods: {
 
         updategetOwners() {

@@ -19,6 +19,7 @@
                         <th>User Owner</th>
                         <th>Chassis</th>
                         <th>Date Register</th>
+                        <th>Status</th>
                         <th>Options</th>
                     </tr>
                 </thead>    
@@ -27,6 +28,8 @@
                         <td>{{ o.owner }}</td>
                         <td>{{ o.chassis }}</td>
                         <td>{{ o.date_register }}</td>
+                        <td class="status-owner" @click="ownerUpdateStatus(o.id, o.status)"
+                        :style="o.status === 'Active' ? 'color: #548644' : 'color: #AE2A32'">{{ o.status }}</td>
                         <td class="edit-item">
                             <button @click.prevent="deleteOwner(o.id)">
                                 <i class="fa-solid fa-trash-can"></i>
@@ -37,6 +40,8 @@
                         <td>{{ o.owner }}</td>
                         <td>{{ o.chassis }}</td>
                         <td>{{ o.date_register }}</td>
+                        <td class="status-owner" @click="ownerUpdateStatus(o.id, o.status)"
+                        :style="o.status === 'Active' ? 'color: #548644' : 'color: #AE2A32'">{{ o.status }}</td>
                         <td class="edit-item">
                             <button @click.prevent="deleteOwner(o.id)">
                                 <i class="fa-solid fa-trash-can"></i>
@@ -85,8 +90,32 @@ export default {
                 id: item.id,
                 owner: item.owner,
                 chassis: item.chassis,
-                date_register: item.date_register
+                date_register: item.date_register,
+                status: item.status
             }));
+
+            for (let i = 0; i < this.owners.length; i++) {
+                if (this.owners[i].status === 'A') {
+                    this.owners[i].status = 'Active';
+                }
+
+                if (this.owners[i].status === 'I') {
+                    this.owners[i].status = 'Inactive';
+                }
+            };    
+
+        },
+
+        updategetChassisThatDontHaveOwner() {
+            eventBus.$emit('update-getChassisThatDontHaveOwner', null);
+        },
+
+        async ownerUpdateStatus(id: String, status: String) {
+            await axios.get('http://localhost:8080/update-owner-status/' + id + '/' + status);
+
+            this.getOwners();
+
+            this.updategetChassisThatDontHaveOwner();
 
         },
     
@@ -177,7 +206,7 @@ td {
 
 tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
 
-.status-item {
+.status-owner {
     cursor: pointer;
 }
 

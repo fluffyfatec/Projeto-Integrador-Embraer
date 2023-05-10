@@ -140,7 +140,7 @@ export default {
             await axios.get('http://localhost:8080/update-item-status/' + itemId + '/' + status);
 
             this.getItems();
-        }
+        },
         
     },
 
