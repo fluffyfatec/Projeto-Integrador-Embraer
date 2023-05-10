@@ -11,24 +11,26 @@
                     </button>
                 </div>
             </div>
-            <div class="filter">
-                <div class="micro-container">
-                    <input type="checkbox" v-model="ApplicableFilter">
-                    <label>Applicable</label>
+            <div class="filter-container">
+                <div class="filter">
+                    <div class="micro-container">
+                        <input type="checkbox" v-model="ApplicableFilter">
+                        <label>Applicable</label>
+                    </div>
+                    <div class="micro-container">
+                        <input type="checkbox" v-model="NotApplicableFilter">
+                        <label>Not Applicable</label>
+                    </div>
+                    <div class="micro-container">
+                        <input type="checkbox" v-model="IncorporatedFilter">
+                        <label>Incorporated</label>
+                    </div>               
                 </div>
-                <div class="micro-container">
-                    <input type="checkbox" v-model="NotApplicableFilter">
-                    <label>Not Applicable</label>
-                </div>
-                <div class="micro-container">
-                    <input type="checkbox" v-model="IncorporatedFilter">
-                    <label>Incorporated</label>
-                </div>           
                 <div v-if="!createNew" class="new-sb">
-                    <button @click.prevent="createNew = true">
-                        <i class="fa-solid fa-plus"></i> New Chassis
-                    </button>
-                </div>    
+                        <button @click.prevent="createNew = true">
+                            <i class="fa-solid fa-plus"></i> New Chassis
+                        </button>
+                    </div>
             </div> 
             <div class="table-wrapper">
                 <table cellspacing="0">
@@ -337,9 +339,37 @@ export default {
 <style scoped>
 @import "../assets/base.css";
 .filter{
-    display: flex;  
-    justify-content: center;
-}
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0;
+        
+    }
+    .micro-container{
+        display: flex;
+        align-self: center;
+        width: 40%;
+        height: auto;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        
+    }
+    .micro-container label{
+        display: flex;
+        align-self: center;
+    }
+
+
+    .div-header{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+    }
+
+  .btn-download{
+    align-self: center;
+    margin-left: 2rem;
+  }
 .title {
     color: var(--azul-principal);
     margin-left: 25px;
@@ -450,12 +480,18 @@ td {
     .create-btn{
         display: flex;
         flex-direction: row;
-        padding-left: 23.1rem;
+        padding-left: 10rem;
+    }
+    .new-sb{
+        display: flex;
+        justify-content: center;
+        padding-top: 1rem;
     }
     .new-sb button{
+        font-size: 18px;
         margin-left: 10px;
-        width: 9rem;
-        height: 2.2rem;
+        width: 14rem;
+        height: 3rem;
         border-radius: 5px;
         background-color: var(--azul-principal);
         color: var(--white);
@@ -465,6 +501,11 @@ td {
     button{
         height: 30px;
         width: 30px;
+    }
+
+    .filter-container{
+        display: flex;
+        flex-direction: column;
     }
 
 /* --------------- Media Queries -------------------- */

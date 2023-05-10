@@ -11,25 +11,26 @@
                     </button>
                 </div>
             </div>
-            <div class="filter">
-                <div class="micro-container">
-                    <input type="checkbox" v-model="ApplicableFilter">
-                    <label>Applicable</label>
-                </div>
-                <div class="micro-container">
-                    <input type="checkbox" v-model="NotApplicableFilter">
-                    <label>Not Applicable</label>
-                </div>
-                <div class="micro-container">
-                    <input type="checkbox" v-model="IncorporatedFilter">
-                    <label>Incorporated</label>
+            <div class="filter-container">
+                <div class="filter">
+                    <div class="micro-container">
+                        <input type="checkbox" v-model="ApplicableFilter">
+                        <label>Applicable</label>
+                    </div>
+                    <div class="micro-container">
+                        <input type="checkbox" v-model="NotApplicableFilter">
+                        <label>Not Applicable</label>
+                    </div>
+                    <div class="micro-container">
+                        <input type="checkbox" v-model="IncorporatedFilter">
+                        <label>Incorporated</label>
+                    </div>        
                 </div>
                 <div v-if="!createNew" class="new-sb">
-                    <button @click.prevent="createNew = true">
-                        <i class="fa-solid fa-plus"></i> New Service Bulletin
-                    </button>
-                </div>
-                
+                        <button @click.prevent="createNew = true">
+                            <i class="fa-solid fa-plus"></i> New Service Bulletin
+                        </button>
+                    </div>
             </div>  
             <div class="table-wrapper">
                 <table cellspacing="0">
@@ -299,6 +300,7 @@ export default {
 .filter{
     display: flex;  
     justify-content: center;
+    padding-left: 3.8rem;
 }
 
 .title {
@@ -417,10 +419,16 @@ tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
         flex-direction: row;
         padding-left: 10rem;
     }
+    .new-sb{
+        display: flex;
+        justify-content: center;
+        padding-top: 1rem;
+    }
     .new-sb button{
+        font-size: 18px;
         margin-left: 10px;
-        width: 9rem;
-        height: 2.2rem;
+        width: 14rem;
+        height: 3rem;
         border-radius: 5px;
         background-color: var(--azul-principal);
         color: var(--white);
@@ -430,6 +438,11 @@ tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
     button{
         height: 30px;
         width: 30px;
+    }
+
+    .filter-container{
+        display: flex;
+        flex-direction: column;
     }
 /* --------------- Media Queries -------------------- */
 
@@ -489,6 +502,40 @@ tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
 /* Estilos para mobile */
 @media only screen and (max-width: 767px) {
 
+    .filter{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0;
+        
+    }
+    .micro-container{
+        display: flex;
+        align-self: center;
+        width: 40%;
+        height: auto;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        
+    }
+    .micro-container label{
+        display: flex;
+        align-self: center;
+    }
+
+
+    .div-header{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+    }
+
+  .btn-download{
+    align-self: center;
+    margin-left: 2rem;
+  }
+
+
     .title {
         margin-left: 25px;
     }
@@ -511,10 +558,6 @@ tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
         margin-bottom: 30px;
         box-shadow: 2px 2px 20px 5px var(--silver);
         width: 96%;
-    }
-
-    .table-header {
-        
     }
 
     th {
