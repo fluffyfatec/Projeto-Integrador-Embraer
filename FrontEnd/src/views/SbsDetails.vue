@@ -42,7 +42,7 @@
                         <th>Options</th>
                     </tr>
                     <tr v-if="createNew">
-                        <td colspan="5" class="full-width">
+                        <td colspan="4" class="full-width">
                             <form @submit.prevent="registerNew" class="center">
                                 <div class="create-container">
                                     <div class="chassis">
@@ -57,7 +57,12 @@
                                             <option>INCORPORATED</option>
                                         </select>
                                     </div>
-                                    <div class="create-btn">
+                                    
+                                </div>
+                            </form>    
+                        </td>
+                        <td>
+                            <div class="create-btn">
                                         <div class="button-submit">
                                             <button v-if="newSb.chassis !== null && newSb.status !== null" type="submit" class="submit">
                                                 <i class="fa-solid fa-check"></i>            
@@ -69,8 +74,6 @@
                                             </button>
                                         </div>
                                     </div>
-                                </div>
-                            </form>    
                         </td>
                     </tr>
                     <tr v-for="plane in planes" :key="plane.chassi">
@@ -94,7 +97,7 @@
                             <button v-if="plane.edition" @click.prevent="saveNewStatus(plane.chassi, plane.selectedStatus); plane.edition = false">
                                 <i class="fa-solid fa-check"></i>
                             </button>
-                            <button v-if="plane.edition" @click.prevent="plane.edition = false">
+                            <button v-if="plane.edition" @click.prevent="plane.edition = false" class="x-btn">
                                 <i class="fa-solid fa-xmark"></i>
                             </button>
                         </td>
@@ -475,7 +478,7 @@ td {
     .create-btn{
         display: flex;
         flex-direction: row;
-        padding-left: 10rem;
+        justify-content: center;
     }
     .new-sb{
         display: flex;
@@ -502,6 +505,23 @@ td {
         display: flex;
         flex-direction: column;
     }
+
+    .button-cancel button{
+        background-color: #f55133;
+        border-color: rgb(44, 41, 41);
+    }
+
+    .x-btn{
+        background-color: #f55133;
+        border-color: rgb(44, 41, 41);
+
+    }
+
+
+
+
+
+
 
 /* --------------- Media Queries -------------------- */
 
