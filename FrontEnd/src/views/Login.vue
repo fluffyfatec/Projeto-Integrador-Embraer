@@ -1,6 +1,6 @@
 <template>
     <div class="login-container">
-        
+    
         <div class="login">
             <form @submit.prevent="login">
                 <img src="@/assets/logo.png">
@@ -56,6 +56,8 @@ export default {
             localStorage.setItem('token', token);
 
             router.push('/items'); // redireciona para a rota /items
+
+            location.reload(); // recarrega a página para reiniciar o mounted()
         } 
 
       } catch (error) {

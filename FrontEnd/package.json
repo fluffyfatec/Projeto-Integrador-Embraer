@@ -17,6 +17,7 @@
     "v-click-outside": "^3.2.0",
     "vue": "^2.7.7",
     "vue-multiselect": "^2.1.7",
+    "vue-property-decorator": "^9.1.2",
     "vue-router": "^3.5.4"
   },
   "devDependencies": {

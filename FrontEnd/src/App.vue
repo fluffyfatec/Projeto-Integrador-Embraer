@@ -139,12 +139,12 @@ export default {
 
   },
 
-  updated() {
+  async beforeUpdate() {
 
     if (this.$route.path !== this.g.previousPath) {
         this.g.previousPath = this.$route.path;
-        this.g.getUserAuthenticated();
-      };     
+        await this.g.getUserAuthenticated();
+    };     
   
   },
 
