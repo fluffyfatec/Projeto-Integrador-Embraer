@@ -339,26 +339,21 @@ export default {
 <style scoped>
 @import "../assets/base.css";
 .filter{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding: 0;
+    display: flex;  
+    justify-content: center;
+    padding-left: 3.8rem;
         
     }
     .micro-container{
-        display: flex;
-        align-self: center;
-        width: 40%;
-        height: auto;
-        margin-left: 2rem;
-        margin-bottom: 1rem;
+    border: 1px solid;
+    border-color: var(--azul-principal);
+    border-radius: 5px;
+    background-color: var(--platinum);
+    margin-right: 20px;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         
     }
-    .micro-container label{
-        display: flex;
-        align-self: center;
-    }
-
 
     .div-header{
         display: flex;
@@ -367,7 +362,7 @@ export default {
     }
 
   .btn-download{
-    align-self: center;
+    align-self:flex-end;
     margin-left: 2rem;
   }
 .title {
@@ -559,11 +554,46 @@ td {
         padding: 10px;
     }
 
+    
+
 }
 
 /* Estilos para mobile */
 @media only screen and (max-width: 767px) {
+    .filter{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0;
+        
+    }
 
+    
+    .micro-container{
+        display: flex;
+        align-self: center;
+        width: 40%;
+        height: auto;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        
+    }
+    .micro-container label{
+        display: flex;
+        align-self: center;
+    }
+
+
+    .div-header{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+    }
+
+    .btn-download{
+    align-self:center;
+    margin-left: 2rem;
+     }
     .title {
         margin-left: 25px;
     }
