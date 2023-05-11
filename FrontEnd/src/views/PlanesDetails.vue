@@ -43,7 +43,7 @@
                         <th>Options</th>
                     </tr>
                     <tr v-if="createNew">
-                        <td colspan="6" class="full-width">
+                        <td colspan="5" class="full-width">
                             <form @submit.prevent="registerNew" class="center">
                                 <div class="create-container">
                                     <div class="sb-name-part">
@@ -64,7 +64,12 @@
                                             <option>INCORPORATED</option>
                                         </select>
                                     </div>
-                                    <div class="create-btn">
+                            
+                                </div>
+                            </form>    
+                        </td>
+                        <td>
+                            <div class="create-btn">
                                         <div class="button-submit">
                                             <button v-if="newSb.name.length > 5 && newSb.part !== null && newSb.status !== null" type="submit" class="submit">
                                                 <i class="fa-solid fa-check"></i>            
@@ -76,9 +81,7 @@
                                             </button>
                                         </div>
                                     </div>
-                                </div>
-                            </form>    
-                        </td>
+                                </td>
                     </tr>
                     <tr v-for="sb in sbs" :key="sb.service_bulleti_name + sb.part">
                         <td>{{ sb.service_bulleti_name }}</td>
@@ -102,7 +105,7 @@
                             <button v-if="sb.edition" @click.prevent="saveNewStatus(sb.service_bulleti_name, sb.part, sb.selectedStatus); sb.edition = false">
                                 <i class="fa-solid fa-check"></i>
                             </button>
-                            <button v-if="sb.edition" @click.prevent="sb.edition = false">
+                            <button v-if="sb.edition" @click.prevent="sb.edition = false" class="x-btn">
                                 <i class="fa-solid fa-xmark"></i>
                             </button>
                         </td>
@@ -417,7 +420,7 @@ tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
     .create-btn{
         display: flex;
         flex-direction: row;
-        padding-left: 10rem;
+        justify-content: center;
     }
     .new-sb{
         display: flex;
@@ -444,6 +447,34 @@ tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
         display: flex;
         flex-direction: column;
     }
+
+    .full-width{
+        padding-bottom: 1.6rem;
+    }
+    .button-cancel button{
+        background-color: #f55133;
+        border-color: rgb(44, 41, 41);
+    }
+
+    .x-btn{
+        background-color: #f55133;
+        border-color: rgb(44, 41, 41);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 /* --------------- Media Queries -------------------- */
 
 /* Estilos para tablet */
@@ -498,6 +529,13 @@ tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
 
 
 }
+
+
+
+
+
+
+
 
 /* Estilos para mobile */
 @media only screen and (max-width: 767px) {

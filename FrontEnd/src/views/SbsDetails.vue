@@ -42,7 +42,7 @@
                         <th>Options</th>
                     </tr>
                     <tr v-if="createNew">
-                        <td colspan="5" class="full-width">
+                        <td colspan="4" class="full-width">
                             <form @submit.prevent="registerNew" class="center">
                                 <div class="create-container">
                                     <div class="chassis">
@@ -57,7 +57,12 @@
                                             <option>INCORPORATED</option>
                                         </select>
                                     </div>
-                                    <div class="create-btn">
+                                    
+                                </div>
+                            </form>    
+                        </td>
+                        <td>
+                            <div class="create-btn">
                                         <div class="button-submit">
                                             <button v-if="newSb.chassis !== null && newSb.status !== null" type="submit" class="submit">
                                                 <i class="fa-solid fa-check"></i>            
@@ -69,8 +74,6 @@
                                             </button>
                                         </div>
                                     </div>
-                                </div>
-                            </form>    
                         </td>
                     </tr>
                     <tr v-for="plane in planes" :key="plane.chassi">
@@ -94,7 +97,7 @@
                             <button v-if="plane.edition" @click.prevent="saveNewStatus(plane.chassi, plane.selectedStatus); plane.edition = false">
                                 <i class="fa-solid fa-check"></i>
                             </button>
-                            <button v-if="plane.edition" @click.prevent="plane.edition = false">
+                            <button v-if="plane.edition" @click.prevent="plane.edition = false" class="x-btn">
                                 <i class="fa-solid fa-xmark"></i>
                             </button>
                         </td>
@@ -339,26 +342,21 @@ export default {
 <style scoped>
 @import "../assets/base.css";
 .filter{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding: 0;
+    display: flex;  
+    justify-content: center;
+    padding-left: 3.8rem;
         
     }
     .micro-container{
-        display: flex;
-        align-self: center;
-        width: 40%;
-        height: auto;
-        margin-left: 2rem;
-        margin-bottom: 1rem;
+    border: 1px solid;
+    border-color: var(--azul-principal);
+    border-radius: 5px;
+    background-color: var(--platinum);
+    margin-right: 20px;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         
     }
-    .micro-container label{
-        display: flex;
-        align-self: center;
-    }
-
 
     .div-header{
         display: flex;
@@ -367,7 +365,7 @@ export default {
     }
 
   .btn-download{
-    align-self: center;
+    align-self:flex-end;
     margin-left: 2rem;
   }
 .title {
@@ -480,7 +478,7 @@ td {
     .create-btn{
         display: flex;
         flex-direction: row;
-        padding-left: 10rem;
+        justify-content: center;
     }
     .new-sb{
         display: flex;
@@ -507,6 +505,23 @@ td {
         display: flex;
         flex-direction: column;
     }
+
+    .button-cancel button{
+        background-color: #f55133;
+        border-color: rgb(44, 41, 41);
+    }
+
+    .x-btn{
+        background-color: #f55133;
+        border-color: rgb(44, 41, 41);
+
+    }
+
+
+
+
+
+
 
 /* --------------- Media Queries -------------------- */
 
@@ -559,11 +574,46 @@ td {
         padding: 10px;
     }
 
+    
+
 }
 
 /* Estilos para mobile */
 @media only screen and (max-width: 767px) {
+    .filter{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0;
+        
+    }
 
+    
+    .micro-container{
+        display: flex;
+        align-self: center;
+        width: 40%;
+        height: auto;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        
+    }
+    .micro-container label{
+        display: flex;
+        align-self: center;
+    }
+
+
+    .div-header{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+    }
+
+    .btn-download{
+    align-self:center;
+    margin-left: 2rem;
+     }
     .title {
         margin-left: 25px;
     }
