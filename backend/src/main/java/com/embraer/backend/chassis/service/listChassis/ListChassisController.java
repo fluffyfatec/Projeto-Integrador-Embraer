@@ -53,5 +53,27 @@ public class ListChassisController {
 
 	}
 
+	@CrossOrigin
+	@GetMapping("/chassi/list/admin/exclude-how-have-sb/{sb}/{part}")
+	public ResponseEntity<List<ListChassisDto>> listAllChassisThatDontHaveTheSbAdmin(@PathVariable("sb") String sb,
+																					 @PathVariable("part") String part) {
+
+		List<ListChassisDto> listChassisDto = listChassisService.showChassisThatDontHaveTheSbAdmin(sb, part);
+
+		return ResponseEntity.status(HttpStatus.OK).body(listChassisDto);
+
+	}
+
+	@CrossOrigin
+	@GetMapping("/chassi/list/editor/exclude-how-have-sb/{sb}/{part}")
+	public ResponseEntity<List<ListChassisDto>> listAllChassisThatDontHaveTheSbEditor(@PathVariable("sb") String sb,
+																					 @PathVariable("part") String part) {
+
+		List<ListChassisDto> listChassisDto = listChassisService.showChassisThatDontHaveTheSbEditor(sb, part);
+
+		return ResponseEntity.status(HttpStatus.OK).body(listChassisDto);
+
+	}
+
 
 }

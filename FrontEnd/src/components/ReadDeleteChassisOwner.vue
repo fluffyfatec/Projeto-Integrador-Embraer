@@ -1,13 +1,25 @@
 <template>
     <div>
-        <h1 class="title">List of Chassis Owners</h1>
-        <input class="search-term" type="text" placeholder="Search a owner..." v-model="searchTerm">
+        <div class="div-header">
+            <h1 class="title">List of Chassis Owners</h1>
+            <div class="div-btn-download">
+                    <button class="btn-download" @click.prevent="downloadPDF">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <i class="txt-btn-download">Download PDF</i>
+                    </button>
+            </div>
+        </div>
+        <div class="search-container">
+            <input class="search-term" type="text" placeholder="Search a owner..." v-model="searchTerm">
+        </div>
         <div class="table-wrapper">
             <table cellspacing="0">
                 <thead>
                     <tr class="table-header">
                         <th>User Owner</th>
                         <th>Chassis</th>
+                        <th>Date Register</th>
+                        <th>Status</th>
                         <th>Options</th>
                     </tr>
                 </thead>    
@@ -15,6 +27,9 @@
                     <tr v-if="searchTerm.length < 3" v-for="o in owners" :key="o.id">
                         <td>{{ o.owner }}</td>
                         <td>{{ o.chassis }}</td>
+                        <td>{{ o.date_register }}</td>
+                        <td class="status-owner" @click="ownerUpdateStatus(o.id, o.status)"
+                        :style="o.status === 'Active' ? 'color: #548644' : 'color: #AE2A32'">{{ o.status }}</td>
                         <td class="edit-item">
                             <button @click.prevent="deleteOwner(o.id)">
                                 <i class="fa-solid fa-trash-can"></i>
@@ -24,6 +39,9 @@
                     <tr v-if="searchTerm.length >= 3" v-for="o in filteredOwners" :key="o.id">
                         <td>{{ o.owner }}</td>
                         <td>{{ o.chassis }}</td>
+                        <td>{{ o.date_register }}</td>
+                        <td class="status-owner" @click="ownerUpdateStatus(o.id, o.status)"
+                        :style="o.status === 'Active' ? 'color: #548644' : 'color: #AE2A32'">{{ o.status }}</td>
                         <td class="edit-item">
                             <button @click.prevent="deleteOwner(o.id)">
                                 <i class="fa-solid fa-trash-can"></i>
@@ -39,6 +57,7 @@
 <script lang="ts">
 import axios from 'axios';
 import { eventBus } from '@/main';
+import FileSaver from 'file-saver';
 
 export default {
 
@@ -71,10 +90,57 @@ export default {
             this.owners = response.data.map((item: String) => ({ 
                 id: item.id,
                 owner: item.owner,
-                chassis: item.chassis
+                chassis: item.chassis,
+                date_register: item.date_register,
+                status: item.status
             }));
 
+            for (let i = 0; i < this.owners.length; i++) {
+                if (this.owners[i].status === 'A') {
+                    this.owners[i].status = 'Active';
+                }
+
+                if (this.owners[i].status === 'I') {
+                    this.owners[i].status = 'Inactive';
+                }
+            };    
+
         },
+
+        updategetChassisThatDontHaveOwner() {
+            eventBus.$emit('update-getChassisThatDontHaveOwner', null);
+        },
+
+        async ownerUpdateStatus(id: String, status: String) {
+            await axios.get('http://localhost:8080/update-owner-status/' + id + '/' + status);
+
+            this.getOwners();
+
+            this.updategetChassisThatDontHaveOwner();
+
+        },
+
+        async downloadPDF() {
+
+            // Faz a requisição para o método do Spring Boot
+            const response = await axios.get('http://localhost:8080/report-owners', {
+                responseType: 'blob' // Define o tipo de resposta como Blob
+            });
+
+            // Obtém o nome do arquivo a partir do cabeçalho Content-Disposition
+            const contentDispositionHeader = response.headers['content-disposition'];
+            const filenameRegex = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/;
+            const matches = filenameRegex.exec(contentDispositionHeader);
+            const filename = matches != null && matches[1] ? matches[1].replace(/['"]/g, '') : 'report.pdf';
+
+            // Cria um objeto Blob com a resposta recebida do servidor
+            const blob = new Blob([response.data], { type: 'application/pdf' });
+
+            // Salva o arquivo com o nome obtido do cabeçalho Content-Disposition
+            FileSaver.saveAs(blob, filename);
+
+        },
+
     
     },    
 
@@ -161,14 +227,19 @@ td {
     vertical-align: middle;
 }
 
-tbody:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
+tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
 
-.status-item {
+.status-owner {
     cursor: pointer;
 }
 
 .edit-item {
     height: fit-content;
+}
+
+.search-container{
+    display: flex;
+    justify-content: center;
 }
 
 /* --------------- Media Queries -------------------- */
@@ -209,6 +280,12 @@ tbody:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
         padding: 10px;
     }
 
+    .search-container input{
+        width: 45%;
+        height: auto;
+        font-size: 22px;
+    }
+
 }
 
 /* Estilos para mobile */
@@ -244,6 +321,11 @@ tbody:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
 
     td {
         padding: 10px;
+    }
+    .search-container input{
+        width: 60%;
+        height: auto;
+        font-size: 20px;
     }
 
 }    

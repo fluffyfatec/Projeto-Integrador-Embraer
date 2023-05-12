@@ -1,7 +1,17 @@
 <template>
     <div>
-        <h1 class="title">List of Chassis Pilots</h1>
-        <input class="search-term" type="text" placeholder="Search a pilot..." v-model="searchTerm">
+        <div class="div-header">
+            <h1 class="title">List of Chassis Pilots</h1>
+            <div class="div-btn-download">
+                        <button class="btn-download" @click.prevent="downloadPDF">
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                            <i class="txt-btn-download">Download PDF</i>
+                        </button>
+                </div>
+            </div>
+        <div class="search-container">
+            <input class="search-term" type="text" placeholder="Search a pilot..." v-model="searchTerm">
+        </div>
         <div class="table-wrapper">
             <table cellspacing="0">
                 <thead>
@@ -9,6 +19,8 @@
                         <th>Owner</th>
                         <th>Chassis</th>
                         <th>Pilot</th>
+                        <th>Date Register</th>
+                        <th>Status</th>
                         <th>Options</th>
                     </tr>
                 </thead>    
@@ -17,6 +29,9 @@
                         <td>{{ p.owner }}</td>
                         <td>{{ p.chassis }}</td>
                         <td>{{ p.pilot }}</td>
+                        <td>{{ p.date_register }}</td>
+                        <td class="status-pilot" @click="pilotUpdateStatus(p.id, p.status)"
+                        :style="p.status === 'Active' ? 'color: #548644' : 'color: #AE2A32'">{{ p.status }}</td>
                         <td class="edit-item">
                             <button @click.prevent="deletePilot(p.id)">
                                 <i class="fa-solid fa-trash-can"></i>
@@ -27,6 +42,9 @@
                         <td>{{ p.owner }}</td>
                         <td>{{ p.chassis }}</td>
                         <td>{{ p.pilot }}</td>
+                        <td>{{ p.date_register }}</td>
+                        <td class="status-pilot" @click="pilotUpdateStatus(p.id, p.status)"
+                        :style="p.status === 'Active' ? 'color: #548644' : 'color: #AE2A32'">{{ p.status }}</td>
                         <td class="edit-item">
                             <button @click.prevent="deletePilot(p.id)">
                                 <i class="fa-solid fa-trash-can"></i>
@@ -42,6 +60,7 @@
 <script lang="ts">
 import axios from 'axios';
 import { eventBus } from '@/main';
+import FileSaver from 'file-saver';
 
 export default {
 
@@ -75,8 +94,47 @@ export default {
                 id: item.id,
                 owner: item.owner,
                 pilot: item.pilot,
-                chassis: item.chassis
+                chassis: item.chassis,
+                date_register: item.date_register,
+                status: item.status
             }));
+
+            for (let i = 0; i < this.pilots.length; i++) {
+                if (this.pilots[i].status === 'A') {
+                    this.pilots[i].status = 'Active';
+                }
+
+                if (this.pilots[i].status === 'I') {
+                    this.pilots[i].status = 'Inactive';
+                }
+            };    
+
+        },
+
+        async pilotUpdateStatus(id: String, status: String) {
+            await axios.get('http://localhost:8080/update-pilot-status/' + id + '/' + status);
+
+            this.getPilots();
+        },
+
+        async downloadPDF() {
+
+            // Faz a requisição para o método do Spring Boot
+            const response = await axios.get('http://localhost:8080/report-pilots', {
+                responseType: 'blob' // Define o tipo de resposta como Blob
+            });
+
+            // Obtém o nome do arquivo a partir do cabeçalho Content-Disposition
+            const contentDispositionHeader = response.headers['content-disposition'];
+            const filenameRegex = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/;
+            const matches = filenameRegex.exec(contentDispositionHeader);
+            const filename = matches != null && matches[1] ? matches[1].replace(/['"]/g, '') : 'report.pdf';
+
+            // Cria um objeto Blob com a resposta recebida do servidor
+            const blob = new Blob([response.data], { type: 'application/pdf' });
+
+            // Salva o arquivo com o nome obtido do cabeçalho Content-Disposition
+            FileSaver.saveAs(blob, filename);
 
         },
 
@@ -164,14 +222,19 @@ td {
     vertical-align: middle;
 }
 
-tbody:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
+tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
 
-.status-item {
+.status-pilot {
     cursor: pointer;
 }
 
 .edit-item {
     height: fit-content;
+}
+
+.search-container{
+    display: flex;
+    justify-content: center;
 }
 
 /* --------------- Media Queries -------------------- */
@@ -212,6 +275,11 @@ tbody:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
         padding: 10px;
     }
 
+    .search-container input{
+        width: 45%;
+        height: auto;
+        font-size: 22px;
+    }
 }
 
 /* Estilos para mobile */
@@ -247,6 +315,12 @@ tbody:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
 
     td {
         padding: 10px;
+    }
+
+    .search-container input{
+        width: 60%;
+        height: auto;
+        font-size: 20px;
     }
 
 }    

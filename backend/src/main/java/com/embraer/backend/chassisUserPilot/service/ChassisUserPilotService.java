@@ -13,6 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -46,6 +48,8 @@ public class ChassisUserPilotService {
            newChassisUserPilot.setOwnerLong(chassisUserOwner.getId());
            newChassisUserPilot.setPilotLong(pilotId);
            newChassisUserPilot.setChassisLong(chassis);
+           newChassisUserPilot.setDtregister(new Timestamp(System.currentTimeMillis()));
+           newChassisUserPilot.setStatus("A");
 
            chassisUserPilotRepository.save(newChassisUserPilot);
 
@@ -61,16 +65,22 @@ public class ChassisUserPilotService {
 
         List<ChassisUserPilot> listOwners = chassisUserPilotRepository.findAll();
 
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+
         for (ChassisUserPilot list : listOwners) {
             ChassisUserPilotDTO dto = new ChassisUserPilotDTO();
 
             String pilot = userRepository.getUserNameByUserId(list.getPilotLong());
             String owner = userRepository.getUserNameByUserId(list.getOwner().getUserLong());
 
+            String formatedDate = dateFormat.format(list.getDtregister());
+
             dto.setId(list.getId());
             dto.setOwner(owner);
             dto.setPilot(pilot);
             dto.setChassis(list.getChassisLong());
+            dto.setDate_register(formatedDate);
+            dto.setStatus(list.getStatus());
 
             listDTO.add(dto);
 
@@ -92,6 +102,25 @@ public class ChassisUserPilotService {
 
             chassisUserPilotRepository.delete(chassisUserPilot);
 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Transactional
+    public void updatePilotStatus(Long id, String status) {
+
+        try {
+
+
+            if (Objects.equals(status, "Active")) {
+                chassisUserPilotRepository.updatePilotStatus("I", id);
+            }
+
+            if (Objects.equals(status, "Inactive")) {
+                chassisUserPilotRepository.updatePilotStatus("A", id);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }

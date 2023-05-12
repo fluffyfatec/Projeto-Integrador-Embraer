@@ -5,25 +5,32 @@
             <div class="div-header">
                 <h1 class="title">Chassis of {{ $route.params.sb }} ({{ $route.params.part === 'UNICO' ? 'UNIQUE' : $route.params.part }})</h1>
                 <div class="div-btn-download">
-                    <button class="btn-download">
+                    <button class="btn-download" @click.prevent="downloadPDF">
                         <i class="fa-solid fa-file-arrow-down"></i>
                         <i class="txt-btn-download">Download PDF</i>
                     </button>
                 </div>
             </div>
-            <div class="filter">
-                <div class="micro-container">
-                    <input type="checkbox" v-model="ApplicableFilter">
-                    <label>Applicable</label>
+            <div class="filter-container">
+                <div class="filter">
+                    <div class="micro-container">
+                        <input type="checkbox" v-model="ApplicableFilter">
+                        <label>Applicable</label>
+                    </div>
+                    <div class="micro-container">
+                        <input type="checkbox" v-model="NotApplicableFilter">
+                        <label>Not Applicable</label>
+                    </div>
+                    <div class="micro-container">
+                        <input type="checkbox" v-model="IncorporatedFilter">
+                        <label>Incorporated</label>
+                    </div>               
                 </div>
-                <div class="micro-container">
-                    <input type="checkbox" v-model="NotApplicableFilter">
-                    <label>Not Applicable</label>
-                </div>
-                <div class="micro-container">
-                    <input type="checkbox" v-model="IncorporatedFilter">
-                    <label>Incorporated</label>
-                </div>               
+                <div v-if="!createNew" class="new-sb">
+                        <button @click.prevent="createNew = true">
+                            <i class="fa-solid fa-plus"></i> New Chassis
+                        </button>
+                    </div>
             </div> 
             <div class="table-wrapper">
                 <table cellspacing="0">
@@ -32,12 +39,68 @@
                         <th>Applicable</th>
                         <th>Not Applicable</th>
                         <th>Incorporated</th>
+                        <th>Options</th>
+                    </tr>
+                    <tr v-if="createNew">
+                        <td colspan="4" class="full-width">
+                            <form @submit.prevent="registerNew" class="center">
+                                <div class="create-container">
+                                    <div class="chassis">
+                                        <select v-model="newSb.chassis">
+                                            <option v-for="c in select_chassis">{{ c.chassi }}</option>
+                                        </select>
+                                    </div>
+                                    <div class="sb-status">
+                                        <select v-model="newSb.status">
+                                            <option>APPLICABLE</option>
+                                            <option>NOT APPLICABLE</option>
+                                            <option>INCORPORATED</option>
+                                        </select>
+                                    </div>
+                                    
+                                </div>
+                            </form>    
+                        </td>
+                        <td>
+                            <div class="create-btn">
+                                        <div class="button-submit">
+                                            <button v-if="newSb.chassis !== null && newSb.status !== null" type="submit" class="submit">
+                                                <i class="fa-solid fa-check"></i>            
+                                            </button>
+                                        </div>
+                                        <div class="button-cancel">
+                                            <button @click.prevent="createNew = false">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                        </td>
                     </tr>
                     <tr v-for="plane in planes" :key="plane.chassi">
                         <td>{{ plane.chassi }}</td>
-                        <td><input v-if="plane.status == 'APPLICABLE'" type="checkbox" onclick="return false;" checked readonly><input v-else type="checkbox" onclick="return false;" readonly></td>
-                        <td><input v-if="plane.status != 'APPLICABLE' && plane.status != 'INCORP' && plane.status != 'INCORPORATED' && plane.status != 'INCOPORATED'" type="checkbox" onclick="return false;" checked readonly><input v-else type="checkbox" onclick="return false;" readonly></td>
-                        <td><input v-if="plane.status == 'INCORP' || plane.status == 'INCORPORATED' || plane.status == 'INCOPORATED'" type="checkbox" onclick="return false;" checked readonly><input v-else type="checkbox" onclick="return false;" readonly></td>
+                        <td>
+                            <input v-if="!plane.edition" type="checkbox" :class="{ 'disabled': !plane.edition }" v-model="plane.checkbox1" value="APPLICABLE" :checked="plane.status == 'APPLICABLE' ? plane.checkbox1 = true : plane.checkbox1 = false">
+                            <input v-else type="checkbox" :value="plane.id" :checked="plane.selectedStatus === 'APPLICABLE'" @change="plane.selectedStatus = 'APPLICABLE'">
+                        </td>
+                        <td>
+                            <input v-if="!plane.edition" type="checkbox" :class="{ 'disabled': !plane.edition }" v-model="plane.checkbox2" value="NOT APPLICABLE" :checked="plane.status != 'APPLICABLE' && plane.status != 'INCORP' && plane.status != 'INCORPORATED' && plane.status != 'INCOPORATED' ? plane.checkbox2 = true : plane.checkbox2 = false">
+                            <input v-else type="checkbox" :value="plane.id" :checked="plane.selectedStatus === 'NOT APPLICABLE'" @change="plane.selectedStatus = 'NOT APPLICABLE'">
+                        </td>
+                        <td>
+                            <input v-if="!plane.edition" type="checkbox" :class="{ 'disabled': !plane.edition }" v-model="plane.checkbox3" value="INCORPORATED" :checked="plane.status == 'INCORP' || plane.status == 'INCORPORATED' || plane.status == 'INCOPORATED' ? plane.checkbox3 = true : plane.checkbox3 = false">
+                            <input v-else type="checkbox" :value="plane.id" :checked="plane.selectedStatus === 'INCORPORATED'" @change="plane.selectedStatus = 'INCORPORATED'">
+                        </td>                    
+                        <td>
+                            <button v-if="!plane.edition" @click.prevent="plane.edition = true">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </button>
+                            <button v-if="plane.edition" @click.prevent="saveNewStatus(plane.chassi, plane.selectedStatus); plane.edition = false">
+                                <i class="fa-solid fa-check"></i>
+                            </button>
+                            <button v-if="plane.edition" @click.prevent="plane.edition = false" class="x-btn">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </td>
                     </tr>
                 </table>
             </div>    
@@ -49,13 +112,16 @@
 import axios from 'axios';
 import { eventBus } from '@/main';
 import ReturnSbs from '@/components/ReturnSbs.vue';
-import globalData from '@/globals'
+import globalData from '@/globals';
+import FileSaver from 'file-saver';
 
 export default {
     
     data() {
         return {
+            createNew: false,
             planes: [],
+            select_chassis: [],
             searchTerm: '',
             ApplicableFilter: true,
             NotApplicableFilter: true,
@@ -64,11 +130,18 @@ export default {
             planesNotApplicable: [],
             planesIncorporated: [],
             g: globalData,
+            newSb: {
+                name: this.$route.params.sb,
+                part: this.$route.params.part,
+                status: null,
+                chassis: null,
+            },
         }
     },
 
     mounted() {
         this.getPlanes();
+        this.getSelectChassis();
 
         if (this.g.userRole == "EDITOR" || this.g.userRole == "ADMIN") {
             return
@@ -121,17 +194,29 @@ export default {
 
             if (this.g.userRole === 'ADMIN') {
             const response = await axios.get('http://localhost:8080/chassi/sb/' + sb + '/' + part);
-            this.planes = response.data.map((item: String) => ({
+            this.planes = response.data.map((item: String, index: number) => ({
+                id: index,
                 chassi: item.chassi,
-                status: item.sb_status
+                status: item.sb_status,
+                checkbox1: false,
+                checkbox2: false,
+                checkbox3: false,
+                edition: false,
+                selectedStatus: null
                 }));
             };
 
             if (this.g.userRole === 'EDITOR') {
             const response = await axios.get('http://localhost:8080/chassi/sb/editor/' + sb + '/' + part);
-            this.planes = response.data.map((item: String) => ({
+            this.planes = response.data.map((item: String, index: number) => ({
+                id: index,
                 chassi: item.chassi,
-                status: item.sb_status
+                status: item.sb_status,
+                checkbox1: false,
+                checkbox2: false,
+                checkbox3: false,
+                edition: false,
+                selectedStatus: null
                 }));
             };
 
@@ -169,6 +254,113 @@ export default {
             }
         },
 
+        async saveNewStatus(chassis: number, status: string) {
+
+            var sb = this.$route.params.sb;
+            var part = this.$route.params.part;
+
+            if (part === 'UNIQUE') {
+                part = 'UNICO';
+            };
+            
+            await axios.get('http://localhost:8080/edit-sb-status/' + sb + '/' + part + '/' + chassis + '/' + status);
+
+            this.getPlanes();
+        },
+
+        async registerNew() {
+
+            if (this.newSb.part === 'UNIQUE') {
+                this.newSb.part = 'UNICO';
+            };
+
+            await axios.post('http://localhost:8080/register-new-sb-or-chassi', this.newSb, {
+                    headers: {
+                    'Content-Type': 'application/json'
+                    }
+
+                });
+
+            this.getPlanes();
+            this.getSelectChassis();   
+            
+            this.createNew = false;
+            this.newSb.status = null;
+            this.newSb.chassis = null;
+
+        },
+
+        async getSelectChassis() {
+            var sb = this.$route.params.sb;
+            var part = this.$route.params.part;
+
+            if (part === 'UNIQUE') {
+                part = 'UNICO';
+            };
+
+            if (this.g.userRole === 'ADMIN') {
+            const response = await axios.get('http://localhost:8080/chassi/list/admin/exclude-how-have-sb/' + sb + '/' + part);
+            this.select_chassis = response.data.map((item: String) => ({
+                chassi: item.chassi_id,
+                }));
+            };
+
+            if (this.g.userRole === 'EDITOR') {
+            const response = await axios.get('http://localhost:8080/chassi/list/editor/exclude-how-have-sb/' + sb + '/' + part);
+            this.select_chassis = response.data.map((item: String) => ({
+                chassi: item.chassi_id,
+                }));
+            };
+
+        },
+
+        async downloadPDF() {
+
+            var sb = this.$route.params.sb;
+            var part = this.$route.params.part;
+
+            if (part === 'UNIQUE') {
+                part = 'UNICO';
+            };
+
+            // Faz a requisição para o método do Spring Boot
+            if (this.g.userRole === 'ADMIN') {
+                const response = await axios.get('http://localhost:8080/report-sbs-admin/' + sb + '/' + part, {
+                    responseType: 'blob' // Define o tipo de resposta como Blob
+                });
+
+                // Obtém o nome do arquivo a partir do cabeçalho Content-Disposition
+                const contentDispositionHeader = response.headers['content-disposition'];
+                const filenameRegex = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/;
+                const matches = filenameRegex.exec(contentDispositionHeader);
+                const filename = matches != null && matches[1] ? matches[1].replace(/['"]/g, '') : 'report.pdf';
+
+                // Cria um objeto Blob com a resposta recebida do servidor
+                const blob = new Blob([response.data], { type: 'application/pdf' });
+
+                // Salva o arquivo com o nome obtido do cabeçalho Content-Disposition
+                FileSaver.saveAs(blob, filename);
+            };
+
+            if (this.g.userRole === 'EDITOR') {
+                const response = await axios.get('http://localhost:8080/report-sbs-editor/' + sb + '/' + part, {
+                    responseType: 'blob' // Define o tipo de resposta como Blob
+                });
+
+                // Obtém o nome do arquivo a partir do cabeçalho Content-Disposition
+                const contentDispositionHeader = response.headers['content-disposition'];
+                const filenameRegex = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/;
+                const matches = filenameRegex.exec(contentDispositionHeader);
+                const filename = matches != null && matches[1] ? matches[1].replace(/['"]/g, '') : 'report.pdf';
+
+                // Cria um objeto Blob com a resposta recebida do servidor
+                const blob = new Blob([response.data], { type: 'application/pdf' });
+
+                // Salva o arquivo com o nome obtido do cabeçalho Content-Disposition
+                FileSaver.saveAs(blob, filename);
+            };
+
+        },
    
     },
 
@@ -199,7 +391,30 @@ export default {
 .filter{
     display: flex;  
     justify-content: center;
-}
+    padding-left: 3.8rem;
+        
+    }
+    .micro-container{
+    border: 1px solid;
+    border-color: var(--azul-principal);
+    border-radius: 5px;
+    background-color: var(--platinum);
+    margin-right: 20px;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        
+    }
+
+    .div-header{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+    }
+
+  .btn-download{
+    align-self:flex-end;
+    margin-left: 2rem;
+  }
 .title {
     color: var(--azul-principal);
     margin-left: 25px;
@@ -275,8 +490,84 @@ td {
    
     }
 
+    input[type=checkbox].disabled {
+    pointer-events: none;
+    }
 
     tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
+
+    .select-part{
+        border-color: var(--azul-claro-light);
+        border-radius: 5px;
+        width: 7rem;
+        height: 6rem;
+        font-size:large;
+    }
+
+    .sb-status select{
+        border-color: var(--azul-claro-light);
+        border-radius: 5px;
+        width: 12rem;
+        height: 2.1rem;
+        font-size:large;
+    }
+
+    .create-container{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    input{
+        margin: 0;
+    }
+
+    .create-btn{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .new-sb{
+        display: flex;
+        justify-content: center;
+        padding-top: 1rem;
+    }
+    .new-sb button{
+        font-size: 18px;
+        margin-left: 10px;
+        width: 14rem;
+        height: 3rem;
+        border-radius: 5px;
+        background-color: var(--azul-principal);
+        color: var(--white);
+        border-color: var(--azul-claro-light);
+    }
+
+    button{
+        height: 30px;
+        width: 30px;
+    }
+
+    .filter-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button-cancel button{
+        background-color: #f55133;
+        border-color: rgb(44, 41, 41);
+    }
+
+    .x-btn{
+        background-color: #f55133;
+        border-color: rgb(44, 41, 41);
+
+    }
+
+
+
+
+
 
 
 /* --------------- Media Queries -------------------- */
@@ -330,11 +621,46 @@ td {
         padding: 10px;
     }
 
+    
+
 }
 
 /* Estilos para mobile */
 @media only screen and (max-width: 767px) {
+    .filter{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0;
+        
+    }
 
+    
+    .micro-container{
+        display: flex;
+        align-self: center;
+        width: 40%;
+        height: auto;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        
+    }
+    .micro-container label{
+        display: flex;
+        align-self: center;
+    }
+
+
+    .div-header{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+    }
+
+    .btn-download{
+    align-self:center;
+    margin-left: 2rem;
+     }
     .title {
         margin-left: 25px;
     }

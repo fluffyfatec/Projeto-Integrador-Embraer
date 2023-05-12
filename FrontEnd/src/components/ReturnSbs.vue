@@ -27,7 +27,8 @@ export default {
     },
 
     mounted() {
-        this.getSbs();
+        
+        this.getSbs();    
 
     },
 

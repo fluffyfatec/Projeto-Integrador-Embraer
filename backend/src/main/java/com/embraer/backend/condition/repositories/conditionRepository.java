@@ -21,10 +21,12 @@ public interface conditionRepository extends JpaRepository<Condition, Long> {
 
     @Modifying
     @Query("UPDATE Condition c SET c.formulaId = :formulaId WHERE c.conditionId = :conditionId")
+    @Transactional
     void updateFormulaId(@Param("conditionId") Long conditionId, @Param("formulaId") Formula formulaId);
 
     @Modifying
     @Query("UPDATE Condition c SET c.chassisBiggerThenId = :chassisBiggerThenId WHERE c.conditionId = :conditionId")
+    @Transactional
     void updateChassisBiggerThen(@Param("conditionId") Long conditionId, @Param("chassisBiggerThenId") Chassis chassis);
 
     @Modifying

@@ -60,4 +60,21 @@ public class ChassisUserOwnerController {
 
     }
 
+    @CrossOrigin
+    @GetMapping("/update-owner-status/{id}/{status}")
+    public ResponseEntity<?> updateOwnerStatus(@PathVariable("id") Long id,
+                                              @PathVariable("status") String status) {
+        try {
+            chassisUserOwnerService.updateOwnerStatus(id, status);
+
+            return ResponseEntity.ok("SUCCESS");
+        } catch (Exception e) {
+            e.printStackTrace();
+
+            return ResponseEntity.ok("NOT SUCCESS");
+        }
+
+    }
+
+
 }

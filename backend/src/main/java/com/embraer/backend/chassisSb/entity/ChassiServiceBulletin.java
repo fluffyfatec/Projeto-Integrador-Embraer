@@ -15,6 +15,7 @@ import javax.validation.constraints.NotNull;
 
 
 import com.embraer.backend.chassis.entity.Chassis;
+import com.embraer.backend.item.entity.Item;
 import com.embraer.backend.serviceBulletin.entity.ServiceBulletin;
 
 import lombok.Data;
@@ -48,7 +49,27 @@ public class ChassiServiceBulletin {
 	@JoinColumn(name="CHASSI_ID")
 	@ManyToOne(fetch = FetchType.LAZY)
 	private Chassis chassiId;
-	
+
+
+	public Long getServiceBulletinIdLong() {
+		return serviceBulletinId.getServiceBulletinId();
+	}
+
+	public void setServiceBulletinIdLong(Long serviceBulletinId) {
+		ServiceBulletin serviceBulletin = new ServiceBulletin();
+		serviceBulletin.setServiceBulletinId(serviceBulletinId);
+		this.serviceBulletinId = serviceBulletin;
+	}
+
+	public Long getChassiIdLong() {
+		return chassiId.getChassiId();
+	}
+
+	public void setChassiIdLong(Long chassiId) {
+		Chassis chassis = new Chassis();
+		chassis.setChassiId(chassiId);
+		this.chassiId = chassis;
+	}
 
 }
 

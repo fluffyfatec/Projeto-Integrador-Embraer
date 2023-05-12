@@ -58,7 +58,7 @@ public class ConditionService {
             Condition newCondition = new Condition();
             newCondition.setItemIdLong(itemRepository.findItemIdByItemName(conditionDTO.getItem()));
 
-            // If formulaId don't exist, create a a new insert in Formula
+            // If formulaId don't exist, create a new insert in Formula
             if (formulaRepository.findFormulaIdByFormulaDesc(conditionDTO.getFormulaDesc()) == null) {
                 Formula newFormula = new Formula();
                 newFormula.setFormulaDescription(conditionDTO.getFormulaDesc());
