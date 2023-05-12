@@ -161,6 +161,8 @@ export default {
       localStorage.removeItem('token');
 
       router.push('/login');
+
+      location.reload(); // recarrega a página para reiniciar o mounted()
    
     },
 

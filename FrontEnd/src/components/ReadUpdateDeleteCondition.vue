@@ -4,7 +4,7 @@
         <div class="div-header">
             <h1 class="title">List of Items</h1>
             <div class="div-btn-download">
-                <button class="btn-download">
+                <button class="btn-download" @click.prevent="downloadPDF">
                     <i class="fa-solid fa-file-arrow-down"></i>
                     <i class="txt-btn-download">Download PDF</i>
                 </button>
@@ -78,6 +78,7 @@ import EditFormula3 from './EditCrudCondition/EditFormula3.vue';
 import EditFormula4 from './EditCrudCondition/EditFormula4.vue';
 import EditFormula5 from './EditCrudCondition/EditFormula5.vue';
 import EditFormulaX from './EditCrudCondition/EditFormulaX.vue';
+import FileSaver from 'file-saver';
 
 export default {
     data() {
@@ -140,6 +141,27 @@ export default {
             await axios.get('http://localhost:8080/update-item-status/' + itemId + '/' + status);
 
             this.getItems();
+        },
+
+        async downloadPDF() {
+
+            // Faz a requisição para o método do Spring Boot
+            const response = await axios.get('http://localhost:8080/report-condition', {
+                responseType: 'blob' // Define o tipo de resposta como Blob
+            });
+
+            // Obtém o nome do arquivo a partir do cabeçalho Content-Disposition
+            const contentDispositionHeader = response.headers['content-disposition'];
+            const filenameRegex = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/;
+            const matches = filenameRegex.exec(contentDispositionHeader);
+            const filename = matches != null && matches[1] ? matches[1].replace(/['"]/g, '') : 'report.pdf';
+
+            // Cria um objeto Blob com a resposta recebida do servidor
+            const blob = new Blob([response.data], { type: 'application/pdf' });
+
+            // Salva o arquivo com o nome obtido do cabeçalho Content-Disposition
+            FileSaver.saveAs(blob, filename);
+
         },
         
     },

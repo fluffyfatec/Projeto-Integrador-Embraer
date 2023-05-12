@@ -5,7 +5,7 @@
             <div class="div-header">
                 <h1 class="title">Chassis of {{ $route.params.sb }} ({{ $route.params.part === 'UNICO' ? 'UNIQUE' : $route.params.part }})</h1>
                 <div class="div-btn-download">
-                    <button class="btn-download">
+                    <button class="btn-download" @click.prevent="downloadPDF">
                         <i class="fa-solid fa-file-arrow-down"></i>
                         <i class="txt-btn-download">Download PDF</i>
                     </button>
@@ -112,7 +112,8 @@
 import axios from 'axios';
 import { eventBus } from '@/main';
 import ReturnSbs from '@/components/ReturnSbs.vue';
-import globalData from '@/globals'
+import globalData from '@/globals';
+import FileSaver from 'file-saver';
 
 export default {
     
@@ -313,7 +314,53 @@ export default {
 
         },
 
+        async downloadPDF() {
 
+            var sb = this.$route.params.sb;
+            var part = this.$route.params.part;
+
+            if (part === 'UNIQUE') {
+                part = 'UNICO';
+            };
+
+            // Faz a requisição para o método do Spring Boot
+            if (this.g.userRole === 'ADMIN') {
+                const response = await axios.get('http://localhost:8080/report-sbs-admin/' + sb + '/' + part, {
+                    responseType: 'blob' // Define o tipo de resposta como Blob
+                });
+
+                // Obtém o nome do arquivo a partir do cabeçalho Content-Disposition
+                const contentDispositionHeader = response.headers['content-disposition'];
+                const filenameRegex = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/;
+                const matches = filenameRegex.exec(contentDispositionHeader);
+                const filename = matches != null && matches[1] ? matches[1].replace(/['"]/g, '') : 'report.pdf';
+
+                // Cria um objeto Blob com a resposta recebida do servidor
+                const blob = new Blob([response.data], { type: 'application/pdf' });
+
+                // Salva o arquivo com o nome obtido do cabeçalho Content-Disposition
+                FileSaver.saveAs(blob, filename);
+            };
+
+            if (this.g.userRole === 'EDITOR') {
+                const response = await axios.get('http://localhost:8080/report-sbs-editor/' + sb + '/' + part, {
+                    responseType: 'blob' // Define o tipo de resposta como Blob
+                });
+
+                // Obtém o nome do arquivo a partir do cabeçalho Content-Disposition
+                const contentDispositionHeader = response.headers['content-disposition'];
+                const filenameRegex = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/;
+                const matches = filenameRegex.exec(contentDispositionHeader);
+                const filename = matches != null && matches[1] ? matches[1].replace(/['"]/g, '') : 'report.pdf';
+
+                // Cria um objeto Blob com a resposta recebida do servidor
+                const blob = new Blob([response.data], { type: 'application/pdf' });
+
+                // Salva o arquivo com o nome obtido do cabeçalho Content-Disposition
+                FileSaver.saveAs(blob, filename);
+            };
+
+        },
    
     },
 
