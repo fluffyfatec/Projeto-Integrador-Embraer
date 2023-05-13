@@ -192,7 +192,7 @@ Mobile
 ## Burndown
 
 <p align="center">
-      <img src="GIT/burndown2.png" width="100%" height="100%">
+      <img src="GIT/burndonw3_auto_x2_auto_x2.jpg" width="100%" height="100%">
 <p align="center">
 
 
