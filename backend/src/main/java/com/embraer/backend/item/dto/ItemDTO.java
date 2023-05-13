@@ -10,7 +10,6 @@ public class ItemDTO {
     private Long itemId;
     private String itemName;
     private String itemDtregister;
-
     private String status;
 
 }

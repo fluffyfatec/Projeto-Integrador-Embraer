@@ -1,631 +1,653 @@
 <template>
-    <form @submit.prevent="EditionConfirm">
-        <div class="condition1">
-            <div class="sb1">
-                <select class="select-sb1" v-model="conditionDTO.sb1">
-                    <option class="select-placeholder" disabled :value="null">Choose sb1...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb1 !== null" class="select-sb1-part" 
-                v-model="conditionDTO.sb1_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts1" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>
+    <form @submit.prevent="EditionConfirm" class="center">
+        <div class="align">
+            <div class="condition1">
+                <div class="micro">
+                <div class="sb1">
+                    <select class="select-sb1" v-model="conditionDTO.sb1">
+                        <option class="select-placeholder" :value="null">Choose sb...</option>
+                        <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                            {{ sb.sb_name }}
+                        </option>
+                    </select>
+                    <select v-if="conditionDTO.sb1 !== null" class="select-sb-part" 
+                    v-model="conditionDTO.sb1_part">
+                        <option class="select-placeholder" disabled :value="null">Part</option>
+                        <option v-for="part in filteredParts1" :key="part.part">
+                            {{ part.part }}
+                        </option>
+                    </select>
+                </div>
+                <div v-if="conditionDTO.sb1 !== null && conditionDTO.sb2 !== null" class="clause">
+                    <select class="select-clause" v-model="conditionDTO.operator_condit_1">
+                        <option>AND</option>
+                        <option>OR</option>
+                    </select>
+                </div>
+                <div class="sb2">
+                    <select v-if="conditionDTO.sb1 !== null" class="select-sb2" v-model="conditionDTO.sb2">
+                        <option class="select-placeholder" :value="null">Choose sb...</option>
+                        <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                            {{ sb.sb_name }}
+                        </option>
+                    </select>
+                    <select v-if="conditionDTO.sb2 !== null" class="select-sb-part" 
+                    v-model="conditionDTO.sb2_part">
+                        <option class="select-placeholder" disabled :value="null">Part</option>
+                        <option v-for="part in filteredParts2" :key="part.part">
+                            {{ part.part }}
+                        </option>
+                    </select>    
+                </div>
+                <div v-if="conditionDTO.sb2 !== null && conditionDTO.sb3 !== null" class="clause">
+                    <select class="select-clause" v-model="conditionDTO.operator_condit_1">
+                        <option>AND</option>
+                        <option>OR</option>
+                    </select>
+                </div>    
+                <div class="sb3">
+                    <select v-if="conditionDTO.sb2 !== null" class="select-sb3" v-model="conditionDTO.sb3">
+                        <option class="select-placeholder" :value="null">Choose sb...</option>
+                        <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                            {{ sb.sb_name }}
+                        </option>
+                    </select>
+                    <select v-if="conditionDTO.sb3 !== null" class="select-sb-part" 
+                    v-model="conditionDTO.sb3_part">
+                        <option class="select-placeholder" disabled :value="null">Part</option>
+                        <option v-for="part in filteredParts3" :key="part.part">
+                            {{ part.part }}
+                        </option>
+                    </select>
+                </div>
+                <div v-if="conditionDTO.sb3 !== null && conditionDTO.sb4 !== null" class="clause">
+                    <select class="select-clause" v-model="conditionDTO.operator_condit_1">
+                        <option>AND</option>
+                        <option>OR</option>
+                    </select>
+                </div>
+                <div class="sb4">
+                    <select v-if="conditionDTO.sb3 !== null" class="select-sb4" v-model="conditionDTO.sb4">
+                        <option class="select-placeholder" :value="null">Choose sb...</option>
+                        <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                            {{ sb.sb_name }}
+                        </option>
+                    </select>
+                    <select v-if="conditionDTO.sb4 !== null" class="select-sb-part" 
+                    v-model="conditionDTO.sb4_part">
+                        <option class="select-placeholder" disabled :value="null">Part</option>
+                        <option v-for="part in filteredParts4" :key="part.part">
+                            {{ part.part }}
+                        </option>
+                    </select>    
+                </div>
+                <div v-if="conditionDTO.sb4 !== null && conditionDTO.sb5 !== null" class="clause">
+                    <select class="select-clause" v-model="conditionDTO.operator_condit_1">
+                        <option>AND</option>
+                        <option>OR</option>
+                    </select>
+                </div>    
+                <div class="sb5">
+                    <select v-if="conditionDTO.sb4 !== null" class="select-sb5" v-model="conditionDTO.sb5">
+                        <option class="select-placeholder" :value="null">Choose sb...</option>
+                        <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                            {{ sb.sb_name }}
+                        </option>
+                    </select>
+                    <select v-if="conditionDTO.sb5 !== null" class="select-sb-part" 
+                    v-model="conditionDTO.sb5_part">
+                        <option class="select-placeholder" disabled :value="null">Part</option>
+                        <option v-for="part in filteredParts5" :key="part.part">
+                            {{ part.part }}
+                        </option>
+                    </select>
+                </div>
+                <div v-if="conditionDTO.sb5 !== null && conditionDTO.sb6 !== null" class="clause">
+                    <select class="select-clause" v-model="conditionDTO.operator_condit_1">
+                        <option>AND</option>
+                        <option>OR</option>
+                    </select>
+                </div>
+                <div class="sb6">
+                    <select v-if="conditionDTO.sb5 !== null" class="select-sb6" v-model="conditionDTO.sb6">
+                        <option class="select-placeholder" :value="null">Choose sb...</option>
+                        <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                            {{ sb.sb_name }}
+                        </option>
+                    </select>
+                    <select v-if="conditionDTO.sb6 !== null" class="select-sb-part" 
+                    v-model="conditionDTO.sb6_part">
+                        <option class="select-placeholder" disabled :value="null">Part</option>
+                        <option v-for="part in filteredParts6" :key="part.part">
+                            {{ part.part }}
+                        </option>
+                    </select> 
+                    </div>   
+                </div>    
+            </div>  
+            <div class = "button">
+                <button v-if="!showCondition2" @click.prevent="showCondition2 = true"><i class="fa-solid fa-plus"></i> New micro-logic</button>
             </div>
-            <div v-if="conditionDTO.sb1 !== null && conditionDTO.sb2 !== null" class="clause">
-                <select class="select-clause-1" v-model="conditionDTO.operator_condit_1">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
+            <div v-if="showCondition2" class="condition2">
+                <div class="micro">
+                    <div class="sb7">
+                        <select class="select-sb7" v-model="conditionDTO.sb7">
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
+                            <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                                {{ sb.sb_name }}
+                            </option>
+                        </select>
+                        <select v-if="conditionDTO.sb7 !== null" class="select-sb-part" 
+                        v-model="conditionDTO.sb7_part">
+                            <option class="select-placeholder" disabled :value="null">Part</option>
+                            <option v-for="part in filteredParts7" :key="part.part">
+                                {{ part.part }}
+                            </option>
+                        </select>
+                    </div>
+                    <div v-if="conditionDTO.sb7 !== null && conditionDTO.sb8 !== null" class="clause">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_2">
+                            <option>AND</option>
+                            <option>OR</option>
+                        </select>
+                    </div>
+                    <div class="sb8">
+                        <select v-if="conditionDTO.sb7 !== null" class="select-sb8" v-model="conditionDTO.sb8">
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
+                            <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                                {{ sb.sb_name }}
+                            </option>
+                        </select>
+                        <select v-if="conditionDTO.sb8 !== null" class="select-sb-part" 
+                        v-model="conditionDTO.sb8_part">
+                            <option class="select-placeholder" disabled :value="null">Part</option>
+                            <option v-for="part in filteredParts8" :key="part.part">
+                                {{ part.part }}
+                            </option>
+                        </select>    
+                    </div>
+                    <div v-if="conditionDTO.sb8 !== null && conditionDTO.sb9 !== null" class="clause">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_2">
+                            <option>AND</option>
+                            <option>OR</option>
+                        </select>
+                    </div>    
+                    <div class="sb9">
+                        <select v-if="conditionDTO.sb8 !== null" class="select-sb9" v-model="conditionDTO.sb9">
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
+                            <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                                {{ sb.sb_name }}
+                            </option>
+                        </select>
+                        <select v-if="conditionDTO.sb9 !== null" class="select-sb-part" 
+                        v-model="conditionDTO.sb9_part">
+                            <option class="select-placeholder" disabled :value="null">Part</option>
+                            <option v-for="part in filteredParts9" :key="part.part">
+                                {{ part.part }}
+                            </option>
+                        </select>
+                    </div>
+                    <div v-if="conditionDTO.sb9 !== null && conditionDTO.sb10 !== null" class="clause">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_2">
+                            <option>AND</option>
+                            <option>OR</option>
+                        </select>
+                    </div>
+                    <div class="sb10">
+                        <select v-if="conditionDTO.sb9 !== null" class="select-sb10" v-model="conditionDTO.sb10">
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
+                            <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                                {{ sb.sb_name }}
+                            </option>
+                        </select>
+                        <select v-if="conditionDTO.sb10 !== null" class="select-sb-part" 
+                        v-model="conditionDTO.sb10_part">
+                            <option class="select-placeholder" disabled :value="null">Part</option>
+                            <option v-for="part in filteredParts10" :key="part.part">
+                                {{ part.part }}
+                            </option>
+                        </select>    
+                    </div>
+                    <div v-if="conditionDTO.sb10 !== null && conditionDTO.sb11 !== null" class="clause">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_2">
+                            <option>AND</option>
+                            <option>OR</option>
+                        </select>
+                    </div>    
+                    <div class="sb11">
+                        <select v-if="conditionDTO.sb10 !== null" class="select-sb11" v-model="conditionDTO.sb11">
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
+                            <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                                {{ sb.sb_name }}
+                            </option>
+                        </select>
+                        <select v-if="conditionDTO.sb11 !== null" class="select-sb-part" 
+                        v-model="conditionDTO.sb11_part">
+                            <option class="select-placeholder" disabled :value="null">Part</option>
+                            <option v-for="part in filteredParts11" :key="part.part">
+                                {{ part.part }}
+                            </option>
+                        </select>
+                    </div>
+                    <div v-if="conditionDTO.sb11 !== null && conditionDTO.sb12 !== null" class="clause">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_2">
+                            <option>AND</option>
+                            <option>OR</option>
+                        </select>
+                    </div>
+                    <div class="sb12">
+                        <select v-if="conditionDTO.sb11 !== null" class="select-sb12" v-model="conditionDTO.sb12">
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
+                            <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                                {{ sb.sb_name }}
+                            </option>
+                        </select>
+                        <select v-if="conditionDTO.sb12 !== null" class="select-sb-part" 
+                        v-model="conditionDTO.sb12_part">
+                            <option class="select-placeholder" disabled :value="null">Part</option>
+                            <option v-for="part in filteredParts12" :key="part.part">
+                                {{ part.part }}
+                            </option>
+                        </select>    
+                    </div> 
+                </div>
             </div>
-            <div class="sb2">
-                <select v-if="conditionDTO.sb1 !== null" class="select-sb2" v-model="conditionDTO.sb2">
-                    <option class="select-placeholder" disabled :value="null">Choose sb2...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb2 !== null" class="select-sb2-part" 
-                v-model="conditionDTO.sb2_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts2" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>    
+            <div class = "button">
+                <button v-if="!showCondition3 && showCondition2" @click.prevent="showCondition3 = true"><i class="fa-solid fa-plus"></i> New micro-logic</button>
             </div>
-            <div v-if="conditionDTO.sb2 !== null && conditionDTO.sb3 !== null" class="clause">
-                <select class="select-clause-1" v-model="conditionDTO.operator_condit_1">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
-            </div>    
-            <div class="sb3">
-                <select v-if="conditionDTO.sb2 !== null" class="select-sb3" v-model="conditionDTO.sb3">
-                    <option class="select-placeholder" disabled :value="null">Choose sb3...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb3 !== null" class="select-sb3-part" 
-                v-model="conditionDTO.sb3_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts3" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>
+            <div v-if="showCondition3" class="condition3">
+                <div class="micro">
+                    <div class="sb13">
+                        <select class="select-sb13" v-model="conditionDTO.sb13">
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
+                            <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                                {{ sb.sb_name }}
+                            </option>
+                        </select>
+                        <select v-if="conditionDTO.sb13 !== null" class="select-sb-part" 
+                        v-model="conditionDTO.sb13_part">
+                            <option class="select-placeholder" disabled :value="null">Part</option>
+                            <option v-for="part in filteredParts13" :key="part.part">
+                                {{ part.part }}
+                            </option>
+                        </select>
+                    </div>
+                    <div v-if="conditionDTO.sb13 !== null && conditionDTO.sb14 !== null" class="clause">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_3">
+                            <option>AND</option>
+                            <option>OR</option>
+                        </select>
+                    </div>
+                    <div class="sb14">
+                        <select v-if="conditionDTO.sb13 !== null" class="select-sb14" v-model="conditionDTO.sb14">
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
+                            <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                                {{ sb.sb_name }}
+                            </option>
+                        </select>
+                        <select v-if="conditionDTO.sb14 !== null" class="select-sb-part" 
+                        v-model="conditionDTO.sb14_part">
+                            <option class="select-placeholder" disabled :value="null">Part</option>
+                            <option v-for="part in filteredParts14" :key="part.part">
+                                {{ part.part }}
+                            </option>
+                        </select>    
+                    </div>
+                    <div v-if="conditionDTO.sb14 !== null && conditionDTO.sb15 !== null" class="clause">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_3">
+                            <option>AND</option>
+                            <option>OR</option>
+                        </select>
+                    </div>    
+                    <div class="sb15">
+                        <select v-if="conditionDTO.sb14 !== null" class="select-sb15" v-model="conditionDTO.sb15">
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
+                            <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                                {{ sb.sb_name }}
+                            </option>
+                        </select>
+                        <select v-if="conditionDTO.sb15 !== null" class="select-sb-part" 
+                        v-model="conditionDTO.sb15_part">
+                            <option class="select-placeholder" disabled :value="null">Part</option>
+                            <option v-for="part in filteredParts15" :key="part.part">
+                                {{ part.part }}
+                            </option>
+                        </select>
+                    </div>
+                    <div v-if="conditionDTO.sb15 !== null && conditionDTO.sb16 !== null" class="clause">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_3">
+                            <option>AND</option>
+                            <option>OR</option>
+                        </select>
+                    </div>
+                    <div class="sb16">
+                        <select v-if="conditionDTO.sb15 !== null" class="select-sb16" v-model="conditionDTO.sb16">
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
+                            <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                                {{ sb.sb_name }}
+                            </option>
+                        </select>
+                        <select v-if="conditionDTO.sb16 !== null" class="select-sb-part" 
+                        v-model="conditionDTO.sb16_part">
+                            <option class="select-placeholder" disabled :value="null">Part</option>
+                            <option v-for="part in filteredParts16" :key="part.part">
+                                {{ part.part }}
+                            </option>
+                        </select>    
+                    </div>
+                    <div v-if="conditionDTO.sb16 !== null && conditionDTO.sb17 !== null" class="clause">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_3">
+                            <option>AND</option>
+                            <option>OR</option>
+                        </select>
+                    </div>    
+                    <div class="sb17">
+                        <select v-if="conditionDTO.sb16 !== null" class="select-sb17" v-model="conditionDTO.sb17">
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
+                            <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                                {{ sb.sb_name }}
+                            </option>
+                        </select>
+                        <select v-if="conditionDTO.sb17 !== null" class="select-sb-part" 
+                        v-model="conditionDTO.sb17_part">
+                            <option class="select-placeholder" disabled :value="null">Part</option>
+                            <option v-for="part in filteredParts17" :key="part.part">
+                                {{ part.part }}
+                            </option>
+                        </select>
+                    </div>
+                    <div v-if="conditionDTO.sb17 !== null && conditionDTO.sb18 !== null" class="clause">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_3">
+                            <option>AND</option>
+                            <option>OR</option>
+                        </select>
+                    </div>
+                    <div class="sb18">
+                        <select v-if="conditionDTO.sb17 !== null" class="select-sb18" v-model="conditionDTO.sb18">
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
+                            <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                                {{ sb.sb_name }}
+                            </option>
+                        </select>
+                        <select v-if="conditionDTO.sb18 !== null" class="select-sb-part" 
+                        v-model="conditionDTO.sb18_part">
+                            <option class="select-placeholder" disabled :value="null">Part</option>
+                            <option v-for="part in filteredParts18" :key="part.part">
+                                {{ part.part }}
+                            </option>
+                        </select>    
+                    </div>
+                </div>
+            </div>  
+            <div class="button">  
+                <button v-if="!showCondition4 && showCondition3" @click.prevent="showCondition4 = true"><i class="fa-solid fa-plus"></i> New micro-logic</button>
             </div>
-            <div v-if="conditionDTO.sb3 !== null && conditionDTO.sb4 !== null" class="clause">
-                <select class="select-clause-1" v-model="conditionDTO.operator_condit_1">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
-            </div>
-            <div class="sb4">
-                <select v-if="conditionDTO.sb3 !== null" class="select-sb4" v-model="conditionDTO.sb4">
-                    <option class="select-placeholder" disabled :value="null">Choose sb4...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb4 !== null" class="select-sb4-part" 
-                v-model="conditionDTO.sb4_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts4" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>    
-            </div>
-            <div v-if="conditionDTO.sb4 !== null && conditionDTO.sb5 !== null" class="clause">
-                <select class="select-clause-1" v-model="conditionDTO.operator_condit_1">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
-            </div>    
-            <div class="sb5">
-                <select v-if="conditionDTO.sb4 !== null" class="select-sb5" v-model="conditionDTO.sb5">
-                    <option class="select-placeholder" disabled :value="null">Choose sb5...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb5 !== null" class="select-sb5-part" 
-                v-model="conditionDTO.sb5_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts5" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>
-            </div>
-            <div v-if="conditionDTO.sb5 !== null && conditionDTO.sb6 !== null" class="clause">
-                <select class="select-clause-1" v-model="conditionDTO.operator_condit_1">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
-            </div>
-            <div class="sb6">
-                <select v-if="conditionDTO.sb5 !== null" class="select-sb6" v-model="conditionDTO.sb6">
-                    <option class="select-placeholder" disabled :value="null">Choose sb6...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb6 !== null" class="select-sb6-part" 
-                v-model="conditionDTO.sb6_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts6" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>    
-            </div>    
-        </div>
-        <button v-if="!showCondition2 && conditionDTO.sb7 === null" @click.prevent="showCondition2 = true"><i class="fa-solid fa-plus"></i> New micro-logic</button>
-        <div v-if="showCondition2 || conditionDTO.sb7 !== null" class="condition2">
-            <div class="sb7">
-                <select class="select-sb7" v-model="conditionDTO.sb7">
-                    <option class="select-placeholder" disabled :value="null">Choose sb7...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb7 !== null" class="select-sb7-part" 
-                v-model="conditionDTO.sb7_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts7" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>
-            </div>
-            <div v-if="conditionDTO.sb7 !== null && conditionDTO.sb8 !== null" class="clause">
-                <select class="select-clause-2" v-model="conditionDTO.operator_condit_2">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
-            </div>
-            <div class="sb8">
-                <select v-if="conditionDTO.sb7 !== null" class="select-sb8" v-model="conditionDTO.sb8">
-                    <option class="select-placeholder" disabled :value="null">Choose sb8...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb8 !== null" class="select-sb8-part" 
-                v-model="conditionDTO.sb8_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts8" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>    
-            </div>
-            <div v-if="conditionDTO.sb8 !== null && conditionDTO.sb9 !== null" class="clause">
-                <select class="select-clause-2" v-model="conditionDTO.operator_condit_2">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
-            </div>    
-            <div class="sb9">
-                <select v-if="conditionDTO.sb8 !== null" class="select-sb9" v-model="conditionDTO.sb9">
-                    <option class="select-placeholder" disabled :value="null">Choose sb9...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb9 !== null" class="select-sb9-part" 
-                v-model="conditionDTO.sb9_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts9" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>
-            </div>
-            <div v-if="conditionDTO.sb9 !== null && conditionDTO.sb10 !== null" class="clause">
-                <select class="select-clause-2" v-model="conditionDTO.operator_condit_2">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
-            </div>
-            <div class="sb10">
-                <select v-if="conditionDTO.sb9 !== null" class="select-sb10" v-model="conditionDTO.sb10">
-                    <option class="select-placeholder" disabled :value="null">Choose sb10...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb10 !== null" class="select-sb10-part" 
-                v-model="conditionDTO.sb10_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts10" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>    
-            </div>
-            <div v-if="conditionDTO.sb10 !== null && conditionDTO.sb11 !== null" class="clause">
-                <select class="select-clause-2" v-model="conditionDTO.operator_condit_2">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
-            </div>    
-            <div class="sb11">
-                <select v-if="conditionDTO.sb10 !== null" class="select-sb11" v-model="conditionDTO.sb11">
-                    <option class="select-placeholder" disabled :value="null">Choose sb11...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb11 !== null" class="select-sb11-part" 
-                v-model="conditionDTO.sb11_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts11" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>
-            </div>
-            <div v-if="conditionDTO.sb11 !== null && conditionDTO.sb12 !== null" class="clause">
-                <select class="select-clause-2" v-model="conditionDTO.operator_condit_2">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
-            </div>
-            <div class="sb12">
-                <select v-if="conditionDTO.sb11 !== null" class="select-sb12" v-model="conditionDTO.sb12">
-                    <option class="select-placeholder" disabled :value="null">Choose sb12...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb12 !== null" class="select-sb12-part" 
-                v-model="conditionDTO.sb12_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts12" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>    
+            <div v-if="showCondition4" class="condition4">
+                <div class="micro">
+                    <div class="sb19">
+                        <select class="select-sb19" v-model="conditionDTO.sb19">
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
+                            <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                                {{ sb.sb_name }}
+                            </option>
+                        </select>
+                        <select v-if="conditionDTO.sb19 !== null" class="select-sb-part" 
+                        v-model="conditionDTO.sb19_part">
+                            <option class="select-placeholder" disabled :value="null">Part</option>
+                            <option v-for="part in filteredParts19" :key="part.part">
+                                {{ part.part }}
+                            </option>
+                        </select>
+                    </div>
+                    <div v-if="conditionDTO.sb19 !== null && conditionDTO.sb20 !== null" class="clause">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_4">
+                            <option>AND</option>
+                            <option>OR</option>
+                        </select>
+                    </div>
+                    <div class="sb20">
+                        <select v-if="conditionDTO.sb19 !== null" class="select-sb20" v-model="conditionDTO.sb20">
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
+                            <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                                {{ sb.sb_name }}
+                            </option>
+                        </select>
+                        <select v-if="conditionDTO.sb20 !== null" class="select-sb-part" 
+                        v-model="conditionDTO.sb20_part">
+                            <option class="select-placeholder" disabled :value="null">Part</option>
+                            <option v-for="part in filteredParts20" :key="part.part">
+                                {{ part.part }}
+                            </option>
+                        </select>    
+                    </div>
+                    <div v-if="conditionDTO.sb20 !== null && conditionDTO.sb21 !== null" class="clause">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_4">
+                            <option>AND</option>
+                            <option>OR</option>
+                        </select>
+                    </div>    
+                    <div class="sb21">
+                        <select v-if="conditionDTO.sb20 !== null" class="select-sb21" v-model="conditionDTO.sb21">
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
+                            <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                                {{ sb.sb_name }}
+                            </option>
+                        </select>
+                        <select v-if="conditionDTO.sb21 !== null" class="select-sb-part" 
+                        v-model="conditionDTO.sb21_part">
+                            <option class="select-placeholder" disabled :value="null">Part</option>
+                            <option v-for="part in filteredParts21" :key="part.part">
+                                {{ part.part }}
+                            </option>
+                        </select>
+                    </div>
+                    <div v-if="conditionDTO.sb21 !== null && conditionDTO.sb22 !== null" class="clause">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_4">
+                            <option>AND</option>
+                            <option>OR</option>
+                        </select>
+                    </div>
+                    <div class="sb22">
+                        <select v-if="conditionDTO.sb21 !== null" class="select-sb22" v-model="conditionDTO.sb22">
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
+                            <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                                {{ sb.sb_name }}
+                            </option>
+                        </select>
+                        <select v-if="conditionDTO.sb22 !== null" class="select-sb-part" 
+                        v-model="conditionDTO.sb22_part">
+                            <option class="select-placeholder" disabled :value="null">Part</option>
+                            <option v-for="part in filteredParts22" :key="part.part">
+                                {{ part.part }}
+                            </option>
+                        </select>    
+                    </div>
+                    <div v-if="conditionDTO.sb22 !== null && conditionDTO.sb23 !== null" class="clause">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_4">
+                            <option>AND</option>
+                            <option>OR</option>
+                        </select>
+                    </div>    
+                    <div class="sb23">
+                        <select v-if="conditionDTO.sb22 !== null" class="select-sb23" v-model="conditionDTO.sb23">
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
+                            <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                                {{ sb.sb_name }}
+                            </option>
+                        </select>
+                        <select v-if="conditionDTO.sb23 !== null" class="select-sb-part" 
+                        v-model="conditionDTO.sb23_part">
+                            <option class="select-placeholder" disabled :value="null">Part</option>
+                            <option v-for="part in filteredParts23" :key="part.part">
+                                {{ part.part }}
+                            </option>
+                        </select>
+                    </div>
+                    <div v-if="conditionDTO.sb23 !== null && conditionDTO.sb24 !== null" class="clause">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_4">
+                            <option>AND</option>
+                            <option>OR</option>
+                        </select>
+                    </div>
+                    <div class="sb24">
+                        <select v-if="conditionDTO.sb23 !== null" class="select-sb24" v-model="conditionDTO.sb24">
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
+                            <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                                {{ sb.sb_name }}
+                            </option>
+                        </select>
+                        <select v-if="conditionDTO.sb24 !== null" class="select-sb-part" 
+                        v-model="conditionDTO.sb24_part">
+                            <option class="select-placeholder" disabled :value="null">Part</option>
+                            <option v-for="part in filteredParts24" :key="part.part">
+                                {{ part.part }}
+                            </option>
+                        </select>    
+                    </div> 
+                </div>
+                <div class="button">
+                    <button v-if="!showCondition5 && showCondition4" @click.prevent="showCondition5 = true"><i class="fa-solid fa-plus"></i> New micro-logic</button>
+                </div>
+                <div v-if="showCondition5" class="condition5">
+                    <div class="micro">
+                        <div class="sb25">
+                            <select class="select-sb25" v-model="conditionDTO.sb25">
+                                <option class="select-placeholder" :value="null">Choose sb...</option>
+                                <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                                    {{ sb.sb_name }}
+                                </option>
+                            </select>
+                            <select v-if="conditionDTO.sb25 !== null" class="select-sb-part" 
+                            v-model="conditionDTO.sb25_part">
+                                <option class="select-placeholder" disabled :value="null">Part</option>
+                                <option v-for="part in filteredParts25" :key="part.part">
+                                    {{ part.part }}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div v-if="conditionDTO.sb25 !== null && conditionDTO.sb26 !== null" class="clause">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_5">
+                            <option>AND</option>
+                            <option>OR</option>
+                        </select>
+                    </div>
+                    <div class="sb26">
+                        <select v-if="conditionDTO.sb25 !== null" class="select-sb26" v-model="conditionDTO.sb26">
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
+                            <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                                {{ sb.sb_name }}
+                            </option>
+                        </select>
+                        <select v-if="conditionDTO.sb26 !== null" class="select-sb-part" 
+                        v-model="conditionDTO.sb26_part">
+                            <option class="select-placeholder" disabled :value="null">Part</option>
+                            <option v-for="part in filteredParts26" :key="part.part">
+                                {{ part.part }}
+                            </option>
+                        </select>    
+                    </div>
+                    <div v-if="conditionDTO.sb26 !== null && conditionDTO.sb27 !== null" class="clause">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_5">
+                            <option>AND</option>
+                            <option>OR</option>
+                        </select>
+                    </div>    
+                    <div class="sb27">
+                        <select v-if="conditionDTO.sb26 !== null" class="select-sb27" v-model="conditionDTO.sb27">
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
+                            <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                                {{ sb.sb_name }}
+                            </option>
+                        </select>
+                        <select v-if="conditionDTO.sb27 !== null" class="select-sb-part" 
+                        v-model="conditionDTO.sb27_part">
+                            <option class="select-placeholder" disabled :value="null">Part</option>
+                            <option v-for="part in filteredParts27" :key="part.part">
+                                {{ part.part }}
+                            </option>
+                        </select>
+                    </div>
+                    <div v-if="conditionDTO.sb27 !== null && conditionDTO.sb28 !== null" class="clause">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_5">
+                            <option>AND</option>
+                            <option>OR</option>
+                        </select>
+                    </div>
+                    <div class="sb28">
+                        <select v-if="conditionDTO.sb27 !== null" class="select-sb28" v-model="conditionDTO.sb28">
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
+                            <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                                {{ sb.sb_name }}
+                            </option>
+                        </select>
+                        <select v-if="conditionDTO.sb28 !== null" class="select-sb-part" 
+                        v-model="conditionDTO.sb28_part">
+                            <option class="select-placeholder" disabled :value="null">Part</option>
+                            <option v-for="part in filteredParts28" :key="part.part">
+                                {{ part.part }}
+                            </option>
+                        </select>    
+                    </div>
+                    <div v-if="conditionDTO.sb28 !== null && conditionDTO.sb29 !== null" class="clause">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_5">
+                            <option>AND</option>
+                            <option>OR</option>
+                        </select>
+                    </div>    
+                    <div class="sb29">
+                        <select v-if="conditionDTO.sb28 !== null" class="select-sb29" v-model="conditionDTO.sb29">
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
+                            <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                                {{ sb.sb_name }}
+                            </option>
+                        </select>
+                        <select v-if="conditionDTO.sb29 !== null" class="select-sb-part" 
+                        v-model="conditionDTO.sb29_part">
+                            <option class="select-placeholder" disabled :value="null">Part</option>
+                            <option v-for="part in filteredParts29" :key="part.part">
+                                {{ part.part }}
+                            </option>
+                        </select>
+                    </div>
+                    <div v-if="conditionDTO.sb29 !== null && conditionDTO.sb30 !== null" class="clause">
+                        <select class="select-clause" v-model="conditionDTO.operator_condit_5">
+                            <option>AND</option>
+                            <option>OR</option>
+                        </select>
+                    </div>
+                    <div class="sb30">
+                        <select v-if="conditionDTO.sb29 !== null" class="select-sb30" v-model="conditionDTO.sb30">
+                            <option class="select-placeholder" :value="null">Choose sb...</option>
+                            <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
+                                {{ sb.sb_name }}
+                            </option>
+                        </select>
+                        <select v-if="conditionDTO.sb30 !== null" class="select-sb-part" 
+                        v-model="conditionDTO.sb30_part">
+                            <option class="select-placeholder" disabled :value="null">Part</option>
+                            <option v-for="part in filteredParts30" :key="part.part">
+                                {{ part.part }}
+                            </option>
+                        </select>    
+                    </div> 
+                </div>
             </div> 
+            <div class="clause">
+                <h3>=</h3>
+            </div>    
+            <div class="item">
+                <input type="text" v-model="conditionDTO.item" placeholder="Name of item...">
+            </div>    
+        
+            <div class="center">
+                <button v-if="conditionDTO.item !== null && 
+                    conditionDTO.sb1 !== null && conditionDTO.sb1_part !== null" 
+                type="submit" class="submit">Submit</button>
+                <button @click.prevent="EditionCancel">Cancel</button>
+              <!--  <button @click.prevent="ItemDelete">Delete</button> -->
+            </div>
         </div>
-        <button v-if="!showCondition3 && showCondition2 && conditionDTO.sb13 === null" @click.prevent="showCondition3 = true"><i class="fa-solid fa-plus"></i> New micro-logic</button>
-        <div v-if="showCondition3 || conditionDTO.sb13 !== null" class="condition3">
-            <div class="sb13">
-                <select class="select-sb13" v-model="conditionDTO.sb13">
-                    <option class="select-placeholder" disabled :value="null">Choose sb13...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb13 !== null" class="select-sb13-part" 
-                v-model="conditionDTO.sb13_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts13" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>
-            </div>
-            <div v-if="conditionDTO.sb13 !== null && conditionDTO.sb14 !== null" class="clause">
-                <select class="select-clause-3" v-model="conditionDTO.operator_condit_3">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
-            </div>
-            <div class="sb14">
-                <select v-if="conditionDTO.sb13 !== null" class="select-sb14" v-model="conditionDTO.sb14">
-                    <option class="select-placeholder" disabled :value="null">Choose sb14...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb14 !== null" class="select-sb14-part" 
-                v-model="conditionDTO.sb14_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts14" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>    
-            </div>
-            <div v-if="conditionDTO.sb14 !== null && conditionDTO.sb15 !== null" class="clause">
-                <select class="select-clause-3" v-model="conditionDTO.operator_condit_3">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
-            </div>    
-            <div class="sb15">
-                <select v-if="conditionDTO.sb14 !== null" class="select-sb15" v-model="conditionDTO.sb15">
-                    <option class="select-placeholder" disabled :value="null">Choose sb15...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb15 !== null" class="select-sb15-part" 
-                v-model="conditionDTO.sb15_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts15" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>
-            </div>
-            <div v-if="conditionDTO.sb15 !== null && conditionDTO.sb16 !== null" class="clause">
-                <select class="select-clause-3" v-model="conditionDTO.operator_condit_3">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
-            </div>
-            <div class="sb16">
-                <select v-if="conditionDTO.sb15 !== null" class="select-sb16" v-model="conditionDTO.sb16">
-                    <option class="select-placeholder" disabled :value="null">Choose sb16...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb16 !== null" class="select-sb16-part" 
-                v-model="conditionDTO.sb16_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts16" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>    
-            </div>
-            <div v-if="conditionDTO.sb16 !== null && conditionDTO.sb17 !== null" class="clause">
-                <select class="select-clause-3" v-model="conditionDTO.operator_condit_3">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
-            </div>    
-            <div class="sb17">
-                <select v-if="conditionDTO.sb16 !== null" class="select-sb17" v-model="conditionDTO.sb17">
-                    <option class="select-placeholder" disabled :value="null">Choose sb17...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb17 !== null" class="select-sb17-part" 
-                v-model="conditionDTO.sb17_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts17" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>
-            </div>
-            <div v-if="conditionDTO.sb17 !== null && conditionDTO.sb18 !== null" class="clause">
-                <select class="select-clause-3" v-model="conditionDTO.operator_condit_3">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
-            </div>
-            <div class="sb18">
-                <select v-if="conditionDTO.sb17 !== null" class="select-sb18" v-model="conditionDTO.sb18">
-                    <option class="select-placeholder" disabled :value="null">Choose sb18...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb18 !== null" class="select-sb18-part" 
-                v-model="conditionDTO.sb18_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts18" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>    
-            </div>
-        </div>    
-        <button v-if="!showCondition4 && showCondition3 && conditionDTO.sb19 === null" @click.prevent="showCondition4 = true"><i class="fa-solid fa-plus"></i> New micro-logic</button>
-        <div v-if="showCondition4 || conditionDTO.sb19 !== null" class="condition4">
-            <div class="sb19">
-                <select class="select-sb19" v-model="conditionDTO.sb19">
-                    <option class="select-placeholder" disabled :value="null">Choose sb19...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb19 !== null" class="select-sb19-part" 
-                v-model="conditionDTO.sb19_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts19" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>
-            </div>
-            <div v-if="conditionDTO.sb19 !== null && conditionDTO.sb20 !== null" class="clause">
-                <select class="select-clause-4" v-model="conditionDTO.operator_condit_4">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
-            </div>
-            <div class="sb20">
-                <select v-if="conditionDTO.sb19 !== null" class="select-sb20" v-model="conditionDTO.sb20">
-                    <option class="select-placeholder" disabled :value="null">Choose sb20...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb20 !== null" class="select-sb20-part" 
-                v-model="conditionDTO.sb20_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts20" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>    
-            </div>
-            <div v-if="conditionDTO.sb20 !== null && conditionDTO.sb21 !== null" class="clause">
-                <select class="select-clause-4" v-model="conditionDTO.operator_condit_4">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
-            </div>    
-            <div class="sb21">
-                <select v-if="conditionDTO.sb20 !== null" class="select-sb21" v-model="conditionDTO.sb21">
-                    <option class="select-placeholder" disabled :value="null">Choose sb21...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb21 !== null" class="select-sb21-part" 
-                v-model="conditionDTO.sb21_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts21" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>
-            </div>
-            <div v-if="conditionDTO.sb21 !== null && conditionDTO.sb22 !== null" class="clause">
-                <select class="select-clause-4" v-model="conditionDTO.operator_condit_4">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
-            </div>
-            <div class="sb22">
-                <select v-if="conditionDTO.sb21 !== null" class="select-sb22" v-model="conditionDTO.sb22">
-                    <option class="select-placeholder" disabled :value="null">Choose sb22...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb22 !== null" class="select-sb22-part" 
-                v-model="conditionDTO.sb22_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts22" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>    
-            </div>
-            <div v-if="conditionDTO.sb22 !== null && conditionDTO.sb23 !== null" class="clause">
-                <select class="select-clause-4" v-model="conditionDTO.operator_condit_4">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
-            </div>    
-            <div class="sb23">
-                <select v-if="conditionDTO.sb22 !== null" class="select-sb23" v-model="conditionDTO.sb23">
-                    <option class="select-placeholder" disabled :value="null">Choose sb23...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb23 !== null" class="select-sb23-part" 
-                v-model="conditionDTO.sb23_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts23" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>
-            </div>
-            <div v-if="conditionDTO.sb23 !== null && conditionDTO.sb24 !== null" class="clause">
-                <select class="select-clause-4" v-model="conditionDTO.operator_condit_4">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
-            </div>
-            <div class="sb24">
-                <select v-if="conditionDTO.sb23 !== null" class="select-sb24" v-model="conditionDTO.sb24">
-                    <option class="select-placeholder" disabled :value="null">Choose sb24...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb24 !== null" class="select-sb24-part" 
-                v-model="conditionDTO.sb24_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts24" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>    
-            </div> 
-        </div>
-        <button v-if="!showCondition5 && showCondition4 && conditionDTO.sb25 === null" @click.prevent="showCondition5 = true"><i class="fa-solid fa-plus"></i> New micro-logic</button>
-        <div v-if="showCondition5 || conditionDTO.sb25 !== null" class="condition5">
-            <div class="sb25">
-                <select class="select-sb25" v-model="conditionDTO.sb25">
-                    <option class="select-placeholder" disabled :value="null">Choose sb25...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb25 !== null" class="select-sb25-part" 
-                v-model="conditionDTO.sb25_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts25" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>
-            </div>
-            <div v-if="conditionDTO.sb25 !== null && conditionDTO.sb26 !== null" class="clause">
-                <select class="select-clause-5" v-model="conditionDTO.operator_condit_5">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
-            </div>
-            <div class="sb26">
-                <select v-if="conditionDTO.sb25 !== null" class="select-sb26" v-model="conditionDTO.sb26">
-                    <option class="select-placeholder" disabled :value="null">Choose sb26...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb26 !== null" class="select-sb26-part" 
-                v-model="conditionDTO.sb26_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts26" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>    
-            </div>
-            <div v-if="conditionDTO.sb26 !== null && conditionDTO.sb27 !== null" class="clause">
-                <select class="select-clause-5" v-model="conditionDTO.operator_condit_5">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
-            </div>    
-            <div class="sb27">
-                <select v-if="conditionDTO.sb26 !== null" class="select-sb27" v-model="conditionDTO.sb27">
-                    <option class="select-placeholder" disabled :value="null">Choose sb27...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb27 !== null" class="select-sb27-part" 
-                v-model="conditionDTO.sb27_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts27" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>
-            </div>
-            <div v-if="conditionDTO.sb27 !== null && conditionDTO.sb28 !== null" class="clause">
-                <select class="select-clause-5" v-model="conditionDTO.operator_condit_5">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
-            </div>
-            <div class="sb28">
-                <select v-if="conditionDTO.sb27 !== null" class="select-sb28" v-model="conditionDTO.sb28">
-                    <option class="select-placeholder" disabled :value="null">Choose sb28...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb28 !== null" class="select-sb28-part" 
-                v-model="conditionDTO.sb28_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts28" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>    
-            </div>
-            <div v-if="conditionDTO.sb28 !== null && conditionDTO.sb29 !== null" class="clause">
-                <select class="select-clause-5" v-model="conditionDTO.operator_condit_5">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
-            </div>    
-            <div class="sb29">
-                <select v-if="conditionDTO.sb28 !== null" class="select-sb29" v-model="conditionDTO.sb29">
-                    <option class="select-placeholder" disabled :value="null">Choose sb29...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb29 !== null" class="select-sb29-part" 
-                v-model="conditionDTO.sb29_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts29" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>
-            </div>
-            <div v-if="conditionDTO.sb29 !== null && conditionDTO.sb30 !== null" class="clause">
-                <select class="select-clause-5" v-model="conditionDTO.operator_condit_5">
-                    <option>AND</option>
-                    <option>OR</option>
-                </select>
-            </div>
-            <div class="sb30">
-                <select v-if="conditionDTO.sb29 !== null" class="select-sb30" v-model="conditionDTO.sb30">
-                    <option class="select-placeholder" disabled :value="null">Choose sb30...</option>
-                    <option v-for="sb in sbs_options" :key="sb.sb_name + sb.part">
-                        {{ sb.sb_name }}
-                    </option>
-                </select>
-                <select v-if="conditionDTO.sb30 !== null" class="select-sb30-part" 
-                v-model="conditionDTO.sb30_part">
-                    <option class="select-placeholder" disabled :value="null">Part</option>
-                    <option v-for="part in filteredParts30" :key="part.part">
-                        {{ part.part }}
-                    </option>
-                </select>    
-            </div> 
-        </div> 
-        <div class="clause">
-            <h3>AND</h3>
-        </div>    
-        <div class="item">
-            <input type="text" v-model="conditionDTO.item" placeholder="Name of item...">
-        </div>    
-    
-
-        <button v-if="conditionDTO.item !== null && conditionDTO.item.length > 4" 
-        type="submit" class="submit">Submit</button>
-        <button @click.prevent="EditionCancel">Cancel</button>
-        <button @click.prevent="ItemDelete">Delete</button>
     </form>
 </template>
 
@@ -1364,3 +1386,39 @@ export default {
 }
 
 </script>
+<style scoped>
+h3{
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    color: var(--azul-principal);
+}
+
+select{
+    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 767px) {
+
+    h3{
+        font-size: 90px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+    select{
+        width: 90%;
+    }
+
+    .align{
+        width: 70%;
+    }
+
+    input{
+        width: 80%;
+    }
+}
+
+.select-placeholder {
+    background-color: #E0E0E1;
+}
+</style>

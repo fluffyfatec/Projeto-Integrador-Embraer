@@ -3,6 +3,9 @@ package com.embraer.backend.chassi.services.ListChassisBySb;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.embraer.backend.user.repositories.UserRepository;
+import com.embraer.backend.userAuthenticated.dto.UserAuthenticationDto;
+import com.embraer.backend.webConfig.UserSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,7 +29,13 @@ public class ListChassisBySbService {
 	@Autowired
 	private ChassiServiceBulletinRepository chassiServiceBulletinRepository;
 
-	public List<ListChassiBySbDto> execute(String sb, String part) {
+	@Autowired
+	UserSession userSession;
+
+	@Autowired
+	UserRepository userRepository;
+
+	public List<ListChassiBySbDto> executeAdmin(String sb, String part) {
 		
 		ServiceBulletin serviceBulletin = serviceBulletinRepository.findByServiceBulletinNameAndServiceBulletinPart(sb, part);
 		
@@ -44,4 +53,32 @@ public class ListChassisBySbService {
 		}
 		return listChassiBySbDto;
 	}
+
+	public List<ListChassiBySbDto> executeEditor(String sb, String part) {
+
+		UserAuthenticationDto userAuthenticationDto = userSession.getUserAuthentication();
+
+		Long userId = userRepository.getUserIdByUserName(userAuthenticationDto.getUsername());
+
+		ServiceBulletin serviceBulletin = serviceBulletinRepository.findByServiceBulletinNameAndServiceBulletinPart(sb, part);
+
+		List<ChassiServiceBulletin> chassiServiceBulletins = chassiServiceBulletinRepository.findByServiceBulletinIdEditor(serviceBulletin.getServiceBulletinId(), userId);
+
+		List<ListChassiBySbDto> listChassiBySbDto = new ArrayList<>();
+
+		for (ChassiServiceBulletin chassiServiceBulletin : chassiServiceBulletins) {
+
+			Chassis chassis = chassisRepository.findById(chassiServiceBulletin.getChassiId().getChassiId()).orElse(null);
+			ListChassiBySbDto listChassiBySb = new ListChassiBySbDto();
+			listChassiBySb.setChassi(chassis.getChassiId());
+			listChassiBySb.setSb_status(chassiServiceBulletin.getServiceBulletinStatus());
+			listChassiBySbDto.add(listChassiBySb);
+		}
+		return listChassiBySbDto;
+
+
+	}
+
+
+
 }

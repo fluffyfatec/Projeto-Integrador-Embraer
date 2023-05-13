@@ -13,6 +13,7 @@
 <script lang="ts">
 import axios from 'axios';
 import { eventBus } from '@/main';
+import globalData from '@/globals';
 
 export default {
 
@@ -20,10 +21,12 @@ export default {
         return {
             chassis: [],
             searchTerm: '',
+            g: globalData,
         }
     },
 
     mounted() {
+       
         this.getChassis();
 
     },
@@ -31,8 +34,22 @@ export default {
     methods: {
 
         async getChassis() {
+
+            if (this.g.userRole == 'ADMIN') {
             const response = await axios.get('http://localhost:8080/chassi/list');
             this.chassis = response.data.map((item: String) => ({ chassi_id: item.chassi_id }));
+            };
+
+            if (this.g.userRole == 'EDITOR') {
+                const response = await axios.get('http://localhost:8080/chassi/list/editor');
+                this.chassis = response.data.map((item: String) => ({ chassi_id: item.chassi_id }));
+            };
+
+            if (this.g.userRole == 'PILOT') {
+                const response = await axios.get('http://localhost:8080/chassi/list/' + this.g.userUserName);
+                this.chassis = response.data.map((item: String) => ({ chassi_id: item.chassi_id }));
+            };
+
         },
 
         divClickToItems(chassis: string) {
@@ -82,6 +99,8 @@ export default {
 
 <style scoped>
 @import "../assets/base.css";
+@import '@fortawesome/fontawesome-free/css/all.css';
+
 
 h1 {
     color: var(--azul-principal);

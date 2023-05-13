@@ -107,20 +107,20 @@ const router = new VueRouter({
     },
 
 
-    // Administrative Panel
+    // CRUD Condition
 
     {
-      path: '/admin-panel',
-      name: 'admin-panel',
+      path: '/register-condition',
+      name: 'registerCondition',
       component: () => import('../views/CrudCondition.vue'),
       meta: {
         showH3: true,
-        tituloValue: 'Administrative Panel',
+        tituloValue: 'Condition',
         requiresAuth: true,
       }
     },
 
-    // Section of upload files, inside Administrative Panel
+    // Section of upload files
 
     {
       path: '/upload',
@@ -147,6 +147,55 @@ const router = new VueRouter({
       }
     },
 
+
+    // CRUD Chassis Owner
+    {
+      path: '/register-owner',
+      name: 'registerOwner',
+      component: () => import('../views/CrudChassisOwner.vue'),
+      meta: {
+        showH3: true,
+        tituloValue: 'Register Owner',
+        requiresAuth: true,
+      }
+    },
+
+    // CRUD Chassis Pilot
+    {
+      path: '/register-pilot',
+      name: 'registerPilot',
+      component: () => import('../views/CrudChassisPilot.vue'),
+      meta: {
+        showH3: true,
+        tituloValue: 'Register Pilot',
+        requiresAuth: true,
+      }
+    },
+
+    // Logs
+    {
+      path: '/logs',
+      name: 'logs',
+      //component: () => import('../views/CrudChassisPilot.vue'),
+      meta: {
+        showH3: true,
+        tituloValue: 'Logs',
+        requiresAuth: true,
+      }
+    },
+
+    // Analytics
+    {
+      path: '/analytics',
+      name: 'analytics',
+      //component: () => import('../views/CrudChassisPilot.vue'),
+      meta: {
+        showH3: true,
+        tituloValue: 'Analytics',
+        requiresAuth: true,
+      }
+    },
+
   ]
 })
 
@@ -162,7 +211,7 @@ router.beforeEach((to, from, next) => {
   const isAuthenticated = token ? true : false;
 
   if (isAuthenticated && to.path === '/login') {
-    next('/planes');
+    next('/items');
     return;
   }
 

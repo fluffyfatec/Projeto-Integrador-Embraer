@@ -1,6 +1,17 @@
 <template>
+
     <div>
-        <h1 class="title">List of Items</h1>
+        <div class="div-header">
+            <h1 class="title">List of Items</h1>
+            <div class="div-btn-download">
+                <button class="btn-download" @click.prevent="downloadPDF">
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                    <i class="txt-btn-download">Download PDF</i>
+                </button>
+            </div>
+        </div>
+        
+        
         <div class="table-wrapper">
             <table cellspacing="0">
                 <thead>
@@ -17,13 +28,15 @@
                         <td>{{ item.dt_register }}</td>
                         <td class="status-item" @click="itemUpdateStatus(item.id, item.status)"
                         :style="item.status === 'Active' ? 'color: #548644' : 'color: #AE2A32'">{{ item.status }}</td>
-                        <td v-if="itemSelected !== item.id">
+                        <td class="edit-item" v-if="itemSelected !== item.id">
                             <button @click.prevent="ItemEdit(item.id)">
                                 <i class="fa-regular fa-pen-to-square"></i>
-                            </button>
+                            </button>   
                         </td>
+                        <td v-else></td> 
                     </tr>
-                        <td colspan="3" class="full-width">
+                    <tr>
+                        <td colspan="4" class="full-width">
                         <div v-if="edition && itemSelected === item.id" class="table-new-line">
 
 
@@ -46,7 +59,7 @@
                             <EditFormulaX v-else :itemId="item.id" :toString="item.id" :toLocaleString="item.id"></EditFormulaX>
                         </div>
                         </td>
-                    
+                    </tr>
                 </tbody>    
                                   
                     
@@ -65,6 +78,7 @@ import EditFormula3 from './EditCrudCondition/EditFormula3.vue';
 import EditFormula4 from './EditCrudCondition/EditFormula4.vue';
 import EditFormula5 from './EditCrudCondition/EditFormula5.vue';
 import EditFormulaX from './EditCrudCondition/EditFormulaX.vue';
+import FileSaver from 'file-saver';
 
 export default {
     data() {
@@ -127,7 +141,28 @@ export default {
             await axios.get('http://localhost:8080/update-item-status/' + itemId + '/' + status);
 
             this.getItems();
-        }
+        },
+
+        async downloadPDF() {
+
+            // Faz a requisição para o método do Spring Boot
+            const response = await axios.get('http://localhost:8080/report-condition', {
+                responseType: 'blob' // Define o tipo de resposta como Blob
+            });
+
+            // Obtém o nome do arquivo a partir do cabeçalho Content-Disposition
+            const contentDispositionHeader = response.headers['content-disposition'];
+            const filenameRegex = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/;
+            const matches = filenameRegex.exec(contentDispositionHeader);
+            const filename = matches != null && matches[1] ? matches[1].replace(/['"]/g, '') : 'report.pdf';
+
+            // Cria um objeto Blob com a resposta recebida do servidor
+            const blob = new Blob([response.data], { type: 'application/pdf' });
+
+            // Salva o arquivo com o nome obtido do cabeçalho Content-Disposition
+            FileSaver.saveAs(blob, filename);
+
+        },
         
     },
 
@@ -224,6 +259,10 @@ tbody:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
 
 .status-item {
     cursor: pointer;
+}
+
+.edit-item {
+    height: fit-content;
 }
 
 

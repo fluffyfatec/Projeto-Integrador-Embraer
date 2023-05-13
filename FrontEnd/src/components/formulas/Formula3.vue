@@ -64,7 +64,7 @@
             </div>    
         
             <div class="center">
-                <button v-if="conditionDTO.item !== null && conditionDTO.item.length > 4  &&  
+                <button v-if="conditionDTO.item !== null && conditionDTO.item.length > 2  &&  
                             conditionDTO.formulaDesc !== null &&
                             conditionDTO.sb1 !== null && conditionDTO.sb1_part !== null &&
                             conditionDTO.sb2 !== null && conditionDTO.sb2_part !== null &&
@@ -97,7 +97,8 @@ export default {
                 sb2: null,
                 sb2_part: null,
                 sb3: null,
-                sb3_part: null
+                sb3_part: null,
+                operator_condit_1: 'OR',
             },
 
         }
@@ -198,6 +199,32 @@ h3{
     justify-content: center;
     font-size: 4rem;
     color: var(--azul-principal);
+}
+
+@media only screen and (max-width: 767px) {
+
+    h3{
+        font-size: 50px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+
+    .align{
+        width: 70%;
+    }
+
+    select{
+        width: 97%;
+    }
+
+    .item{
+        display: flex;
+        justify-content: center;
+    }
+
+    input{
+        width: 80%;
+    }
 }
 
 </style>

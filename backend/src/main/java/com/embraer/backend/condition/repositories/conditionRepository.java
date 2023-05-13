@@ -14,15 +14,19 @@ import org.springframework.stereotype.Repository;
 import com.embraer.backend.condition.entity.Condition;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Repository
 public interface conditionRepository extends JpaRepository<Condition, Long> {
 
     @Modifying
     @Query("UPDATE Condition c SET c.formulaId = :formulaId WHERE c.conditionId = :conditionId")
+    @Transactional
     void updateFormulaId(@Param("conditionId") Long conditionId, @Param("formulaId") Formula formulaId);
 
     @Modifying
     @Query("UPDATE Condition c SET c.chassisBiggerThenId = :chassisBiggerThenId WHERE c.conditionId = :conditionId")
+    @Transactional
     void updateChassisBiggerThen(@Param("conditionId") Long conditionId, @Param("chassisBiggerThenId") Chassis chassis);
 
     @Modifying
@@ -183,5 +187,8 @@ public interface conditionRepository extends JpaRepository<Condition, Long> {
 
     @Query("SELECT c FROM Condition c WHERE c.itemId.itemId = :itemId")
     Condition listAllByItemId(@Param("itemId") Long itemId);
+
+    @Query("SELECT c FROM Condition c")
+    List<Condition> listAllConditions();
 
 }

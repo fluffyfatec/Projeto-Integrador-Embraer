@@ -32,11 +32,15 @@ Currently, many pilots work as “freelancers” and do not operate just one air
       <p></p>
 <p>• Access to the customer database (user, password and equipment);
       
-<p>• Users must have different profiles (administrator, editing and query);
+<p>• Users must have different profiles with different access levels (administrator, editing and query);
+
+<p>• Items CRUD, with register of the condition of each item;
 
 <p>• Board of Administration and Statistics;
 
 <p>• PDF generation and export.
+
+<p>• Notifications when a Service Bulletin is changed;
 </details>
       
 
@@ -47,7 +51,7 @@ Currently, many pilots work as “freelancers” and do not operate just one air
       
 <p>• Relational Database (Cloud)
 
-<p>• VUE
+<p>• Vue.js 2
       
 <p>• Web System
       
@@ -80,18 +84,18 @@ Our team will develop a web software for the company "Embraer" that allows the e
 <summary><b>Sprint 1</b></summary>
                   <details>
                   <summary>0</summary>
-                        <p>•Data automation.
+                        <p>• Data automation.
                   </details>
                   <details>
                   <summary>1</summary>                  
-                        <p>•Search by Sb's.
-                        <p>•Search by Items.
-                        <p>•Search by Chassis.
+                        <p>• Search by Sb's.
+                        <p>• Search by Items.
+                        <p>• Search by Chassis.
                   </details>
                    <details>
                   <summary>2</summary>                  
-                        <p>•Item Search by Chassis.
-                        <p>•Search of Sb's by Chassis.                      
+                        <p>• Item Search by Chassis.
+                        <p>• Search of Sb's by Chassis.                      
                   </details>
  </details>   
  
@@ -99,33 +103,41 @@ Our team will develop a web software for the company "Embraer" that allows the e
 <summary><b>Sprint 2</b></summary>
                   <details>
                   <summary>0</summary>
-                        <p>•User Authentication and Authorization.
+                        <p>• Registration of New Items.
+                        <p>• Update of the Condition of an Item.
+                        <p>• Activate and Inactivate Items.
+                        <p>• Show new items in Item Search by Chassis.
                   </details>
                   <details>
                   <summary>1</summary>                  
-                        <p>•Access levels.                    
+                        <p>• User Authentication and Authorization.
+                        <p>• Access levels. 
+                        <p>• List items registered in database.
                   </details>
                    <details>
-                  <summary>2</summary>                  
-                        <p>•Registration of New Items.
+                  <summary>2</summary>
+                        <p>• Improvement of search methods.
+                        <p>• Search filters in tables of Data.
                   </details>
              
 </details>
 
- <details>              
+<details>              
 <summary><b>Sprint 3</b></summary>
                   <details>
                   <summary>0</summary>
-                        <p>•Generate aircraft reports.
+                        <p>• Notifications of edits to the users.
+                        <p>• Edition of the Planes, with different access levels.
+                        <p>• Edition of Sb's, with different access levels.
                   </details>
                   <details>
-                  <summary>1</summary>                  
-                        <p>•Edition of the Planes.
-                        <p>•Edition of Sb's.      
+                  <summary>1</summary>
+                        <p>• Registration of Chassis owner by Administrator.
+                        <p>• Registration of Chassis pilot by Chassis owner.
                   </details>
                    <details>
                   <summary>2</summary>                  
-                        <p>•Notifications of edits (via email).
+                        <p>• Generate aircraft reports.
                   </details>
              
 </details>
@@ -134,11 +146,11 @@ Our team will develop a web software for the company "Embraer" that allows the e
 <summary><b>Sprint 4</b></summary>
                   <details>
                   <summary>0</summary>
-                        <p>•Administrative panel.
+                        <p>• Administrative panel.
                   </details>
                   <details>
                   <summary>1</summary>                  
-                        <p>•Log Generation.                    
+                        <p>• Log Generation.                    
                   </details>
                  
              
@@ -168,7 +180,9 @@ Mobile
 ## ERD
 
 <p align="center">
+
       <img src="GIT/der_embraer3.png" width="100%" height="100%">
+
 <p align="center">
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
@@ -176,7 +190,9 @@ Mobile
 ## Logical Model
 
 <p align="center">
+
       <img src="GIT/logico3.png" width="100%" height="100%">
+
 <p align="center">
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
@@ -203,7 +219,7 @@ Mobile
 | Avatar            							| Student         | Function          		| GitHub                                                      | LinkedIn                                              |
 | -------------------------------------------- | ---------------- | ---------------- | -------------------------------------------------------------- | ----------------------------------------------------- |
 | <img src = "./GIT/avatarpatrick.png" width="60" >|_Patrick Souza_  | Scrum Master | [![](https://bit.ly/3f9Xo0P)](https://github.com/PatrickSouzza)  | [![](https://bit.ly/2P1ZogM)](https://www.linkedin.com/in/patrick-g-souza/) |
-| <img src = "./GIT/avatarfelipe.png" width="60" >|_Felipe Sobral_  | Product Owner  | [![](https://bit.ly/3f9Xo0P)](https://github.com/SoSoJigsaw)| [![](https://bit.ly/2P1ZogM)]() |
+| <img src = "./GIT/avatarfelipe.png" width="60" >|_Felipe Sobral_  | Product Owner  | [![](https://bit.ly/3f9Xo0P)](https://github.com/SoSoJigsaw)| [![](https://bit.ly/2P1ZogM)](https://www.linkedin.com/in/sosojigsaw/) |
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
@@ -211,10 +227,10 @@ Mobile
 <details>
 <summary>Front-End</summary>
 
-* [JavaScript](https://www.javascript.com)
-* [HTML](https://www.w3schools.com/css/)
-* [CSS](https://www.w3schools.com/css/)
-* [VUE](https://vuejs.org/)
+* [JavaScript (ES6)](https://www.javascript.com)
+* [HTML5](https://www.w3schools.com/css/)
+* [CSS3](https://www.w3schools.com/css/)
+* [Vue.js 2](https://vuejs.org/)
 
 
 </details>

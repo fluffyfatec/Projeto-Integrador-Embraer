@@ -72,7 +72,7 @@ body {
 
 }
 
-/* ------------------------------- ↓↓↓↓↓ Modificações repetitivas ↓↓↓↓↓ --------------------------------*/
+/* ------------------------------- ↓↓↓↓↓ Modificações repetitivas ou globais↓↓↓↓↓ --------------------------------*/
 select{
   border-color: var(--azul-claro-light);
   border-radius: 5px;
@@ -121,7 +121,12 @@ input{
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-
+.micro{
+  border: 2px solid var(--azul-principal);
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
 
 .sbs{
   padding-top: 20px;
@@ -133,6 +138,61 @@ input{
 
 .select-sb-part{
   width: 6.5rem;
+}
+
+.select-clause{
+  background-color: var(--azul-embraer-light);
+  color: var(--white);
+  border-color: var(--azul-embraer-dark);
+}
+
+.div-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.div-btn-download{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 1.8rem;
+}
+
+.btn-download{
+  display: flex;
+  justify-content: space-around;
+  padding: 0.65rem;
+  font-size: x-large;
+  width: 8rem;
+  height: 3rem;
+}
+
+.txt-btn-download{
+  font-size: small;
+}
+
+/* Estilos para tablet */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {}
+
+/* Estilos para mobile */
+@media only screen and (max-width: 767px) {
+
+  select {
+    max-width: 100%; 
+    display: block;
+    font-size: 18px;
+  }
+
+  option {
+    font-size: 12px; 
+    overflow-x: scroll;
+    max-width: 100%;
+  }
+
+  input {
+    font-size: 21px;
+  }
+
 }
 /* ------------------------------- ↓↓↓↓↓ Fonte Responsiva ↓↓↓↓↓ --------------------------------*/
 
