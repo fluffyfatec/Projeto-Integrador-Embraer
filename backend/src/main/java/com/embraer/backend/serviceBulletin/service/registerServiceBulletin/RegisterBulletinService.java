@@ -66,6 +66,19 @@ public class RegisterBulletinService {
 
 			VerifyDTO serviceInfo = verifyPart.verifyPart(serviceDTO.getBulletin_service());
 
+			if (serviceBulletinRepository.findByServiceBulletinNameAndServiceBulletinPart(serviceInfo.getBulletin(), serviceInfo.getPart()) == null) {
+
+				ServiceBulletin serviceBulletin = new ServiceBulletin();
+
+				serviceBulletin.setServiceBulletinName(serviceInfo.getBulletin());
+				serviceBulletin.setServiceBulletinDtRegister(new Timestamp(System.currentTimeMillis()));
+				serviceBulletin.setServiceBulletinPart(serviceInfo.getPart());
+				serviceBulletin.setUserRegister(null);
+
+				serviceBulletinRepository.saveAndFlush(serviceBulletin);
+
+			}
+
 			ServiceBulletin serviceBulletin = serviceBulletinRepository
 					.findByServiceBulletinNameAndServiceBulletinPart(serviceInfo.getBulletin(), serviceInfo.getPart());
 			
@@ -79,6 +92,7 @@ public class RegisterBulletinService {
 			service.add(chassiServiceBulletin);
 			
 		}
+
 		chassiServiceBulletinRepository.saveAllAndFlush(service);
 
 
