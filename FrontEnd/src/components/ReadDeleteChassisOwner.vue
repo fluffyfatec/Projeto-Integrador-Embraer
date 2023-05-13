@@ -3,10 +3,23 @@
         <div class="div-header">
             <h1 class="title">List of Chassis Owners</h1>
             <div class="div-btn-download">
-                    <button class="btn-download" @click.prevent="downloadPDF">
+                    <button class="btn-download" @click.prevent="showPdfOptions = true">
                         <i class="fa-solid fa-file-arrow-down"></i>
                         <i class="txt-btn-download">Download PDF</i>
                     </button>
+            </div>
+            <div v-if="showPdfOptions" class="filter-download">
+                    <h3>Choose what you want in the report</h3>
+
+                    <input type="checkbox" v-model="pdf.active" :value="true">
+                    <label>Show Active</label>
+
+                    <input type="checkbox" v-model="pdf.inactive" :value="true">
+                    <label>Show Inactive</label>
+
+                    <button v-if="pdf.active !== false || pdf.inactive !== false" 
+                            @click.prevent="downloadPDF">Confirm</button>
+                    <button @click.prevent="showPdfOptions = false">Cancel</button>        
             </div>
         </div>
         <div class="search-container">
@@ -65,6 +78,11 @@ export default {
         return {
             searchTerm: '',
             owners: [],
+            pdf: {
+                active: false,
+                inactive: false,
+            },
+            showPdfOptions: false,
         }
     },
 
@@ -123,7 +141,7 @@ export default {
         async downloadPDF() {
 
             // Faz a requisição para o método do Spring Boot
-            const response = await axios.get('http://localhost:8080/report-owners', {
+            const response = await axios.get('http://localhost:8080/report-owners/' + this.pdf.active + '/' + this.pdf.inactive, {
                 responseType: 'blob' // Define o tipo de resposta como Blob
             });
 
@@ -240,6 +258,24 @@ tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
 .search-container{
     display: flex;
     justify-content: center;
+}
+
+.filter-download {
+    position: absolute;
+    background-color: var(--white);
+    border-radius: 10px;
+    text-align: center;
+    width: 60%;
+    padding-top: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 40px;
+    box-shadow: 2px 2px 20px 5px var(--silver);
+    transition: 2s;
+    z-index: 9999;
 }
 
 /* --------------- Media Queries -------------------- */
