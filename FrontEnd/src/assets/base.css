@@ -93,8 +93,6 @@ button{
 
 }
 
-
-
 input{
   border-color: var(--azul-claro-light);
   border-radius: 5px;
@@ -169,6 +167,43 @@ input{
 
 .txt-btn-download{
   font-size: small;
+}
+/* POP-UP download PDF*/
+.check-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.check-label{
+display: flex;
+align-items: flex-start;
+padding-left: 35%;
+}
+.check-label label{
+  color: var(--azul-embraer);
+  
+  }
+
+  .check-label-adm{
+    display: flex;
+    align-items: flex-start;
+    padding-left: 39%;
+    }
+    .check-label-adm label{
+      color: var(--azul-embraer);
+      }
+
+.title-popup{
+  color: var(--azul-embraer);
+}
+
+.btn-popup{
+  margin-top: 1.5rem;
+  width: auto;
+  height: 2rem;
+  font-size: 22px;
+  margin-left: 1.5rem;
+
 }
 
 /* Estilos para tablet */

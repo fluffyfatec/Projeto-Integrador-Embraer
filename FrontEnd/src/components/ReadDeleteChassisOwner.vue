@@ -9,17 +9,24 @@
                     </button>
             </div>
             <div v-if="showPdfOptions" class="filter-download">
-                    <h3>Choose what you want in the report</h3>
+                    <h3 class="title-popup">Choose what you want in the report</h3>
 
-                    <input type="checkbox" v-model="pdf.active" :value="true">
-                    <label>Show Active</label>
+                <div class="check-conatiner">
+                    <div class="check-label-adm">
+                        <input type="checkbox" v-model="pdf.active" :value="true">
+                        <label>Show Active</label>
 
-                    <input type="checkbox" v-model="pdf.inactive" :value="true">
-                    <label>Show Inactive</label>
+                    </div>
 
-                    <button v-if="pdf.active !== false || pdf.inactive !== false" 
+                    <div class="check-label-adm">
+                        <input type="checkbox" v-model="pdf.inactive" :value="true">
+                        <label>Show Inactive</label>
+
+                    </div>
+                </div>
+                    <button v-if="pdf.active !== false || pdf.inactive !== false" class="btn-popup" 
                             @click.prevent="downloadPDF">Confirm</button>
-                    <button @click.prevent="showPdfOptions = false">Cancel</button>        
+                    <button @click.prevent="showPdfOptions = false" class="btn-popup">Cancel</button>        
             </div>
         </div>
         <div class="search-container">
@@ -226,6 +233,20 @@ table {
     width: 96%;
     
 }
+input[type=checkbox] {
+        border: 1px solid var(--silver);
+        width: 15px;
+        height: 15px;
+        border-radius: 4px;
+        outline: none;
+        cursor: pointer;
+        -ms-transform: scale(1.5); /* IE */
+        -moz-transform: scale(1.5); /* FF */
+        -webkit-transform: scale(1.5); /* Safari and Chrome */
+        -o-transform: scale(1.5); /* Opera */
+        transform: scale(1.5);
+        margin: 10px;
+    }
 
 .table-header {
     background-color: var(--azul-principal);
@@ -261,7 +282,7 @@ tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
 }
 
 .filter-download {
-    position: absolute;
+    position: fixed;
     background-color: var(--white);
     border-radius: 10px;
     text-align: center;
