@@ -11,22 +11,33 @@
                     </button>
                 </div>
                 <div v-if="showPdfOptions" class="filter-download">
-                    <h3>Choose what you want in the report</h3>
+                    <h3 class="title-popup">Choose what you want in the report</h3>
 
-                    <input type="checkbox" v-model="pdf.incorporated" :value="true">
-                    <label>Show Incorporated</label>
+                    <div class="check-container">
+                        <div class="check-label">
+                            <input type="checkbox" v-model="pdf.incorporated" :value="true">
+                            <label>Show Incorporated</label>
+                        </div>
+                        
+                        <div class="check-label">
+                            <input type="checkbox" v-model="pdf.applicable" :value="true">
+                            <label>Show Applicable</label>
+                        </div>
 
-                    <input type="checkbox" v-model="pdf.applicable" :value="true">
-                    <label>Show Applicable</label>
+                        
+                        <div class="check-label">
+                            <input type="checkbox" v-model="pdf.notApplicable" :value="true">
+                            <label>Show Not Applicable</label>
+                        </div>
 
-                    <input type="checkbox" v-model="pdf.notApplicable" :value="true">
-                    <label>Show Not Applicable</label>
+                    </div>
 
-                    <button v-if="pdf.incorporated !== false || pdf.applicable !== false || pdf.notApplicable !== false" 
+                    <button v-if="pdf.incorporated !== false || pdf.applicable !== false || pdf.notApplicable !== false" class="btn-popup"
                             @click.prevent="downloadPDF">Confirm</button>
-                    <button @click.prevent="showPdfOptions = false">Cancel</button>        
+                    <button @click.prevent="showPdfOptions = false" class="btn-popup btn-popup2">Cancel</button>        
                 </div>
             </div>
+
             <div class="filter-container">
                 <div class="filter">
                     <div class="micro-container">
@@ -510,7 +521,7 @@ tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
     }
 
     .filter-download {
-        position: absolute;
+        position: fixed;
         background-color: var(--white);
         border-radius: 10px;
         text-align: center;
