@@ -34,7 +34,7 @@
 
                     <button v-if="pdf.incorporated !== false || pdf.applicable !== false || pdf.notApplicable !== false" class="btn-popup"
                             @click.prevent="downloadPDF">Confirm</button>
-                    <button @click.prevent="showPdfOptions = false" class="btn-popup">Cancel</button>        
+                    <button @click.prevent="showPdfOptions = false" class="btn-popup btn-popup2">Cancel</button>        
                 </div>
             </div>
 

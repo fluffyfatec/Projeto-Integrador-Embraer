@@ -27,7 +27,7 @@
                 </div>
                     <button v-if="pdf.active !== false || pdf.inactive !== false" class="btn-popup" 
                             @click.prevent="downloadPDF">Confirm</button>
-                    <button @click.prevent="showPdfOptions = false" class="btn-popup">Cancel</button>        
+                    <button @click.prevent="showPdfOptions = false" class="btn-popup btn-popup2">Cancel</button>        
             </div>
         </div>
         
