@@ -5,10 +5,26 @@
             <div class="div-header">
                 <h1 class="title">SBs of chassis {{ $route.params.chassis }}</h1>
                 <div class="div-btn-download">
-                    <button class="btn-download" @click.prevent="downloadPDF">
+                    <button class="btn-download" @click.prevent="showPdfOptions = true">
                         <i class="fa-solid fa-file-arrow-down"></i>
                         <i class="txt-btn-download">Download PDF</i>
                     </button>
+                </div>
+                <div v-if="showPdfOptions" class="filter-download">
+                    <h3>Choose what you want in the report</h3>
+
+                    <input type="checkbox" v-model="pdf.incorporated" :value="true">
+                    <label>Show Incorporated</label>
+
+                    <input type="checkbox" v-model="pdf.applicable" :value="true">
+                    <label>Show Applicable</label>
+
+                    <input type="checkbox" v-model="pdf.notApplicable" :value="true">
+                    <label>Show Not Applicable</label>
+
+                    <button v-if="pdf.incorporated !== false || pdf.applicable !== false || pdf.notApplicable !== false" 
+                            @click.prevent="downloadPDF">Confirm</button>
+                    <button @click.prevent="showPdfOptions = false">Cancel</button>        
                 </div>
             </div>
             <div class="filter-container">
@@ -145,6 +161,12 @@ export default {
                 status: null,
                 chassis: this.$route.params.chassis,
             },
+            pdf: {
+                incorporated: false,
+                applicable: false,
+                notApplicable: false,
+            },
+            showPdfOptions: false,
         }
     },
 
@@ -280,7 +302,7 @@ export default {
             const chassis = this.$route.params.chassis;
             
             // Faz a requisição para o método do Spring Boot
-            const response = await axios.get('http://localhost:8080/report-planes/' + chassis, {
+            const response = await axios.get('http://localhost:8080/report-planes/' + chassis + '/' + this.pdf.incorporated + '/' + this.pdf.applicable + '/' + this.pdf.notApplicable, {
                 responseType: 'blob' // Define o tipo de resposta como Blob
             });
 
@@ -487,7 +509,23 @@ tr:nth-child(even)    { background-color: rgba(224, 224, 225, 0.5);}
 
     }
 
-
+    .filter-download {
+        position: absolute;
+        background-color: var(--white);
+        border-radius: 10px;
+        text-align: center;
+        width: 60%;
+        padding-top: 10px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-left: 25px;
+        margin-right: 25px;
+        padding: 40px;
+        box-shadow: 2px 2px 20px 5px var(--silver);
+        transition: 2s;
+        z-index: 9999;
+    }
 
 
 

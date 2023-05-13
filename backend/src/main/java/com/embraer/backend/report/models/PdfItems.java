@@ -25,7 +25,9 @@ import com.itextpdf.text.pdf.PdfWriter;
 public class PdfItems {
 
     public static ByteArrayInputStream exportReportItems (ListItemsResponseDTO items,
-                                                          Long chassiId, String userName) throws IOException {
+                                                          Long chassiId, String userName,
+                                                          boolean inc, boolean app,
+                                                          boolean notApp) throws IOException {
 
         //Criando o documento PDF
         Document document = new Document(PageSize.A4.rotate(), 25, 25, 25, 25);
@@ -58,74 +60,82 @@ public class PdfItems {
             table.addCell(hcell);
 
 
+            if (inc) {
 
-            for (ListIncorporated item : items.getIncorporated()) {
+                for (ListIncorporated item : items.getIncorporated()) {
 
-                //Povoando as células da tabela
-                Font font = FontFactory.getFont(FontFactory.HELVETICA, 21, new BaseColor(9, 22, 163));
+                    //Povoando as células da tabela
+                    Font font = FontFactory.getFont(FontFactory.HELVETICA, 21, new BaseColor(9, 22, 163));
 
-                PdfPCell cell;
+                    PdfPCell cell;
 
-                cell = new PdfPCell(new Phrase(item.getName_item(), font));
-                cell.setPaddingTop(2f);
-                cell.setFixedHeight(32f);
-                cell.setVerticalAlignment(Element.ALIGN_CENTER);
-                cell.setHorizontalAlignment(Element.ALIGN_CENTER);
-                table.addCell(cell);
+                    cell = new PdfPCell(new Phrase(item.getName_item(), font));
+                    cell.setPaddingTop(2f);
+                    cell.setFixedHeight(32f);
+                    cell.setVerticalAlignment(Element.ALIGN_CENTER);
+                    cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+                    table.addCell(cell);
 
-                cell = new PdfPCell(new Phrase(item.getStatus(), font));
-                cell.setPaddingTop(2f);
-                cell.setFixedHeight(32f);
-                cell.setVerticalAlignment(Element.ALIGN_CENTER);
-                cell.setHorizontalAlignment(Element.ALIGN_CENTER);
-                table.addCell(cell);
+                    cell = new PdfPCell(new Phrase(item.getStatus(), font));
+                    cell.setPaddingTop(2f);
+                    cell.setFixedHeight(32f);
+                    cell.setVerticalAlignment(Element.ALIGN_CENTER);
+                    cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+                    table.addCell(cell);
 
+                }
             }
 
-            for (ListApplicable item : items.getApplicable()) {
+            if (app) {
 
-                //Povoando as células da tabela
-                Font font = FontFactory.getFont(FontFactory.HELVETICA, 21, new BaseColor(9, 22, 163));
+                for (ListApplicable item : items.getApplicable()) {
 
-                PdfPCell cell;
+                    //Povoando as células da tabela
+                    Font font = FontFactory.getFont(FontFactory.HELVETICA, 21, new BaseColor(9, 22, 163));
 
-                cell = new PdfPCell(new Phrase(item.getName_item(), font));
-                cell.setPaddingTop(2f);
-                cell.setFixedHeight(32f);
-                cell.setVerticalAlignment(Element.ALIGN_CENTER);
-                cell.setHorizontalAlignment(Element.ALIGN_CENTER);
-                table.addCell(cell);
+                    PdfPCell cell;
 
-                cell = new PdfPCell(new Phrase(item.getStatus(), font));
-                cell.setPaddingTop(2f);
-                cell.setFixedHeight(32f);
-                cell.setVerticalAlignment(Element.ALIGN_CENTER);
-                cell.setHorizontalAlignment(Element.ALIGN_CENTER);
-                table.addCell(cell);
+                    cell = new PdfPCell(new Phrase(item.getName_item(), font));
+                    cell.setPaddingTop(2f);
+                    cell.setFixedHeight(32f);
+                    cell.setVerticalAlignment(Element.ALIGN_CENTER);
+                    cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+                    table.addCell(cell);
 
+                    cell = new PdfPCell(new Phrase(item.getStatus(), font));
+                    cell.setPaddingTop(2f);
+                    cell.setFixedHeight(32f);
+                    cell.setVerticalAlignment(Element.ALIGN_CENTER);
+                    cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+                    table.addCell(cell);
+
+                }
             }
 
-            for (ListNotApplicable item : items.getNot_applicable()) {
+            if (notApp) {
 
-                //Povoando as células da tabela
-                Font font = FontFactory.getFont(FontFactory.HELVETICA, 21, new BaseColor(9, 22, 163));
+                for (ListNotApplicable item : items.getNot_applicable()) {
 
-                PdfPCell cell;
+                    //Povoando as células da tabela
+                    Font font = FontFactory.getFont(FontFactory.HELVETICA, 21, new BaseColor(9, 22, 163));
 
-                cell = new PdfPCell(new Phrase(item.getName_item(), font));
-                cell.setPaddingTop(2f);
-                cell.setFixedHeight(32f);
-                cell.setVerticalAlignment(Element.ALIGN_CENTER);
-                cell.setHorizontalAlignment(Element.ALIGN_CENTER);
-                table.addCell(cell);
+                    PdfPCell cell;
 
-                cell = new PdfPCell(new Phrase(item.getStatus(), font));
-                cell.setPaddingTop(2f);
-                cell.setFixedHeight(32f);
-                cell.setVerticalAlignment(Element.ALIGN_CENTER);
-                cell.setHorizontalAlignment(Element.ALIGN_CENTER);
-                table.addCell(cell);
+                    cell = new PdfPCell(new Phrase(item.getName_item(), font));
+                    cell.setPaddingTop(2f);
+                    cell.setFixedHeight(32f);
+                    cell.setVerticalAlignment(Element.ALIGN_CENTER);
+                    cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+                    table.addCell(cell);
 
+                    cell = new PdfPCell(new Phrase(item.getStatus(), font));
+                    cell.setPaddingTop(2f);
+                    cell.setFixedHeight(32f);
+                    cell.setVerticalAlignment(Element.ALIGN_CENTER);
+                    cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+                    table.addCell(cell);
+
+                }
             }
 
             //Alternando a cor do background e do grid das células entre branco e cinza
