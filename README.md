@@ -125,10 +125,11 @@ Our team will develop a web software for the company "Embraer" that allows the e
 <details>              
 <summary><b>Sprint 3</b></summary>
                   <details>
-                  <summary>0</summary>
-                        <p>• Notifications of edits to the users.
-                        <p>• Edition of the Planes, with different access levels.
-                        <p>• Edition of Sb's, with different access levels.
+                  <summary>0</summary>                        
+                        <p>• Edition of Sb status in Planes section, with different access levels.
+                        <p>• Edition of Sb status in Sbs section, with different access levels.
+                        <p>• Add a new Sb in Planes section, with different access levels.
+                        <p>• Add a new Chassis association in Sbs section, with different access levels.      
                   </details>
                   <details>
                   <summary>1</summary>
@@ -137,7 +138,7 @@ Our team will develop a web software for the company "Embraer" that allows the e
                   </details>
                    <details>
                   <summary>2</summary>                  
-                        <p>• Generate aircraft reports.
+                        <p>• Generate custom reports.
                   </details>
              
 </details>
@@ -146,11 +147,12 @@ Our team will develop a web software for the company "Embraer" that allows the e
 <summary><b>Sprint 4</b></summary>
                   <details>
                   <summary>0</summary>
-                        <p>• Administrative panel.
+                        <p>• Log Generation. 
+                        <p>• Notifications of Sbs to the users.          
                   </details>
                   <details>
                   <summary>1</summary>                  
-                        <p>• Log Generation.                    
+                        <p>• Analysis and graphics generation.     
                   </details>
                  
              
