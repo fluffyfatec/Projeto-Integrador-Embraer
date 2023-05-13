@@ -180,7 +180,9 @@ Mobile
 ## ERD
 
 <p align="center">
-      <img src="GIT/der_embraer.png" width="100%" height="100%">
+
+      <img src="GIT/der_embraer3.png" width="100%" height="100%">
+
 <p align="center">
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
@@ -188,7 +190,9 @@ Mobile
 ## Logical Model
 
 <p align="center">
-      <img src="GIT/Lógico_1.png" width="100%" height="100%">
+
+      <img src="GIT/logico3.png" width="100%" height="100%">
+
 <p align="center">
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
@@ -204,7 +208,7 @@ Mobile
 ## Burndown
 
 <p align="center">
-      <img src="GIT/burndown2.png" width="100%" height="100%">
+      <img src="GIT/burndonw3_auto_x2_auto_x2.jpg" width="100%" height="100%">
 <p align="center">
 
 
