@@ -71,7 +71,6 @@
                     </tr>
                     <tr v-if="createNew">
                         <td colspan="5" class="full-width">
-                            <form @submit.prevent="registerNew" class="center">
                                 <div class="create-container">
                                     <div class="sb-name-part">
                                         <input type="text" v-model="newSb.name" placeholder="Insert a SB name...">
@@ -93,12 +92,11 @@
                                     </div>
                             
                                 </div>
-                            </form>    
                         </td>
                         <td>
                             <div class="create-btn">
                                         <div class="button-submit">
-                                            <button v-if="newSb.name.length > 5 && newSb.part !== null && newSb.status !== null" type="submit" class="submit">
+                                            <button v-if="newSb.name.length > 5 && newSb.part !== null && newSb.status !== null" @click.prevent="registerNew" class="submit">
                                                 <i class="fa-solid fa-check"></i>            
                                             </button>
                                         </div>
