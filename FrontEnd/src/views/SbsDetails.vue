@@ -66,7 +66,6 @@
                     </tr>
                     <tr v-if="createNew">
                         <td colspan="4" class="full-width">
-                            <form @submit.prevent="registerNew" class="center">
                                 <div class="create-container">
                                     <div class="chassis">
                                         <select v-model="newSb.chassis">
@@ -81,13 +80,12 @@
                                         </select>
                                     </div>
                                     
-                                </div>
-                            </form>    
+                                </div> 
                         </td>
                         <td>
                             <div class="create-btn">
                                         <div class="button-submit">
-                                            <button v-if="newSb.chassis !== null && newSb.status !== null" type="submit" class="submit">
+                                            <button v-if="newSb.chassis !== null && newSb.status !== null" @click.prevent="registerNew" class="submit">
                                                 <i class="fa-solid fa-check"></i>            
                                             </button>
                                         </div>

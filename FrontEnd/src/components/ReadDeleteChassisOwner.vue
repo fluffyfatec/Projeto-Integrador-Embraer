@@ -40,7 +40,7 @@
                         <th>Chassis</th>
                         <th>Date Register</th>
                         <th>Status</th>
-                        <th>Options</th>
+                    <!--    <th>Options</th> -->
                     </tr>
                 </thead>    
                 <tbody>
@@ -50,11 +50,11 @@
                         <td>{{ o.date_register }}</td>
                         <td class="status-owner" @click="ownerUpdateStatus(o.id, o.status)"
                         :style="o.status === 'Active' ? 'color: #548644' : 'color: #AE2A32'">{{ o.status }}</td>
-                        <td class="edit-item">
+                    <!--    <td class="edit-item">
                             <button @click.prevent="deleteOwner(o.id)">
                                 <i class="fa-solid fa-trash-can"></i>
                             </button>   
-                        </td>
+                        </td> -->
                     </tr>
                     <tr v-if="searchTerm.length >= 3" v-for="o in filteredOwners" :key="o.id">
                         <td>{{ o.owner }}</td>

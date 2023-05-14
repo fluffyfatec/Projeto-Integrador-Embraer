@@ -41,7 +41,7 @@
                         <th>Pilot</th>
                         <th>Date Register</th>
                         <th>Status</th>
-                        <th>Options</th>
+                    <!--    <th>Options</th> -->
                     </tr>
                 </thead>    
                 <tbody>
@@ -52,11 +52,11 @@
                         <td>{{ p.date_register }}</td>
                         <td class="status-pilot" @click="pilotUpdateStatus(p.id, p.status)"
                         :style="p.status === 'Active' ? 'color: #548644' : 'color: #AE2A32'">{{ p.status }}</td>
-                        <td class="edit-item">
+                    <!--    <td class="edit-item">
                             <button @click.prevent="deletePilot(p.id)">
                                 <i class="fa-solid fa-trash-can"></i>
                             </button>   
-                        </td>
+                        </td> -->
                     </tr>
                     <tr v-if="searchTerm.length >= 3" v-for="p in filteredPilots" :key="p.id">
                         <td>{{ p.owner }}</td>
