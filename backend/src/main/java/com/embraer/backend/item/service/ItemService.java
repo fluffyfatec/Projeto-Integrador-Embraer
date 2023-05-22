@@ -11,6 +11,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 @Service
 public class ItemService {
@@ -23,6 +24,14 @@ public class ItemService {
 
         List<ItemDTO> listItemDTO = new ArrayList<>();
         List<Item> items = itemRepository.findAll();
+
+
+        Optional<Item> itemToRemove = items.stream()
+                .filter(item -> item.getItemId().equals(469L))
+                .findFirst();
+
+        itemToRemove.ifPresent(items::remove);
+
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
