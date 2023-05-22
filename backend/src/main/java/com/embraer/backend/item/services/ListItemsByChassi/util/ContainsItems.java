@@ -304,15 +304,15 @@ public class ContainsItems {
 								.findSbNameByServiceBulletinId(condition.getSb3IdLong()))) {
 
 					ListIncorporated inc = formula3Incorporated.formula3ListIncorporated(condition, id);
-					ListApplicable app = formula3Applicable.formula3ListApplicable(condition, id);
-					ListNotApplicable notApp = formula3NotApplicable.formula3ListApplicable(condition, id);
 
 					incorporated.add(inc);
 
 					if (Objects.equals(inc.getName_item(), "FAKE ITEM")) {
+						ListApplicable app = formula3Applicable.formula3ListApplicable(condition, id);
 						applicable.add(app);
 
 						if (Objects.equals(app.getName_item(), "FAKE ITEM")) {
+							ListNotApplicable notApp = formula3NotApplicable.formula3ListApplicable(condition, id);
 							notApplicable.add(notApp);
 
 							if (Objects.equals(notApp.getName_item(), "FAKE ITEM")) {
@@ -340,15 +340,15 @@ public class ContainsItems {
 								.findSbNameByServiceBulletinId(condition.getSb2IdLong()))) {
 
 					ListIncorporated inc = formula4Incorporated.formula4ListIncorporated(condition, id);
-					ListApplicable app = formula4Applicable.formula4ListApplicable(condition, id);
-					ListNotApplicable notApp = formula4NotApplicable.formula4ListNotApplicable(condition, id);
 
 					incorporated.add(inc);
 
 					if (Objects.equals(inc.getName_item(), "FAKE ITEM")) {
+						ListApplicable app = formula4Applicable.formula4ListApplicable(condition, id);
 						applicable.add(app);
 
 						if (Objects.equals(app.getName_item(), "FAKE ITEM")) {
+							ListNotApplicable notApp = formula4NotApplicable.formula4ListNotApplicable(condition, id);
 							notApplicable.add(notApp);
 
 							if (Objects.equals(notApp.getName_item(), "FAKE ITEM")) {
@@ -379,15 +379,15 @@ public class ContainsItems {
 								.findSbNameByServiceBulletinId(condition.getSb3IdLong()))) {
 
 					ListIncorporated inc = formula7Incorporated.formula7ListIncorporated(condition, id);
-					ListApplicable app = formula7Applicable.formula7ListApplicable(condition, id);
-					ListNotApplicable notApp = formula7NotApplicable.formula7ListNotAppliacable(condition, id);
 
 					incorporated.add(inc);
 
 					if (Objects.equals(inc.getName_item(), "FAKE ITEM")) {
+						ListApplicable app = formula7Applicable.formula7ListApplicable(condition, id);
 						applicable.add(app);
 
 						if (Objects.equals(app.getName_item(), "FAKE ITEM")) {
+							ListNotApplicable notApp = formula7NotApplicable.formula7ListNotAppliacable(condition, id);
 							notApplicable.add(notApp);
 
 							if (Objects.equals(notApp.getName_item(), "FAKE ITEM")) {
@@ -420,15 +420,15 @@ public class ContainsItems {
 								.findSbNameByServiceBulletinId(condition.getSb4IdLong()))) {
 
 					ListIncorporated inc = formula22Incorporated.formula22ListIncorporated(condition, id);
-					ListApplicable app = formula22Applicable.formula22ListApplicable(condition, id);
-					ListNotApplicable notApp = formula22NotApplicable.formula22ListNotApplicable(condition, id);
 
 					incorporated.add(inc);
 
 					if (Objects.equals(inc.getName_item(), "FAKE ITEM")) {
+						ListApplicable app = formula22Applicable.formula22ListApplicable(condition, id);
 						applicable.add(app);
 
 						if (Objects.equals(app.getName_item(), "FAKE ITEM")) {
+							ListNotApplicable notApp = formula22NotApplicable.formula22ListNotApplicable(condition, id);
 							notApplicable.add(notApp);
 
 							if (Objects.equals(notApp.getName_item(), "FAKE ITEM")) {
@@ -463,15 +463,15 @@ public class ContainsItems {
 								.findSbNameByServiceBulletinId(condition.getSb5IdLong()))) {
 
 					ListIncorporated inc = formula90Incorporated.formula90ListIncorporated(condition, id);
-					ListApplicable app = formula90Applicable.formula90ListApplicable(condition, id);
-					ListNotApplicable notApp = formula90NotApplicable.formula90ListNotApplicable(condition, id);
 
 					incorporated.add(inc);
 
 					if (Objects.equals(inc.getName_item(), "FAKE ITEM")) {
+						ListApplicable app = formula90Applicable.formula90ListApplicable(condition, id);
 						applicable.add(app);
 
 						if (Objects.equals(app.getName_item(), "FAKE ITEM")) {
+							ListNotApplicable notApp = formula90NotApplicable.formula90ListNotApplicable(condition, id);
 							notApplicable.add(notApp);
 
 							if (Objects.equals(notApp.getName_item(), "FAKE ITEM")) {
@@ -508,15 +508,15 @@ public class ContainsItems {
 								.findSbNameByServiceBulletinId(condition.getSb6IdLong()))) {
 
 					ListIncorporated inc = formula92Incorporated.formula92ListIncorporated(condition, id);
-					ListApplicable app = formula92Applicable.formula92ListApplicable(condition, id);
-					ListNotApplicable notApp = formula92NotApplicable.formula92ListNotApplicable(condition, id);
 
 					incorporated.add(inc);
 
 					if (Objects.equals(inc.getName_item(), "FAKE ITEM")) {
+						ListApplicable app = formula92Applicable.formula92ListApplicable(condition, id);
 						applicable.add(app);
 
 						if (Objects.equals(app.getName_item(), "FAKE ITEM")) {
+							ListNotApplicable notApp = formula92NotApplicable.formula92ListNotApplicable(condition, id);
 							notApplicable.add(notApp);
 
 							if (Objects.equals(notApp.getName_item(), "FAKE ITEM")) {
@@ -546,15 +546,15 @@ public class ContainsItems {
 								.findSbNameByServiceBulletinId(condition.getSb2IdLong()))) {
 
 					ListIncorporated inc = formula5Incorporated.formula5ListIncorporated(condition, id);
-					ListApplicable app = formula5Applicable.formula5ListApplicable(condition, id);
-					ListNotApplicable notApp = formula5NotApplicable.formula5ListNotApplicable(condition, id);
 
 					incorporated.add(inc);
 
 					if (Objects.equals(inc.getName_item(), "FAKE ITEM")) {
+						ListApplicable app = formula5Applicable.formula5ListApplicable(condition, id);
 						applicable.add(app);
 
 						if (Objects.equals(app.getName_item(), "FAKE ITEM")) {
+							ListNotApplicable notApp = formula5NotApplicable.formula5ListNotApplicable(condition, id);
 							notApplicable.add(notApp);
 
 							if (Objects.equals(notApp.getName_item(), "FAKE ITEM")) {
@@ -586,15 +586,15 @@ public class ContainsItems {
 								.findSbNameByServiceBulletinId(condition.getSb3IdLong()))) {
 
 					ListIncorporated inc = formula82Incorporated.formula82ListIncorporated(condition, id);
-					ListApplicable app = formula82Applicable.formula82ListApplicable(condition, id);
-					ListNotApplicable notApp = formula82NotApplicable.formula82ListNotApplicable(condition, id);
 
 					incorporated.add(inc);
 
 					if (Objects.equals(inc.getName_item(), "FAKE ITEM")) {
+						ListApplicable app = formula82Applicable.formula82ListApplicable(condition, id);
 						applicable.add(app);
 
 						if (Objects.equals(app.getName_item(), "FAKE ITEM")) {
+							ListNotApplicable notApp = formula82NotApplicable.formula82ListNotApplicable(condition, id);
 							notApplicable.add(notApp);
 
 							if (Objects.equals(notApp.getName_item(), "FAKE ITEM")) {
@@ -628,15 +628,15 @@ public class ContainsItems {
 								.findSbNameByServiceBulletinId(condition.getSb4IdLong()))) {
 
 					ListIncorporated inc = formula84Incorporated.formula84ListIncorporated(condition, id);
-					ListApplicable app = formula84Applicable.formula84ListApplicable(condition, id);
-					ListNotApplicable notApp = formula84NotApplicable.formula84ListNotApplicable(condition, id);
 
 					incorporated.add(inc);
 
 					if (Objects.equals(inc.getName_item(), "FAKE ITEM")) {
+						ListApplicable app = formula84Applicable.formula84ListApplicable(condition, id);
 						applicable.add(app);
 
 						if (Objects.equals(app.getName_item(), "FAKE ITEM")) {
+							ListNotApplicable notApp = formula84NotApplicable.formula84ListNotApplicable(condition, id);
 							notApplicable.add(notApp);
 
 							if (Objects.equals(notApp.getName_item(), "FAKE ITEM")) {
@@ -672,15 +672,15 @@ public class ContainsItems {
 								.findSbNameByServiceBulletinId(condition.getSb5IdLong()))) {
 
 					ListIncorporated inc = formula86Incorporated.formula86ListIncorporated(condition, id);
-					ListApplicable app = formula86Applicable.formula86ListApplicable(condition, id);
-					ListNotApplicable notApp = formula86NotApplicable.formula86ListNotApplicable(condition, id);
 
 					incorporated.add(inc);
 
 					if (Objects.equals(inc.getName_item(), "FAKE ITEM")) {
+						ListApplicable app = formula86Applicable.formula86ListApplicable(condition, id);
 						applicable.add(app);
 
 						if (Objects.equals(app.getName_item(), "FAKE ITEM")) {
+							ListNotApplicable notApp = formula86NotApplicable.formula86ListNotApplicable(condition, id);
 							notApplicable.add(notApp);
 
 							if (Objects.equals(notApp.getName_item(), "FAKE ITEM")) {
@@ -718,15 +718,15 @@ public class ContainsItems {
 								.findSbNameByServiceBulletinId(condition.getSb6IdLong()))) {
 
 					ListIncorporated inc = formula88Incorporated.formula88ListIncorporated(condition, id);
-					ListApplicable app = formula88Applicable.formula88ListApplicable(condition, id);
-					ListNotApplicable notApp = formula88NotApplicable.formula88ListNotApplicable(condition, id);
 
 					incorporated.add(inc);
 
 					if (Objects.equals(inc.getName_item(), "FAKE ITEM")) {
+						ListApplicable app = formula88Applicable.formula88ListApplicable(condition, id);
 						applicable.add(app);
 
 						if (Objects.equals(app.getName_item(), "FAKE ITEM")) {
+							ListNotApplicable notApp = formula88NotApplicable.formula88ListNotApplicable(condition, id);
 							notApplicable.add(notApp);
 
 							if (Objects.equals(notApp.getName_item(), "FAKE ITEM")) {
@@ -758,15 +758,15 @@ public class ContainsItems {
 								.findSbNameByServiceBulletinId(condition.getSb8IdLong()))) {
 
 					ListIncorporated inc = formula94Incorporated.formula94ListIncorporated(condition, id);
-					ListApplicable app = formula94Applicable.formula94ListApplicable(condition, id);
-					ListNotApplicable notApp = formula94NotApplicable.formula94ListNotApplicable(condition, id);
 
 					incorporated.add(inc);
 
 					if (Objects.equals(inc.getName_item(), "FAKE ITEM")) {
+						ListApplicable app = formula94Applicable.formula94ListApplicable(condition, id);
 						applicable.add(app);
 
 						if (Objects.equals(app.getName_item(), "FAKE ITEM")) {
+							ListNotApplicable notApp = formula94NotApplicable.formula94ListNotApplicable(condition, id);
 							notApplicable.add(notApp);
 
 							if (Objects.equals(notApp.getName_item(), "FAKE ITEM")) {
@@ -800,15 +800,15 @@ public class ContainsItems {
 								.findSbNameByServiceBulletinId(condition.getSb9IdLong()))) {
 
 					ListIncorporated inc = formula96Incorporated.formula96ListIncorporated(condition, id);
-					ListApplicable app = formula96Applicable.formula96ListApplicable(condition, id);
-					ListNotApplicable notApp = formula96NotApplicable.formula96ListNotApplicable(condition, id);
 
 					incorporated.add(inc);
 
 					if (Objects.equals(inc.getName_item(), "FAKE ITEM")) {
+						ListApplicable app = formula96Applicable.formula96ListApplicable(condition, id);
 						applicable.add(app);
 
 						if (Objects.equals(app.getName_item(), "FAKE ITEM")) {
+							ListNotApplicable notApp = formula96NotApplicable.formula96ListNotApplicable(condition, id);
 							notApplicable.add(notApp);
 
 							if (Objects.equals(notApp.getName_item(), "FAKE ITEM")) {
@@ -844,15 +844,15 @@ public class ContainsItems {
 								.findSbNameByServiceBulletinId(condition.getSb14IdLong()))) {
 
 					ListIncorporated inc = formula98Incorporated.formula98ListIncorporated(condition, id);
-					ListApplicable app = formula98Applicable.formula98ListApplicable(condition, id);
-					ListNotApplicable notApp = formula98NotApplicable.formula98ListNotApplicable(condition, id);
 
 					incorporated.add(inc);
 
 					if (Objects.equals(inc.getName_item(), "FAKE ITEM")) {
+						ListApplicable app = formula98Applicable.formula98ListApplicable(condition, id);
 						applicable.add(app);
 
 						if (Objects.equals(app.getName_item(), "FAKE ITEM")) {
+							ListNotApplicable notApp = formula98NotApplicable.formula98ListNotApplicable(condition, id);
 							notApplicable.add(notApp);
 
 							if (Objects.equals(notApp.getName_item(), "FAKE ITEM")) {
@@ -892,15 +892,15 @@ public class ContainsItems {
 								.findSbNameByServiceBulletinId(condition.getSb15IdLong()))) {
 
 					ListIncorporated inc = formula100Incorporated.formula100ListIncorporated(condition, id);
-					ListApplicable app = formula100Applicable.formula100ListApplicable(condition, id);
-					ListNotApplicable notApp = formula100NotApplicable.formula100ListNotApplicable(condition, id);
 
 					incorporated.add(inc);
 
 					if (Objects.equals(inc.getName_item(), "FAKE ITEM")) {
+						ListApplicable app = formula100Applicable.formula100ListApplicable(condition, id);
 						applicable.add(app);
 
 						if (Objects.equals(app.getName_item(), "FAKE ITEM")) {
+							ListNotApplicable notApp = formula100NotApplicable.formula100ListNotApplicable(condition, id);
 							notApplicable.add(notApp);
 
 							if (Objects.equals(notApp.getName_item(), "FAKE ITEM")) {
@@ -926,15 +926,15 @@ public class ContainsItems {
 						condition.getSb25Id() != null) {
 
 					ListIncorporated inc = fiveConditionsIncorporated.FiveConditionsListIncorporated(condition, id);
-					ListApplicable app = fiveConditionsApplicable.fiveConditionsListApplicable(condition, id);
-					ListNotApplicable notApp = fiveConditionsNotApplicable.fiveConditionsListNotApplicable(condition, id);
 
 					incorporated.add(inc);
 
 					if (Objects.equals(inc.getName_item(), "FAKE ITEM")) {
+						ListApplicable app = fiveConditionsApplicable.fiveConditionsListApplicable(condition, id);
 						applicable.add(app);
 
 						if (Objects.equals(app.getName_item(), "FAKE ITEM")) {
+							ListNotApplicable notApp = fiveConditionsNotApplicable.fiveConditionsListNotApplicable(condition, id);
 							notApplicable.add(notApp);
 
 							if (Objects.equals(notApp.getName_item(), "FAKE ITEM")) {
@@ -951,15 +951,15 @@ public class ContainsItems {
 						condition.getSb13Id() != null && condition.getSb19Id() != null) {
 
 					ListIncorporated inc = fourConditionsIncorporated.fourConditionsListIncorporated(condition, id);
-					ListApplicable app = fourConditionsApplicable.fourConditionsListApplicable(condition, id);
-					ListNotApplicable notApp = fourConditionsNotApplicable.fourConditionsListNotApplicable(condition, id);
 
 					incorporated.add(inc);
 
 					if (Objects.equals(inc.getName_item(), "FAKE ITEM")) {
+						ListApplicable app = fourConditionsApplicable.fourConditionsListApplicable(condition, id);
 						applicable.add(app);
 
 						if (Objects.equals(app.getName_item(), "FAKE ITEM")) {
+							ListNotApplicable notApp = fourConditionsNotApplicable.fourConditionsListNotApplicable(condition, id);
 							notApplicable.add(notApp);
 
 							if (Objects.equals(notApp.getName_item(), "FAKE ITEM")) {
@@ -976,15 +976,15 @@ public class ContainsItems {
 						condition.getSb13Id() != null) {
 
 					ListIncorporated inc = threeConditionsIncorporated.threeConditionsListIncorporated(condition, id);
-					ListApplicable app = threeConditionsApplicable.threeConditionsListApplicable(condition, id);
-					ListNotApplicable notApp = threeConditionsNotApplicable.threeConditionsListNotApplicable(condition, id);
 
 					incorporated.add(inc);
 
 					if (Objects.equals(inc.getName_item(), "FAKE ITEM")) {
+						ListApplicable app = threeConditionsApplicable.threeConditionsListApplicable(condition, id);
 						applicable.add(app);
 
 						if (Objects.equals(app.getName_item(), "FAKE ITEM")) {
+							ListNotApplicable notApp = threeConditionsNotApplicable.threeConditionsListNotApplicable(condition, id);
 							notApplicable.add(notApp);
 
 							if (Objects.equals(notApp.getName_item(), "FAKE ITEM")) {
@@ -1000,15 +1000,15 @@ public class ContainsItems {
 				else if (condition.getSb1Id() != null && condition.getSb7Id() != null) {
 
 					ListIncorporated inc = twoConditionsIncorporated.twoConditionsListIncorporated(condition, id);
-					ListApplicable app = twoConditionsApplicable.twoConditionsListApplicable(condition, id);
-					ListNotApplicable notApp = twoConditionsNotApplicable.twoConditionsListNotApplicable(condition, id);
 
 					incorporated.add(inc);
 
 					if (Objects.equals(inc.getName_item(), "FAKE ITEM")) {
+						ListApplicable app = twoConditionsApplicable.twoConditionsListApplicable(condition, id);
 						applicable.add(app);
 
 						if (Objects.equals(app.getName_item(), "FAKE ITEM")) {
+							ListNotApplicable notApp = twoConditionsNotApplicable.twoConditionsListNotApplicable(condition, id);
 							notApplicable.add(notApp);
 
 							if (Objects.equals(notApp.getName_item(), "FAKE ITEM")) {
