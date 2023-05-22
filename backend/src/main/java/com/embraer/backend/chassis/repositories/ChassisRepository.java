@@ -33,4 +33,10 @@ public interface ChassisRepository extends JpaRepository<Chassis, Long>{
             " AND cs.serviceBulletinId.serviceBulletinId = :sbId AND o.status = 'A'")
     List<Chassis> getChassisChassisThatDontHaveTheSbEditor(@Param("userId") Long userId, @Param("sbId") Long sbId);
 
+
+    @Query("SELECT c FROM Chassis c, ChassiServiceBulletin cs, ChassisUserOwner o WHERE c.chassiId = " +
+            "cs.chassiId.chassiId AND cs.chassiId.chassiId = o.chassis.chassiId AND " +
+            "cs.serviceBulletinId.serviceBulletinId = :sbId AND o.status = 'A'")
+    List<Chassis> listAllChassisThatHaveTheSbBySbId(@Param("sbId") Long sbId);
+
 }

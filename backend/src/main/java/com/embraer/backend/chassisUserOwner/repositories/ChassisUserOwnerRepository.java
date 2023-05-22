@@ -27,4 +27,8 @@ public interface ChassisUserOwnerRepository extends JpaRepository<ChassisUserOwn
     @Transactional
     void updateOwnerStatus(@Param("status") String status, @Param("id") Long id);
 
+    @Query("SELECT u.userUsername FROM ChassisUserOwner o, User u WHERE o.user.userId = u.userId " +
+            "AND o.chassis.chassiId = :chassisId AND o.status = 'A'")
+    String getChassisOwnerNameByChassisId(@Param("chassisId") Long chassisId);
+
 }
