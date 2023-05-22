@@ -290,7 +290,13 @@ export default {
                 part = 'UNICO';
             };
             
-            await axios.get('http://localhost:8080/edit-sb-status/' + sb + '/' + part + '/' + chassis + '/' + status);
+            const response = await axios.get('http://localhost:8080/edit-sb-status/' + sb + '/' + part + '/' + chassis + '/' + status);
+
+            if (response.data === 'The sb already has this status.') {
+                
+                alert('The Service Bulletin already has this status.');
+
+            }
 
             this.getPlanes();
         },
