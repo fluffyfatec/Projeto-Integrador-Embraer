@@ -5,6 +5,8 @@ import com.embraer.backend.chassisSb.entity.ChassiServiceBulletin;
 import com.embraer.backend.chassisSb.repository.ChassiServiceBulletinRepository;
 import com.embraer.backend.chassisUserOwner.repositories.ChassisUserOwnerRepository;
 import com.embraer.backend.item.entity.Item;
+import com.embraer.backend.log.entity.Log;
+import com.embraer.backend.log.repository.LogRepository;
 import com.embraer.backend.notificationsSb.entity.NotificationsSb;
 import com.embraer.backend.notificationsSb.repository.NotificationsSbRepository;
 import com.embraer.backend.notificationsSb.service.util.ContainsSb;
@@ -45,6 +47,9 @@ public class ChassiServiceBulletinService {
     @Autowired
     UserRepository userRepository;
 
+    @Autowired
+    LogRepository logRepository;
+
 
     @Transactional
     public ResponseEntity<?> updateSbStatus(String sbName, String part, Long chassis, String status) {
@@ -60,11 +65,26 @@ public class ChassiServiceBulletinService {
 
             } else {
 
+                String oldRegister = chassiServiceBulletinRepository.findSbStatusBySbId(sbId, chassis);
+
                 chassiServiceBulletinRepository.updateSbStatus(status, sbId, chassis);
                 chassiServiceBulletinRepository.flush();
 
-                // Log generation
+                String newRegister = chassiServiceBulletinRepository.findSbStatusBySbId(sbId, chassis);
 
+                // Log generation
+                Log newLog = new Log();
+
+                newLog.setUsername(userSession.getUserAuthentication().getUsername());
+                newLog.setRole(userSession.getUserAuthentication().getRole());
+                newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+                newLog.setOperation("Change of " + sbName + " " + part + " Status in chassis " + chassis);
+                newLog.setOldRegister(oldRegister);
+                newLog.setNewRegister(newRegister);
+                newLog.setChassis(chassis);
+                newLog.setBooleanAdmin(0);
+
+                logRepository.saveAndFlush(newLog);
 
 
                 // Notification sb
@@ -122,7 +142,19 @@ public class ChassiServiceBulletinService {
 
 
             // Log generation
+            Log newLog = new Log();
 
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Creation of " + chassiServiceBulletinDTO.getName() + " " + chassiServiceBulletinDTO.getPart()
+                    + " in chassis " + chassiServiceBulletinDTO.getChassis());
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister(chassiServiceBulletinRepository.findSbStatusBySbId(sbId, chassiServiceBulletinDTO.getChassis()));
+            newLog.setChassis(chassiServiceBulletinDTO.getChassis());
+            newLog.setBooleanAdmin(0);
+
+            logRepository.saveAndFlush(newLog);
 
 
             // Notifications of Sb

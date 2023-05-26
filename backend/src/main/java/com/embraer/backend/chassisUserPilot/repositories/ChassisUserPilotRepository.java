@@ -32,4 +32,10 @@ public interface ChassisUserPilotRepository extends JpaRepository<ChassisUserPil
     @Transactional
     void updatePilotStatus(@Param("status") String status, @Param("id") Long id);
 
+    @Query("SELECT p.chassis.chassiId FROM ChassisUserPilot p WHERE p.id = :id")
+    Long getChassisByPilotId(@Param("id") Long id);
+
+    @Query("SELECT u.userUsername FROM ChassisUserPilot p, User u WHERE p.pilot.userId = u.userId AND p.id = :id")
+    String getPilotNameByPilotId(@Param("id") Long id);
+
 }

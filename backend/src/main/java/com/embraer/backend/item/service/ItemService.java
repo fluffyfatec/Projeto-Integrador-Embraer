@@ -3,10 +3,14 @@ package com.embraer.backend.item.service;
 import com.embraer.backend.item.dto.ItemDTO;
 import com.embraer.backend.item.entity.Item;
 import com.embraer.backend.item.repositories.ItemRepository;
+import com.embraer.backend.log.entity.Log;
+import com.embraer.backend.log.repository.LogRepository;
+import com.embraer.backend.webConfig.UserSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +22,12 @@ public class ItemService {
 
     @Autowired
     private ItemRepository itemRepository;
+
+    @Autowired
+    LogRepository logRepository;
+
+    @Autowired
+    UserSession userSession;
 
 
     public List<ItemDTO> listAllItems() {
@@ -58,10 +68,42 @@ public class ItemService {
 
             if (Objects.equals(status, "Active")) {
                 itemRepository.updateItemStatus("I", itemId);
+
+                // Log generation
+                Log newLog = new Log();
+
+                newLog.setUsername(userSession.getUserAuthentication().getUsername());
+                newLog.setRole(userSession.getUserAuthentication().getRole());
+                newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+                newLog.setOperation("Update item " + itemRepository.findItemNameByItemId(itemId) + " Status");
+                newLog.setOldRegister("Active");
+                newLog.setNewRegister("Inactive");
+                newLog.setChassis(null);
+                newLog.setBooleanAdmin(1);
+
+                logRepository.saveAndFlush(newLog);
+
             }
 
             if (Objects.equals(status, "Inactive")) {
+
                 itemRepository.updateItemStatus("A", itemId);
+
+                // Log generation
+                Log newLog = new Log();
+
+                newLog.setUsername(userSession.getUserAuthentication().getUsername());
+                newLog.setRole(userSession.getUserAuthentication().getRole());
+                newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+                newLog.setOperation("Update item " + itemRepository.findItemNameByItemId(itemId) + " Status");
+                newLog.setOldRegister("Inactive");
+                newLog.setNewRegister("Active");
+                newLog.setChassis(null);
+                newLog.setBooleanAdmin(1);
+
+                logRepository.saveAndFlush(newLog);
+
+
             }
         } catch (Exception e) {
             e.printStackTrace();

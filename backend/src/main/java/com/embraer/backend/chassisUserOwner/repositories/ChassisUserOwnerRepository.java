@@ -31,4 +31,10 @@ public interface ChassisUserOwnerRepository extends JpaRepository<ChassisUserOwn
             "AND o.chassis.chassiId = :chassisId AND o.status = 'A'")
     String getChassisOwnerNameByChassisId(@Param("chassisId") Long chassisId);
 
+    @Query("SELECT o.chassis.chassiId FROM ChassisUserOwner o WHERE o.id = :id")
+    Long getChassisByOwnerId(@Param("id") Long id);
+
+    @Query("SELECT u.userUsername FROM ChassisUserOwner o, User u WHERE o.user.userId = u.userId AND o.id = :id")
+    String getOwnerNameByOwnerId(@Param("id") Long id);
+
 }

@@ -10,10 +10,13 @@ import com.embraer.backend.formula.entity.Formula;
 import com.embraer.backend.formula.repositories.FormulaRepository;
 import com.embraer.backend.item.entity.Item;
 import com.embraer.backend.item.repositories.ItemRepository;
+import com.embraer.backend.log.entity.Log;
+import com.embraer.backend.log.repository.LogRepository;
 import com.embraer.backend.operator.entity.Operator;
 import com.embraer.backend.operator.repository.OperatorRepository;
 import com.embraer.backend.serviceBulletin.entity.ServiceBulletin;
 import com.embraer.backend.serviceBulletin.repositories.ServiceBulletinRepository;
+import com.embraer.backend.webConfig.UserSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.embraer.backend.condition.repositories.conditionRepository;
@@ -42,6 +45,12 @@ public class ConditionService {
 
     @Autowired
     private ServiceBulletinRepository serviceBulletinRepository;
+
+    @Autowired
+    LogRepository logRepository;
+
+    @Autowired
+    UserSession userSession;
 
 
     @Transactional
@@ -306,6 +315,21 @@ public class ConditionService {
             conditionOperatorRepository.save(newConditionOperator);
 
 
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Creation of item " + conditionDTO.getItem());
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("Formula " + conditionDTO.getFormulaDesc());
+            newLog.setChassis(null);
+            newLog.setBooleanAdmin(1);
+
+            logRepository.saveAndFlush(newLog);
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -326,7 +350,7 @@ public class ConditionService {
                 newCondition.setFormulaId(formula);
             } else {
 
-                // If formulaId don't exist, create a a new insert in Formula
+                // If formulaId don't exist, create a new insert in Formula
                 if (formulaRepository.findFormulaIdByFormulaDesc(conditionDTO.getFormulaDesc()) == null) {
                     Formula newFormula = new Formula();
                     newFormula.setFormulaDescription(conditionDTO.getFormulaDesc());
@@ -336,6 +360,9 @@ public class ConditionService {
 
                 newCondition.setFormulaIdLong(formulaRepository.findFormulaIdByFormulaDesc(conditionDTO.getFormulaDesc()));
             }
+
+            Long formulaId = conditionRepository.getFormulaIdByConditionId(conditionDTO.getConditionId());
+            String oldRegister = formulaRepository.findFormulaDescByFormulaId(formulaId);
 
             conditionRepository.updateFormulaId(conditionDTO.getConditionId(), newCondition.getFormulaId());
 
@@ -685,6 +712,21 @@ public class ConditionService {
             }
 
             conditionOperatorRepository.updateOperator5(conditionDTO.getConditionId(), newConditionOperator.getOperator5());
+
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Update of item " + conditionDTO.getItem() + " condition");
+            newLog.setOldRegister("Formula " + oldRegister);
+            newLog.setNewRegister("Formula " + conditionDTO.getFormulaDesc());
+            newLog.setChassis(null);
+            newLog.setBooleanAdmin(1);
+
+            logRepository.saveAndFlush(newLog);
 
 
 
