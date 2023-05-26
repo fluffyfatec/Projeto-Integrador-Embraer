@@ -176,7 +176,7 @@ const router = new VueRouter({
     {
       path: '/logs',
       name: 'logs',
-      //component: () => import('../views/CrudChassisPilot.vue'),
+      component: () => import('../views/LogView.vue'),
       meta: {
         showH3: true,
         tituloValue: 'Logs',
@@ -188,7 +188,7 @@ const router = new VueRouter({
     {
       path: '/analytics',
       name: 'analytics',
-      //component: () => import('../views/CrudChassisPilot.vue'),
+      component: () => import('../views/Analytics.vue'),
       meta: {
         showH3: true,
         tituloValue: 'Analytics',

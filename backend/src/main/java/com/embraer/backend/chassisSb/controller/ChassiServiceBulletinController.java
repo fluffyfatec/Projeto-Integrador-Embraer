@@ -20,9 +20,7 @@ public class ChassiServiceBulletinController {
 
         try {
 
-            chassiServiceBulletinService.updateSbStatus(sbName, sbPart, chassis, sbStatus);
-
-            return ResponseEntity.ok("SUCCESS");
+            return chassiServiceBulletinService.updateSbStatus(sbName, sbPart, chassis, sbStatus);
 
         } catch (Exception e) {
 

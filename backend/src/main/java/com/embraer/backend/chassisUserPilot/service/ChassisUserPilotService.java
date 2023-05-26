@@ -6,6 +6,8 @@ import com.embraer.backend.chassisUserOwner.repositories.ChassisUserOwnerReposit
 import com.embraer.backend.chassisUserPilot.dto.ChassisUserPilotDTO;
 import com.embraer.backend.chassisUserPilot.entity.ChassisUserPilot;
 import com.embraer.backend.chassisUserPilot.repositories.ChassisUserPilotRepository;
+import com.embraer.backend.log.entity.Log;
+import com.embraer.backend.log.repository.LogRepository;
 import com.embraer.backend.user.repositories.UserRepository;
 import com.embraer.backend.userAuthenticated.dto.UserAuthenticationDto;
 import com.embraer.backend.webConfig.UserSession;
@@ -34,6 +36,9 @@ public class ChassisUserPilotService {
     @Autowired
     UserSession userSession;
 
+    @Autowired
+    LogRepository logRepository;
+
 
     public void registerChassisPilot(Long chassis, String pilot) {
 
@@ -52,6 +57,22 @@ public class ChassisUserPilotService {
            newChassisUserPilot.setStatus("A");
 
            chassisUserPilotRepository.save(newChassisUserPilot);
+
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Register chassis " + chassis + " pilot");
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister(pilot + " is one of the pilots of chassis " + chassis);
+            newLog.setChassis(chassis);
+            newLog.setBooleanAdmin(0);
+
+            logRepository.saveAndFlush(newLog);
+
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -113,13 +134,50 @@ public class ChassisUserPilotService {
 
         try {
 
+            Long chassis = chassisUserPilotRepository.getChassisByPilotId(id);
+            String pilot = chassisUserPilotRepository.getPilotNameByPilotId(id);
+
 
             if (Objects.equals(status, "Active")) {
+
                 chassisUserPilotRepository.updatePilotStatus("I", id);
+
+                // Log generation
+                Log newLog = new Log();
+
+                newLog.setUsername(userSession.getUserAuthentication().getUsername());
+                newLog.setRole(userSession.getUserAuthentication().getRole());
+                newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+                newLog.setOperation("Update " + pilot + " pilot register in chassis " + chassis + " Status");
+                newLog.setOldRegister("Active");
+                newLog.setNewRegister("Inactive");
+                newLog.setChassis(chassis);
+                newLog.setBooleanAdmin(0);
+
+                logRepository.saveAndFlush(newLog);
+
             }
 
             if (Objects.equals(status, "Inactive")) {
+
                 chassisUserPilotRepository.updatePilotStatus("A", id);
+
+
+                // Log generation
+                Log newLog = new Log();
+
+                newLog.setUsername(userSession.getUserAuthentication().getUsername());
+                newLog.setRole(userSession.getUserAuthentication().getRole());
+                newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+                newLog.setOperation("Update " + pilot + " pilot register in chassis " + chassis + " Status");
+                newLog.setOldRegister("Inactive");
+                newLog.setNewRegister("Active");
+                newLog.setChassis(chassis);
+                newLog.setBooleanAdmin(0);
+
+                logRepository.saveAndFlush(newLog);
+
+
             }
         } catch (Exception e) {
             e.printStackTrace();

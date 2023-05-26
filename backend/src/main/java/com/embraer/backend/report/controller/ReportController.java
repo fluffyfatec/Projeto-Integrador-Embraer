@@ -10,6 +10,8 @@ import com.embraer.backend.item.dto.ItemDTO;
 import com.embraer.backend.item.service.ItemService;
 import com.embraer.backend.item.services.ListItemsByChassi.ListItemsByChassiService;
 import com.embraer.backend.item.services.ListItemsByChassi.dto.ListItemsResponseDTO;
+import com.embraer.backend.log.entity.Log;
+import com.embraer.backend.log.repository.LogRepository;
 import com.embraer.backend.report.models.*;
 import com.embraer.backend.serviceBulletin.service.listServiceBulletins.ListServiceBulletinsService;
 import com.embraer.backend.serviceBulletin.service.listServiceBulletins.dto.ListServiceBulletinsResponse;
@@ -23,6 +25,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Timestamp;
 import java.util.List;
 import java.io.ByteArrayInputStream;
 import java.util.Objects;
@@ -52,6 +55,9 @@ public class ReportController {
     @Autowired
     ListItemsByChassiService listItemsByChassiService;
 
+    @Autowired
+    LogRepository logRepository;
+
 
     @CrossOrigin
     @GetMapping("/report-planes/{chassiId}/{inc}/{app}/{notApp}")
@@ -73,6 +79,27 @@ public class ReportController {
 
             headers.add("Content-Disposition", "attachment;filename=Report Chassis " + chassiId + ".pdf");
 
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Generation of Planes Report, about chassis " + chassiId);
+            newLog.setOldRegister(null);
+            newLog.setNewRegister(null);
+            newLog.setChassis(chassiId);
+
+            if (Objects.equals(userSession.getUserAuthentication().getRole(), "ADMIN")) {
+                newLog.setBooleanAdmin(1);
+            } else {
+                newLog.setBooleanAdmin(0);
+            }
+
+            logRepository.saveAndFlush(newLog);
+
+
             return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                     .body(new InputStreamResource(bis));
 
@@ -87,6 +114,27 @@ public class ReportController {
             HttpHeaders headers = new HttpHeaders();
 
             headers.add("Content-Disposition", "attachment;filename=Report Chassis " + chassiId + ".pdf");
+
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Generation of Planes Report, about chassis " + chassiId);
+            newLog.setOldRegister(null);
+            newLog.setNewRegister(null);
+            newLog.setChassis(chassiId);
+
+            if (Objects.equals(userSession.getUserAuthentication().getRole(), "ADMIN")) {
+                newLog.setBooleanAdmin(1);
+            } else {
+                newLog.setBooleanAdmin(0);
+            }
+
+            logRepository.saveAndFlush(newLog);
+
 
             return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                     .body(new InputStreamResource(bis));
@@ -103,6 +151,27 @@ public class ReportController {
 
             headers.add("Content-Disposition", "attachment;filename=Report Chassis " + chassiId + ".pdf");
 
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Generation of Planes Report, about chassis " + chassiId);
+            newLog.setOldRegister(null);
+            newLog.setNewRegister(null);
+            newLog.setChassis(chassiId);
+
+            if (Objects.equals(userSession.getUserAuthentication().getRole(), "ADMIN")) {
+                newLog.setBooleanAdmin(1);
+            } else {
+                newLog.setBooleanAdmin(0);
+            }
+
+            logRepository.saveAndFlush(newLog);
+
+
             return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                     .body(new InputStreamResource(bis));
 
@@ -117,6 +186,27 @@ public class ReportController {
             HttpHeaders headers = new HttpHeaders();
 
             headers.add("Content-Disposition", "attachment;filename=Report Chassis " + chassiId + ".pdf");
+
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Generation of Planes Report, about chassis " + chassiId);
+            newLog.setOldRegister(null);
+            newLog.setNewRegister(null);
+            newLog.setChassis(chassiId);
+
+            if (Objects.equals(userSession.getUserAuthentication().getRole(), "ADMIN")) {
+                newLog.setBooleanAdmin(1);
+            } else {
+                newLog.setBooleanAdmin(0);
+            }
+
+            logRepository.saveAndFlush(newLog);
+
 
             return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                     .body(new InputStreamResource(bis));
@@ -133,6 +223,27 @@ public class ReportController {
 
             headers.add("Content-Disposition", "attachment;filename=Report Chassis " + chassiId + ".pdf");
 
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Generation of Planes Report, about chassis " + chassiId);
+            newLog.setOldRegister(null);
+            newLog.setNewRegister(null);
+            newLog.setChassis(chassiId);
+
+            if (Objects.equals(userSession.getUserAuthentication().getRole(), "ADMIN")) {
+                newLog.setBooleanAdmin(1);
+            } else {
+                newLog.setBooleanAdmin(0);
+            }
+
+            logRepository.saveAndFlush(newLog);
+
+
             return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                     .body(new InputStreamResource(bis));
 
@@ -148,6 +259,26 @@ public class ReportController {
 
             headers.add("Content-Disposition", "attachment;filename=Report Chassis " + chassiId + ".pdf");
 
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Generation of Planes Report, about chassis " + chassiId);
+            newLog.setOldRegister(null);
+            newLog.setNewRegister(null);
+            newLog.setChassis(chassiId);
+
+            if (Objects.equals(userSession.getUserAuthentication().getRole(), "ADMIN")) {
+                newLog.setBooleanAdmin(1);
+            } else {
+                newLog.setBooleanAdmin(0);
+            }
+
+            logRepository.saveAndFlush(newLog);
+
             return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                     .body(new InputStreamResource(bis));
 
@@ -158,6 +289,27 @@ public class ReportController {
         HttpHeaders headers = new HttpHeaders();
 
         headers.add("Content-Disposition", "attachment;filename=Report Chassis " + chassiId + ".pdf");
+
+
+        // Log generation
+        Log newLog = new Log();
+
+        newLog.setUsername(userSession.getUserAuthentication().getUsername());
+        newLog.setRole(userSession.getUserAuthentication().getRole());
+        newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+        newLog.setOperation("Generation of Planes Report, about chassis " + chassiId);
+        newLog.setOldRegister(null);
+        newLog.setNewRegister(null);
+        newLog.setChassis(chassiId);
+
+        if (Objects.equals(userSession.getUserAuthentication().getRole(), "ADMIN")) {
+            newLog.setBooleanAdmin(1);
+        } else {
+            newLog.setBooleanAdmin(0);
+        }
+
+        logRepository.saveAndFlush(newLog);
+
 
         return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                 .body(new InputStreamResource(bis));
@@ -184,6 +336,22 @@ public class ReportController {
 
             headers.add("Content-Disposition", "attachment;filename=Report " + sb + " " + part + ".pdf");
 
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+            newLog.setOldRegister(null);
+            newLog.setNewRegister(null);
+            newLog.setBooleanAdmin(1);
+            newLog.setChassis(null);
+
+            logRepository.saveAndFlush(newLog);
+
+
             return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                     .body(new InputStreamResource(bis));
 
@@ -198,6 +366,22 @@ public class ReportController {
             HttpHeaders headers = new HttpHeaders();
 
             headers.add("Content-Disposition", "attachment;filename=Report " + sb + " " + part + ".pdf");
+
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+            newLog.setOldRegister(null);
+            newLog.setNewRegister(null);
+            newLog.setBooleanAdmin(1);
+            newLog.setChassis(null);
+
+            logRepository.saveAndFlush(newLog);
+
 
             return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                     .body(new InputStreamResource(bis));
@@ -214,6 +398,22 @@ public class ReportController {
 
             headers.add("Content-Disposition", "attachment;filename=Report " + sb + " " + part + ".pdf");
 
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+            newLog.setOldRegister(null);
+            newLog.setNewRegister(null);
+            newLog.setBooleanAdmin(1);
+            newLog.setChassis(null);
+
+            logRepository.saveAndFlush(newLog);
+
+
             return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                     .body(new InputStreamResource(bis));
 
@@ -228,6 +428,22 @@ public class ReportController {
             HttpHeaders headers = new HttpHeaders();
 
             headers.add("Content-Disposition", "attachment;filename=Report " + sb + " " + part + ".pdf");
+
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+            newLog.setOldRegister(null);
+            newLog.setNewRegister(null);
+            newLog.setBooleanAdmin(1);
+            newLog.setChassis(null);
+
+            logRepository.saveAndFlush(newLog);
+
 
             return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                     .body(new InputStreamResource(bis));
@@ -244,6 +460,22 @@ public class ReportController {
 
             headers.add("Content-Disposition", "attachment;filename=Report " + sb + " " + part + ".pdf");
 
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+            newLog.setOldRegister(null);
+            newLog.setNewRegister(null);
+            newLog.setBooleanAdmin(1);
+            newLog.setChassis(null);
+
+            logRepository.saveAndFlush(newLog);
+
+
             return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                     .body(new InputStreamResource(bis));
 
@@ -259,6 +491,22 @@ public class ReportController {
 
             headers.add("Content-Disposition", "attachment;filename=Report " + sb + " " + part + ".pdf");
 
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+            newLog.setOldRegister(null);
+            newLog.setNewRegister(null);
+            newLog.setBooleanAdmin(1);
+            newLog.setChassis(null);
+
+            logRepository.saveAndFlush(newLog);
+
+
             return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                     .body(new InputStreamResource(bis));
 
@@ -269,6 +517,22 @@ public class ReportController {
         HttpHeaders headers = new HttpHeaders();
 
         headers.add("Content-Disposition", "attachment;filename=Report " + sb + " " + part + ".pdf");
+
+
+        // Log generation
+        Log newLog = new Log();
+
+        newLog.setUsername(userSession.getUserAuthentication().getUsername());
+        newLog.setRole(userSession.getUserAuthentication().getRole());
+        newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+        newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+        newLog.setOldRegister(null);
+        newLog.setNewRegister(null);
+        newLog.setBooleanAdmin(1);
+        newLog.setChassis(null);
+
+        logRepository.saveAndFlush(newLog);
+
 
         return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                 .body(new InputStreamResource(bis));
@@ -295,6 +559,22 @@ public class ReportController {
 
             headers.add("Content-Disposition", "attachment;filename=Report " + sb + " " + part + ".pdf");
 
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+            newLog.setOldRegister(null);
+            newLog.setNewRegister(null);
+            newLog.setBooleanAdmin(0);
+            newLog.setChassis(chassis.get(0).getChassi());
+
+            logRepository.saveAndFlush(newLog);
+
+
             return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                     .body(new InputStreamResource(bis));
 
@@ -309,6 +589,22 @@ public class ReportController {
             HttpHeaders headers = new HttpHeaders();
 
             headers.add("Content-Disposition", "attachment;filename=Report " + sb + " " + part + ".pdf");
+
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+            newLog.setOldRegister(null);
+            newLog.setNewRegister(null);
+            newLog.setBooleanAdmin(0);
+            newLog.setChassis(chassis.get(0).getChassi());
+
+            logRepository.saveAndFlush(newLog);
+
 
             return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                     .body(new InputStreamResource(bis));
@@ -325,6 +621,22 @@ public class ReportController {
 
             headers.add("Content-Disposition", "attachment;filename=Report " + sb + " " + part + ".pdf");
 
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+            newLog.setOldRegister(null);
+            newLog.setNewRegister(null);
+            newLog.setBooleanAdmin(0);
+            newLog.setChassis(chassis.get(0).getChassi());
+
+            logRepository.saveAndFlush(newLog);
+
+
             return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                     .body(new InputStreamResource(bis));
 
@@ -339,6 +651,22 @@ public class ReportController {
             HttpHeaders headers = new HttpHeaders();
 
             headers.add("Content-Disposition", "attachment;filename=Report " + sb + " " + part + ".pdf");
+
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+            newLog.setOldRegister(null);
+            newLog.setNewRegister(null);
+            newLog.setBooleanAdmin(0);
+            newLog.setChassis(chassis.get(0).getChassi());
+
+            logRepository.saveAndFlush(newLog);
+
 
             return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                     .body(new InputStreamResource(bis));
@@ -355,6 +683,22 @@ public class ReportController {
 
             headers.add("Content-Disposition", "attachment;filename=Report " + sb + " " + part + ".pdf");
 
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+            newLog.setOldRegister(null);
+            newLog.setNewRegister(null);
+            newLog.setBooleanAdmin(0);
+            newLog.setChassis(chassis.get(0).getChassi());
+
+            logRepository.saveAndFlush(newLog);
+
+
             return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                     .body(new InputStreamResource(bis));
 
@@ -370,6 +714,22 @@ public class ReportController {
 
             headers.add("Content-Disposition", "attachment;filename=Report " + sb + " " + part + ".pdf");
 
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+            newLog.setOldRegister(null);
+            newLog.setNewRegister(null);
+            newLog.setBooleanAdmin(0);
+            newLog.setChassis(chassis.get(0).getChassi());
+
+            logRepository.saveAndFlush(newLog);
+
+
             return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                     .body(new InputStreamResource(bis));
 
@@ -380,6 +740,23 @@ public class ReportController {
         HttpHeaders headers = new HttpHeaders();
 
         headers.add("Content-Disposition", "attachment;filename=Report " + sb + " " + part + ".pdf");
+
+
+        // Log generation
+        Log newLog = new Log();
+
+        newLog.setUsername(userSession.getUserAuthentication().getUsername());
+        newLog.setRole(userSession.getUserAuthentication().getRole());
+        newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+        newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+        newLog.setOldRegister(null);
+        newLog.setNewRegister(null);
+        newLog.setBooleanAdmin(0);
+        newLog.setChassis(chassis.get(0).getChassi());
+
+        logRepository.saveAndFlush(newLog);
+
+
 
         return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                 .body(new InputStreamResource(bis));
@@ -403,6 +780,22 @@ public class ReportController {
 
             headers.add("Content-Disposition", "attachment;filename=Report Owners.pdf");
 
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Generation of Owners Report");
+            newLog.setOldRegister(null);
+            newLog.setNewRegister(null);
+            newLog.setBooleanAdmin(1);
+            newLog.setChassis(null);
+
+            logRepository.saveAndFlush(newLog);
+
+
             return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                     .body(new InputStreamResource(bis));
 
@@ -418,6 +811,22 @@ public class ReportController {
 
             headers.add("Content-Disposition", "attachment;filename=Report Owners.pdf");
 
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Generation of Owners Report");
+            newLog.setOldRegister(null);
+            newLog.setNewRegister(null);
+            newLog.setBooleanAdmin(1);
+            newLog.setChassis(null);
+
+            logRepository.saveAndFlush(newLog);
+
+
             return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                     .body(new InputStreamResource(bis));
 
@@ -428,6 +837,22 @@ public class ReportController {
         HttpHeaders headers = new HttpHeaders();
 
         headers.add("Content-Disposition", "attachment;filename=Report Owners.pdf");
+
+
+        // Log generation
+        Log newLog = new Log();
+
+        newLog.setUsername(userSession.getUserAuthentication().getUsername());
+        newLog.setRole(userSession.getUserAuthentication().getRole());
+        newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+        newLog.setOperation("Generation of Owners Report");
+        newLog.setOldRegister(null);
+        newLog.setNewRegister(null);
+        newLog.setBooleanAdmin(1);
+        newLog.setChassis(null);
+
+        logRepository.saveAndFlush(newLog);
+
 
         return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                 .body(new InputStreamResource(bis));
@@ -451,6 +876,22 @@ public class ReportController {
 
             headers.add("Content-Disposition", "attachment;filename=Report Pilots.pdf");
 
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Generation of Pilots Report");
+            newLog.setOldRegister(null);
+            newLog.setNewRegister(null);
+            newLog.setBooleanAdmin(0);
+            newLog.setChassis(pilots.get(0).getChassis());
+
+            logRepository.saveAndFlush(newLog);
+
+
             return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                     .body(new InputStreamResource(bis));
 
@@ -466,6 +907,22 @@ public class ReportController {
 
             headers.add("Content-Disposition", "attachment;filename=Report Pilots.pdf");
 
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Generation of Pilots Report");
+            newLog.setOldRegister(null);
+            newLog.setNewRegister(null);
+            newLog.setBooleanAdmin(0);
+            newLog.setChassis(pilots.get(0).getChassis());
+
+            logRepository.saveAndFlush(newLog);
+
+
             return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                     .body(new InputStreamResource(bis));
 
@@ -476,6 +933,22 @@ public class ReportController {
         HttpHeaders headers = new HttpHeaders();
 
         headers.add("Content-Disposition", "attachment;filename=Report Pilots.pdf");
+
+
+        // Log generation
+        Log newLog = new Log();
+
+        newLog.setUsername(userSession.getUserAuthentication().getUsername());
+        newLog.setRole(userSession.getUserAuthentication().getRole());
+        newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+        newLog.setOperation("Generation of Pilots Report");
+        newLog.setOldRegister(null);
+        newLog.setNewRegister(null);
+        newLog.setBooleanAdmin(0);
+        newLog.setChassis(pilots.get(0).getChassis());
+
+        logRepository.saveAndFlush(newLog);
+
 
         return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                 .body(new InputStreamResource(bis));
@@ -499,6 +972,22 @@ public class ReportController {
 
             headers.add("Content-Disposition", "attachment;filename=Report Items.pdf");
 
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Generation of List of Items Report");
+            newLog.setOldRegister(null);
+            newLog.setNewRegister(null);
+            newLog.setBooleanAdmin(1);
+            newLog.setChassis(null);
+
+            logRepository.saveAndFlush(newLog);
+
+
             return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                     .body(new InputStreamResource(bis));
 
@@ -514,6 +1003,22 @@ public class ReportController {
 
             headers.add("Content-Disposition", "attachment;filename=Report Items.pdf");
 
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Generation of List of Items Report");
+            newLog.setOldRegister(null);
+            newLog.setNewRegister(null);
+            newLog.setBooleanAdmin(1);
+            newLog.setChassis(null);
+
+            logRepository.saveAndFlush(newLog);
+
+
             return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                     .body(new InputStreamResource(bis));
 
@@ -524,6 +1029,22 @@ public class ReportController {
         HttpHeaders headers = new HttpHeaders();
 
         headers.add("Content-Disposition", "attachment;filename=Report Items.pdf");
+
+
+        // Log generation
+        Log newLog = new Log();
+
+        newLog.setUsername(userSession.getUserAuthentication().getUsername());
+        newLog.setRole(userSession.getUserAuthentication().getRole());
+        newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+        newLog.setOperation("Generation of List of Items Report");
+        newLog.setOldRegister(null);
+        newLog.setNewRegister(null);
+        newLog.setBooleanAdmin(1);
+        newLog.setChassis(null);
+
+        logRepository.saveAndFlush(newLog);
+
 
         return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                 .body(new InputStreamResource(bis));
@@ -544,6 +1065,28 @@ public class ReportController {
         HttpHeaders headers = new HttpHeaders();
 
         headers.add("Content-Disposition", "attachment;filename=Report Chassis " + chassiId + ".pdf");
+
+
+        // Log generation
+        Log newLog = new Log();
+
+        newLog.setUsername(userSession.getUserAuthentication().getUsername());
+        newLog.setRole(userSession.getUserAuthentication().getRole());
+        newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+        newLog.setOperation("Generation of Items Report, about chassis " + chassiId);
+        newLog.setOldRegister(null);
+        newLog.setNewRegister(null);
+        newLog.setChassis(chassiId);
+
+        if (Objects.equals(userSession.getUserAuthentication().getRole(), "ADMIN")) {
+            newLog.setBooleanAdmin(1);
+        } else {
+            newLog.setBooleanAdmin(0);
+        }
+
+        logRepository.saveAndFlush(newLog);
+
+
 
         return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF)
                 .body(new InputStreamResource(bis));

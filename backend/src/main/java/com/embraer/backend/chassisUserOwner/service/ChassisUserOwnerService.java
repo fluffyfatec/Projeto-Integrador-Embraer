@@ -4,7 +4,10 @@ import com.embraer.backend.chassisUserOwner.dto.ChassisUserOwnerDTO;
 import com.embraer.backend.chassisUserOwner.entity.ChassisUserOwner;
 import com.embraer.backend.chassisUserOwner.repositories.ChassisUserOwnerRepository;
 import com.embraer.backend.chassisUserPilot.repositories.ChassisUserPilotRepository;
+import com.embraer.backend.log.entity.Log;
+import com.embraer.backend.log.repository.LogRepository;
 import com.embraer.backend.user.repositories.UserRepository;
+import com.embraer.backend.webConfig.UserSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,6 +30,12 @@ public class ChassisUserOwnerService {
     @Autowired
     ChassisUserPilotRepository chassisUserPilotRepository;
 
+    @Autowired
+    LogRepository logRepository;
+
+    @Autowired
+    UserSession userSession;
+
 
     public void registerChassisOwner(String owner, Long chassis) {
 
@@ -42,6 +51,22 @@ public class ChassisUserOwnerService {
             newChassisUserOwner.setStatus("A");
 
             chassisUserOwnerRepository.save(newChassisUserOwner);
+
+
+            // Log generation
+            Log newLog = new Log();
+
+            newLog.setUsername(userSession.getUserAuthentication().getUsername());
+            newLog.setRole(userSession.getUserAuthentication().getRole());
+            newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+            newLog.setOperation("Register chassis " + chassis + " owner");
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister(owner + " is the owner of chassis " + chassis);
+            newLog.setChassis(chassis);
+            newLog.setBooleanAdmin(0);
+
+            logRepository.saveAndFlush(newLog);
+
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -99,13 +124,51 @@ public class ChassisUserOwnerService {
 
         try {
 
+            Long chassis = chassisUserOwnerRepository.getChassisByOwnerId(id);
+            String owner = chassisUserOwnerRepository.getOwnerNameByOwnerId(id);
+
 
             if (Objects.equals(status, "Active")) {
+
                 chassisUserOwnerRepository.updateOwnerStatus("I", id);
+
+
+                // Log generation
+                Log newLog = new Log();
+
+                newLog.setUsername(userSession.getUserAuthentication().getUsername());
+                newLog.setRole(userSession.getUserAuthentication().getRole());
+                newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+                newLog.setOperation("Update " + owner + " owner register in chassis " + chassis + " Status");
+                newLog.setOldRegister("Active");
+                newLog.setNewRegister("Inactive");
+                newLog.setChassis(chassis);
+                newLog.setBooleanAdmin(0);
+
+                logRepository.saveAndFlush(newLog);
+
+
             }
 
             if (Objects.equals(status, "Inactive")) {
+
                 chassisUserOwnerRepository.updateOwnerStatus("A", id);
+
+
+                // Log generation
+                Log newLog = new Log();
+
+                newLog.setUsername(userSession.getUserAuthentication().getUsername());
+                newLog.setRole(userSession.getUserAuthentication().getRole());
+                newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
+                newLog.setOperation("Update " + owner + " owner register in chassis " + chassis + " Status");
+                newLog.setOldRegister("Inactive");
+                newLog.setNewRegister("Active");
+                newLog.setChassis(chassis);
+                newLog.setBooleanAdmin(0);
+
+                logRepository.saveAndFlush(newLog);
+
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -15,7 +15,7 @@
             <li class="mobile-user" @click="showDropdown = !showDropdown" v-bind:class="{ 'active': showDropdown }">
               <a><i class="fa-solid fa-circle-user"></i></a>
               <ul v-if="showDropdown" class="dropdown-menu-mobile">
-                <li v-if="g.adminAuth"><router-link to="/logs"><i class="fa-solid fa-lock"></i> Logs</router-link></li>
+                <li v-if="g.adminAuth || g.editorAuth"><router-link to="/logs"><i class="fa-solid fa-lock"></i> Logs</router-link></li>
                 <li v-if="g.adminAuth"><router-link to="/register-condition"><i class="fa-sharp fa-solid fa-sitemap"></i> Condition</router-link></li>
                 <li v-if="g.adminAuth"><router-link to="/register-owner"><img src="./assets/plane.png"> Register Owner</router-link></li>
                 <li v-if="g.editorAuth"><router-link to="/register-pilot"><img src="./assets/plane.png"> Register Pilot</router-link></li>
@@ -34,11 +34,11 @@
           <ul class="desktop-nav">
             <li id="user-icone" @click="showDropdown = !showDropdown" v-bind:class="{ 'active': showDropdown }"
             :style="showDropdown && g.adminAuth ? { 'padding-bottom': '225px', 'padding-left':'60px' } : {} ||
-            showDropdown && g.editorAuth ? { 'padding-bottom': '100px' } : {} || 
+            showDropdown && g.editorAuth ? { 'padding-bottom': '150px' } : {} || 
             showDropdown && g.pilotAuth ? { 'padding-bottom': '50px', 'padding-left':'50px' } : {}">
               <a><i class="fa-solid fa-circle-user"></i></a>
               <ul v-if="showDropdown" class="dropdown-menu">
-                <li v-if="g.adminAuth"><router-link to="/logs"><i class="fa-solid fa-lock"></i> Logs</router-link></li>
+                <li v-if="g.adminAuth || g.editorAuth"><router-link to="/logs"><i class="fa-solid fa-lock"></i> Logs</router-link></li>
                 <li v-if="g.adminAuth"><router-link to="/register-condition"><i class="fa-sharp fa-solid fa-sitemap"></i> Condition</router-link></li>
                 <li v-if="g.adminAuth"><router-link to="/register-owner"><img src="./assets/plane.png"> Register Owner</router-link></li>
                 <li v-if="g.editorAuth"><router-link to="/register-pilot"><img src="./assets/plane.png"> Register Pilot</router-link></li>
@@ -46,7 +46,7 @@
                 <li><a href="#" @click.prevent="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
               </ul>
             </li>
-            <li v-if="g.adminAuth || g.editorAuth" id="notification-icone"><router-link to="/notifications"><i class="fa-solid fa-bell"></i></router-link></li>
+            <li v-if="g.adminAuth || g.editorAuth" id="notification-icone"><a @click.prevent="showNotifications = true"><i class="fa-solid fa-bell"></i></a></li>
             <li v-if="g.adminAuth"><router-link to="/analytics">Analytics</router-link></li>
             <li v-if="g.adminAuth || g.editorAuth"><router-link to="/sbs">SBs</router-link></li>
             <li v-if="g.adminAuth || g.editorAuth"><router-link to="/planes">Planes</router-link></li>
@@ -54,6 +54,10 @@
           </ul>
         </div>  
       </nav>
+
+      <Notifications v-if="showNotifications"></Notifications>
+
+      
 
       <ContainerSearch></ContainerSearch>
 
@@ -107,9 +111,11 @@
 
 <script lang="ts">
 import ContainerSearch from './components/ContainerSearch.vue'
+import Notifications from './components/Notifications.vue';
 import clickOutside from '@/utils/click-outside.js';
 import globalData from '@/globals'
 import router from '@/router';
+import axios from 'axios';
 
 export default {
   data() {
@@ -118,6 +124,7 @@ export default {
       isDesktop: false,
       showDropdown: false,
       g: globalData,     
+      showNotifications: false,
     }
   },
 
@@ -170,6 +177,7 @@ export default {
   
   components: {
     ContainerSearch,
+    Notifications
   }
 };
 </script>
@@ -454,7 +462,6 @@ span {
   background-position: center center;
   height: 377px;
 }
-
 
 /* --------------- Media Queries -------------------- */
 /* Estilos para tablet */

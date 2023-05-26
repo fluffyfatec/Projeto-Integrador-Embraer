@@ -19,6 +19,10 @@ import java.util.List;
 @Repository
 public interface conditionRepository extends JpaRepository<Condition, Long> {
 
+
+    @Query("SELECT c.formulaId.formulaId FROM Condition c WHERE c.conditionId = :conditionId")
+    Long getFormulaIdByConditionId(@Param("conditionId") Long conditionId);
+
     @Modifying
     @Query("UPDATE Condition c SET c.formulaId = :formulaId WHERE c.conditionId = :conditionId")
     @Transactional
