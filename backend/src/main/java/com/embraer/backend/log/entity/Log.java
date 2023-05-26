@@ -37,4 +37,10 @@ public class Log {
     @Column(name="NEW_REGISTER")
     private String newRegister;
 
+    @Column(name="BOOLEAN_ADMIN")
+    private Integer booleanAdmin;
+
+    @Column(name="CHASSIS_ID")
+    private Long chassis;
+
 }
