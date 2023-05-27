@@ -9,8 +9,8 @@
             <img src="@/assets/logo.png" alt="Logo">
           </a>
           <div class="mobile-icons">
-            <a v-if="g.adminAuth || g.editorAuth" class="mobile-notification">
-              <router-link to="/notificacoes"><i class="fa-solid fa-bell"></i></router-link>
+            <a v-if="g.adminAuth || g.editorAuth" class="mobile-notification" @click.prevent="showNotifications = !showNotifications">
+              <i class="fa-solid fa-bell"></i>
             </a>
             <li class="mobile-user" @click="showDropdown = !showDropdown" v-bind:class="{ 'active': showDropdown }">
               <a><i class="fa-solid fa-circle-user"></i></a>
@@ -46,7 +46,7 @@
                 <li><a href="#" @click.prevent="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
               </ul>
             </li>
-            <li v-if="g.adminAuth || g.editorAuth" id="notification-icone"><a @click.prevent="showNotifications = true"><i class="fa-solid fa-bell"></i></a></li>
+            <li v-if="g.adminAuth || g.editorAuth" id="notification-icone"><a @click.prevent="showNotifications = !showNotifications"><i class="fa-solid fa-bell"></i></a></li>
             <li v-if="g.adminAuth"><router-link to="/analytics">Analytics</router-link></li>
             <li v-if="g.adminAuth || g.editorAuth"><router-link to="/sbs">SBs</router-link></li>
             <li v-if="g.adminAuth || g.editorAuth"><router-link to="/planes">Planes</router-link></li>
@@ -115,7 +115,7 @@ import Notifications from './components/Notifications.vue';
 import clickOutside from '@/utils/click-outside.js';
 import globalData from '@/globals'
 import router from '@/router';
-import axios from 'axios';
+import { eventBus } from '@/main';
 
 export default {
   data() {
@@ -137,6 +137,14 @@ export default {
     this.checkIfMobile();
     window.addEventListener('resize', this.checkIfDesktop);
     this.checkIfDesktop();
+
+  },
+
+  created() {
+
+    eventBus.$on('close-notifications', (closeNotifications: boolean) => {
+            this.showNotifications = closeNotifications
+        });
 
   },
 
