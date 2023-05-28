@@ -87,8 +87,8 @@ public class ReportController {
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
             newLog.setOperation("Generation of Planes Report, about chassis " + chassiId);
-            newLog.setOldRegister(null);
-            newLog.setNewRegister(null);
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("It does not have");
             newLog.setChassis(chassiId);
 
             if (Objects.equals(userSession.getUserAuthentication().getRole(), "ADMIN")) {
@@ -123,8 +123,8 @@ public class ReportController {
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
             newLog.setOperation("Generation of Planes Report, about chassis " + chassiId);
-            newLog.setOldRegister(null);
-            newLog.setNewRegister(null);
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("It does not have");
             newLog.setChassis(chassiId);
 
             if (Objects.equals(userSession.getUserAuthentication().getRole(), "ADMIN")) {
@@ -159,8 +159,8 @@ public class ReportController {
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
             newLog.setOperation("Generation of Planes Report, about chassis " + chassiId);
-            newLog.setOldRegister(null);
-            newLog.setNewRegister(null);
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("It does not have");
             newLog.setChassis(chassiId);
 
             if (Objects.equals(userSession.getUserAuthentication().getRole(), "ADMIN")) {
@@ -195,8 +195,8 @@ public class ReportController {
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
             newLog.setOperation("Generation of Planes Report, about chassis " + chassiId);
-            newLog.setOldRegister(null);
-            newLog.setNewRegister(null);
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("It does not have");
             newLog.setChassis(chassiId);
 
             if (Objects.equals(userSession.getUserAuthentication().getRole(), "ADMIN")) {
@@ -231,8 +231,8 @@ public class ReportController {
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
             newLog.setOperation("Generation of Planes Report, about chassis " + chassiId);
-            newLog.setOldRegister(null);
-            newLog.setNewRegister(null);
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("It does not have");
             newLog.setChassis(chassiId);
 
             if (Objects.equals(userSession.getUserAuthentication().getRole(), "ADMIN")) {
@@ -267,8 +267,8 @@ public class ReportController {
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
             newLog.setOperation("Generation of Planes Report, about chassis " + chassiId);
-            newLog.setOldRegister(null);
-            newLog.setNewRegister(null);
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("It does not have");
             newLog.setChassis(chassiId);
 
             if (Objects.equals(userSession.getUserAuthentication().getRole(), "ADMIN")) {
@@ -298,8 +298,8 @@ public class ReportController {
         newLog.setRole(userSession.getUserAuthentication().getRole());
         newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
         newLog.setOperation("Generation of Planes Report, about chassis " + chassiId);
-        newLog.setOldRegister(null);
-        newLog.setNewRegister(null);
+        newLog.setOldRegister("It does not have");
+        newLog.setNewRegister("It does not have");
         newLog.setChassis(chassiId);
 
         if (Objects.equals(userSession.getUserAuthentication().getRole(), "ADMIN")) {
@@ -344,8 +344,8 @@ public class ReportController {
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
             newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
-            newLog.setOldRegister(null);
-            newLog.setNewRegister(null);
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(1);
             newLog.setChassis(null);
 
@@ -375,8 +375,8 @@ public class ReportController {
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
             newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
-            newLog.setOldRegister(null);
-            newLog.setNewRegister(null);
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(1);
             newLog.setChassis(null);
 
@@ -406,8 +406,8 @@ public class ReportController {
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
             newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
-            newLog.setOldRegister(null);
-            newLog.setNewRegister(null);
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(1);
             newLog.setChassis(null);
 
@@ -437,8 +437,8 @@ public class ReportController {
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
             newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
-            newLog.setOldRegister(null);
-            newLog.setNewRegister(null);
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(1);
             newLog.setChassis(null);
 
@@ -468,8 +468,8 @@ public class ReportController {
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
             newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
-            newLog.setOldRegister(null);
-            newLog.setNewRegister(null);
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(1);
             newLog.setChassis(null);
 
@@ -499,8 +499,8 @@ public class ReportController {
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
             newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
-            newLog.setOldRegister(null);
-            newLog.setNewRegister(null);
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(1);
             newLog.setChassis(null);
 
@@ -526,8 +526,8 @@ public class ReportController {
         newLog.setRole(userSession.getUserAuthentication().getRole());
         newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
         newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
-        newLog.setOldRegister(null);
-        newLog.setNewRegister(null);
+        newLog.setOldRegister("It does not have");
+        newLog.setNewRegister("It does not have");
         newLog.setBooleanAdmin(1);
         newLog.setChassis(null);
 
@@ -567,8 +567,8 @@ public class ReportController {
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
             newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
-            newLog.setOldRegister(null);
-            newLog.setNewRegister(null);
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(0);
             newLog.setChassis(chassis.get(0).getChassi());
 
@@ -598,8 +598,8 @@ public class ReportController {
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
             newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
-            newLog.setOldRegister(null);
-            newLog.setNewRegister(null);
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(0);
             newLog.setChassis(chassis.get(0).getChassi());
 
@@ -629,8 +629,8 @@ public class ReportController {
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
             newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
-            newLog.setOldRegister(null);
-            newLog.setNewRegister(null);
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(0);
             newLog.setChassis(chassis.get(0).getChassi());
 
@@ -660,8 +660,8 @@ public class ReportController {
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
             newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
-            newLog.setOldRegister(null);
-            newLog.setNewRegister(null);
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(0);
             newLog.setChassis(chassis.get(0).getChassi());
 
@@ -691,8 +691,8 @@ public class ReportController {
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
             newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
-            newLog.setOldRegister(null);
-            newLog.setNewRegister(null);
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(0);
             newLog.setChassis(chassis.get(0).getChassi());
 
@@ -722,8 +722,8 @@ public class ReportController {
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
             newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
-            newLog.setOldRegister(null);
-            newLog.setNewRegister(null);
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(0);
             newLog.setChassis(chassis.get(0).getChassi());
 
@@ -749,8 +749,8 @@ public class ReportController {
         newLog.setRole(userSession.getUserAuthentication().getRole());
         newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
         newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
-        newLog.setOldRegister(null);
-        newLog.setNewRegister(null);
+        newLog.setOldRegister("It does not have");
+        newLog.setNewRegister("It does not have");
         newLog.setBooleanAdmin(0);
         newLog.setChassis(chassis.get(0).getChassi());
 
@@ -788,8 +788,8 @@ public class ReportController {
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
             newLog.setOperation("Generation of Owners Report");
-            newLog.setOldRegister(null);
-            newLog.setNewRegister(null);
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(1);
             newLog.setChassis(null);
 
@@ -819,8 +819,8 @@ public class ReportController {
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
             newLog.setOperation("Generation of Owners Report");
-            newLog.setOldRegister(null);
-            newLog.setNewRegister(null);
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(1);
             newLog.setChassis(null);
 
@@ -846,8 +846,8 @@ public class ReportController {
         newLog.setRole(userSession.getUserAuthentication().getRole());
         newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
         newLog.setOperation("Generation of Owners Report");
-        newLog.setOldRegister(null);
-        newLog.setNewRegister(null);
+        newLog.setOldRegister("It does not have");
+        newLog.setNewRegister("It does not have");
         newLog.setBooleanAdmin(1);
         newLog.setChassis(null);
 
@@ -884,8 +884,8 @@ public class ReportController {
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
             newLog.setOperation("Generation of Pilots Report");
-            newLog.setOldRegister(null);
-            newLog.setNewRegister(null);
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(0);
             newLog.setChassis(pilots.get(0).getChassis());
 
@@ -915,8 +915,8 @@ public class ReportController {
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
             newLog.setOperation("Generation of Pilots Report");
-            newLog.setOldRegister(null);
-            newLog.setNewRegister(null);
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(0);
             newLog.setChassis(pilots.get(0).getChassis());
 
@@ -942,8 +942,8 @@ public class ReportController {
         newLog.setRole(userSession.getUserAuthentication().getRole());
         newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
         newLog.setOperation("Generation of Pilots Report");
-        newLog.setOldRegister(null);
-        newLog.setNewRegister(null);
+        newLog.setOldRegister("It does not have");
+        newLog.setNewRegister("It does not have");
         newLog.setBooleanAdmin(0);
         newLog.setChassis(pilots.get(0).getChassis());
 
@@ -980,8 +980,8 @@ public class ReportController {
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
             newLog.setOperation("Generation of List of Items Report");
-            newLog.setOldRegister(null);
-            newLog.setNewRegister(null);
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(1);
             newLog.setChassis(null);
 
@@ -1011,8 +1011,8 @@ public class ReportController {
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
             newLog.setOperation("Generation of List of Items Report");
-            newLog.setOldRegister(null);
-            newLog.setNewRegister(null);
+            newLog.setOldRegister("It does not have");
+            newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(1);
             newLog.setChassis(null);
 
@@ -1038,8 +1038,8 @@ public class ReportController {
         newLog.setRole(userSession.getUserAuthentication().getRole());
         newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
         newLog.setOperation("Generation of List of Items Report");
-        newLog.setOldRegister(null);
-        newLog.setNewRegister(null);
+        newLog.setOldRegister("It does not have");
+        newLog.setNewRegister("It does not have");
         newLog.setBooleanAdmin(1);
         newLog.setChassis(null);
 
@@ -1074,8 +1074,8 @@ public class ReportController {
         newLog.setRole(userSession.getUserAuthentication().getRole());
         newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
         newLog.setOperation("Generation of Items Report, about chassis " + chassiId);
-        newLog.setOldRegister(null);
-        newLog.setNewRegister(null);
+        newLog.setOldRegister("It does not have");
+        newLog.setNewRegister("It does not have");
         newLog.setChassis(chassiId);
 
         if (Objects.equals(userSession.getUserAuthentication().getRole(), "ADMIN")) {
