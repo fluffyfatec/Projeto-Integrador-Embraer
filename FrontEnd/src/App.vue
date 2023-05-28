@@ -10,7 +10,7 @@
           </a>
           <div class="mobile-icons">
             <a v-if="g.adminAuth || g.editorAuth" class="mobile-notification" @click.prevent="showNotifications = !showNotifications">
-              <i class="fa-solid fa-bell"></i>
+              <b class="number-notifications">{{ numberNotifications }}</b><i class="fa-solid fa-bell"></i>
             </a>
             <li class="mobile-user" @click="showDropdown = !showDropdown" v-bind:class="{ 'active': showDropdown }">
               <a><i class="fa-solid fa-circle-user"></i></a>
@@ -46,7 +46,7 @@
                 <li><a href="#" @click.prevent="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
               </ul>
             </li>
-            <li v-if="g.adminAuth || g.editorAuth" id="notification-icone"><a @click.prevent="showNotifications = !showNotifications"><i class="fa-solid fa-bell"></i></a></li>
+            <li v-if="g.adminAuth || g.editorAuth" id="notification-icone"><a @click.prevent="showNotifications = !showNotifications"><b class="number-notifications">{{ numberNotifications }}</b><i class="fa-solid fa-bell"></i></a></li>
             <li v-if="g.adminAuth"><router-link to="/analytics">Analytics</router-link></li>
             <li v-if="g.adminAuth || g.editorAuth"><router-link to="/sbs">SBs</router-link></li>
             <li v-if="g.adminAuth || g.editorAuth"><router-link to="/planes">Planes</router-link></li>
@@ -55,7 +55,8 @@
         </div>  
       </nav>
 
-      <Notifications v-if="showNotifications"></Notifications>
+      <Notifications v-if="showNotifications" ref="notifications"></Notifications>
+      <NumberNotifications></NumberNotifications>
 
       
 
@@ -112,10 +113,13 @@
 <script lang="ts">
 import ContainerSearch from './components/ContainerSearch.vue'
 import Notifications from './components/Notifications.vue';
+import NumberNotifications from './components/NumberNotifications.vue'
 import clickOutside from '@/utils/click-outside.js';
 import globalData from '@/globals'
 import router from '@/router';
 import { eventBus } from '@/main';
+import axios from 'axios';
+
 
 export default {
   data() {
@@ -125,6 +129,7 @@ export default {
       showDropdown: false,
       g: globalData,     
       showNotifications: false,
+      numberNotifications: null,
     }
   },
 
@@ -140,11 +145,16 @@ export default {
 
   },
 
+
   created() {
 
     eventBus.$on('close-notifications', (closeNotifications: boolean) => {
             this.showNotifications = closeNotifications
         });
+
+    eventBus.$on('number-notifications', (number: any) => {
+        this.numberNotifications = number
+    });   
 
   },
 
@@ -159,7 +169,7 @@ export default {
     if (this.$route.path !== this.g.previousPath) {
         this.g.previousPath = this.$route.path;
         await this.g.getUserAuthenticated();
-    };     
+    };    
   
   },
 
@@ -185,7 +195,8 @@ export default {
   
   components: {
     ContainerSearch,
-    Notifications
+    Notifications,
+    NumberNotifications
   }
 };
 </script>
@@ -461,6 +472,18 @@ span {
   transition: 5s;
 }
 
+.number-notifications {
+  background-color: #AE2A32;
+  border-radius: 50%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  color: white;
+  display:inline;
+}
+
 
 /* Classe wrapper */
 .wrapper {
@@ -552,6 +575,19 @@ span {
     background-size: 100% 188px;
     height: 188px;
   }
+
+  .number-notifications {
+    background-color: #AE2A32;
+    border-radius: 50%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 12.5px;
+    color: white;
+    display:inline;
+  }
+
 }
 </style>
 

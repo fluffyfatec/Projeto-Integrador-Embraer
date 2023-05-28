@@ -215,6 +215,13 @@ export default {
     },
     
     methods: {
+
+        updateNotifications() {
+
+            eventBus.$emit('update-notifications', true)
+
+        },
+
         async getPlanes() {
             const sb = this.$route.params.sb;
             const part = this.$route.params.part;
@@ -299,6 +306,7 @@ export default {
             }
 
             this.getPlanes();
+            this.updateNotifications();
         },
 
         async registerNew() {
@@ -315,7 +323,8 @@ export default {
                 });
 
             this.getPlanes();
-            this.getSelectChassis();   
+            this.getSelectChassis();
+            this.updateNotifications();   
             
             this.createNew = false;
             this.newSb.status = null;

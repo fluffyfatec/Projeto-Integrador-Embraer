@@ -12,24 +12,30 @@
         </h2>
 
         <div class="card-notification" v-for="n in notifications" :key="n.id">
-            <h4 v-if="(n.operation === 'Changed Sb status' || n.operation === 'Unlocking items by the new Sb') && n.item_status === 'INCORPORATED'">
+            <h4 v-if="(n.operation === 'Changed Sb status' || n.operation === 'Unlocking items by the new Sb') && n.item_status === 'INCORPORATED'" @click.prevent="divClickToItems(n.chassis_associate)">
                 Unlocked "{{ n.item }}" in chassis {{ n.chassis_associate }} 
                 <b :style="n.item_status === 'INCORPORATED' ? { 'background-color': '#548644', 'color' : 'white' } : { 'background-color': '#7CF0BD', 'color' : 'white' }">{{ n.item_status }}</b>
                 <button class="button-delete" @click.prevent="deleteNotification(n.id)"><i class="fa-solid fa-trash"></i></button>
             </h4>
-            <h4 v-if="(n.operation === 'Changed Sb status' || n.operation === 'Unlocking items by the new Sb') && n.item_status === 'APPLICABLE'">
+            <h4 v-if="(n.operation === 'Changed Sb status' || n.operation === 'Unlocking items by the new Sb') && n.item_status === 'APPLICABLE'" @click.prevent="divClickToItems(n.chassis_associate)">
                 Chance of "{{ n.item }}" unlocking in chassis {{ n.chassis_associate }} 
                 <b :style="n.item_status === 'INCORPORATED' ? { 'background-color': '#548644', 'color' : 'white' } : { 'background-color': '#7CF0BD', 'color' : 'white' }">{{ n.item_status }}</b>
                 <button class="button-delete" @click.prevent="deleteNotification(n.id)"><i class="fa-solid fa-trash"></i></button>
             </h4>
-            <h5 v-if="n.operation === 'Changed Sb status'">By change in {{ n.sb_name }} {{ n.sb_part }} for <b>{{ n.sb_status_change }}</b></h5>
-            <h5 v-if="n.operation === 'Unlocking items by the new Sb'">By creation of {{ n.sb_name }} {{ n.sb_part }} with status <p>{{ n.sb_status_change }}</p></h5>
+            <h5 v-if="n.operation === 'Changed Sb status'" @click.prevent="divClickToSbs(n.sb_name, n.sb_part)">
+                By change in {{ n.sb_name }} {{ n.sb_part }} for <b>{{ n.sb_status_change }}</b>
+            </h5>
+            <h5 v-if="n.operation === 'Unlocking items by the new Sb'" @click.prevent="divClickToSbs(n.sb_name, n.sb_part)">
+                By creation of {{ n.sb_name }} {{ n.sb_part }} with status <p>{{ n.sb_status_change }}</p>
+            </h5>
             
-            <h4 v-if="n.operation === 'Creation of new Sb'">
+            <h4 v-if="n.operation === 'Creation of new Sb'" @click.prevent="divClickToPlanes(n.chassis_associate)">
                 Creation of new Service Bulletin in chassis {{ n.chassis_associate }}
                 <button class="button-delete" @click.prevent="deleteNotification(n.id)"><i class="fa-solid fa-trash"></i></button>
             </h4>
-            <h5 v-if="n.operation === 'Creation of new Sb'">{{ n.sb_name }} {{ n.sb_part }} with status {{ n.sb_status_change }}</h5>
+            <h5 v-if="n.operation === 'Creation of new Sb'" @click.prevent="divClickToSbs(n.sb_name, n.sb_part)">
+                {{ n.sb_name }} {{ n.sb_part }} with status {{ n.sb_status_change }}
+            </h5>
             
             <h6 v-if="g.adminAuth"><i>Modified by {{ n.user_modified }} at {{ n.date_register }}.</i> Chassis owner: {{ n.user_owner }}</h6>
             <h6 v-else><i>Modified by {{ n.user_modified }} at {{ n.date_register }}</i></h6>
@@ -65,6 +71,10 @@ export default {
         this.filterUnlocked();
         this.filterChance();
         this.filterNewSb();
+
+        eventBus.$on('update-notifications', (update: boolean) => {
+            this.getNotifications();
+        });
     },
 
     watch: {
@@ -131,6 +141,8 @@ export default {
 
             };
 
+            eventBus.$emit('number-notifications', this.notifications.length)
+
         },
 
         async deleteNotification(id: Number) {
@@ -174,6 +186,43 @@ export default {
             }
         },
 
+        divClickToItems(chassis: string) {
+
+            this.$router.push({
+            name: 'items-details',
+                params: {
+                    chassis: chassis
+                }
+            });
+
+            this.closeNotifications();
+        },
+
+        divClickToPlanes(chassis: string) {
+
+            this.$router.push({
+            name: 'planes-details',
+                params: {
+                    chassis: chassis
+                }
+            });
+
+            this.closeNotifications();
+        },
+
+        divClickToSbs(sbName: string, part: string) {
+
+            this.$router.push({
+            name: 'sbs-details',
+                params: {
+                    sb: sbName,
+                    part: part
+                }
+            });
+
+            this.closeNotifications();
+        },
+
     },
 
     computed: {
@@ -187,6 +236,10 @@ export default {
 
         filteredNewSb() {
         return this.notifications;
+        },
+
+        numberOfNotifications() {
+            return eventBus.$emit('number-notifications', this.notifications.length)
         },
 
     },
@@ -240,6 +293,10 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 25px;
     display: flex;
     align-items: center;
+}
+
+h4, h5 {
+    cursor: pointer;
 }
 
 h4 b {

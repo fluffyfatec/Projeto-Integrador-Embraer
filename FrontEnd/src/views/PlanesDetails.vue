@@ -221,6 +221,13 @@ export default {
   },
     
     methods: {
+
+        updateNotifications() {
+
+            eventBus.$emit('update-notifications', true)
+
+        },
+
         async getSbs() {
             const chassis = this.$route.params.chassis;
 
@@ -288,6 +295,7 @@ export default {
             }
 
             this.getSbs();
+            this.updateNotifications();
         },
 
         async registerNew() {
@@ -304,6 +312,7 @@ export default {
                 });
 
             this.getSbs();   
+            this.updateNotifications();
             
             this.createNew = false;
             this.newSb.name = '';
