@@ -35,14 +35,14 @@ public class Formula98Incorporated {
                         .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED")) {
             ListIncorporated item = new ListIncorporated();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("INCORPORATED");
+            item.setStatus("INCORPORATED"); item.setChassis(id);
 
             return item;
         }
 
         ListIncorporated item = new ListIncorporated();
         item.setName_item("FAKE ITEM");
-        item.setStatus("INCORPORATED");
+        item.setStatus("INCORPORATED"); item.setChassis(id);
 
         return item;
     }

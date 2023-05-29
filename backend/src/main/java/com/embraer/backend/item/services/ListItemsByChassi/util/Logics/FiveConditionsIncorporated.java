@@ -41,7 +41,7 @@ public class FiveConditionsIncorporated {
                             .findSbStatusBySbId((condition.getSb25IdLong()), id), "INCORPORATED")) {
                 ListIncorporated item = new ListIncorporated();
                 item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-                item.setStatus("INCORPORATED");
+                item.setStatus("INCORPORATED"); item.setChassis(id);
 
                 return item;
             }
@@ -49,7 +49,7 @@ public class FiveConditionsIncorporated {
 
         ListIncorporated item = new ListIncorporated();
         item.setName_item("FAKE ITEM");
-        item.setStatus("INCORPORATED");
+        item.setStatus("INCORPORATED"); item.setChassis(id);
 
         return item;
     }

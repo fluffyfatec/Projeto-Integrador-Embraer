@@ -8,4 +8,6 @@ public class ListIncorporated {
 	private String name_item;
 	
 	private String status;
+
+	private Long chassis;
 }

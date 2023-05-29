@@ -30,7 +30,7 @@ public class Formula4Incorporated {
                         .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED")) {
             ListIncorporated item = new ListIncorporated();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("INCORPORATED");
+            item.setStatus("INCORPORATED"); item.setChassis(id);
 
             return item;
         }
@@ -38,7 +38,7 @@ public class Formula4Incorporated {
 
         ListIncorporated item = new ListIncorporated();
         item.setName_item("FAKE ITEM");
-        item.setStatus("INCORPORATED");
+        item.setStatus("INCORPORATED"); item.setChassis(id);
 
         return item;
     }

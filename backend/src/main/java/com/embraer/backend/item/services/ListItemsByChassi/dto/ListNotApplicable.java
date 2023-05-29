@@ -9,4 +9,6 @@ public class ListNotApplicable {
 	private String name_item;
 	
 	private String status;
+
+	private Long chassis;
 }

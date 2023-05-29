@@ -8,5 +8,7 @@ public class ListApplicable {
 	private String name_item;
 	
 	private String status;
+
+	private Long chassis;
 	
 }

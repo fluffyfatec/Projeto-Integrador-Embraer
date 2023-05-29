@@ -248,11 +248,13 @@ public class ContainsItems {
 					ListIncorporated item = new ListIncorporated();
 					item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
 					item.setStatus("INCORPORATED");
+					item.setChassis(id);
 					incorporated.add(item);
 				} else {
 					ListNotApplicable item = new ListNotApplicable();
 					item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
 					item.setStatus("NOT APPLICABLE");
+					item.setChassis(id);
 					notApplicable.add(item);
 				}
 
@@ -267,6 +269,7 @@ public class ContainsItems {
 						ListIncorporated item = new ListIncorporated();
 						item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
 						item.setStatus("INCORPORATED");
+						item.setChassis(id);
 						incorporated.add(item);
 					}
 
@@ -275,6 +278,7 @@ public class ContainsItems {
 						ListApplicable item = new ListApplicable();
 						item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
 						item.setStatus("APPLICABLE");
+						item.setChassis(id);
 						applicable.add(item);
 					}
 
@@ -283,12 +287,14 @@ public class ContainsItems {
 						ListNotApplicable item = new ListNotApplicable();
 						item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
 						item.setStatus("NOT APPLICABLE");
+						item.setChassis(id);
 						notApplicable.add(item);
 					}
 				} else {
 					ListNotApplicable item = new ListNotApplicable();
 					item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
 					item.setStatus("NOT APPLICABLE");
+					item.setChassis(id);
 					notApplicable.add(item);
 				}
 
