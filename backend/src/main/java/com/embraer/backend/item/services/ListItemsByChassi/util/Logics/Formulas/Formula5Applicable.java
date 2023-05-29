@@ -30,14 +30,14 @@ public class Formula5Applicable {
                         .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
 
         ListApplicable item = new ListApplicable();
         item.setName_item("FAKE ITEM");
-        item.setStatus("APPLICABLE");
+        item.setStatus("APPLICABLE"); item.setChassis(id);
 
         return item;
     }

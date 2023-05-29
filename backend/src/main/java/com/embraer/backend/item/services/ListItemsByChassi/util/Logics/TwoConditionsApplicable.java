@@ -31,7 +31,7 @@ public class TwoConditionsApplicable {
                             .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE")) {
                 ListApplicable item = new ListApplicable();
                 item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-                item.setStatus("APPLICABLE");
+                item.setStatus("APPLICABLE"); item.setChassis(id);
                 return item;
             } else if (Objects.equals(chassiServiceBulletinRepository
                     .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
@@ -39,7 +39,7 @@ public class TwoConditionsApplicable {
                             .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE")) {
                 ListApplicable item = new ListApplicable();
                 item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-                item.setStatus("APPLICABLE");
+                item.setStatus("APPLICABLE"); item.setChassis(id);
                 return item;
             } else if (Objects.equals(chassiServiceBulletinRepository
                     .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
@@ -47,7 +47,7 @@ public class TwoConditionsApplicable {
                             .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED")) {
                 ListApplicable item = new ListApplicable();
                 item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-                item.setStatus("APPLICABLE");
+                item.setStatus("APPLICABLE"); item.setChassis(id);
 
                 return item;
 
@@ -57,7 +57,7 @@ public class TwoConditionsApplicable {
 
         ListApplicable item = new ListApplicable();
         item.setName_item("FAKE ITEM");
-        item.setStatus("APPLICABLE");
+        item.setStatus("APPLICABLE"); item.setChassis(id);
 
         return item;
     }

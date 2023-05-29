@@ -30,14 +30,14 @@ public class Formula3NotApplicable {
                 .findSbStatusBySbId((condition.getSb3IdLong()), id), "NOT APPLICABLE")) {
             ListNotApplicable item = new ListNotApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("NOT APPLICABLE");
+            item.setStatus("NOT APPLICABLE"); item.setChassis(id);
 
             return item;
         }
 
         ListNotApplicable item = new ListNotApplicable();
         item.setName_item("FAKE ITEM");
-        item.setStatus("NOT APPLICABLE");
+        item.setStatus("NOT APPLICABLE"); item.setChassis(id);
 
         return item;
     }

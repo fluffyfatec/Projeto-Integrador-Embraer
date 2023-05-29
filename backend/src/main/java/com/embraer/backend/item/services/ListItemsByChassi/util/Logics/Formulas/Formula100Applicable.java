@@ -40,7 +40,7 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -61,7 +61,7 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -82,7 +82,7 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -103,7 +103,7 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -124,7 +124,7 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -145,7 +145,7 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -166,7 +166,7 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -187,7 +187,7 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -208,7 +208,7 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -229,7 +229,7 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -250,7 +250,7 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -271,7 +271,7 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -292,7 +292,7 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -313,7 +313,7 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -334,7 +334,7 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -355,7 +355,7 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -376,7 +376,7 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -397,7 +397,7 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -418,7 +418,7 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -439,7 +439,7 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -460,7 +460,7 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -481,1645 +481,7 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "ICORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "ICORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
-
-            return item;
-        }
-
-        else if (Objects.equals(chassiServiceBulletinRepository
-                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
-                Objects.equals(chassiServiceBulletinRepository
-                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
-            ListApplicable item = new ListApplicable();
-            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -2137,10 +499,1648 @@ public class Formula100Applicable {
                 Objects.equals(chassiServiceBulletinRepository
                         .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
                 Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "ICORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "APPLICABLE")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
+
+            return item;
+        }
+
+        else if (Objects.equals(chassiServiceBulletinRepository
+                .findSbStatusBySbId((condition.getSb1IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb2IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb7IdLong()), id), "ICORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb13IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb14IdLong()), id), "INCORPORATED") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb3IdLong()), id), "APPLICABLE") &&
+                Objects.equals(chassiServiceBulletinRepository
+                        .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
+            ListApplicable item = new ListApplicable();
+            item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -2161,7 +2161,7 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -2182,7 +2182,7 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -2203,14 +2203,14 @@ public class Formula100Applicable {
                         .findSbStatusBySbId((condition.getSb15IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
 
         ListApplicable item = new ListApplicable();
         item.setName_item("FAKE ITEM");
-        item.setStatus("APPLICABLE");
+        item.setStatus("APPLICABLE"); item.setChassis(id);
 
         return item;
     }

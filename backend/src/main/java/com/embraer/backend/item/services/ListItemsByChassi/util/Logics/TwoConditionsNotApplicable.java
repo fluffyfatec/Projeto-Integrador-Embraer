@@ -31,7 +31,7 @@ public class TwoConditionsNotApplicable {
                             .findSbStatusBySbId((condition.getSb7IdLong()), id), "NOT APPLICABLE")) {
                 ListNotApplicable item = new ListNotApplicable();
                 item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-                item.setStatus("NOT APPLICABLE");
+                item.setStatus("NOT APPLICABLE"); item.setChassis(id);
 
                 return item;
 
@@ -40,7 +40,7 @@ public class TwoConditionsNotApplicable {
 
         ListNotApplicable item = new ListNotApplicable();
         item.setName_item("FAKE ITEM");
-        item.setStatus("NOT APPLICABLE");
+        item.setStatus("NOT APPLICABLE"); item.setChassis(id);
 
         return item;
     }

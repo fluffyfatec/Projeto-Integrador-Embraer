@@ -38,7 +38,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -57,7 +57,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -76,7 +76,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -95,7 +95,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -114,7 +114,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -133,7 +133,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -152,7 +152,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -171,7 +171,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -190,7 +190,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -209,7 +209,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -228,7 +228,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -247,7 +247,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -266,7 +266,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -285,7 +285,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -304,7 +304,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -323,7 +323,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -342,7 +342,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -361,7 +361,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -380,7 +380,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -399,7 +399,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -418,7 +418,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -437,7 +437,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -456,7 +456,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -475,7 +475,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "APPLICABLE")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -494,7 +494,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -513,7 +513,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -532,7 +532,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -551,7 +551,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -570,7 +570,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -589,7 +589,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -608,7 +608,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -627,7 +627,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -646,7 +646,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -665,7 +665,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -684,7 +684,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -703,7 +703,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -722,7 +722,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -741,7 +741,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -760,7 +760,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -779,7 +779,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -798,7 +798,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -817,7 +817,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -836,7 +836,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -855,7 +855,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -874,7 +874,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -893,7 +893,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -912,7 +912,7 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
@@ -931,14 +931,14 @@ public class Formula92Applicable {
                         .findSbStatusBySbId((condition.getSb6IdLong()), id), "INCORPORATED")) {
             ListApplicable item = new ListApplicable();
             item.setName_item(itemRepository.findItemNameByItemId(condition.getItemIdLong()));
-            item.setStatus("APPLICABLE");
+            item.setStatus("APPLICABLE"); item.setChassis(id);
 
             return item;
         }
 
         ListApplicable item = new ListApplicable();
         item.setName_item("FAKE ITEM");
-        item.setStatus("APPLICABLE");
+        item.setStatus("APPLICABLE"); item.setChassis(id);
 
         return item;
     }
