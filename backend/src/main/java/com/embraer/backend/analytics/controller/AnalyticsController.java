@@ -31,5 +31,24 @@ public class AnalyticsController {
 
     }
 
+    @CrossOrigin
+    @GetMapping("/data-graphic-macro-item-status")
+    public ResponseEntity<?> dataForGraphicMacroItemStatus() {
+
+        try {
+
+            return ResponseEntity.ok(analyticsService.dataOfGraphicMacroItemStatus());
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+
+            return ResponseEntity.ok("NOT SUCCESS");
+
+        }
+
+    }
+
+
 
 }
