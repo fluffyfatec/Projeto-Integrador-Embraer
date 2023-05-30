@@ -9,11 +9,15 @@
         <h3 @click.prevent="subSections = 'logs'" :style="subSections === 'logs' ? { 'color': '#F3C653' } : { }">Logs</h3>
       </div>
       <chart-items v-if="subSections === 'items'"></chart-items>
+      <chart-planes v-if="subSections === 'planes'"></chart-planes>
+      <chart-sbs v-if="subSections === 'sbs'"></chart-sbs>
     </div>
   </template>
   
   <script lang="ts">
   import ChartItems from '@/components/Graphics/ChartItems.vue';
+  import ChartPlanes from '@/components/Graphics/ChartPlanes.vue';
+  import ChartSbs from '@/components/Graphics/ChartSbs.vue';
   
   export default {
 
@@ -24,7 +28,9 @@
     },
   
     components: {
-      ChartItems
+      ChartItems,
+      ChartPlanes,
+      ChartSbs
     }
 }
 
