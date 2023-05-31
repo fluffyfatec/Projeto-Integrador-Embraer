@@ -1,29 +1,58 @@
 <template>
-    <div class="chart-container">
-      <h1>Item status in chassis <b>{{ itemSelected }}</b></h1>
-      <div class="grid-row">
-        <select v-model="SelectPlaceholder">
-          <option class="select-placeholder" disabled :value="null">Select a chassis...</option>
-          <option v-for="c in chassis" :key="c.chassi_id" @click.prevent="getDataOfGraphic(c.chassi_id)">{{ c.chassi_id }}</option>
-        </select>
-        <div class="chart1">
-          <img v-if="loading" src="../../assets/loading.gif" alt="Carregando...">
-          <canvas ref="chart"></canvas>
-          <div v-if="chartInstance !== null" class="button-pdf">
-            <button @click="exportToPdf">Export to PDF <i class="fa-solid fa-file-lines"></i></button>
-          </div>
+    <div>
+        <div class="chart-container">
+        <h1>Item status in chassis <b>{{ itemSelected }}</b></h1>
+        <div class="grid-row">
+            <select v-model="SelectPlaceholder">
+            <option class="select-placeholder" disabled :value="null">Select a chassis...</option>
+            <option v-for="c in chassis" :key="c.chassi_id" @click.prevent="getDataOfGraphicOne(c.chassi_id)">{{ c.chassi_id }}</option>
+            </select>
+            <div class="chart1">
+            <img v-if="loading" src="../../assets/loading.gif" alt="Carregando...">
+            <canvas ref="chart"></canvas>
+            <div v-if="chartInstance !== null" class="button-pdf">
+                <button @click="exportToPdf">Export to PDF <i class="fa-solid fa-file-lines"></i></button>
+            </div>
+            </div>
         </div>
-      </div>
-      <div v-if="items_incorporated.length >= 1 || items_applicable.length >= 1 || items_not_applicable.length >= 1" 
-        class="open-dropdown" @click.prevent="moreInformation = !moreInformation">
-        <h4 v-if="!moreInformation">See more information <i class="fa-solid fa-chevron-down"></i></h4>
-        <h4 v-else>Close more information <i class="fa-solid fa-chevron-up"></i></h4>
-      </div> 
-      <div v-if="moreInformation" class="container-card">
-        <div class="card" v-for="inc in items_incorporated">{{ inc.name_item }} <br> <b style="background-color: #548644;">INCORPORATED</b></div>
-        <div class="card" v-for="app in items_applicable">{{ app.name_item }} <br> <b style="background-color: #7CF0BD;">APPLICABLE</b></div>
-        <div class="card" v-for="notApp in items_not_applicable">{{ notApp.name_item }} <br> <b style="background-color: #AE2A32;">NOT APPLICABLE</b></div>
-      </div>
+        <div v-if="items_incorporated.length >= 1 || items_applicable.length >= 1 || items_not_applicable.length >= 1" 
+            class="open-dropdown" @click.prevent="moreInformation = !moreInformation">
+            <h4 v-if="!moreInformation">See more information <i class="fa-solid fa-chevron-down"></i></h4>
+            <h4 v-else>Close more information <i class="fa-solid fa-chevron-up"></i></h4>
+        </div> 
+        <div v-if="moreInformation" class="container-card">
+            <div class="card" v-for="inc in items_incorporated">{{ inc.name_item }} <br> <b style="background-color: #548644;">INCORPORATED</b></div>
+            <div class="card" v-for="app in items_applicable">{{ app.name_item }} <br> <b style="background-color: #7CF0BD;">APPLICABLE</b></div>
+            <div class="card" v-for="notApp in items_not_applicable">{{ notApp.name_item }} <br> <b style="background-color: #AE2A32;">NOT APPLICABLE</b></div>
+        </div>
+        </div>
+
+        <div class="chart-container">
+        <h1>Sb status in chassis <b>{{ itemSelected2 }}</b></h1>
+        <div class="grid-row">
+            <select v-model="SelectPlaceholder2">
+            <option class="select-placeholder" disabled :value="null">Select a chassis...</option>
+            <option v-for="c in chassis" :key="c.chassi_id" @click.prevent="getDataOfGraphicTwo(c.chassi_id)">{{ c.chassi_id }}</option>
+            </select>
+            <div class="chart1">
+            <img v-if="loading2" src="../../assets/loading.gif" alt="Carregando...">
+            <canvas ref="chart2"></canvas>
+            <div v-if="chartInstance2 !== null" class="button-pdf">
+                <button @click="exportToPdf2">Export to PDF <i class="fa-solid fa-file-lines"></i></button>
+            </div>
+            </div>
+        </div>
+        <div v-if="sbs.length >= 1" 
+            class="open-dropdown" @click.prevent="moreInformation2 = !moreInformation2">
+            <h4 v-if="!moreInformation2">See more information <i class="fa-solid fa-chevron-down"></i></h4>
+            <h4 v-else>Close more information <i class="fa-solid fa-chevron-up"></i></h4>
+        </div> 
+        <div v-if="moreInformation2" class="container-card">
+            <div class="card" v-for="inc in sbs.filter(sb => String(sb.status) === 'INCORPORATED')">{{ inc.sb_name }} {{ inc.part }} <br> <b style="background-color: #548644;">INCORPORATED</b></div>
+            <div class="card" v-for="app in sbs.filter(sb => String(sb.status) === 'APPLICABLE')">{{ app.sb_name }} {{ app.part }} <br> <b style="background-color: #7CF0BD;">APPLICABLE</b></div>
+            <div class="card" v-for="notApp in sbs.filter(sb => String(sb.status) === 'NOT APPLICABLE')">{{ notApp.sb_name }} {{ notApp.part }} <br> <b style="background-color: #AE2A32;">NOT APPLICABLE</b></div>
+        </div>
+        </div>
     </div>
   </template>
   
@@ -53,6 +82,16 @@
         moreInformation: false,
         loading: false,
         g: globalData,
+
+        loading2: false,
+        chartInstance2: null,
+        moreInformation2: false,
+        data_incorporated2: null,
+        data_applicable2: null,
+        data_not_applicable2: null,
+        itemSelected2: null,
+        SelectPlaceholder2: null,
+        sbs: [],
       }
     },
   
@@ -98,7 +137,7 @@
 
           },
 
-          async getDataOfGraphic(chassiId: Number) {
+          async getDataOfGraphicOne(chassiId: Number) {
   
             // Se existir, destrua o antigo gráfico
             if (this.chartInstance !== null) {
@@ -151,16 +190,102 @@
               this.chartInstance = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                  labels: ['Incorporated', 'Applicable', 'NotApplicable'],
+                  labels: ['Chassis ' + this.SelectPlaceholder],
                   datasets: [{
-                    label: 'Chassis ' + this.SelectPlaceholder,  
-                    data: [this.data_incorporated, this.data_applicable, this.data_not_applicable],
-                    backgroundColor: ['#548644', '#7CF0BD', '#AE2A32']
+                    label: 'Incorporated',  
+                    data: [this.data_incorporated],
+                    backgroundColor: ['#548644']
+                  },
+                  {
+                    label: 'Applicable',  
+                    data: [this.data_applicable],
+                    backgroundColor: ['#7CF0BD']
+                  },
+                  {
+                    label: 'Not Applicable',  
+                    data: [this.data_not_applicable],
+                    backgroundColor: ['#AE2A32']
                   }]
                 }
               });
   
           },
+
+          async getDataOfGraphicTwo(chassiId: Number) {
+  
+            // Se existir, destrua o antigo gráfico
+            if (this.chartInstance2 !== null) {
+                    this.chartInstance2.destroy();
+                    this.chartInstance2 = null;
+                };
+
+            this.sbs = [];    
+            this.moreInformation2 = false;
+
+            this.loading2 = true;
+
+            this.itemSelected2 = chassiId;
+
+            const response = await axios.get('http://localhost:8080/bulletins/listar/' + chassiId);
+            this.sbs = response.data.map((item: String) => ({ 
+                sb_name: item.service_bulleti_name,
+                status: item.status,
+                part: item.part === 'UNICO' ? 'UNIQUE' : item.part,
+            }));
+
+                this.data_incorporated2 = this.sbs.filter(sb => String(sb.status) === 'INCORPORATED').length
+
+                this.data_applicable2 = this.sbs.filter(sb => String(sb.status) === 'APPLICABLE').length
+
+                this.data_not_applicable2 = this.sbs.filter(sb => String(sb.status) === 'NOT APPLICABLE').length
+
+
+                this.loading2 = false;
+
+
+                // Registra os plugins do Chart.js que deseja utilizar
+                Chart.register(...registerables);
+
+                // Cria uma instância do gráfico
+                const ctx = this.$refs.chart2 as HTMLCanvasElement;
+                this.chartInstance2 = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Chassis ' + this.SelectPlaceholder2],
+                    datasets: [{
+                    label: 'Incorporated',  
+                    data: [this.data_incorporated2],
+                    backgroundColor: ['#548644']
+                    },
+                    {
+                    label: 'Applicable',  
+                    data: [this.data_applicable2],
+                    backgroundColor: ['#7CF0BD']
+                    },
+                    {
+                    label: 'Not Applicable',  
+                    data: [this.data_not_applicable2],
+                    backgroundColor: ['#AE2A32']
+                    }]
+                }
+                });
+
+            },
+
+            exportToPdf2() {
+                const chartContainer = this.$refs.chart2.parentElement;
+    
+                html2canvas(chartContainer).then((canvas) => {
+                    const imageData = canvas.toDataURL('image/png');
+                    const pdf = new jsPDF();
+    
+                    const width = pdf.internal.pageSize.getWidth();
+                    const height = pdf.internal.pageSize.getHeight();
+    
+                    pdf.addImage(imageData, 'PNG', 0, 0, width, height);
+                    pdf.save('chart.pdf');
+                });
+            },
       },
     })
   </script>

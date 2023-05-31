@@ -146,11 +146,21 @@ export default defineComponent({
             this.chartInstance = new Chart(ctx, {
               type: 'bar',
               data: {
-                labels: ['Incorporated', 'Applicable', 'NotApplicable'],
+                labels: [this.SelectPlaceholder],
                 datasets: [{
-                  label: this.SelectPlaceholder,  
-                  data: [this.data_incorporated, this.data_applicable, this.data_not_applicable],
-                  backgroundColor: ['#548644', '#7CF0BD', '#AE2A32']
+                  label: 'Incorporated',  
+                  data: [this.data_incorporated],
+                  backgroundColor: ['#548644']
+                },
+                {
+                  label: 'Applicable',  
+                  data: [this.data_applicable],
+                  backgroundColor: ['#7CF0BD']
+                },
+                {
+                  label: 'Not Applicable',  
+                  data: [this.data_not_applicable],
+                  backgroundColor: ['#AE2A32']
                 }]
               }
             });
@@ -202,11 +212,21 @@ export default defineComponent({
             this.chartInstance2 = new Chart(ctx, {
               type: 'bar',
               data: {
-                labels: ['Incorporated', 'Applicable', 'NotApplicable'],
+                labels: ['All items'],
                 datasets: [{
-                  label: 'All items',  
-                  data: [this.dataMacro_incorporated, this.dataMacro_applicable, this.dataMacro_not_applicable],
-                  backgroundColor: ['#548644', '#7CF0BD', '#AE2A32']
+                  label: 'Incorporated',  
+                  data: [this.dataMacro_incorporated],
+                  backgroundColor: ['#548644']
+                },
+                {
+                  label: 'Applicable',  
+                  data: [this.dataMacro_applicable],
+                  backgroundColor: ['#7CF0BD']
+                },
+                {
+                  label: 'Not Applicable',  
+                  data: [this.dataMacro_not_applicable],
+                  backgroundColor: ['#AE2A32']
                 }]
               }
             });
