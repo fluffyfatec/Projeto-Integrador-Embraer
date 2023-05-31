@@ -7,7 +7,7 @@ public class ListGraphicsOwnersDTO {
 
     Long owner_id;
 
-    Integer data_owner;
+    Long data_owner;
 
     String owner_name;
 

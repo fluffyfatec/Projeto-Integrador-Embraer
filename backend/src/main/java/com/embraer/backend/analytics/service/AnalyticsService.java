@@ -11,6 +11,7 @@ import com.embraer.backend.chassisUserPilot.repositories.ChassisUserPilotReposit
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -53,11 +54,19 @@ public class AnalyticsService {
 
     public List<ListGraphicsOwnersDTO> dataOfGraphicOwners() {
 
-        List<ListGraphicsOwnersDTO> owners = chassisUserOwnerRepository.groupByOwner();
+        List<Object[]> dtos = chassisUserOwnerRepository.groupByOwner();
 
-        for (ListGraphicsOwnersDTO owner : owners) {
+        List<ListGraphicsOwnersDTO> owners = new ArrayList<>();
 
-            owner.setOwner_name(chassisUserOwnerRepository.getOwnerNameByOwnerId(owner.getOwner_id()));
+        for (Object[] dto : dtos) {
+
+            ListGraphicsOwnersDTO owner = new ListGraphicsOwnersDTO();
+
+            owner.setOwner_id((Long) dto[0]);
+            owner.setData_owner((Long) dto[1]);
+            owner.setOwner_name(chassisUserOwnerRepository.getOwnerNameByUserId((Long) dto[0]));
+
+            owners.add(owner);
 
         }
 

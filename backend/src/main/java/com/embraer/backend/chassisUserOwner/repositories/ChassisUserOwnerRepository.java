@@ -1,6 +1,5 @@
 package com.embraer.backend.chassisUserOwner.repositories;
 
-import com.embraer.backend.analytics.dto.ListGraphicsOwnersDTO;
 import com.embraer.backend.chassisUserOwner.entity.ChassisUserOwner;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -39,6 +38,9 @@ public interface ChassisUserOwnerRepository extends JpaRepository<ChassisUserOwn
     String getOwnerNameByOwnerId(@Param("id") Long id);
 
     @Query("SELECT c.user.userId, COUNT(*) FROM ChassisUserOwner c WHERE c.status = 'A' GROUP BY c.user.userId")
-    List<ListGraphicsOwnersDTO> groupByOwner();
+    List<Object[]> groupByOwner();
+
+    @Query("SELECT DISTINCT u.userUsername FROM ChassisUserOwner o, User u WHERE o.user.userId = u.userId AND o.user.userId = :id")
+    String getOwnerNameByUserId(@Param("id") Long id);
 
 }
