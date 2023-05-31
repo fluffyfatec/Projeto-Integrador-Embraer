@@ -50,5 +50,44 @@ public class AnalyticsController {
     }
 
 
+    @CrossOrigin
+    @GetMapping("/data-graphic-macro-sb-status")
+    public ResponseEntity<?> dataForGraphicMacroSbStatus() {
+
+        try {
+
+            return ResponseEntity.ok(analyticsService.dataOfGraphicMacroSbStatus());
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+
+            return ResponseEntity.ok("NOT SUCCESS");
+
+        }
+
+    }
+
+
+    @CrossOrigin
+    @GetMapping("/data-graphic-owners")
+    public ResponseEntity<?> dataForGraphicOwners() {
+
+        try {
+
+            return ResponseEntity.ok(analyticsService.dataOfGraphicOwners());
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+
+            return ResponseEntity.ok("NOT SUCCESS");
+
+        }
+
+    }
+
+
+
 
 }

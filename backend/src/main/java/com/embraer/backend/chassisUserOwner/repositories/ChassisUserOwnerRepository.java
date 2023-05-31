@@ -1,14 +1,15 @@
 package com.embraer.backend.chassisUserOwner.repositories;
 
+import com.embraer.backend.analytics.dto.ListGraphicsOwnersDTO;
 import com.embraer.backend.chassisUserOwner.entity.ChassisUserOwner;
-import com.embraer.backend.item.entity.Item;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Repository
 public interface ChassisUserOwnerRepository extends JpaRepository<ChassisUserOwner, Long> {
@@ -36,5 +37,8 @@ public interface ChassisUserOwnerRepository extends JpaRepository<ChassisUserOwn
 
     @Query("SELECT u.userUsername FROM ChassisUserOwner o, User u WHERE o.user.userId = u.userId AND o.id = :id")
     String getOwnerNameByOwnerId(@Param("id") Long id);
+
+    @Query("SELECT c.user.userId, COUNT(*) FROM ChassisUserOwner c WHERE c.status = 'A' GROUP BY c.user.userId")
+    List<ListGraphicsOwnersDTO> groupByOwner();
 
 }
