@@ -6,12 +6,12 @@
         <h3 @click.prevent="subSections = 'sbs'" :style="subSections === 'sbs' ? { 'color': '#F3C653' } : { }">Sbs</h3>
         <h3 @click.prevent="subSections = 'owners'" :style="subSections === 'owners' ? { 'color': '#F3C653' } : { }">Owners</h3>
         <h3 @click.prevent="subSections = 'pilots'" :style="subSections === 'pilots' ? { 'color': '#F3C653' } : { }">Pilots</h3>
-        <h3 @click.prevent="subSections = 'logs'" :style="subSections === 'logs' ? { 'color': '#F3C653' } : { }">Logs</h3>
       </div>
       <chart-items v-if="subSections === 'items'"></chart-items>
       <chart-planes v-if="subSections === 'planes'"></chart-planes>
       <chart-sbs v-if="subSections === 'sbs'"></chart-sbs>
       <chart-owners v-if="subSections === 'owners'"></chart-owners>
+      <chart-pilots v-if="subSections === 'pilots'"></chart-pilots>
     </div>
   </template>
   
@@ -20,6 +20,7 @@
   import ChartPlanes from '@/components/Graphics/ChartPlanes.vue';
   import ChartSbs from '@/components/Graphics/ChartSbs.vue';
   import ChartOwners from '@/components/Graphics/ChartOwners.vue';
+  import ChartPilots from '@/components/Graphics/ChartPilots.vue';
   
   export default {
 
@@ -33,7 +34,8 @@
       ChartItems,
       ChartPlanes,
       ChartSbs,
-      ChartOwners
+      ChartOwners,
+      ChartPilots
     }
 }
 
