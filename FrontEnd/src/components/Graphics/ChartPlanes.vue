@@ -108,13 +108,32 @@
   
               html2canvas(chartContainer).then((canvas) => {
                 const imageData = canvas.toDataURL('image/png');
-                const pdf = new jsPDF();
-  
-                const width = pdf.internal.pageSize.getWidth();
-                const height = pdf.internal.pageSize.getHeight();
-  
-                pdf.addImage(imageData, 'PNG', 0, 0, width, height);
-                pdf.save('chart.pdf');
+                const pdf = new jsPDF('landscape'); // Definir o formato do PDF como paisagem
+
+              const pdfWidth = pdf.internal.pageSize.getWidth(); // Largura do PDF
+              const pdfHeight = pdf.internal.pageSize.getHeight(); // Altura do PDF
+
+              const chartWidth = canvas.width; // Largura da imagem do gráfico
+              const chartHeight = canvas.height; // Altura da imagem do gráfico
+
+              const aspectRatio = chartWidth / chartHeight; // Proporção de aspecto da imagem do gráfico
+
+              let finalWidth, finalHeight;
+              if (aspectRatio > 1) {
+                // Imagem mais larga do que alta
+                finalWidth = pdfWidth;
+                finalHeight = pdfWidth / aspectRatio;
+              } else {
+                // Imagem mais alta do que larga (ou quadrada)
+                finalWidth = pdfHeight * aspectRatio;
+                finalHeight = pdfHeight;
+              }
+
+              const xPos = (pdfWidth - finalWidth + 50) / 2; // Posição horizontal da imagem no PDF
+              const yPos = (pdfHeight - finalHeight) / 2; // Posição vertical da imagem no PDF
+
+              pdf.addImage(imageData, 'PNG', xPos, yPos, finalWidth, finalHeight);
+              pdf.save('chart.pdf');
                });
           },
   
@@ -277,13 +296,32 @@
     
                 html2canvas(chartContainer).then((canvas) => {
                     const imageData = canvas.toDataURL('image/png');
-                    const pdf = new jsPDF();
-    
-                    const width = pdf.internal.pageSize.getWidth();
-                    const height = pdf.internal.pageSize.getHeight();
-    
-                    pdf.addImage(imageData, 'PNG', 0, 0, width, height);
-                    pdf.save('chart.pdf');
+                    const pdf = new jsPDF('landscape'); // Definir o formato do PDF como paisagem
+
+              const pdfWidth = pdf.internal.pageSize.getWidth(); // Largura do PDF
+              const pdfHeight = pdf.internal.pageSize.getHeight(); // Altura do PDF
+
+              const chartWidth = canvas.width; // Largura da imagem do gráfico
+              const chartHeight = canvas.height; // Altura da imagem do gráfico
+
+              const aspectRatio = chartWidth / chartHeight; // Proporção de aspecto da imagem do gráfico
+
+              let finalWidth, finalHeight;
+              if (aspectRatio > 1) {
+                // Imagem mais larga do que alta
+                finalWidth = pdfWidth;
+                finalHeight = pdfWidth / aspectRatio;
+              } else {
+                // Imagem mais alta do que larga (ou quadrada)
+                finalWidth = pdfHeight * aspectRatio;
+                finalHeight = pdfHeight;
+              }
+
+              const xPos = (pdfWidth - finalWidth + 50) / 2; // Posição horizontal da imagem no PDF
+              const yPos = (pdfHeight - finalHeight) / 2; // Posição vertical da imagem no PDF
+
+              pdf.addImage(imageData, 'PNG', xPos, yPos, finalWidth, finalHeight);
+              pdf.save('chart.pdf');
                 });
             },
       },
