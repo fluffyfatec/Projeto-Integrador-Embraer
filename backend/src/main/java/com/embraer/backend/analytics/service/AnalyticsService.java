@@ -3,6 +3,7 @@ package com.embraer.backend.analytics.service;
 import com.embraer.backend.analytics.dto.ListGraphicItemsStatusDataDTO;
 import com.embraer.backend.analytics.dto.ListGraphicSbsStatusDTO;
 import com.embraer.backend.analytics.dto.ListGraphicsOwnersDTO;
+import com.embraer.backend.analytics.dto.ListGraphicsPilotsDTO;
 import com.embraer.backend.analytics.service.util.GraphicsAllOfItems;
 import com.embraer.backend.analytics.service.util.GraphicsAllOfSbs;
 import com.embraer.backend.analytics.service.util.GraphicsItems;
@@ -73,6 +74,30 @@ public class AnalyticsService {
         return owners;
 
     }
+
+
+    public List<ListGraphicsPilotsDTO> dataOfGraphicPilots() {
+
+        List<Object[]> dtos = chassisUserPilotRepository.groupByPilot();
+
+        List<ListGraphicsPilotsDTO> pilots = new ArrayList<>();
+
+        for (Object[] dto : dtos) {
+
+            ListGraphicsPilotsDTO pilot = new ListGraphicsPilotsDTO();
+
+            pilot.setPilot_id((Long) dto[0]);
+            pilot.setData_pilot((Long) dto[1]);
+            pilot.setPilot_name(chassisUserPilotRepository.getPilotNameByUserId((Long) dto[0]));
+
+            pilots.add(pilot);
+
+        }
+
+        return pilots;
+
+    }
+
 
 
 }

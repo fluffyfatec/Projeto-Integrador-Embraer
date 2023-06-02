@@ -42,6 +42,14 @@ public class ChassisUserPilotController {
     }
 
     @CrossOrigin
+    @GetMapping("list-all-chassis-pilots-admin")
+    public List<ChassisUserPilotDTO> listAllChassisPilotsAdmin() {
+
+        return chassisUserPilotService.listAllChassisPilotsAdmin();
+
+    }
+
+    @CrossOrigin
     @GetMapping("delete-chassis-pilot/{id}")
     public ResponseEntity<?> deleteOwner(@PathVariable("id") Long id) {
 

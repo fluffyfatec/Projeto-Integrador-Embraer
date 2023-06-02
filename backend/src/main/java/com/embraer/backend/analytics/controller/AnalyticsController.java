@@ -87,6 +87,24 @@ public class AnalyticsController {
 
     }
 
+    @CrossOrigin
+    @GetMapping("/data-graphic-pilots")
+    public ResponseEntity<?> dataForGraphicPilots() {
+
+        try {
+
+            return ResponseEntity.ok(analyticsService.dataOfGraphicPilots());
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+
+            return ResponseEntity.ok("NOT SUCCESS");
+
+        }
+
+    }
+
 
 
 
