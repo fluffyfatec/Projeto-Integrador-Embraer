@@ -46,10 +46,10 @@
 @import "../assets/base.css";
 
 .sub-sections {
-  display: grid;
-  grid-template-columns: 11% 11% 9% 11% 9% 11%;
-  justify-content: center;
-  margin-left: 50px;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .sub-sections h3 {
@@ -61,4 +61,17 @@
   color: var(--amarelo);
   transition: 1s;
 }
+
+/* --------------- Media Queries -------------------- */
+
+/* Estilos para tablet */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+/* Estilos para mobile */
+@media only screen and (max-width: 767px) {
+  
+}
+
 </style>
