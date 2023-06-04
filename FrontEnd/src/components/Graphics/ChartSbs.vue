@@ -17,10 +17,10 @@
             <div class="chart1">
             <img v-if="loading" src="../../assets/loading.gif" alt="Carregando...">
             <canvas ref="chart"></canvas>
-            <div v-if="chartInstance !== null" class="button-pdf">
+            </div>
+        </div>
+        <div v-if="chartInstance !== null" class="button-pdf">
                 <button @click="exportToPdf">Export to PDF <i class="fa-solid fa-file-lines"></i></button>
-            </div>
-            </div>
         </div>
         <div v-if="planes.length >= 1" 
             class="open-dropdown" @click.prevent="moreInformation = !moreInformation">
