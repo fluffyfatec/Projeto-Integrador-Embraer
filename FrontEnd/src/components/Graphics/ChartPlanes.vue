@@ -443,6 +443,11 @@
     margin-top: 30%;
 
   }
+  .container-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
   
   

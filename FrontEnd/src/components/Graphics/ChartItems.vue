@@ -418,6 +418,12 @@ h4 {
   .chart1{
     height: 200px;
   }
+
+  .container-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 
