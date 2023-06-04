@@ -416,7 +416,34 @@
     font-size: 21px;
     margin-top: 15px;
   }
+      /* Estilos para mobile */
+@media only screen and (max-width: 767px) {
+  .grid-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .grid-row2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .select-container select{
+    margin-bottom: 10px;
+  }
+  .btn-submit{
+    margin-left: 5rem;
+  }
   
+  .chart1 img {
+    width: 40%;
+    height: 40%;
+    margin-left: 30%;
+    margin-top: 30%;
+
+  }
+}
   
   
   </style>

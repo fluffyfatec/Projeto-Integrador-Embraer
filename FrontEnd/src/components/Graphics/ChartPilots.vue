@@ -184,7 +184,7 @@
   @import "../../assets/base.css";
   
   .chart1{
-    height: 400px;
+    height: 300px;
   }
   
   .chart1 img {
@@ -227,12 +227,11 @@
     color: var(--azul-embraer-light);
     padding: 10px;
     text-align: center;
-    margin-top: 100px;
   }
   
   .button-pdf {
     text-align: center;
-    padding: 40px;
+
   }
   
   .button-pdf i {
@@ -266,9 +265,55 @@
     color: white;
     padding: 7px;
     font-size: 21px;
-    margin-top: 15px;
+    padding-top: 2px;
+  }
+      /* Estilos para mobile */
+@media only screen and (max-width: 767px) {
+  .grid-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .grid-row2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .select-container select{
+    margin-bottom: 10px;
+  }
+  .btn-submit{
+    margin-left: 5rem;
   }
   
+  .chart1 img {
+    width: 40%;
+    height: 40%;
+    margin-top: 10%;
+  }
+
+  .chart-container{
+  padding: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  }
+
+  .chart1{
+    height: 200px;
+    width: 400px;
+  }
+
+  .container-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .card b{
+    font-size: 15px;
+    padding-top: 2px;
+  }
+}
   
   
   </style>
