@@ -11,6 +11,8 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Repository
 public interface ChassisUserPilotRepository extends JpaRepository<ChassisUserPilot, Long> {
 
@@ -37,5 +39,11 @@ public interface ChassisUserPilotRepository extends JpaRepository<ChassisUserPil
 
     @Query("SELECT u.userUsername FROM ChassisUserPilot p, User u WHERE p.pilot.userId = u.userId AND p.id = :id")
     String getPilotNameByPilotId(@Param("id") Long id);
+
+    @Query("SELECT p.pilot.userId, COUNT(*) FROM ChassisUserPilot p WHERE p.status = 'A' GROUP BY p.pilot.userId")
+    List<Object[]> groupByPilot();
+
+    @Query("SELECT DISTINCT u.userUsername FROM ChassisUserPilot p, User u WHERE p.pilot.userId = u.userId AND p.pilot.userId = :id")
+    String getPilotNameByUserId(@Param("id") Long id);
 
 }

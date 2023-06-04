@@ -1,28 +1,43 @@
 <template>
-  <div class="chart-container">
-    <h1>Item status in all chassis <b>{{ itemSelected }}</b></h1>
-    <div class="grid-row">
-      <select v-model="SelectPlaceholder">
-        <option value="null">Select an item...</option>
-        <option v-for="i in items" :key="i.id" @click.prevent="getDataOfGraphic(i.id, i.name)">{{ i.name }}</option>
-      </select>
-      <div class="chart1">
-        <img v-if="loading" src="../../assets/loading.gif" alt="Carregando...">
-        <canvas ref="chart"></canvas>
-        <div v-if="chartInstance !== null" class="button-pdf">
-          <button @click="exportToPdf">Export to PDF <i class="fa-solid fa-file-lines"></i></button>
+  <div>
+    <div class="chart-container">
+      <h1>Item status in all chassis <b>{{ itemSelected }}</b></h1>
+      <div class="grid-row">
+        <select v-model="SelectPlaceholder">
+          <option class="select-placeholder" disabled :value="null">Select an item...</option>
+          <option v-for="i in items" :key="i.id" @click.prevent="getDataOfGraphic(i.id, i.name)">{{ i.name }}</option>
+        </select>
+        <div class="chart1">
+          <img v-if="loading" src="../../assets/loading.gif" alt="Carregando...">
+          <canvas ref="chart"></canvas>
+          <div v-if="chartInstance !== null" class="button-pdf">
+            <button @click="exportToPdf">Export to PDF <i class="fa-solid fa-file-lines"></i></button>
+          </div>
         </div>
       </div>
+      <div v-if="items_incorporated.length >= 1 || items_applicable.length >= 1 || items_not_applicable.length >= 1" 
+        class="open-dropdown" @click.prevent="moreInformation = !moreInformation">
+        <h4 v-if="!moreInformation">See more information <i class="fa-solid fa-chevron-down"></i></h4>
+        <h4 v-else>Close more information <i class="fa-solid fa-chevron-up"></i></h4>
+      </div> 
+      <div v-if="moreInformation" class="container-card">
+        <div class="card" v-for="inc in items_incorporated">Chassis {{ inc.chassis }} <br> <b style="background-color: #548644;">INCORPORATED</b></div>
+        <div class="card" v-for="app in items_applicable">Chassis {{ app.chassis }} <br> <b style="background-color: #7CF0BD;">APPLICABLE</b></div>
+        <div class="card" v-for="notApp in items_not_applicable">Chassis {{ notApp.chassis }} <br> <b style="background-color: #AE2A32;">NOT APPLICABLE</b></div>
+      </div>
     </div>
-    <div v-if="items_incorporated.length >= 1 || items_applicable.length >= 1 || items_not_applicable.length >= 1" 
-      class="open-dropdown" @click.prevent="moreInformation = !moreInformation">
-      <h4 v-if="!moreInformation">See more information <i class="fa-solid fa-chevron-down"></i></h4>
-      <h4 v-else>Close more information <i class="fa-solid fa-chevron-up"></i></h4>
-    </div> 
-    <div v-if="moreInformation" class="container-card">
-      <div class="card" v-for="inc in items_incorporated">Chassis {{ inc.chassis }} <br> <b style="background-color: #548644;">INCORPORATED</b></div>
-      <div class="card" v-for="app in items_applicable">Chassis {{ app.chassis }} <br> <b style="background-color: #7CF0BD;">APPLICABLE</b></div>
-      <div class="card" v-for="notApp in items_not_applicable">Chassis {{ notApp.chassis }} <br> <b style="background-color: #AE2A32;">NOT APPLICABLE</b></div>
+
+    <div class="chart-container">
+      <h1>Macro Item status in all chassis for all items</h1>
+      <div class="grid-row2">
+        <div class="chart1">
+          <img v-if="loading2" src="../../assets/loading.gif" alt="Carregando...">
+          <canvas ref="chart2"></canvas>
+        </div>
+        <div v-if="chartInstance2 !== null" class="button-pdf">
+            <button @click="exportToPdf2">Export to PDF <i class="fa-solid fa-file-lines"></i></button>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -50,6 +65,12 @@ export default defineComponent({
       data_not_applicable: null,
       moreInformation: false,
       loading: false,
+
+      loading2: false,
+      chartInstance2: null,
+      dataMacro_incorporated: null,
+      dataMacro_applicable: null,
+      dataMacro_not_applicable: null,
     }
   },
 
@@ -57,6 +78,7 @@ export default defineComponent({
   mounted() {
 
     this.getItems();
+    this.getDataOfMacroGraphic();
 
   },
 
@@ -66,12 +88,31 @@ export default defineComponent({
 
             html2canvas(chartContainer).then((canvas) => {
               const imageData = canvas.toDataURL('image/png');
-              const pdf = new jsPDF();
+              const pdf = new jsPDF('landscape'); // Definir o formato do PDF como paisagem
 
-              const width = pdf.internal.pageSize.getWidth();
-              const height = pdf.internal.pageSize.getHeight();
+              const pdfWidth = pdf.internal.pageSize.getWidth(); // Largura do PDF
+              const pdfHeight = pdf.internal.pageSize.getHeight(); // Altura do PDF
 
-              pdf.addImage(imageData, 'PNG', 0, 0, width, height);
+              const chartWidth = canvas.width; // Largura da imagem do gráfico
+              const chartHeight = canvas.height; // Altura da imagem do gráfico
+
+              const aspectRatio = chartWidth / chartHeight; // Proporção de aspecto da imagem do gráfico
+
+              let finalWidth, finalHeight;
+              if (aspectRatio > 1) {
+                // Imagem mais larga do que alta
+                finalWidth = pdfWidth;
+                finalHeight = pdfWidth / aspectRatio;
+              } else {
+                // Imagem mais alta do que larga (ou quadrada)
+                finalWidth = pdfHeight * aspectRatio;
+                finalHeight = pdfHeight;
+              }
+
+              const xPos = (pdfWidth - finalWidth + 50) / 2; // Posição horizontal da imagem no PDF
+              const yPos = (pdfHeight - finalHeight) / 2; // Posição vertical da imagem no PDF
+
+              pdf.addImage(imageData, 'PNG', xPos, yPos, finalWidth, finalHeight);
               pdf.save('chart.pdf');
              });
         },
@@ -124,11 +165,21 @@ export default defineComponent({
             this.chartInstance = new Chart(ctx, {
               type: 'bar',
               data: {
-                labels: ['Incorporated', 'Applicable', 'NotApplicable'],
+                labels: [this.SelectPlaceholder],
                 datasets: [{
-                  label: this.SelectPlaceholder,  
-                  data: [this.data_incorporated, this.data_applicable, this.data_not_applicable],
-                  backgroundColor: ['#548644', '#7CF0BD', '#AE2A32']
+                  label: 'Incorporated',  
+                  data: [this.data_incorporated],
+                  backgroundColor: ['#548644']
+                },
+                {
+                  label: 'Applicable',  
+                  data: [this.data_applicable],
+                  backgroundColor: ['#7CF0BD']
+                },
+                {
+                  label: 'Not Applicable',  
+                  data: [this.data_not_applicable],
+                  backgroundColor: ['#AE2A32']
                 }]
               }
             });
@@ -149,7 +200,93 @@ export default defineComponent({
             }));
 
         },
-    },
+
+        async getDataOfMacroGraphic() {
+
+          // Se existir, destrua o antigo gráfico
+          if (this.chartInstance2 !== null) {
+                this.chartInstance2.destroy();
+                this.chartInstance2 = null;
+              };
+
+          this.loading2 = true;
+
+          const response = await axios.get('http://localhost:8080/data-graphic-macro-item-status');
+
+            this.dataMacro_incorporated = response.data.data_incorporated;
+
+            this.dataMacro_applicable = response.data.data_applicable;
+
+            this.dataMacro_not_applicable = response.data.data_not_applicable;
+
+
+            this.loading2 = false;
+
+
+            // Registra os plugins do Chart.js que deseja utilizar
+            Chart.register(...registerables);
+
+            // Cria uma instância do gráfico
+            const ctx = this.$refs.chart2 as HTMLCanvasElement;
+            this.chartInstance2 = new Chart(ctx, {
+              type: 'bar',
+              data: {
+                labels: ['All items'],
+                datasets: [{
+                  label: 'Incorporated',  
+                  data: [this.dataMacro_incorporated],
+                  backgroundColor: ['#548644']
+                },
+                {
+                  label: 'Applicable',  
+                  data: [this.dataMacro_applicable],
+                  backgroundColor: ['#7CF0BD']
+                },
+                {
+                  label: 'Not Applicable',  
+                  data: [this.dataMacro_not_applicable],
+                  backgroundColor: ['#AE2A32']
+                }]
+              }
+            });
+
+          },
+
+          exportToPdf2() {
+            const chartContainer = this.$refs.chart2.parentElement;
+
+            html2canvas(chartContainer).then((canvas) => {
+              const imageData = canvas.toDataURL('image/png');
+              const pdf = new jsPDF('landscape'); // Definir o formato do PDF como paisagem
+
+              const pdfWidth = pdf.internal.pageSize.getWidth(); // Largura do PDF
+              const pdfHeight = pdf.internal.pageSize.getHeight(); // Altura do PDF
+
+              const chartWidth = canvas.width; // Largura da imagem do gráfico
+              const chartHeight = canvas.height; // Altura da imagem do gráfico
+
+              const aspectRatio = chartWidth / chartHeight; // Proporção de aspecto da imagem do gráfico
+
+              let finalWidth, finalHeight;
+              if (aspectRatio > 1) {
+                // Imagem mais larga do que alta
+                finalWidth = pdfWidth;
+                finalHeight = pdfWidth / aspectRatio;
+              } else {
+                // Imagem mais alta do que larga (ou quadrada)
+                finalWidth = pdfHeight * aspectRatio;
+                finalHeight = pdfHeight;
+              }
+
+              const xPos = (pdfWidth - finalWidth + 50) / 2; // Posição horizontal da imagem no PDF
+              const yPos = (pdfHeight - finalHeight) / 2; // Posição vertical da imagem no PDF
+
+              pdf.addImage(imageData, 'PNG', xPos, yPos, finalWidth, finalHeight);
+              pdf.save('chart.pdf');
+             });
+          },
+      },
+
   })
 </script>
 
@@ -162,7 +299,8 @@ export default defineComponent({
 
 .chart1 img {
   height: 350px;
-  margin-left: 100px;
+  margin-left: 150px;
+
 }
 
 .chart-container {
@@ -200,12 +338,11 @@ h4 {
   color: var(--azul-embraer-light);
   padding: 10px;
   text-align: center;
-  margin-top: 100px;
 }
 
 .button-pdf {
   text-align: center;
-  padding: 40px;
+  padding-bottom: 20px;
 }
 
 .button-pdf i {
@@ -242,6 +379,55 @@ h4 {
   margin-top: 15px;
 }
 
+/* Style for graphic two */
+.grid-row2 {
+  display: grid;
+  grid-template-columns: 60%;
+  justify-content: center;
+  gap: 50px;
+  margin-left: 25px;
+  margin-right: 10px;
+}
+    /* Estilos para mobile */
+    @media only screen and (max-width: 767px) {
+  .grid-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .grid-row2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .select-container select{
+    margin-bottom: 10px;
+  }
+  .btn-submit{
+    margin-left: 5rem;
+  }
+
+  .chart1 img {
+    width: 40%;
+    height: 40%;
+    margin-left: 30%;
+    margin-top: 30%;
+
+  }
+  .chart1{
+    height: 200px;
+  }
+
+  .container-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .card b{
+    font-size: 12px;
+  }
+}
 
 
 </style>

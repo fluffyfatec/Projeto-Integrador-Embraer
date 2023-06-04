@@ -1,15 +1,17 @@
 <template>
     <div class="notifications">
+        <button class="button-close" @click.prevent="closeNotifications">
+                <i class="fa-solid fa-xmark"></i>
+        </button>
         <h2 class="title">Notifications
             <div class="notification-filter">
-                <b @click.prevent="unlocked = !unlocked" :style="unlocked === true ? { 'background-color' : '#004AEB', 'color' : 'white' } : { 'background-color' : 'transparent', 'color' : '#004AEB' }">Unlocked</b>
-                <b @click.prevent="chance = !chance" :style="chance === true ? { 'background-color' : '#004AEB', 'color' : 'white' } : { 'background-color' : 'transparent', 'color' : '#004AEB' }">Chance</b>
-                <b @click.prevent="newSb = !newSb" :style="newSb === true ? { 'background-color' : '#004AEB', 'color' : 'white' } : { 'background-color' : 'transparent', 'color' : '#004AEB' }">New Sb</b>
+                <b @click.prevent="unlocked = !unlocked" :style="unlocked === true ? { 'background-color' : '#004AEB', 'color' : 'white','white-space': 'nowrap','overflow': 'hidden','text-overflow': 'ellipsis' } : { 'background-color' : 'transparent', 'color' : '#004AEB','white-space': 'nowrap','overflow': 'hidden','text-overflow': 'ellipsis' }">Unlocked</b>
+                <b @click.prevent="chance = !chance" :style="chance === true ? { 'background-color' : '#004AEB', 'color' : 'white', 'white-space': 'nowrap','overflow': 'hidden','text-overflow': 'ellipsis'} : { 'background-color' : 'transparent', 'color' : '#004AEB','white-space': 'nowrap','overflow': 'hidden','text-overflow': 'ellipsis' }">Chance</b>
+                <b @click.prevent="newSb = !newSb" :style="newSb === true ? { 'background-color' : '#004AEB', 'color' : 'white' , 'white-space': 'nowrap','overflow': 'hidden','text-overflow': 'ellipsis' } : { 'background-color' : 'transparent', 'color' : '#004AEB','white-space': 'nowrap','overflow': 'hidden','text-overflow': 'ellipsis' }">New Sb</b>
             </div>
-             <button class="button-close" @click.prevent="closeNotifications">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-        </h2>
+        </h2>    
+    
+    
 
         <div class="card-notification" v-for="n in notifications" :key="n.id">
             <h4 v-if="(n.operation === 'Changed Sb status' || n.operation === 'Unlocking items by the new Sb') && n.item_status === 'INCORPORATED'" @click.prevent="divClickToItems(n.chassis_associate)">
@@ -326,6 +328,7 @@ h6 i {
 .button-delete i {
     font-size: 25px;
     color: #AE2A32;
+    margin-left: 1rem;
 }
 
 .title {
@@ -336,7 +339,7 @@ h6 i {
     background-color: transparent;
     border-color: transparent;
     width: 40px;
-    height: 45px;
+    height: auto;
     margin-left: auto;
     margin-right: 12px;
     cursor: pointer;
@@ -358,7 +361,9 @@ h6 i {
     border-radius: 15px;
     padding: 7px;
 }
-
+.notifications b{
+    cursor: pointer;
+}
 
 
 /* --------------- Media Queries -------------------- */
@@ -370,7 +375,36 @@ h6 i {
 
 /* Estilos para mobile */
 @media only screen and (max-width: 767px) {
+    .notifications{
+        padding: 0;
+        width: 22rem;
+        height: 25rem;
+    }
+    .title{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
 
+    .notification-filter{
+        margin: 0;
+        margin-top: 1rem;
+    }
+    .notification-filter b{
+        font-size: 20px;
+        
+    }
+    .button-close i {
+    font-size: 30px;
+}
+    .card-notification b{
+        font-size: 12px;
+    }
+
+    .button-delete i {
+    font-size: 20px;
+
+}
 }
 
 </style>

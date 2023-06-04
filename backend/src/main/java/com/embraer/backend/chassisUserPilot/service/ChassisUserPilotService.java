@@ -114,6 +114,36 @@ public class ChassisUserPilotService {
         return listDTO;
     }
 
+    public List<ChassisUserPilotDTO> listAllChassisPilotsAdmin() {
+
+        List<ChassisUserPilotDTO> listDTO = new ArrayList<>();
+
+        List<ChassisUserPilot> listOwners = chassisUserPilotRepository.findAll();
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+
+        for (ChassisUserPilot list : listOwners) {
+            ChassisUserPilotDTO dto = new ChassisUserPilotDTO();
+
+            String pilot = userRepository.getUserNameByUserId(list.getPilotLong());
+            String owner = userRepository.getUserNameByUserId(list.getOwner().getUserLong());
+
+            String formatedDate = dateFormat.format(list.getDtregister());
+
+            dto.setId(list.getId());
+            dto.setOwner(owner);
+            dto.setPilot(pilot);
+            dto.setChassis(list.getChassisLong());
+            dto.setDate_register(formatedDate);
+            dto.setStatus(list.getStatus());
+
+            listDTO.add(dto);
+
+        }
+
+        return listDTO;
+    }
+
     @Transactional
     public void deleteChassiPilot(Long id) {
 

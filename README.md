@@ -195,6 +195,14 @@ Mobile
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
 
+## Log ERD 
+
+<p align="center">
+      <img src="GIT/DER_LOG2.png" width="100%" height="100%">
+<p align="center">
+
+<p align="right">(<a href="#top">Back to top</a>)</p>
+
 ## Data dictionary
 
 [Click here to access the data dictionary](https://github.com/fluffyfatec/Projeto-Integrador-Embraer/blob/GIT_MODIFICATION/GIT/datadic.pdf)
@@ -206,7 +214,9 @@ Mobile
 ## Burndown
 
 <p align="center">
-      <img src="GIT/burndown3.png" width="100%" height="100%">
+
+      <img src="GIT/burndownsprint4.png" width="100%" height="100%">
+
 <p align="center">
 
 
