@@ -337,7 +337,8 @@
   
   .chart1 img {
     height: 350px;
-    margin-left: 100px;
+    margin-left: 150px;
+  
   }
   
   .chart-container {
@@ -375,12 +376,11 @@
     color: var(--azul-embraer-light);
     padding: 10px;
     text-align: center;
-    margin-top: 100px;
   }
   
   .button-pdf {
     text-align: center;
-    padding: 40px;
+    padding-bottom: 20px;
   }
   
   .button-pdf i {
@@ -416,39 +416,59 @@
     font-size: 21px;
     margin-top: 15px;
   }
+  
+  /* Style for graphic two */
+  .grid-row2 {
+    display: grid;
+    grid-template-columns: 60%;
+    justify-content: center;
+    gap: 50px;
+    margin-left: 25px;
+    margin-right: 10px;
+  }
       /* Estilos para mobile */
-@media only screen and (max-width: 767px) {
-  .grid-row{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+      @media only screen and (max-width: 767px) {
+    .grid-row{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .grid-row2{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .select-container select{
+      margin-bottom: 10px;
+    }
+    .btn-submit{
+      margin-left: 5rem;
+    }
+  
+    .chart1 img {
+      width: 40%;
+      height: 40%;
+      margin-left: 30%;
+      margin-top: 30%;
+  
+    }
+    .chart1{
+      height: 200px;
+    }
+  
+    .container-card{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .card b{
+    font-size: 12px;
   }
-  .grid-row2{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .select-container select{
-    margin-bottom: 10px;
-  }
-  .btn-submit{
-    margin-left: 5rem;
   }
   
-  .chart1 img {
-    width: 40%;
-    height: 40%;
-    margin-left: 30%;
-    margin-top: 30%;
-
-  }
-  .container-card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
+  
+  </style>
   
   
   </style>

@@ -424,6 +424,9 @@ h4 {
     flex-direction: column;
     justify-content: center;
   }
+  .card b{
+    font-size: 12px;
+  }
 }
 
 
