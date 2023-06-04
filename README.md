@@ -196,7 +196,7 @@ Mobile
 ## Log ERD 
 
 <p align="center">
-      <img src="GIT/DER_LOG.png" width="100%" height="100%">
+      <img src="GIT/DER_LOG2.png" width="100%" height="100%">
 <p align="center">
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
