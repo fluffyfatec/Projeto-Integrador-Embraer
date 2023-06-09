@@ -75,6 +75,10 @@ public class ChassiServiceBulletinService {
                 // Log generation
                 Log newLog = new Log();
 
+                if (Objects.equals(part, "UNICO")) {
+                    part = "UNIQUE";
+                }
+
                 newLog.setUsername(userSession.getUserAuthentication().getUsername());
                 newLog.setRole(userSession.getUserAuthentication().getRole());
                 newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
@@ -144,10 +148,15 @@ public class ChassiServiceBulletinService {
             // Log generation
             Log newLog = new Log();
 
+            String part = chassiServiceBulletinDTO.getPart();
+            if (Objects.equals(part, "UNICO")) {
+                part = "UNIQUE";
+            }
+
             newLog.setUsername(userSession.getUserAuthentication().getUsername());
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
-            newLog.setOperation("Creation of " + chassiServiceBulletinDTO.getName() + " " + chassiServiceBulletinDTO.getPart()
+            newLog.setOperation("Creation of " + chassiServiceBulletinDTO.getName() + " " + part
                     + " in chassis " + chassiServiceBulletinDTO.getChassis());
             newLog.setOldRegister("It does not have");
             newLog.setNewRegister(chassiServiceBulletinRepository.findSbStatusBySbId(sbId, chassiServiceBulletinDTO.getChassis()));

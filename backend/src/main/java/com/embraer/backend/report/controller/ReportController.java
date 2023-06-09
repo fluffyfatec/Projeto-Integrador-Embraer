@@ -326,6 +326,11 @@ public class ReportController {
 
         List<ListChassiBySbDto> chassis = listChassisBySbService.executeAdmin(sb, part);
 
+        String partString = part;
+        if (Objects.equals(partString, "UNICO")) {
+            partString = "UNIQUE";
+        }
+
         if (!inc && app && notApp) {
 
             chassis.removeIf(chassi -> Objects.equals(chassi.getSb_status(), "INCORPORATED"));
@@ -343,7 +348,7 @@ public class ReportController {
             newLog.setUsername(userSession.getUserAuthentication().getUsername());
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
-            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + partString);
             newLog.setOldRegister("It does not have");
             newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(1);
@@ -374,7 +379,7 @@ public class ReportController {
             newLog.setUsername(userSession.getUserAuthentication().getUsername());
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
-            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + partString);
             newLog.setOldRegister("It does not have");
             newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(1);
@@ -405,7 +410,7 @@ public class ReportController {
             newLog.setUsername(userSession.getUserAuthentication().getUsername());
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
-            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + partString);
             newLog.setOldRegister("It does not have");
             newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(1);
@@ -436,7 +441,7 @@ public class ReportController {
             newLog.setUsername(userSession.getUserAuthentication().getUsername());
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
-            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + partString);
             newLog.setOldRegister("It does not have");
             newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(1);
@@ -467,7 +472,7 @@ public class ReportController {
             newLog.setUsername(userSession.getUserAuthentication().getUsername());
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
-            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + partString);
             newLog.setOldRegister("It does not have");
             newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(1);
@@ -498,7 +503,7 @@ public class ReportController {
             newLog.setUsername(userSession.getUserAuthentication().getUsername());
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
-            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + partString);
             newLog.setOldRegister("It does not have");
             newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(1);
@@ -525,7 +530,7 @@ public class ReportController {
         newLog.setUsername(userSession.getUserAuthentication().getUsername());
         newLog.setRole(userSession.getUserAuthentication().getRole());
         newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
-        newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+        newLog.setOperation("Generation of Sbs Report, about " + sb + " " + partString);
         newLog.setOldRegister("It does not have");
         newLog.setNewRegister("It does not have");
         newLog.setBooleanAdmin(1);
@@ -549,6 +554,11 @@ public class ReportController {
 
         List<ListChassiBySbDto> chassis = listChassisBySbService.executeEditor(sb, part);
 
+        String partString = part;
+        if (Objects.equals(partString, "UNICO")) {
+            partString = "UNIQUE";
+        }
+
         if (!inc && app && notApp) {
 
             chassis.removeIf(chassi -> Objects.equals(chassi.getSb_status(), "INCORPORATED"));
@@ -566,7 +576,7 @@ public class ReportController {
             newLog.setUsername(userSession.getUserAuthentication().getUsername());
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
-            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + partString);
             newLog.setOldRegister("It does not have");
             newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(0);
@@ -597,7 +607,7 @@ public class ReportController {
             newLog.setUsername(userSession.getUserAuthentication().getUsername());
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
-            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + partString);
             newLog.setOldRegister("It does not have");
             newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(0);
@@ -628,7 +638,7 @@ public class ReportController {
             newLog.setUsername(userSession.getUserAuthentication().getUsername());
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
-            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + partString);
             newLog.setOldRegister("It does not have");
             newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(0);
@@ -659,7 +669,7 @@ public class ReportController {
             newLog.setUsername(userSession.getUserAuthentication().getUsername());
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
-            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + partString);
             newLog.setOldRegister("It does not have");
             newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(0);
@@ -690,7 +700,7 @@ public class ReportController {
             newLog.setUsername(userSession.getUserAuthentication().getUsername());
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
-            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + partString);
             newLog.setOldRegister("It does not have");
             newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(0);
@@ -721,7 +731,7 @@ public class ReportController {
             newLog.setUsername(userSession.getUserAuthentication().getUsername());
             newLog.setRole(userSession.getUserAuthentication().getRole());
             newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
-            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+            newLog.setOperation("Generation of Sbs Report, about " + sb + " " + partString);
             newLog.setOldRegister("It does not have");
             newLog.setNewRegister("It does not have");
             newLog.setBooleanAdmin(0);
@@ -748,7 +758,7 @@ public class ReportController {
         newLog.setUsername(userSession.getUserAuthentication().getUsername());
         newLog.setRole(userSession.getUserAuthentication().getRole());
         newLog.setDtregister(new Timestamp(System.currentTimeMillis()));
-        newLog.setOperation("Generation of Sbs Report, about " + sb + " " + part);
+        newLog.setOperation("Generation of Sbs Report, about " + sb + " " + partString);
         newLog.setOldRegister("It does not have");
         newLog.setNewRegister("It does not have");
         newLog.setBooleanAdmin(0);
