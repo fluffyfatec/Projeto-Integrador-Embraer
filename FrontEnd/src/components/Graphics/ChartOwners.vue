@@ -116,8 +116,10 @@
 
 
             // Use um loop 'for' para iterar sobre this.data_owners
-            let backgroundColor = ['#F3C653', '#0916A3', '#1F3C92', '#0A1A5C', '#004AEB', '#005BAF', '#1781E3',
-                                    '#00417D', '#F3C653', '#C0C0C0', '#E0E0E1', '#548644', '#7CF0BD', '#AE2A32']
+            let backgroundColor = ['#739DD7', '#04381D', '#2F1547', '#1DDCF5', '#69A3F5', '#904101', '#10233D',
+                                    '#6AD19C', '#9D66D0', '#44B3C2', '#7993B7', '#C7793A', '#0F438C', '#098746', 
+                                  '#632C96', '#87ECFA', '#B0CEF9', '#30B1C7', '#155BBD', '#0DB85F', '#8339C7', 
+                                '#0E6C78', '#345078', '#C76414', '#1497A8', '#4870A8']
             let datasets = [];
 
             var n = 0;

@@ -2,12 +2,6 @@
     <div>
         <div class="div-header">
             <h1 class="title">List of Logs</h1>
-            <div class="div-btn-download">
-                    <button class="btn-download" @click.prevent="downloadPDF">
-                        <i class="fa-solid fa-file-arrow-down"></i>
-                        <i class="txt-btn-download">Download PDF</i>
-                    </button>
-            </div>
         </div>
         <div class="search-container">
             <input class="search-term" type="text" placeholder="Search a register..." v-model="searchTerm">

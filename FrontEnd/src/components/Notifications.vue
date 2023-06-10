@@ -112,13 +112,15 @@ export default {
                     user_owner: item.user_owner,
                     chassis_associate: item.chassis_associate,
                     sb_name: item.sb_name,
-                    sb_part: item.sb_part,
+                    sb_part: item.sb_part === 'UNICO' ? 'UNIQUE' : item.sb_part,
                     operation: item.operation,
                     sb_status_change: item.sb_status_change,
                     item: item.item,
                     item_status: item.item_status,
                     date_register: item.date_register
                 }));
+
+
 
             };
 
@@ -133,7 +135,7 @@ export default {
                     user_owner: item.user_owner,
                     chassis_associate: item.chassis_associate,
                     sb_name: item.sb_name,
-                    sb_part: item.sb_part,
+                    sb_part: item.sb_part === 'UNICO' ? 'UNIQUE' : item.sb_part,
                     operation: item.operation,
                     sb_status_change: item.sb_status_change,
                     item: item.item,
